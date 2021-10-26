@@ -1,0 +1,5 @@
+misc
+node_modules
+webfonts/
+*.txt
+data.json
