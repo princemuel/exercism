@@ -49,7 +49,3 @@ def elapsed_time_in_minutes(number_of_layers: int, elapsed_bake_time: int):
     lasagna.
     """
     return preparation_time_in_minutes(number_of_layers) + elapsed_bake_time
-
-
-# TODO: Remember to go back and add docstrings to all your functions
-#  (you can copy and then alter the one from bake_time_remaining.)
