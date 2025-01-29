@@ -7,7 +7,6 @@
 - [PEP 257][PEP257] details Python docstring conventions.
 - [Numbers][numbers] in Python can be integers, floats, or complex.
 
-
 ## 1. Define expected bake time in minutes
 
 - You need to [name][naming] a [constant][constants], and [assign][assignment] it an [integer][numbers] value.
