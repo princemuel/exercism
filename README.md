@@ -7,5 +7,3 @@ These are my solutions to the Exercism exercises for the [Python track](./python
 ## Rust
 
 These are my solutions to the Exercism exercises for the [Rust track](./rust-exercises/README.md)
-
-

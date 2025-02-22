@@ -1,5 +1,4 @@
-# Exercism Exercises' Solutions:
-
+# Exercism Exercises' Solutions
 
 ## Python
 
