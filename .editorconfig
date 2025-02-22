@@ -13,6 +13,10 @@ insert_final_newline = true
 end_of_line = lf
 
 # Specific settings for Rust files
+[*.rs]
+indent_size = 4
+
+# Specific settings for Python files
 [*.py]
 indent_size = 4
 
