@@ -1,7 +1,7 @@
 """Functions for implementing the rules of the classic arcade game Pac-Man."""
 
 
-def eat_ghost(power_pellet_active, touching_ghost):
+def eat_ghost(power_pellet_active: bool, touching_ghost: bool):
     """Verify that Pac-Man can eat a ghost if he is empowered by a power pellet.
 
     :param power_pellet_active: bool - does the player have an active power pellet?
@@ -9,10 +9,10 @@ def eat_ghost(power_pellet_active, touching_ghost):
     :return: bool - can a ghost be eaten?
     """
 
-    pass
+    return power_pellet_active and touching_ghost
 
 
-def score(touching_power_pellet, touching_dot):
+def score(touching_power_pellet: bool, touching_dot: bool):
     """Verify that Pac-Man has scored when a power pellet or dot has been eaten.
 
     :param touching_power_pellet: bool - is the player touching a power pellet?
@@ -20,10 +20,10 @@ def score(touching_power_pellet, touching_dot):
     :return: bool - has the player scored or not?
     """
 
-    pass
+    return touching_power_pellet or touching_dot
 
 
-def lose(power_pellet_active, touching_ghost):
+def lose(power_pellet_active: bool, touching_ghost: bool):
     """Trigger the game loop to end (GAME OVER) when Pac-Man touches a ghost without his power pellet.
 
     :param power_pellet_active: bool - does the player have an active power pellet?
@@ -31,10 +31,10 @@ def lose(power_pellet_active, touching_ghost):
     :return: bool - has the player lost the game?
     """
 
-    pass
+    return not power_pellet_active and touching_ghost
 
 
-def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
+def win(has_eaten_all_dots: bool, power_pellet_active: bool, touching_ghost: bool):
     """Trigger the victory event when all dots have been eaten.
 
     :param has_eaten_all_dots: bool - has the player "eaten" all the dots?
@@ -43,4 +43,4 @@ def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
     :return: bool - has the player won the game?
     """
 
-    pass
+    return has_eaten_all_dots and not lose(power_pellet_active, touching_ghost)
