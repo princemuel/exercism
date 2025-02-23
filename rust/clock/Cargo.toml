@@ -1,4 +1,4 @@
 [package]
-edition = "2021"
-name = "clock"
-version = "2.4.0"
+  edition = "2024"
+  name    = "clock"
+  version = "2.4.0"
