@@ -3,7 +3,7 @@ use core::fmt;
 const ONE_DAY: i64 = 24 * 60;
 const ONE_HOUR: i64 = 60;
 
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct Clock {
     minutes: i64,
 }
