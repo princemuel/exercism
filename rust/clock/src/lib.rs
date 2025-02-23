@@ -27,3 +27,13 @@ impl fmt::Display for Clock {
         )
     }
 }
+
+impl From<Clock> for String {
+    fn from(clock: Clock) -> Self {
+        format!(
+            "{:02}:{:02}",
+            clock.minutes / ONE_HOUR,
+            clock.minutes % ONE_HOUR
+        )
+    }
+}
