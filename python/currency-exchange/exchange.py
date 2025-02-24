@@ -6,8 +6,7 @@ Overview of exchanging currency when travelling: https://www.compareremit.com/mo
 """
 
 
-
-def exchange_money(budget, exchange_rate):
+def exchange_money(budget: float, exchange_rate: float):
     """
 
     :param budget: float - amount of money you are planning to exchange.
@@ -15,10 +14,10 @@ def exchange_money(budget, exchange_rate):
     :return: float - exchanged value of the foreign currency you can receive.
     """
 
-    pass
+    return budget / exchange_rate
 
 
-def get_change(budget, exchanging_value):
+def get_change(budget: float, exchanging_value: float):
     """
 
     :param budget: float - amount of money you own.
@@ -29,7 +28,7 @@ def get_change(budget, exchanging_value):
     pass
 
 
-def get_value_of_bills(denomination, number_of_bills):
+def get_value_of_bills(denomination: int, number_of_bills: int):
     """
 
     :param denomination: int - the value of a bill.
@@ -40,7 +39,7 @@ def get_value_of_bills(denomination, number_of_bills):
     pass
 
 
-def get_number_of_bills(amount, denomination):
+def get_number_of_bills(amount: float, denomination: int):
     """
 
     :param amount: float - the total starting value.
@@ -51,7 +50,7 @@ def get_number_of_bills(amount, denomination):
     pass
 
 
-def get_leftover_of_bills(amount, denomination):
+def get_leftover_of_bills(amount: float, denomination: int):
     """
 
     :param amount: float - the total starting value.
@@ -62,7 +61,9 @@ def get_leftover_of_bills(amount, denomination):
     pass
 
 
-def exchangeable_value(budget, exchange_rate, spread, denomination):
+def exchangeable_value(
+    budget: float, exchange_rate: float, spread: int, denomination: int
+):
     """
 
     :param budget: float - the amount of your money you are planning to exchange.

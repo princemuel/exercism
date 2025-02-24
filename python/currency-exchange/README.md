@@ -108,9 +108,9 @@ This function should return the value of the exchanged currency.
 Create the `get_change()` function, taking 2 parameters:
 
 1. `budget` : Amount of money before exchange.
-2. `exchanging_value` : Amount of money that is *taken* from the budget to be exchanged.
+2. `exchanging_value` : Amount of money that is _taken_ from the budget to be exchanged.
 
-This function should return the amount of money that *is left* from the budget.
+This function should return the amount of money that _is left_ from the budget.
 
 ```python
 >>> get_change(127.5, 120)
@@ -139,7 +139,7 @@ Unfortunately, the booth gets to keep the remainder/change as an added bonus.
 Create the `get_number_of_bills()` function, taking `amount` and `denomination`.
 
 This function should return the _number of currency bills_ that you can receive within the given _amount_.
-In other words:  How many _whole bills_ of currency fit into the starting amount?
+In other words: How many _whole bills_ of currency fit into the starting amount?
 Remember -- you can only receive _whole bills_, not fractions of bills, so remember to divide accordingly.
 Effectively, you are rounding _down_ to the nearest whole bill/denomination.
 
@@ -164,12 +164,12 @@ It is very important to know exactly how much the booth gets to keep.
 
 Create the `exchangeable_value()` function, taking `budget`, `exchange_rate`, `spread`, and `denomination`.
 
-Parameter `spread` is the *percentage taken* as an exchange fee, written as an integer.
+Parameter `spread` is the _percentage taken_ as an exchange fee, written as an integer.
 It needs to be converted to decimal by dividing it by 100.
-If `1.00 EUR == 1.20 USD` and the *spread* is `10`, the actual exchange rate will be: `1.00 EUR == 1.32 USD` because 10% of 1.20 is 0.12, and this additional fee is added to the exchange.
+If `1.00 EUR == 1.20 USD` and the _spread_ is `10`, the actual exchange rate will be: `1.00 EUR == 1.32 USD` because 10% of 1.20 is 0.12, and this additional fee is added to the exchange.
 
-This function should return the maximum value of the new currency after calculating the *exchange rate* plus the *spread*.
-Remember that the currency *denomination* is a whole number, and cannot be sub-divided.
+This function should return the maximum value of the new currency after calculating the _exchange rate_ plus the _spread_.
+Remember that the currency _denomination_ is a whole number, and cannot be sub-divided.
 
 **Note:** Returned value should be `int` type.
 
