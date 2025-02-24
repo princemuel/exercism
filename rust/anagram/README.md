@@ -72,4 +72,4 @@ This is intentional: what's there demonstrates the basics of lifetime syntax, an
 
 ### Based on
 
-Inspired by the Extreme Startup game - https://github.com/rchatley/extreme_startup
+Inspired by the Extreme Startup game - <https://github.com/rchatley/extreme_startup>
