@@ -1,30 +1,34 @@
-use std::collections::{BTreeMap, HashSet};
+use std::collections::{BTreeMap, HashMap, HashSet};
 use unicode_segmentation::UnicodeSegmentation;
 
-fn sorted_key(word: &str) -> String {
-    let mut chars: Vec<_> =
-        word.to_lowercase().graphemes(true).map(|g| g.to_string()).collect();
+fn frequency_map(word: &str) -> BTreeMap<String, usize> {
+    let mut freq_map: BTreeMap<String, usize> = BTreeMap::new();
 
-    chars.sort_unstable();
-    chars.join("")
+    for g in word.to_lowercase().graphemes(true) {
+        *freq_map.entry(g.to_string()).or_insert(0) += 1;
+    }
+
+    freq_map
 }
 
 pub fn anagrams_for<'a>(
     word: &'a str,
     possible_anagrams: &'a [&str],
 ) -> HashSet<&'a str> {
-    let target_key = sorted_key(word);
+    let target_key = frequency_map(word);
     let lowercased_word = word.to_lowercase();
 
-    let mut anagram_map: BTreeMap<_, Vec<&str>> = BTreeMap::new();
+    let mut anagram_map: HashMap<BTreeMap<String, usize>, Vec<&str>> =
+        HashMap::new();
 
     for &candidate in possible_anagrams {
-        // Ignore words that are the same as the input word
         if candidate.to_lowercase() == lowercased_word {
-            continue;
+            continue; // Ignore identical words
         }
-
-        anagram_map.entry(sorted_key(candidate)).or_default().push(candidate);
+        anagram_map
+            .entry(frequency_map(candidate))
+            .or_default()
+            .push(candidate);
     }
 
     HashSet::from_iter(
