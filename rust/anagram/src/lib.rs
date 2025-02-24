@@ -1,15 +1,5 @@
-use std::collections::{BTreeMap, HashMap, HashSet};
+use std::collections::{HashMap, HashSet};
 use unicode_segmentation::UnicodeSegmentation;
-
-fn frequency_map(word: &str) -> BTreeMap<String, usize> {
-    let mut freq_map: BTreeMap<String, usize> = BTreeMap::new();
-
-    for g in word.to_lowercase().graphemes(true) {
-        *freq_map.entry(g.to_string()).or_insert(0) += 1;
-    }
-
-    freq_map
-}
 
 pub fn anagrams_for<'a>(
     word: &'a str,
@@ -18,13 +8,13 @@ pub fn anagrams_for<'a>(
     let target_key = frequency_map(word);
     let lowercased_word = word.to_lowercase();
 
-    let mut anagram_map: HashMap<BTreeMap<String, usize>, Vec<&str>> =
-        HashMap::new();
+    let mut anagram_map: HashMap<_, Vec<&str>> = HashMap::new();
 
     for &candidate in possible_anagrams {
         if candidate.to_lowercase() == lowercased_word {
             continue; // Ignore identical words
         }
+
         anagram_map
             .entry(frequency_map(candidate))
             .or_default()
@@ -34,4 +24,14 @@ pub fn anagrams_for<'a>(
     HashSet::from_iter(
         anagram_map.get(&target_key).cloned().unwrap_or_default(),
     )
+}
+
+fn frequency_map(word: &str) -> Vec<(String, usize)> {
+    let mut freq_map: HashMap<String, usize> = HashMap::new();
+    for g in word.to_lowercase().graphemes(true) {
+        *freq_map.entry(g.to_string()).or_insert(0) += 1;
+    }
+    let mut freq_vec: Vec<_> = freq_map.into_iter().collect();
+    freq_vec.sort(); // Ensure consistent ordering for hashing
+    freq_vec
 }
