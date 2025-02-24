@@ -6,7 +6,7 @@ pub fn anagrams_for<'a>(
     possible_anagrams: &'a [&str],
 ) -> HashSet<&'a str> {
     let normalized_target = word.to_lowercase();
-    let target_signature = char_frequency_map(&normalized_target);
+    let target_signature = get_freq_map(&normalized_target);
 
     let mut anagrams = HashSet::new();
 
@@ -14,7 +14,7 @@ pub fn anagrams_for<'a>(
         let normalized_candidate = candidate.to_lowercase();
 
         if normalized_candidate != normalized_target
-            && char_frequency_map(&normalized_candidate) == target_signature
+            && get_freq_map(&normalized_candidate) == target_signature
         {
             anagrams.insert(candidate);
         }
@@ -23,7 +23,7 @@ pub fn anagrams_for<'a>(
     anagrams
 }
 
-fn char_frequency_map(word: &str) -> HashMap<String, usize> {
+fn get_freq_map(word: &str) -> HashMap<String, usize> {
     let mut frequency_map = HashMap::new();
 
     for grapheme in word.graphemes(true) {
