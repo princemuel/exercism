@@ -43,23 +43,13 @@ def reactor_efficiency(
     where generated power = voltage * current
     """
 
-    efficiency = ((voltage * current) / theoretical_max_power) * 100
+    efficiency = (voltage * current / theoretical_max_power) * 100
 
-    grader = [
-        "black",
-        "black",
-        "black",
-        "red",
-        "red",
-        "red",
-        "orange",
-        "orange",
-        "green",
-        "green",
-        "green",
-    ]
+    # Define efficiency zones in a list using (10% steps, max index 10)
+    zones = ["black"] * 3 + ["red"] * 3 + ["orange"] * 2 + ["green"] * 3
 
-    return grader[int(efficiency // 10)]
+    # Use min to prevent out-of-bounds access for efficiency > 100
+    return zones[min(int(efficiency // 10), 10)]
 
 
 def fail_safe(
@@ -78,5 +68,11 @@ def fail_safe(
     2. 'NORMAL' -> `temperature * neutrons per second` +/- 10% of `threshold`
     3. 'DANGER' -> `temperature * neutrons per second` is not in the above-stated ranges
     """
+    reactor_output = temperature * neutrons_produced_per_second
 
-    pass
+    low_threshold, high_threshold = 0.9 * threshold, 1.1 * threshold
+
+    return {
+        reactor_output < low_threshold: "LOW",
+        low_threshold <= reactor_output <= high_threshold: "NORMAL",
+    }.get(True, "DANGER")
