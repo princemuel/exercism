@@ -1,21 +1,17 @@
-const EARTH_YEAR_IN_SECS: f64 = 31_557_600.0;
-
 #[derive(Debug)]
-pub struct Duration {
-    seconds: f64,
-}
-
+pub struct Duration(f64);
 impl From<u64> for Duration {
     fn from(s: u64) -> Self {
-        Self { seconds: s as f64 }
+        Self(s as f64)
     }
 }
 
 pub trait Planet {
     const ORBITAL_PERIOD: f64;
+    const EARTH_YEAR_IN_SECS: f64 = 365.25 * 24.0 * 60.0 * 60.0;
 
     fn years_during(d: &Duration) -> f64 {
-        d.seconds / (Self::ORBITAL_PERIOD * EARTH_YEAR_IN_SECS)
+        d.0 / (Self::ORBITAL_PERIOD * Self::EARTH_YEAR_IN_SECS)
     }
 }
 
