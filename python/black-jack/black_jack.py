@@ -5,7 +5,7 @@ How to play blackjack:    https://bicyclecards.com/how-to-play/blackjack/
 """
 
 
-def value_of_card(card):
+def value_of_card(card: str):
     """Determine the scoring value of a card.
 
     :param card: str - given card.
@@ -16,10 +16,13 @@ def value_of_card(card):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    face_cards = {char: 10 for char in "JQK"}
+    card_values = {**face_cards, "A": 1}
+
+    return card_values.get(card, int(card) if card.isdigit() else None)
 
 
-def higher_card(card_one, card_two):
+def higher_card(card_one: str, card_two: str):
     """Determine which card has a higher value in the hand.
 
     :param card_one, card_two: str - cards dealt in hand.  See below for values.
@@ -33,7 +36,7 @@ def higher_card(card_one, card_two):
     pass
 
 
-def value_of_ace(card_one, card_two):
+def value_of_ace(card_one: str, card_two: str):
     """Calculate the most advantageous value for the ace card.
 
     :param card_one, card_two: str - card dealt. See below for values.
@@ -47,7 +50,7 @@ def value_of_ace(card_one, card_two):
     pass
 
 
-def is_blackjack(card_one, card_two):
+def is_blackjack(card_one: str, card_two: str):
     """Determine if the hand is a 'natural' or 'blackjack'.
 
     :param card_one, card_two: str - card dealt. See below for values.
@@ -61,7 +64,7 @@ def is_blackjack(card_one, card_two):
     pass
 
 
-def can_split_pairs(card_one, card_two):
+def can_split_pairs(card_one: str, card_two: str):
     """Determine if a player can split their hand into two hands.
 
     :param card_one, card_two: str - cards dealt.
@@ -71,7 +74,7 @@ def can_split_pairs(card_one, card_two):
     pass
 
 
-def can_double_down(card_one, card_two):
+def can_double_down(card_one: str, card_two: str):
     """Determine if a blackjack player can place a double down bet.
 
     :param card_one, card_two: str - first and second cards in hand.

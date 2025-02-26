@@ -203,8 +203,8 @@ True
 False
 
 # A dictionary of employee information.
->>> employee = {'name': 'John Doe', 
-                'id': 67826, 'age': 33, 
+>>> employee = {'name': 'John Doe',
+                'id': 67826, 'age': 33,
                 'title': 'ceo'}
 
 # Checking for the membership of certain keys.
@@ -326,7 +326,6 @@ Remember: the value of the hand with the ace needs to be as high as possible _wi
 
 If a player is dealt an ace (`A`) and a ten-card (10, `K`, `Q`, or `J`) as their first two cards, then the player has a score of 21.
 This is known as a **blackjack** hand.
-
 
 Define the `is_blackjack(<card_one>, <card_two>)` function with parameters `card_one` and `card_two`, which are a pair of cards.
 Determine if the two-card hand is a **blackjack**, and return the boolean `True` if it is, `False` otherwise.
