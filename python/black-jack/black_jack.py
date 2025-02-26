@@ -4,6 +4,8 @@ How to play blackjack:    https://bicyclecards.com/how-to-play/blackjack/
 "Standard" playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 """
 
+from typing import Tuple
+
 
 def value_of_card(card: str):
     """Determine the scoring value of a card.
@@ -16,10 +18,9 @@ def value_of_card(card: str):
     3.  '2' - '10' = numerical value.
     """
 
-    face_cards = {char: 10 for char in "JQK"}
-    card_values = {**face_cards, "A": 1}
+    cards = {**{char: 10 for char in "JQK"}, "A": 1}
 
-    return card_values.get(card, int(card) if card.isdigit() else None)
+    return cards.get(card, int(card) if card.isdigit() and 2 <= int(card) <= 10 else 0)
 
 
 def higher_card(card_one: str, card_two: str):
@@ -33,7 +34,13 @@ def higher_card(card_one: str, card_two: str):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    card_one_value = value_of_card(card_one)
+    card_two_value = value_of_card(card_two)
+
+    if card_one_value == card_two_value:
+        return card_one, card_two
+
+    return card_two if card_two_value > card_one_value else card_one
 
 
 def value_of_ace(card_one: str, card_two: str):
@@ -60,6 +67,10 @@ def is_blackjack(card_one: str, card_two: str):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
+
+
+    card_one_value = value_of_card(card_one)
+    card_two_value = value_of_card(card_two)
 
     pass
 
