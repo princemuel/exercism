@@ -5,7 +5,7 @@
 Execute the tests with:
 
 ```bash
-$ cargo test
+cargo test
 ```
 
 All but the first test have been ignored. After you get the first test to
@@ -17,25 +17,25 @@ Continue, until you pass every test.
 If you wish to run _only ignored_ tests without editing the tests source file, use:
 
 ```bash
-$ cargo test -- --ignored
+cargo test -- --ignored
 ```
 
 If you are using Rust 1.51 or later, you can run _all_ tests with
 
 ```bash
-$ cargo test -- --include-ignored
+cargo test -- --include-ignored
 ```
 
 To run a specific test, for example `some_test`, you can use:
 
 ```bash
-$ cargo test some_test
+cargo test some_test
 ```
 
 If the specific test is ignored, use:
 
 ```bash
-$ cargo test some_test -- --ignored
+cargo test some_test -- --ignored
 ```
 
 To learn more about Rust tests refer to the online [test documentation][rust-tests].
@@ -79,6 +79,7 @@ The GitHub [track repository][github] is the home for all of the Rust exercises.
 If you want to know more about Exercism, take a look at the [contribution guide].
 
 ## Submitting Incomplete Solutions
+
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
 
 [help-page]: https://exercism.org/tracks/rust/learning
