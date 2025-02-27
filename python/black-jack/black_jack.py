@@ -4,8 +4,6 @@ How to play blackjack:    https://bicyclecards.com/how-to-play/blackjack/
 "Standard" playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 """
 
-from typing import Tuple
-
 
 def value_of_card(card: str):
     """Determine the scoring value of a card.
@@ -54,9 +52,9 @@ def value_of_ace(card_one: str, card_two: str):
     3.  '2' - '10' = numerical value.
     """
 
-    card_one_value = value_of_card(card_one)
-    card_two_value = value_of_card(card_two)
-    pass
+    hand_total = value_of_card(card_one) + value_of_card(card_two)
+
+    return 1 if "A" in (card_one, card_two) or hand_total > 10 else 11
 
 
 def is_blackjack(card_one: str, card_two: str):
@@ -70,7 +68,9 @@ def is_blackjack(card_one: str, card_two: str):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    return {"A", 10}.issubset(
+        {card_one, card_two, value_of_card(card_one), value_of_card(card_two)}
+    )
 
 
 def can_split_pairs(card_one: str, card_two: str):
@@ -79,8 +79,7 @@ def can_split_pairs(card_one: str, card_two: str):
     :param card_one, card_two: str - cards dealt.
     :return: bool - can the hand be split into two pairs? (i.e. cards are of the same value).
     """
-
-    pass
+    return value_of_card(card_one) == value_of_card(card_two)
 
 
 def can_double_down(card_one: str, card_two: str):
@@ -90,4 +89,4 @@ def can_double_down(card_one: str, card_two: str):
     :return: bool - can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
 
-    pass
+    return 9 <= value_of_card(card_one) + value_of_card(card_two) <= 11
