@@ -1,7 +1,7 @@
 """Functions to help edit essay homework using string manipulation."""
 
 
-def capitalize_title(title):
+def capitalize_title(title: str):
     """Convert the first letter of each word in the title to uppercase if needed.
 
     :param title: str - title string that needs title casing.
@@ -11,7 +11,7 @@ def capitalize_title(title):
     pass
 
 
-def check_sentence_ending(sentence):
+def check_sentence_ending(sentence: str):
     """Check the ending of the sentence to verify that a period is present.
 
     :param sentence: str - a sentence to check.
@@ -21,7 +21,7 @@ def check_sentence_ending(sentence):
     pass
 
 
-def clean_up_spacing(sentence):
+def clean_up_spacing(sentence: str):
     """Verify that there isn't any whitespace at the start and end of the sentence.
 
     :param sentence: str - a sentence to clean of leading and trailing space characters.
@@ -31,7 +31,7 @@ def clean_up_spacing(sentence):
     pass
 
 
-def replace_word_choice(sentence, old_word, new_word):
+def replace_word_choice(sentence: str, old_word: str, new_word: str):
     """Replace a word in the provided sentence with a new one.
 
     :param sentence: str - a sentence to replace words in.
