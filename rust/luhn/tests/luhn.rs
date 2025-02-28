@@ -127,6 +127,7 @@ fn using_ascii_value_for_doubled_non_digit_isn_t_allowed() {
 
 #[test]
 #[ignore]
-fn non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed() {
+fn non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed()
+ {
     assert!(!is_valid("59%59"));
 }
