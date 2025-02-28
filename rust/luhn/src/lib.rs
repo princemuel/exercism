@@ -1,33 +1,11 @@
 pub fn is_valid(code: &str) -> bool {
-    let chars: Vec<char> =
-        code.chars().filter(|c| !c.is_whitespace()).collect();
-
-    if chars.len() < 2 {
-        return false;
-    }
-
-    if !chars.iter().all(char::is_ascii_digit) {
-        return false;
-    }
-
-    let sum: u32 = chars
-        .iter()
-        .rev()
-        .enumerate()
-        .map(|(idx, c)| {
-            let mut digit = c.to_digit(10).unwrap();
-
-            if idx % 2 == 1 {
-                digit *= 2;
-
-                if digit > 9 {
-                    digit -= 9;
-                }
-            }
-
-            digit
+    code.chars()
+        .filter(|c| !c.is_whitespace())
+        .try_rfold((0, 0), |(count, sum), c| {
+            c.to_digit(10)
+                .map(|num| if count % 2 == 1 { num * 2 } else { num })
+                .map(|num| if num > 9 { num - 9 } else { num })
+                .map(|num| (count + 1, sum + num))
         })
-        .sum();
-
-    sum % 10 == 0
+        .is_some_and(|(count, sum)| sum % 10 == 0 && count > 1)
 }
