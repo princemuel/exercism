@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-    result=""
+    local result=""
 
     (($1 % 3)) || result+="Pling"
     (($1 % 5)) || result+="Plang"
