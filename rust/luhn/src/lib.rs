@@ -7,5 +7,5 @@ pub fn is_valid(code: &str) -> bool {
                 .map(|num| if num > 9 { num - 9 } else { num })
                 .map(|num| (count + 1, sum + num))
         })
-        .is_some_and(|(count, sum)| sum % 10 == 0 && count > 1)
+        .is_some_and(|(count, sum)| count > 1 && sum % 10 == 0)
 }
