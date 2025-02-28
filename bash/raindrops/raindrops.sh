@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
 main() {
-    local number="$1"
-
     result=""
 
-    ((number % 3 == 0)) && result+="Pling"
-    ((number % 5 == 0)) && result+="Plang"
-    ((number % 7 == 0)) && result+="Plong"
+    (($1 % 3)) || result+="Pling"
+    (($1 % 5)) || result+="Plang"
+    (($1 % 7)) || result+="Plong"
 
-    echo "${result:-$number}"
+    echo "${result:-$1}"
 }
 
 main "$@"
