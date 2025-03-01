@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
 
+error() {
+    printf '%s\n' "$*"
+    exit 1
+}
+
 main() {
-    if [[ $# -ne 2 ]]; then
-        echo "Usage: hamming.sh <string1> <string2>"
-        exit 1
-    fi
+    (($# == 2)) || error 'Usage: hamming.sh <string1> <string2>'
 
     local strand_a=$1
     local strand_b=$2
 
     # Check if the strands are of equal length
-    if [[ ${#strand_a} -ne ${#strand_b} ]]; then
-        echo "strands must be of equal length"
-        exit 1
-    fi
+    ((${#strand_a} == ${#strand_a})) || error 'strands must be of equal length'
 
     local distance=0
 
