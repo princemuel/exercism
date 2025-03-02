@@ -5,6 +5,10 @@ error() {
     exit 1
 }
 
+cleanup() {
+    rm -f file_a file_b
+}
+
 main() {
     (($# == 2)) || error 'Usage: hamming.sh <string1> <string2>'
 
@@ -12,18 +16,15 @@ main() {
     local strand_b=$2
 
     # Check if the strands are of equal length
-    ((${#strand_a} == ${#strand_a})) || error 'strands must be of equal length'
+    ((${#strand_a} == ${#strand_b})) || error 'strands must be of equal length'
 
-    local distance=0
+    echo "$strand_a" >file_a
+    echo "$strand_b" >file_b
 
-    # Iterate over the characters of the strands
-    for ((idx = 0; idx < ${#strand_a}; idx++)); do
-        if [[ ${strand_a:idx:1} != "${strand_b:idx:1}" ]]; then
-            ((distance++))
-        fi
-    done
+    # Ensure cleanup happens on script exit
+    trap cleanup EXIT
 
-    echo $distance
+    cmp -l file_a file_b | wc -l
 }
 
 main "$@"
