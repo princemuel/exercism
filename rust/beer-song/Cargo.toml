@@ -1,4 +1,4 @@
 [package]
-edition = "2021"
-name = "beer-song"
-version = "0.0.0"
+    edition = "2024"
+    name    = "beer-song"
+    version = "0.0.0"
