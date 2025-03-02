@@ -1,22 +1,37 @@
 pub fn verse(n: u32) -> String {
     match n {
-        0 => String::from(
-            "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.",
+        n @ 0 => format!(
+            "No more {0} of beer on the wall, no more {0} of beer.\n\
+            Go to the store and buy some more, 99 bottles of beer on the wall.",
+            get_bottle_word(n),
         ),
-        1 => String::from(
-            "1 bottle of beer on the wall, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.",
+        n @ 1 => format!(
+            "{n} {0} of beer on the wall, {n} {0} of beer.\n\
+            Take it down and pass it around, no more {1} of beer on the wall.",
+            get_bottle_word(n),
+            get_bottle_word(n - 1)
         ),
-        2 => String::from(
-            "2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.",
+        n @ 2 => format!(
+            "{n} {1} of beer on the wall, {n} {1} of beer.\n\
+            Take one down and pass it around, {0} {2} of beer on the wall.",
+            n - 1,
+            get_bottle_word(n),
+            get_bottle_word(n - 1)
         ),
         _ => format!(
-            "{0} bottles of beer on the wall, {0} bottles of beer.\nTake one down and pass it around, {1} bottles of beer on the wall.",
-            n,
-            n - 1
+            "{n} {1} of beer on the wall, {n} {1} of beer.\n\
+            Take one down and pass it around, {0} {2} of beer on the wall.",
+            n - 1,
+            get_bottle_word(n),
+            get_bottle_word(n - 1)
         ),
     }
 }
 
 pub fn sing(start: u32, end: u32) -> String {
     (end..=start).rev().map(verse).collect::<Vec<_>>().join("\n\n")
+}
+
+fn get_bottle_word(n: u32) -> &'static str {
+    if n == 1 { "bottle" } else { "bottles" }
 }
