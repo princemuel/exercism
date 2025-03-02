@@ -3,6 +3,7 @@
 Python list documentation: https://docs.python.org/3/tutorial/datastructures.html
 """
 
+from statistics import mean, median
 from typing import List
 from operator import concat
 
@@ -36,7 +37,7 @@ def list_contains_round(rounds: List[int], number: int):
     :return: bool - was the round played?
     """
 
-    return rounds.count(number) > 0
+    return number in rounds
 
 
 def card_average(hand: List[int]):
@@ -46,7 +47,7 @@ def card_average(hand: List[int]):
     :return: float - average value of the cards in the hand.
     """
 
-    return sum(hand) / len(hand)
+    return mean(hand)
 
 
 def approx_average_is_average(hand: List[int]):
@@ -56,7 +57,7 @@ def approx_average_is_average(hand: List[int]):
     :return: bool - does one of the approximate averages equal the `true average`?
     """
 
-    middle = hand[len(hand) // 2]
+    middle = median(hand)
     approx_mean = (hand[0] + hand[-1]) / 2
     real_mean = card_average(hand)
 
