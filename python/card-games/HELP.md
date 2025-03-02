@@ -11,47 +11,47 @@ You should also install the following `pytest` plugins:
 
 Extended information can be found in our website [Python testing guide][Python track tests page].
 
-
 ### Running Tests
 
 To run the included tests, navigate to the folder where the exercise is stored using `cd` in your terminal (_replace `{exercise-folder-location}` below with your path_).
 Test files usually end in `_test.py`, and are the same tests that run on the website when a solution is uploaded.
 
 Linux/MacOS
+
 ```bash
-$ cd {path/to/exercise-folder-location}
+cd {path/to/exercise-folder-location}
 ```
 
 Windows
+
 ```powershell
 PS C:\Users\foobar> cd {path\to\exercise-folder-location}
 ```
 
-<br>
-
 Next, run the `pytest` command in your terminal, replacing `{exercise_test.py}` with the name of the test file:
 
 Linux/MacOS
+
 ```bash
 $ python3 -m pytest -o markers=task {exercise_test.py}
 ==================== 7 passed in 0.08s ====================
 ```
 
 Windows
+
 ```powershell
 PS C:\Users\foobar> py -m pytest -o markers=task {exercise_test.py}
 ==================== 7 passed in 0.08s ====================
 ```
 
-
 ### Common options
+
 - `-o` : override default `pytest.ini` (_you can use this to avoid marker warnings_)
 - `-v` : enable verbose output.
 - `-x` : stop running tests on first failure.
 - `--ff` : run failures from previous test before running other test cases.
 
 For additional options, use `python3 -m pytest -h` or `py -m pytest -h`.
-
 
 ### Fixing warnings
 
@@ -77,7 +77,6 @@ More information on pytest marks can be found in the `pytest` documentation on [
 
 Information on customizing pytest configurations can be found in the `pytest` documentation on [configuration file formats][pytest: configuration file formats].
 
-
 ### Extending your IDE or Code Editor
 
 Many IDEs and code editors have built-in support for using `pytest` and other code quality tools.
@@ -86,8 +85,8 @@ Some community-sourced options can be found on our [Python track tools page][Pyt
 [Pytest: Getting Started Guide]: https://docs.pytest.org/en/latest/getting-started.html
 [Python track tools page]: https://exercism.org/docs/tracks/python/tools
 [Python track tests page]: https://exercism.org/docs/tracks/python/tests
-[pytest-cache]:http://pythonhosted.org/pytest-cache/
-[pytest-subtests]:https://github.com/pytest-dev/pytest-subtests
+[pytest-cache]: http://pythonhosted.org/pytest-cache/
+[pytest-subtests]: https://github.com/pytest-dev/pytest-subtests
 [pytest.ini]: https://github.com/exercism/python/blob/main/pytest.ini
 [pytest: configuration file formats]: https://docs.pytest.org/en/6.2.x/customize.html#configuration-file-formats
 [pytest: marking test functions with attributes]: https://docs.pytest.org/en/6.2.x/mark.html#raising-errors-on-unknown-marks
@@ -127,4 +126,4 @@ Below are some resources for getting help if you run into trouble:
 - [Pythontutor](http://pythontutor.com/) for stepping through small code snippets visually.
 
 Additionally, [StackOverflow](http://stackoverflow.com/questions/tagged/python) is a good spot to search for your problem/question to see if it has been answered already.
- If not - you can always [ask](https://stackoverflow.com/help/how-to-ask) or [answer](https://stackoverflow.com/help/how-to-answer) someone else's question.
+If not - you can always [ask](https://stackoverflow.com/help/how-to-ask) or [answer](https://stackoverflow.com/help/how-to-answer) someone else's question.

@@ -40,7 +40,6 @@
 - Lists are _mutable_. Once a `list` is created, you can modify, delete or add any type of element you wish.
 - Python provides a wide range of [ways to modify `lists`][ways to modify `lists`].
 
-
 [common sequence operations]: https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
 [constructed]: https://docs.python.org/3/library/stdtypes.html#list
 [return]: https://www.w3schools.com/python/ref_keyword_return.asp
