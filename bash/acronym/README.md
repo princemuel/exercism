@@ -41,4 +41,4 @@ For example:
 
 ### Based on
 
-Julien Vanier - https://github.com/monkbroc
+Julien Vanier - <https://github.com/monkbroc>

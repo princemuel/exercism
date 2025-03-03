@@ -66,7 +66,7 @@ load bats-extra
   assert_output "TRNT"
 }
 
-# bash-specific test: Focus the student's attention on the effects of 
+# bash-specific test: Focus the student's attention on the effects of
 # word splitting and filename expansion:
 # https://www.gnu.org/software/bash/manual/bash.html#Shell-Expansions
 
