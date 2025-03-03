@@ -7,7 +7,7 @@ Before trying to execute the tests, ensure the assignment folder is set-up corre
 Execute the tests with:
 
 ```bash
-$ corepack yarn test
+corepack yarn test
 ```
 
 ## Skipped tests

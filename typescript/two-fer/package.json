@@ -27,17 +27,12 @@
     "typescript-eslint": "^8.10.0"
   },
   "scripts": {
-    "test": "corepack pnpm node test-runner.mjs",
-    "test:types": "corepack pnpm tstyche",
-    "test:implementation": "corepack pnpm jest --no-cache --passWithNoTests",
-    "lint": "corepack pnpm lint:types && corepack pnpm lint:ci",
-    "lint:types": "corepack pnpm tsc --noEmit -p .",
-    "lint:ci": "corepack pnpm eslint . --ext .tsx,.ts"
+    "test": "corepack yarn node test-runner.mjs",
+    "test:types": "corepack yarn tstyche",
+    "test:implementation": "corepack yarn jest --no-cache --passWithNoTests",
+    "lint": "corepack yarn lint:types && corepack yarn lint:ci",
+    "lint:types": "corepack yarn tsc --noEmit -p .",
+    "lint:ci": "corepack yarn eslint . --ext .tsx,.ts"
   },
-  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "core-js"
-    ]
-  }
+  "packageManager": "yarn@4.5.1"
 }

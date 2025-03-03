@@ -1,0 +1,9 @@
+/node_modules
+/bin/configlet
+/bin/configlet.exe
+/package-lock.json
+/yarn.lock
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/sdks
