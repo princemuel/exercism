@@ -1,0 +1,9 @@
+[package]
+    name    = "sum_of_multiples"
+    version = "0.1.0"
+    edition = "2024"
+
+[dependencies]
+
+[lints.clippy]
+    all = "warn"
