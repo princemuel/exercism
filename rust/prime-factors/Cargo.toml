@@ -9,5 +9,4 @@
 [dependencies]
 
 [lints.clippy]
-    all     = "warn"
-    nursery = "warn"
+    all = "warn"

@@ -103,11 +103,9 @@ fn pollards_rho(n: u64) -> u64 {
 }
 
 // Euclidean algorithm for greatest common divisor
-const fn gcd(mut a: u64, mut b: u64) -> u64 {
+fn gcd(mut a: u64, mut b: u64) -> u64 {
     while b != 0 {
-        let temp = b;
-        b = a % b;
-        a = temp;
+        (a, b) = (b, a % b);
     }
     a
 }
