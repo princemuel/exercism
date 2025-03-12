@@ -1,0 +1,19 @@
+def convert(number: int):
+    drops = (3, "i"), (5, "a"), (7, "o")
+
+    return "".join(
+        f"Pl{sound}ng" for divisor, sound in drops if number % divisor == 0
+    ) or str(number)
+
+def convert(number: int):
+    sounds = [
+        "Pling" if number % 3 == 0 else "",
+        "Plang" if number % 5 == 0 else "",
+        "Plong" if number % 7 == 0 else "",
+    ]
+
+    match "".join(sounds):
+        case "":
+            return str(number)
+        case sound:
+            return sound
