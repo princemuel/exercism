@@ -1,7 +1,7 @@
 use core::fmt;
 
-const ONE_DAY: i64 = 24 * 60;
-const ONE_HOUR: i64 = 60;
+const ONE_DAY: i64 = 1 * 24 * 60;
+const ONE_HOUR: i64 = 1 * 60;
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct Clock {

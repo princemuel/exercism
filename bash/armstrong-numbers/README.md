@@ -37,4 +37,4 @@ Write some code to determine whether a number is an Armstrong number.
 
 ### Based on
 
-Wikipedia - https://en.wikipedia.org/wiki/Narcissistic_number
+Wikipedia - <https://en.wikipedia.org/wiki/Narcissistic_number>

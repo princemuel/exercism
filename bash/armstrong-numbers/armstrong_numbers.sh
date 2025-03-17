@@ -1,24 +1,29 @@
 #!/usr/bin/env bash
 
-# The following comments should help you get started:
-# - Bash is flexible. You may use functions or write a "raw" script.
-#
-# - Complex code can be made easier to read by breaking it up
-#   into functions, however this is sometimes overkill in bash.
-#
-# - You can find links about good style and other resources
-#   for Bash in './README.md'. It came with this exercise.
-#
-#   Example:
-#   # other functions here
-#   # ...
-#   # ...
-#
-#   main () {
-#     # your main function code here
-#   }
-#
-#   # call main with all of the positional arguments
-#   main "$@"
-#
-# *** PLEASE REMOVE THESE COMMENTS BEFORE SUBMITTING YOUR SOLUTION ***
+error() {
+    printf '%s\n' "$*" >&2
+    exit 1
+}
+
+is_armstrong_number() {
+    (($# > 0)) || error "Usage: is_armstrong_number <number>"
+
+    local num=$1
+    local length=${#num}
+    local sum=0
+    local temp=$num
+
+    while [ "$temp" -gt 0 ]; do
+        digit=$((temp % 10))
+        sum=$((sum + digit ** length))
+        temp=$((temp / 10))
+    done
+
+    if [ $sum -eq "$num" ]; then
+        echo "true"
+    else
+        echo "false"
+    fi
+}
+
+is_armstrong_number "$@"
