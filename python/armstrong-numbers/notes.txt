@@ -1,0 +1,12 @@
+def is_armstrong_number(number: int):
+    num_str = str(number)
+    power = len(num_str)
+    armstrong_sum = sum(int(digit) ** power for digit in num_str)
+    return armstrong_sum == number
+
+def is_armstrong(n: int) -> bool:
+    if n < 10:
+        return True  # Single-digit numbers are always Armstrong numbers
+    digits = [int(d) for d in str(n)]  # Convert number to a list of digits
+    num_digits = len(digits)  # Count of digits
+    return sum(d**num_digits for d in digits) == n  #
