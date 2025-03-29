@@ -1,0 +1,50 @@
+pub fn nth(n: u32) -> u32 {
+    PrimeIter::new().nth(n as usize).expect("There should always be an nth prime")
+}
+
+struct PrimeIter {
+    primes: Vec<u32>,
+    next_candidate: u32,
+}
+
+impl PrimeIter {
+    fn new() -> Self {
+        Self { primes: Vec::with_capacity(64), next_candidate: 2 }
+    }
+
+    fn is_prime(&self, num: u32) -> bool {
+        self.primes.iter().take_while(|&&p| p * p <= num).all(|&p| num % p != 0)
+    }
+}
+
+impl Iterator for PrimeIter {
+    type Item = u32;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        while !self.is_prime(self.next_candidate) {
+            self.next_candidate += 1;
+        }
+
+        let prime = self.next_candidate;
+        self.primes.push(prime);
+
+        self.next_candidate += 1;
+        Some(prime)
+    }
+}
+
+// pub fn nth(n: u32) -> u32 {
+//     (2..3).chain((3..).filter(|x| is_prime(*x))).nth(n as usize).unwrap()
+// }
+
+// fn is_prime(n: u32) -> bool {
+//     if n <= 3 {
+//         return n > 1;
+//     }
+//     if n % 2 == 0 || n % 3 == 0 {
+//         return false;
+//     }
+
+//     let limit = (n as f32).sqrt() as u32;
+//     !(5..=limit).step_by(6).any(|i| n % i == 0 || n % (i + 2) == 0)
+// }

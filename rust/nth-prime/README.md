@@ -39,4 +39,4 @@ Remember that while people commonly count with 1-based indexing (i.e. "the 6th p
 
 ### Based on
 
-A variation on Problem 7 at Project Euler - https://projecteuler.net/problem=7
+A variation on Problem 7 at Project Euler - <https://projecteuler.net/problem=7>
