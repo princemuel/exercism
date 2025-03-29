@@ -1,0 +1,14 @@
+msrv = "stable"
+
+# Controls how strict Clippy is with warnings.
+warns = ["clippy::pedantic", "clippy::nursery", "clippy::restriction"] # Enables additional lints
+
+# Allow specific lints that might be too strict.
+# allow = ["clippy::module_name_repetitions"]
+
+# Set Clippy to deny certain lints (fail compilation if they are triggered).
+deny = ["clippy::unwrap_used", "clippy::expect_used"] # Prevents usage of unwrap() and expect()
+
+# Controls how many lines functions are allowed to have before Clippy warns.
+too_many_lines_threshold = 108
+
