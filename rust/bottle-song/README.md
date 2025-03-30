@@ -69,4 +69,4 @@ There'll be no green bottles hanging on the wall.
 
 ### Based on
 
-Wikipedia - <https://en.wikipedia.org/wiki/Ten_Green_Bottles>
+Wikipedia - https://en.wikipedia.org/wiki/Ten_Green_Bottles
