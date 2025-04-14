@@ -50,3 +50,5 @@ pub fn egg_count(display_value: u32) -> u32 {
     }
     count
 }
+
+// (0..).take_while(|_| n != 0).map(|_| { n &= n - 1; 1 }).sum()
