@@ -5,36 +5,36 @@
  */
 
 type FruitPickerSuccess = {
-  message: 'SUCCESS';
+    message: "SUCCESS";
 };
 
 type FruitPickerError = {
-  message: 'ERROR';
+    message: "ERROR";
 };
 
-declare module 'notifier' {
-  function notify(message: FruitPickerSuccess | FruitPickerError): void;
+declare module "notifier" {
+    function notify(message: FruitPickerSuccess | FruitPickerError): void;
 }
 
 type GrocerQuery = {
-  variety: string;
-  quantity: number;
+    variety: string;
+    quantity: number;
 };
 
 interface GrocerOnSuccessCallback {
-  (quantityOrdered: number): void;
+    (quantityOrdered: number): void;
 }
 
 interface GrocerOnErrorCallback {
-  (errorMessage: string): void;
+    (errorMessage: string): void;
 }
 
-declare module 'grocer' {
-  function order(
-    query: GrocerQuery,
-    onSuccess: GrocerOnSuccessCallback,
-    onError: GrocerOnErrorCallback,
-  ): void;
+declare module "grocer" {
+    function order(
+        query: GrocerQuery,
+        onSuccess: GrocerOnSuccessCallback,
+        onError: GrocerOnErrorCallback
+    ): void;
 }
 
 type FruitPickerSuccessCallback = () => SuccessResult;

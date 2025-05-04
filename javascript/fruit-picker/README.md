@@ -73,9 +73,9 @@ const query = {
 
 ```javascript
 orderFromGrocer(
-  { variety: 'pear', quantity: 12 },
+  { variety: "pear", quantity: 12 },
   exampleSuccessCallback,
-  exampleErrorCallback,
+  exampleErrorCallback
 );
 // => `order` was called with the query and the callbacks
 ```
@@ -85,7 +85,7 @@ orderFromGrocer(
 Your customers are now able to place fruit orders via your portal, however, you notice that you are invoking the `orderFromGrocer` function in many different places across your codebase, each time having to pass in a `query` and the two `callback` functions as arguments. Seeing an opportunity to refactor your code, you think it would be simpler if you could place an order by just passing the `variety` and `quantity` of fruit required. Define the `postOrder` helper function that takes `variety` and `quantity` as arguments and attempts to place an order with the grocer.
 
 ```javascript
-postOrder('peach', 100);
+postOrder("peach", 100);
 // => order placed for 100 peaches
 ```
 
