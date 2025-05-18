@@ -11,7 +11,7 @@ pre-push:
 
     - name: format readme
       files: git ls-files -m
-      run: prettier {files} --write
+      run: pnpm prettier {files} --write
       glob: "README.md"
       stage_fixed: true
 
