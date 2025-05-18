@@ -33,10 +33,9 @@ pub fn generate_readme(
 
 		// Generate exercise list with links
 		for exercise in exercises {
-			let markup = format!(
-				"| {} | [View]({}) | [README]({}) |\n",
-				exercise.name, exercise.url, exercise.local_path
-			);
+			let Exercise { name, url, local_path } = exercise;
+			let markup =
+				format!("| {name} | [{url}]({url}) | [README]({local_path}) |\n");
 			content.push_str(&markup);
 		}
 
