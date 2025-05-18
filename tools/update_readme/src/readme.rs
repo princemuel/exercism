@@ -16,15 +16,28 @@ pub fn generate_readme(
 
 	for track in tracks {
 		let exercises = &exercises_by_track[track];
-		content.push_str(&format!("## {}\n\n", track));
 
-		content.push_str(&format!("These are my solutions to the Exercism exercises for the [{}](https://exercism.org/tracks/{}) track\n\n",
-                                track,
-                                track.to_lowercase().replace(' ', "-").replace("++", "pp")));
+		let markup = format!("## {}\n\n", track);
+		content.push_str(&markup);
+
+		let markup = format!(
+			"These are my solutions to the Exercism exercises for the [{}](https://exercism.org/tracks/{}) track\n\n",
+			track,
+			track.to_lowercase().replace(' ', "-").replace("++", "pp")
+		);
+		content.push_str(&markup);
+
+		// Generate table with exercises
+		content.push_str("| Exercise | Link | Solution |\n");
+		content.push_str("|----------|----------|----------|\n");
 
 		// Generate exercise list with links
 		for exercise in exercises {
-			content.push_str(&format!("- [{}]({})\n", exercise.name, exercise.url));
+			let markup = format!(
+				"| {} | [View]({}) | [README]({}) |\n",
+				exercise.name, exercise.url, exercise.local_path
+			);
+			content.push_str(&markup);
 		}
 
 		content.push('\n');

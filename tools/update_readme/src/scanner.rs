@@ -10,9 +10,10 @@ pub fn scan_exercism_directories(
 	root: &Path,
 	filter_tracks: Option<&Vec<String>>,
 ) -> Result<HashMap<String, Vec<Exercise>>, Box<dyn std::error::Error>> {
-	let mut exercises_by_track: HashMap<String, Vec<Exercise>> = HashMap::new();
+	let mut exercises_by_track = HashMap::new();
 
 	fn scan_recursive(
+		root_path: &Path,
 		dir: &Path,
 		exercises_by_track: &mut HashMap<String, Vec<Exercise>>,
 		filter_tracks: Option<&Vec<String>>,
@@ -34,9 +35,17 @@ pub fn scan_exercism_directories(
 						}
 					}
 
+					// Calculate relative path from root to this exercise directory
+					let relative_path = dir
+						.strip_prefix(root_path)
+						.unwrap_or(dir)
+						.to_string_lossy()
+						.replace('\\', "/"); // Ensure forward slashes for markdown links
+
 					let exercise = Exercise {
 						name: format_exercise_name(&metadata.exercise),
 						url: metadata.url,
+						local_path: format!("./{}/README.md", relative_path),
 					};
 
 					exercises_by_track
@@ -65,7 +74,9 @@ pub fn scan_exercism_directories(
 						.to_string_lossy()
 						.starts_with('.')
 				{
-					scan_recursive(&path, exercises_by_track, filter_tracks)?;
+					scan_recursive(
+						root_path, &path, exercises_by_track, filter_tracks,
+					)?;
 				}
 			}
 		}
@@ -73,7 +84,7 @@ pub fn scan_exercism_directories(
 		Ok(())
 	}
 
-	scan_recursive(root, &mut exercises_by_track, filter_tracks)?;
+	scan_recursive(root, root, &mut exercises_by_track, filter_tracks)?;
 
 	// Sort exercises within each track
 	for exercises in exercises_by_track.values_mut() {

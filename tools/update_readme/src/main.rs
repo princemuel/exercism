@@ -1,6 +1,5 @@
 use std::fs;
 
-use clap::Parser;
 use update_readme::{args, readme, scanner};
 
 use args::Args;
@@ -10,14 +9,9 @@ use scanner::scan_exercism_directories;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
 	let args = Args::parse();
 
-	let filter_tracks: Option<Vec<String>> = args
-		.tracks
-		.as_ref()
-		.map(|t| t.split(',').map(|s| s.trim().to_string()).collect());
-
 	println!("Scanning for Exercism exercises in: {}", args.path.display());
 
-	let exercises = scan_exercism_directories(&args.path, filter_tracks.as_ref())?;
+	let exercises = scan_exercism_directories(&args.path, None)?;
 
 	if exercises.is_empty() {
 		println!("No Exercism exercises found!");
