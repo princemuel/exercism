@@ -13,6 +13,7 @@
     "devDependencies": {
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
-        "lefthook": "^1.11.13"
+        "lefthook": "^1.11.13",
+        "prettier": "^3.5.3"
     }
 }

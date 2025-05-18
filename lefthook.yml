@@ -9,6 +9,11 @@ pre-push:
     - name: update readme
       run: ./scripts/update_readme
       root: .
+
+    - name: format readme
+      files: git ls-files -m
+      run: prettier {files} --write
+      glob: "README.md"
       stage_fixed: true
 
 commit-msg:

@@ -12,7 +12,10 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 end_of_line = lf
 
-# Specific settings for Markdown files
-[*.md, *.yml]
+[{*.md}]
 indent_size = 2
+
+# Specific settings for Markdown files
+[{*.md,*.mdx,*.mdoc,*.yml}]
+max_line_length = 84
 trim_trailing_whitespace = false
