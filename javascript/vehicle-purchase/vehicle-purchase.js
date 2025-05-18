@@ -34,7 +34,7 @@ export const calculateResellPrice = (originalPrice, age) => {
   const priceFactor =
     new Map([
       [age < 3, 0.8],
-      [age > 10, 0.5],
+      [age >= 10, 0.5],
     ]).get(true) ?? 0.7;
 
   return originalPrice * priceFactor;
