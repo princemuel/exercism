@@ -6,7 +6,7 @@
 pre-push:
   jobs:
     - name: update readme
-      run: ./scripts/update_readme
+      run: ./scripts/build.sh
       root: .
 
     - name: format readme

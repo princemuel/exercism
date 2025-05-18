@@ -12,7 +12,7 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 end_of_line = lf
 
-[{*.md}]
+[{*.md,*.mdx,*.mdoc,*.yml}]
 indent_size = 2
 
 # Specific settings for Markdown files
