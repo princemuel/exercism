@@ -35,7 +35,7 @@ pub fn generate_readme(
 		for exercise in exercises {
 			let Exercise { name, url, local_path } = exercise;
 			let markup =
-				format!("| {name} | [{url}]({url}) | [README]({local_path}) |\n");
+				format!("| {name} | [{name}]({url}) | [Docs]({local_path}) |\n");
 			content.push_str(&markup);
 		}
 
