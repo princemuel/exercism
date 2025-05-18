@@ -4,10 +4,9 @@
 #   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
 
 pre-push:
-  commands:
-    readme:
-      run: ./scripts/build.sh
-      root: .
+  scripts:
+    "readme.sh":
+      runner: bash
 
 commit-msg:
   commands:
