@@ -9,12 +9,6 @@ pre-push:
       run: ./scripts/build.sh
       root: .
 
-    - name: format readme
-      files: git ls-files -m
-      run: pnpm prettier {files} --write
-      glob: "README.md"
-      stage_fixed: true
-
 commit-msg:
   commands:
     check-sign-off:
