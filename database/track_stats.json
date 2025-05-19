@@ -1,0 +1,98 @@
+[
+    {
+        "language": "sqlite",
+        "category": "database",
+        "total": 28,
+        "last_touched": 83
+    },
+    {
+        "language": "python",
+        "category": "scripting",
+        "total": 140,
+        "last_touched": 1
+    },
+    {
+        "language": "jq",
+        "category": "shell",
+        "total": 74,
+        "last_touched": 25
+    },
+    {
+        "language": "wasm",
+        "category": "system",
+        "total": 83,
+        "last_touched": 24
+    },
+    {
+        "language": "elixir",
+        "category": "functional",
+        "total": 162,
+        "last_touched": 0
+    },
+    {
+        "language": "rust",
+        "category": "system",
+        "total": 99,
+        "last_touched": 35
+    },
+    {
+        "language": "javascript",
+        "category": "scripting",
+        "total": 150,
+        "last_touched": 0
+    },
+    {
+        "language": "typescript",
+        "category": "scripting",
+        "total": 100,
+        "last_touched": 14
+    },
+    {
+        "language": "go",
+        "category": "scripting",
+        "total": 141,
+        "last_touched": 0
+    },
+    {
+        "language": "c",
+        "category": "system",
+        "total": 82,
+        "last_touched": 0
+    },
+    {
+        "language": "cpp",
+        "category": "system",
+        "total": 99,
+        "last_touched": 0
+    },
+    {
+        "language": "bash",
+        "category": "shell",
+        "total": 92,
+        "last_touched": 0
+    },
+    {
+        "language": "awk",
+        "category": "shell",
+        "total": 83,
+        "last_touched": 0
+    },
+    {
+        "language": "haskell",
+        "category": "functional",
+        "total": 107,
+        "last_touched": 0
+    },
+    {
+        "language": "julia",
+        "category": "functional",
+        "total": 101,
+        "last_touched": 0
+    },
+    {
+        "language": "lua",
+        "category": "shell",
+        "total": 110,
+        "last_touched": 0
+    }
+]

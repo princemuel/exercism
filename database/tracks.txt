@@ -1,0 +1,16 @@
+awk
+bash
+c
+cpp
+elixir
+go
+haskell
+javascript
+jq
+julia
+lua
+python
+rust
+sqlite
+typescript
+wasm

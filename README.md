@@ -29,6 +29,7 @@ These are my solutions to the Exercism exercises for the [C](https://exercism.or
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/c/exercises/hello-world) | [Docs](./c/hello-world/README.md) |
+| Leap | [Leap](https://exercism.org/tracks/c/exercises/leap) | [Docs](./c/leap/README.md) |
 
 ## C++
 
@@ -37,6 +38,7 @@ These are my solutions to the Exercism exercises for the [C++](https://exercism.
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/cpp/exercises/hello-world) | [Docs](./cpp/hello-world/README.md) |
+| Lasagna | [Lasagna](https://exercism.org/tracks/cpp/exercises/lasagna) | [Docs](./cpp/lasagna/README.md) |
 
 ## Dart
 
@@ -53,6 +55,7 @@ These are my solutions to the Exercism exercises for the [Go](https://exercism.o
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Annalyns Infiltration | [Annalyns Infiltration](https://exercism.org/tracks/go/exercises/annalyns-infiltration) | [Docs](./go/annalyns-infiltration/README.md) |
+| Blackjack | [Blackjack](https://exercism.org/tracks/go/exercises/blackjack) | [Docs](./go/blackjack/README.md) |
 | Cars Assemble | [Cars Assemble](https://exercism.org/tracks/go/exercises/cars-assemble) | [Docs](./go/cars-assemble/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/go/exercises/hello-world) | [Docs](./go/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/go/exercises/lasagna) | [Docs](./go/lasagna/README.md) |
@@ -211,14 +214,6 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Two Fer | [Two Fer](https://exercism.org/tracks/typescript/exercises/two-fer) | [Docs](./typescript/two-fer/README.md) |
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
-## VimScript
-
-These are my solutions to the Exercism exercises for the [VimScript](https://exercism.org/tracks/vimscript) track
-
-| Exercise | Link | Solution |
-|----------|----------|----------|
-| Hello World | [Hello World](https://exercism.org/tracks/vimscript/exercises/hello-world) | [Docs](./vimscript/hello-world/README.md) |
-
 ## WebAssembly
 
 These are my solutions to the Exercism exercises for the [WebAssembly](https://exercism.org/tracks/webassembly) track
@@ -229,4 +224,4 @@ These are my solutions to the Exercism exercises for the [WebAssembly](https://e
 | Hello World | [Hello World](https://exercism.org/tracks/wasm/exercises/hello-world) | [Docs](./wasm/hello-world/README.md) |
 
 ---
-*Generated on 2025-05-18 19:36:21 UTC*
+*Generated on 2025-05-18 21:11:03 UTC*

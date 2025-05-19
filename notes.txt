@@ -1,3 +1,0 @@
-github.com/slaymance/exercism
-https://graphics.stanford.edu/~seander/bithacks.html
-https://yuminlee2.medium.com/brian-kernighans-algorithm-count-set-bits-in-a-number-18ab05edca93#ba44
