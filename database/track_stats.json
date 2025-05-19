@@ -3,7 +3,7 @@
         "language": "sqlite",
         "category": "database",
         "total": 28,
-        "last_touched": 83
+        "last_touched": 0
     },
     {
         "language": "python",
@@ -39,7 +39,7 @@
         "language": "javascript",
         "category": "scripting",
         "total": 150,
-        "last_touched": 0
+        "last_touched": 1
     },
     {
         "language": "typescript",
@@ -51,13 +51,13 @@
         "language": "go",
         "category": "scripting",
         "total": 141,
-        "last_touched": 0
+        "last_touched": 1
     },
     {
         "language": "c",
         "category": "system",
         "total": 82,
-        "last_touched": 0
+        "last_touched": 1
     },
     {
         "language": "cpp",

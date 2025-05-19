@@ -1,11 +1,12 @@
 import csv
 import json
-from datetime import datetime, timezone
+from datetime import datetime
 from hashlib import sha256
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 import pandas as pd
+from constants import BASE_DIR, TRACK_LOG_FILE, TRACK_STATS_FILE, UTC_PLUS_ONE
 
 
 def load_language_metadata(track_stats_file: Path) -> List[Dict[str, Any]]:
@@ -34,7 +35,7 @@ def compute_score(row: pd.Series) -> float:
 
 def get_daily_seed() -> Tuple[int, str]:
     """Generate a deterministic seed based on today's date."""
-    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today_str = datetime.now(UTC_PLUS_ONE).strftime("%Y-%m-%d")
     seed = int(sha256(today_str.encode()).hexdigest(), 16) % (10**8)
     return seed, today_str
 
@@ -85,10 +86,6 @@ def log_daily_selection(
 
 def main() -> None:
     """Main function to orchestrate the daily track selection."""
-    # Setup paths
-    BASE_DIR = Path.home() / "exercism"
-    TRACK_STATS_FILE = BASE_DIR / "database" / "track_stats.json"
-    TRACK_LOG_FILE = BASE_DIR / "database" / "track_log.csv"
 
     # Load and prepare data
     languages = load_language_metadata(TRACK_STATS_FILE)

@@ -3,6 +3,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
+from constants import BASE_DIR, TRACK_STATS_FILE, UTC_PLUS_ONE
+
 
 def load_track_stats(file_path: Path) -> List[Dict]:
     """Load track statistics from JSON file."""
@@ -16,7 +18,7 @@ def load_track_stats(file_path: Path) -> List[Dict]:
 def save_track_stats(file_path: Path, stats: List[Dict]) -> None:
     """Save track statistics to JSON file."""
     with open(file_path, "w") as f:
-        json.dump(stats, f, indent=4)
+        json.dump(stats, f, indent=2)
 
 
 def is_hidden_path(file_path: Path) -> bool:
@@ -46,12 +48,16 @@ def find_most_recent_file(track_dir: Path) -> Optional[datetime]:
             if mtime and mtime > most_recent_time:
                 most_recent_time = mtime
 
-    return datetime.fromtimestamp(most_recent_time) if most_recent_time > 0 else None
+    return (
+        datetime.fromtimestamp(most_recent_time, UTC_PLUS_ONE)
+        if most_recent_time > 0
+        else None
+    )
 
 
 def calculate_days_since(date: datetime) -> int:
     """Calculate days between a date and now."""
-    return (datetime.now() - date).days
+    return (datetime.now(UTC_PLUS_ONE) - date).days
 
 
 def get_track_directory(base_dir: Path, track_name: str) -> Path:
@@ -131,10 +137,6 @@ def print_summary(updated_count: int, file_name: str) -> None:
 
 def main() -> None:
     """Main function to orchestrate the last_touched update process."""
-
-    # === CONFIG ===
-    BASE_DIR = Path.home() / "exercism"
-    TRACK_STATS_FILE = BASE_DIR / "database" / "track_stats.json"
 
     try:
         # Load existing stats
