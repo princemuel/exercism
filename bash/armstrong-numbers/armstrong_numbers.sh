@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-error() {
-    printf '%s\n' "$*" >&2
+usage () {
+    echo "Usage: $(basename "$0") <number>"
     exit 1
 }
 
 is_armstrong_number() {
-    (($# > 0)) || error "Usage: is_armstrong_number <number>"
+    (($# > 0)) || usage "Usage: is_armstrong_number <number>"
 
     local num=$1
     local length=${#num}
