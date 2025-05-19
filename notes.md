@@ -1,4 +1,4 @@
-# Notes
+git pgit # Notes
 
 github.com/slaymance/exercism
 https://graphics.stanford.edu/~seander/bithacks.html
@@ -36,4 +36,3 @@ Command-line power tools, scripting, text munging, editor automation
 🗃️ Data & Persistence
 Lightweight database operations and structure
 - SQLite
-
