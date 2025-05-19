@@ -2,7 +2,7 @@
 load bats-extra
 
 # local version: 2.3.0.3
-#
+# 
 # bash-specific test: Input validation, proper quoting
 
 @test 'empty strands' {
