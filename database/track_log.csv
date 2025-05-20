@@ -1,3 +1,2 @@
 date,tracks
-2025-05-19,"sqlite,jq,wasm,elixir,go"
-2025-05-20,"rust,lua,haskell,go,sqlite"
+2025-05-20,"rust,lua,go,sqlite"

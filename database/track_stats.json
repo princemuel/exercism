@@ -66,18 +66,6 @@
     "last_touched": 1
   },
   {
-    "language": "haskell",
-    "category": "functional",
-    "total": 107,
-    "last_touched": 0
-  },
-  {
-    "language": "julia",
-    "category": "functional",
-    "total": 101,
-    "last_touched": 0
-  },
-  {
     "language": "lua",
     "category": "shell",
     "total": 110,
