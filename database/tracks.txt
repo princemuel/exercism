@@ -5,7 +5,7 @@ cpp
 go
 javascript
 jq
-lua
+julia
 python
 rust
 sqlite
