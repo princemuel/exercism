@@ -2,7 +2,6 @@ awk
 bash
 c
 cpp
-elixir
 go
 haskell
 javascript
@@ -13,4 +12,3 @@ python
 rust
 sqlite
 typescript
-wasm
