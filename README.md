@@ -106,13 +106,13 @@ These are my solutions to the Exercism exercises for the [Jq](https://exercism.o
 | Log Line Parser | [Log Line Parser](https://exercism.org/tracks/jq/exercises/log-line-parser) | [Docs](./jq/log-line-parser/README.md) |
 | Shopping | [Shopping](https://exercism.org/tracks/jq/exercises/shopping) | [Docs](./jq/shopping/README.md) |
 
-## Lua
+## Julia
 
-These are my solutions to the Exercism exercises for the [Lua](https://exercism.org/tracks/lua) track
+These are my solutions to the Exercism exercises for the [Julia](https://exercism.org/tracks/julia) track
 
 | Exercise | Link | Solution |
 |----------|----------|----------|
-| Hello World | [Hello World](https://exercism.org/tracks/lua/exercises/hello-world) | [Docs](./lua/hello-world/README.md) |
+| Hello World | [Hello World](https://exercism.org/tracks/julia/exercises/hello-world) | [Docs](./julia/hello-world/README.md) |
 
 ## Python
 
@@ -221,4 +221,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-20 02:38:08 UTC*
+*Generated on 2025-05-20 02:48:40 UTC*
