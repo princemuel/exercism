@@ -59,14 +59,6 @@ These are my solutions to the Exercism exercises for the [Go](https://exercism.o
 | Weather Forecast | [Weather Forecast](https://exercism.org/tracks/go/exercises/weather-forecast) | [Docs](./go/weather-forecast/README.md) |
 | Welcome To Tech Palace | [Welcome To Tech Palace](https://exercism.org/tracks/go/exercises/welcome-to-tech-palace) | [Docs](./go/welcome-to-tech-palace/README.md) |
 
-## Haskell
-
-These are my solutions to the Exercism exercises for the [Haskell](https://exercism.org/tracks/haskell) track
-
-| Exercise | Link | Solution |
-|----------|----------|----------|
-| Hello World | [Hello World](https://exercism.org/tracks/haskell/exercises/hello-world) | [Docs](./haskell/hello-world/README.md) |
-
 ## JavaScript
 
 These are my solutions to the Exercism exercises for the [JavaScript](https://exercism.org/tracks/javascript) track
@@ -113,14 +105,6 @@ These are my solutions to the Exercism exercises for the [Jq](https://exercism.o
 | Hello World | [Hello World](https://exercism.org/tracks/jq/exercises/hello-world) | [Docs](./jq/hello-world/README.md) |
 | Log Line Parser | [Log Line Parser](https://exercism.org/tracks/jq/exercises/log-line-parser) | [Docs](./jq/log-line-parser/README.md) |
 | Shopping | [Shopping](https://exercism.org/tracks/jq/exercises/shopping) | [Docs](./jq/shopping/README.md) |
-
-## Julia
-
-These are my solutions to the Exercism exercises for the [Julia](https://exercism.org/tracks/julia) track
-
-| Exercise | Link | Solution |
-|----------|----------|----------|
-| Hello World | [Hello World](https://exercism.org/tracks/julia/exercises/hello-world) | [Docs](./julia/hello-world/README.md) |
 
 ## Lua
 
@@ -237,4 +221,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-20 01:56:50 UTC*
+*Generated on 2025-05-20 02:37:48 UTC*
