@@ -43,14 +43,6 @@ These are my solutions to the Exercism exercises for the [C++](https://exercism.
 | Hello World | [Hello World](https://exercism.org/tracks/cpp/exercises/hello-world) | [Docs](./cpp/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/cpp/exercises/lasagna) | [Docs](./cpp/lasagna/README.md) |
 
-## Elixir
-
-These are my solutions to the Exercism exercises for the [Elixir](https://exercism.org/tracks/elixir) track
-
-| Exercise | Link | Solution |
-|----------|----------|----------|
-| Hello World | [Hello World](https://exercism.org/tracks/elixir/exercises/hello-world) | [Docs](./elixir/hello-world/README.md) |
-
 ## Go
 
 These are my solutions to the Exercism exercises for the [Go](https://exercism.org/tracks/go) track
@@ -119,6 +111,8 @@ These are my solutions to the Exercism exercises for the [Jq](https://exercism.o
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/jq/exercises/hello-world) | [Docs](./jq/hello-world/README.md) |
+| Log Line Parser | [Log Line Parser](https://exercism.org/tracks/jq/exercises/log-line-parser) | [Docs](./jq/log-line-parser/README.md) |
+| Shopping | [Shopping](https://exercism.org/tracks/jq/exercises/shopping) | [Docs](./jq/shopping/README.md) |
 
 ## Julia
 
@@ -242,14 +236,5 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Two Fer | [Two Fer](https://exercism.org/tracks/typescript/exercises/two-fer) | [Docs](./typescript/two-fer/README.md) |
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
-## WebAssembly
-
-These are my solutions to the Exercism exercises for the [WebAssembly](https://exercism.org/tracks/webassembly) track
-
-| Exercise | Link | Solution |
-|----------|----------|----------|
-| Armstrong Numbers | [Armstrong Numbers](https://exercism.org/tracks/wasm/exercises/armstrong-numbers) | [Docs](./wasm/armstrong-numbers/README.md) |
-| Hello World | [Hello World](https://exercism.org/tracks/wasm/exercises/hello-world) | [Docs](./wasm/hello-world/README.md) |
-
 ---
-*Generated on 2025-05-19 23:43:29 UTC*
+*Generated on 2025-05-20 01:53:04 UTC*
