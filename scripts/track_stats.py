@@ -34,19 +34,36 @@ def get_file_modification_time(file_path: Path) -> Optional[float]:
         return None
 
 
-def find_most_recent_file(track_dir: Path) -> Optional[datetime]:
-    """Find the most recently modified file in a track directory."""
+def find_most_recent_file(track_dir: Path, max_depth: int = 4) -> Optional[datetime]:
+    """Find the most recently modified file in a track directory with depth limit."""
     if not track_dir.exists() or not track_dir.is_dir():
         return None
 
     most_recent_time = 0.0
 
-    # Recursively find all files, ignoring hidden directories
-    for file_path in track_dir.rglob("*"):
-        if file_path.is_file() and not is_hidden_path(file_path):
-            mtime = get_file_modification_time(file_path)
-            if mtime and mtime > most_recent_time:
-                most_recent_time = mtime
+    # Track current depth during traversal
+    def walk_directory(current_dir: Path, current_depth: int = 0):
+        nonlocal most_recent_time
+
+        if current_depth > max_depth:
+            return
+
+        try:
+            for path in current_dir.iterdir():
+                if is_hidden_path(path):
+                    continue
+
+                if path.is_file():
+                    mtime = get_file_modification_time(path)
+                    if mtime and mtime > most_recent_time:
+                        most_recent_time = mtime
+                elif path.is_dir():
+                    walk_directory(path, current_depth + 1)
+        except (PermissionError, OSError):
+            # Log error but continue with other directories
+            pass
+
+    walk_directory(track_dir)
 
     return (
         datetime.fromtimestamp(most_recent_time, UTC_PLUS_ONE)
