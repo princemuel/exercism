@@ -7,6 +7,7 @@ These are my solutions to the Exercism exercises for the [AWK](https://exercism.
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/awk/exercises/hello-world) | [Docs](./awk/hello-world/README.md) |
+| Two Fer | [Two Fer](https://exercism.org/tracks/awk/exercises/two-fer) | [Docs](./awk/two-fer/README.md) |
 
 ## Bash
 
@@ -16,9 +17,11 @@ These are my solutions to the Exercism exercises for the [Bash](https://exercism
 |----------|----------|----------|
 | Acronym | [Acronym](https://exercism.org/tracks/bash/exercises/acronym) | [Docs](./bash/acronym/README.md) |
 | Armstrong Numbers | [Armstrong Numbers](https://exercism.org/tracks/bash/exercises/armstrong-numbers) | [Docs](./bash/armstrong-numbers/README.md) |
+| Bob | [Bob](https://exercism.org/tracks/bash/exercises/bob) | [Docs](./bash/bob/README.md) |
 | Error Handling | [Error Handling](https://exercism.org/tracks/bash/exercises/error-handling) | [Docs](./bash/error-handling/README.md) |
 | Hamming | [Hamming](https://exercism.org/tracks/bash/exercises/hamming) | [Docs](./bash/hamming/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/bash/exercises/hello-world) | [Docs](./bash/hello-world/README.md) |
+| Pangram | [Pangram](https://exercism.org/tracks/bash/exercises/pangram) | [Docs](./bash/pangram/README.md) |
 | Raindrops | [Raindrops](https://exercism.org/tracks/bash/exercises/raindrops) | [Docs](./bash/raindrops/README.md) |
 | Two Fer | [Two Fer](https://exercism.org/tracks/bash/exercises/two-fer) | [Docs](./bash/two-fer/README.md) |
 
@@ -40,13 +43,13 @@ These are my solutions to the Exercism exercises for the [C++](https://exercism.
 | Hello World | [Hello World](https://exercism.org/tracks/cpp/exercises/hello-world) | [Docs](./cpp/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/cpp/exercises/lasagna) | [Docs](./cpp/lasagna/README.md) |
 
-## Dart
+## Elixir
 
-These are my solutions to the Exercism exercises for the [Dart](https://exercism.org/tracks/dart) track
+These are my solutions to the Exercism exercises for the [Elixir](https://exercism.org/tracks/elixir) track
 
 | Exercise | Link | Solution |
 |----------|----------|----------|
-| Hello World | [Hello World](https://exercism.org/tracks/dart/exercises/hello-world) | [Docs](./dart/hello-world/README.md) |
+| Hello World | [Hello World](https://exercism.org/tracks/elixir/exercises/hello-world) | [Docs](./elixir/hello-world/README.md) |
 
 ## Go
 
@@ -63,6 +66,14 @@ These are my solutions to the Exercism exercises for the [Go](https://exercism.o
 | Vehicle Purchase | [Vehicle Purchase](https://exercism.org/tracks/go/exercises/vehicle-purchase) | [Docs](./go/vehicle-purchase/README.md) |
 | Weather Forecast | [Weather Forecast](https://exercism.org/tracks/go/exercises/weather-forecast) | [Docs](./go/weather-forecast/README.md) |
 | Welcome To Tech Palace | [Welcome To Tech Palace](https://exercism.org/tracks/go/exercises/welcome-to-tech-palace) | [Docs](./go/welcome-to-tech-palace/README.md) |
+
+## Haskell
+
+These are my solutions to the Exercism exercises for the [Haskell](https://exercism.org/tracks/haskell) track
+
+| Exercise | Link | Solution |
+|----------|----------|----------|
+| Hello World | [Hello World](https://exercism.org/tracks/haskell/exercises/hello-world) | [Docs](./haskell/hello-world/README.md) |
 
 ## JavaScript
 
@@ -108,6 +119,22 @@ These are my solutions to the Exercism exercises for the [Jq](https://exercism.o
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/jq/exercises/hello-world) | [Docs](./jq/hello-world/README.md) |
+
+## Julia
+
+These are my solutions to the Exercism exercises for the [Julia](https://exercism.org/tracks/julia) track
+
+| Exercise | Link | Solution |
+|----------|----------|----------|
+| Hello World | [Hello World](https://exercism.org/tracks/julia/exercises/hello-world) | [Docs](./julia/hello-world/README.md) |
+
+## Lua
+
+These are my solutions to the Exercism exercises for the [Lua](https://exercism.org/tracks/lua) track
+
+| Exercise | Link | Solution |
+|----------|----------|----------|
+| Hello World | [Hello World](https://exercism.org/tracks/lua/exercises/hello-world) | [Docs](./lua/hello-world/README.md) |
 
 ## Python
 
@@ -182,6 +209,7 @@ These are my solutions to the Exercism exercises for the [SQLite](https://exerci
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Darts | [Darts](https://exercism.org/tracks/sqlite/exercises/darts) | [Docs](./sqlite/darts/README.md) |
+| Grains | [Grains](https://exercism.org/tracks/sqlite/exercises/grains) | [Docs](./sqlite/grains/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/sqlite/exercises/hello-world) | [Docs](./sqlite/hello-world/README.md) |
 
 ## TypeScript
@@ -224,4 +252,4 @@ These are my solutions to the Exercism exercises for the [WebAssembly](https://e
 | Hello World | [Hello World](https://exercism.org/tracks/wasm/exercises/hello-world) | [Docs](./wasm/hello-world/README.md) |
 
 ---
-*Generated on 2025-05-18 21:11:03 UTC*
+*Generated on 2025-05-19 23:43:29 UTC*
