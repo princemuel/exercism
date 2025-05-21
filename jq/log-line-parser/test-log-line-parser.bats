@@ -15,7 +15,7 @@ load bats-jq
     run jq -rn --arg line '[WARNING]: Disk almost full' \
         'include "log-line-parser"; $line | message'
     assert_success
-    assert_output 'Disk almost full' 
+    assert_output 'Disk almost full'
 }
 
 @test info_message {
@@ -23,7 +23,7 @@ load bats-jq
     run jq -rn --arg line '[INFO]: File moved' \
         'include "log-line-parser"; $line | message'
     assert_success
-    assert_output 'File moved' 
+    assert_output 'File moved'
 }
 
 @test message_with_leading_and_trailing_space {
@@ -47,7 +47,7 @@ load bats-jq
     run jq -rn --arg line '[ERROR]: Disk full' \
         'include "log-line-parser"; $line | log_level'
     assert_success
-    assert_output 'error' 
+    assert_output 'error'
 }
 
 @test warning_log_level {
@@ -55,7 +55,7 @@ load bats-jq
     run jq -rn --arg line '[WARNING]: Unsafe password' \
         'include "log-line-parser"; $line | log_level'
     assert_success
-    assert_output 'warning' 
+    assert_output 'warning'
 }
 
 @test info_log_level {
@@ -63,7 +63,7 @@ load bats-jq
     run jq -rn --arg line '[INFO]: Timezone changed' \
         'include "log-line-parser"; $line | log_level'
     assert_success
-    assert_output 'info' 
+    assert_output 'info'
 }
 
 @test error_reformat {
@@ -71,7 +71,7 @@ load bats-jq
     run jq -rn --arg line '[ERROR]: Segmentation fault' \
         'include "log-line-parser"; $line | reformat'
     assert_success
-    assert_output 'Segmentation fault (error)' 
+    assert_output 'Segmentation fault (error)'
 }
 
 @test warning_reformat {
@@ -79,7 +79,7 @@ load bats-jq
     run jq -rn --arg line '[WARNING]: Decreased performance' \
         'include "log-line-parser"; $line | reformat'
     assert_success
-    assert_output 'Decreased performance (warning)' 
+    assert_output 'Decreased performance (warning)'
 }
 
 @test info_reformat {
@@ -87,7 +87,7 @@ load bats-jq
     run jq -rn --arg line '[INFO]: Disk defragmented' \
         'include "log-line-parser"; $line | reformat'
     assert_success
-    assert_output 'Disk defragmented (info)' 
+    assert_output 'Disk defragmented (info)'
 }
 
 @test reformat_with_leading_and_trailing_space {
