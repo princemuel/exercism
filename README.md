@@ -31,6 +31,7 @@ These are my solutions to the Exercism exercises for the [C](https://exercism.or
 
 | Exercise | Link | Solution |
 |----------|----------|----------|
+| Grains | [Grains](https://exercism.org/tracks/c/exercises/grains) | [Docs](./c/grains/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/c/exercises/hello-world) | [Docs](./c/hello-world/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/c/exercises/leap) | [Docs](./c/leap/README.md) |
 
@@ -42,6 +43,7 @@ These are my solutions to the Exercism exercises for the [C++](https://exercism.
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/cpp/exercises/hello-world) | [Docs](./cpp/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/cpp/exercises/lasagna) | [Docs](./cpp/lasagna/README.md) |
+| Pacman Rules | [Pacman Rules](https://exercism.org/tracks/cpp/exercises/pacman-rules) | [Docs](./cpp/pacman-rules/README.md) |
 
 ## Go
 
@@ -91,6 +93,7 @@ These are my solutions to the Exercism exercises for the [JavaScript](https://ex
 | Poetry Club Door Policy | [Poetry Club Door Policy](https://exercism.org/tracks/javascript/exercises/poetry-club-door-policy) | [Docs](./javascript/poetry-club-door-policy/README.md) |
 | Raindrops | [Raindrops](https://exercism.org/tracks/javascript/exercises/raindrops) | [Docs](./javascript/raindrops/README.md) |
 | Space Age | [Space Age](https://exercism.org/tracks/javascript/exercises/space-age) | [Docs](./javascript/space-age/README.md) |
+| Translation Service | [Translation Service](https://exercism.org/tracks/javascript/exercises/translation-service) | [Docs](./javascript/translation-service/README.md) |
 | Triangle | [Triangle](https://exercism.org/tracks/javascript/exercises/triangle) | [Docs](./javascript/triangle/README.md) |
 | Two Fer | [Two Fer](https://exercism.org/tracks/javascript/exercises/two-fer) | [Docs](./javascript/two-fer/README.md) |
 | Vehicle Purchase | [Vehicle Purchase](https://exercism.org/tracks/javascript/exercises/vehicle-purchase) | [Docs](./javascript/vehicle-purchase/README.md) |
@@ -112,7 +115,9 @@ These are my solutions to the Exercism exercises for the [Julia](https://exercis
 
 | Exercise | Link | Solution |
 |----------|----------|----------|
+| Annalyns Infiltration | [Annalyns Infiltration](https://exercism.org/tracks/julia/exercises/annalyns-infiltration) | [Docs](./julia/annalyns-infiltration/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/julia/exercises/hello-world) | [Docs](./julia/hello-world/README.md) |
+| Lasagna | [Lasagna](https://exercism.org/tracks/julia/exercises/lasagna) | [Docs](./julia/lasagna/README.md) |
 
 ## Python
 
@@ -124,6 +129,7 @@ These are my solutions to the Exercism exercises for the [Python](https://exerci
 | Black Jack | [Black Jack](https://exercism.org/tracks/python/exercises/black-jack) | [Docs](./python/black-jack/README.md) |
 | Bob | [Bob](https://exercism.org/tracks/python/exercises/bob) | [Docs](./python/bob/README.md) |
 | Card Games | [Card Games](https://exercism.org/tracks/python/exercises/card-games) | [Docs](./python/card-games/README.md) |
+| Cater Waiter | [Cater Waiter](https://exercism.org/tracks/python/exercises/cater-waiter) | [Docs](./python/cater-waiter/README.md) |
 | Chaitanas Colossal Coaster | [Chaitanas Colossal Coaster](https://exercism.org/tracks/python/exercises/chaitanas-colossal-coaster) | [Docs](./python/chaitanas-colossal-coaster/README.md) |
 | Collatz Conjecture | [Collatz Conjecture](https://exercism.org/tracks/python/exercises/collatz-conjecture) | [Docs](./python/collatz-conjecture/README.md) |
 | Currency Exchange | [Currency Exchange](https://exercism.org/tracks/python/exercises/currency-exchange) | [Docs](./python/currency-exchange/README.md) |
@@ -189,6 +195,7 @@ These are my solutions to the Exercism exercises for the [SQLite](https://exerci
 | Darts | [Darts](https://exercism.org/tracks/sqlite/exercises/darts) | [Docs](./sqlite/darts/README.md) |
 | Grains | [Grains](https://exercism.org/tracks/sqlite/exercises/grains) | [Docs](./sqlite/grains/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/sqlite/exercises/hello-world) | [Docs](./sqlite/hello-world/README.md) |
+| Leap | [Leap](https://exercism.org/tracks/sqlite/exercises/leap) | [Docs](./sqlite/leap/README.md) |
 
 ## TypeScript
 
@@ -221,4 +228,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-20 09:01:14 UTC*
+*Generated on 2025-05-22 04:14:43 UTC*
