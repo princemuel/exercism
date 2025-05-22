@@ -7,16 +7,9 @@ pub struct Dna {
 
 impl Dna {
 	pub fn new(strand: &str) -> Result<Self, usize> {
-		let nucleotides = Nucleotide::parse(strand, MoleculeType::Dna)?;
-
-		for (i, &nucleotide) in nucleotides.iter().enumerate() {
-			if !nucleotide.is_dna() {
-				return Err(i);
-			}
-		}
-
-		Ok(Self { strand: nucleotides })
+		Ok(Self { strand: Nucleotide::parse(strand, Molecule::Dna)? })
 	}
+
 	pub fn into_rna(&self) -> Rna {
 		Rna { strand: self.strand.iter().map(|&n| n.to_rna_complement()).collect() }
 	}
@@ -38,15 +31,7 @@ pub struct Rna {
 
 impl Rna {
 	pub fn new(strand: &str) -> Result<Self, usize> {
-		let nucleotides = Nucleotide::parse(strand, MoleculeType::Rna)?;
-
-		for (i, &nucleotide) in nucleotides.iter().enumerate() {
-			if !nucleotide.is_rna() {
-				return Err(i);
-			}
-		}
-
-		Ok(Self { strand: nucleotides })
+		Ok(Self { strand: Nucleotide::parse(strand, Molecule::Rna)? })
 	}
 
 	pub fn into_dna(self) -> Dna {
@@ -79,9 +64,10 @@ pub enum Nucleotide {
 }
 
 impl Nucleotide {
-	pub fn parse(s: &str, molecule_type: MoleculeType) -> Result<Vec<Self>, usize> {
-		let mut nucleotides = Vec::with_capacity(s.len());
+	pub fn parse(s: &str, molecule_type: Molecule) -> Result<Vec<Self>, usize> {
 		let is_valid = molecule_type.predicate();
+
+		let mut nucleotides = Vec::with_capacity(s.len());
 
 		for (i, c) in s.chars().enumerate() {
 			match Self::try_from(c) {
@@ -149,16 +135,16 @@ impl From<Nucleotide> for char {
 }
 
 #[derive(Debug, Clone, Copy)]
-pub enum MoleculeType {
+pub enum Molecule {
 	Dna,
 	Rna,
 }
 
-impl MoleculeType {
+impl Molecule {
 	fn predicate(&self) -> fn(Nucleotide) -> bool {
 		match self {
-			MoleculeType::Dna => Nucleotide::is_dna,
-			MoleculeType::Rna => Nucleotide::is_rna,
+			Self::Dna => Nucleotide::is_dna,
+			Self::Rna => Nucleotide::is_rna,
 		}
 	}
 }
