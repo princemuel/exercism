@@ -14,7 +14,7 @@ max_line_length = 84
 trim_trailing_whitespace = true
 
 # Specific settings for some files
-[{*.yml,*.yaml,*.md}]
+[{*.yml,*.yaml,*.md,*.hs,*.cabal}]
 indent_size = 2
 
 # Specific settings for Markdown files

@@ -45,4 +45,4 @@ Here are some examples:
 
 ### Based on
 
-https://github.com/exercism/problem-specifications/issues/757
+<https://github.com/exercism/problem-specifications/issues/757>
