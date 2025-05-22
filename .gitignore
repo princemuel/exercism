@@ -25,8 +25,10 @@ node_modules/
 jspm_packages/
 .mypy_cache
 __pycache__
-.yarn/cache/
-.yarn/unplugged/
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
 
 # TypeScript v1 declaration files
 typings/
@@ -1277,9 +1279,6 @@ tmp-*
 
 .nx/cache
 .nx/workspace-data
-
-.yarn/build-state.yml
-.yarn/sdks
 
 *.pem
 *.ignored.*
