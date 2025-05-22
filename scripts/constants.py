@@ -10,7 +10,7 @@ TRACK_STATS_FILE = BASE_DIR / "database" / "track_stats.json"
 TRACK_LOG_FILE = BASE_DIR / "database" / "track_log.csv"
 
 # Constants for algorithm tuning
-MAX_DAILY_TRACKS = 5
+MAX_DAILY_TRACKS = 4
 DAYS_FOR_TRACK_ROTATION = 14  # Days to consider for track rotation history
 COMPLETION_THRESHOLD = 1.0  # Consider a track completed at 100% completion
 
