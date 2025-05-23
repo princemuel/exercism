@@ -172,6 +172,7 @@ These are my solutions to the Exercism exercises for the [Rust](https://exercism
 | Eliuds Eggs | [Eliuds Eggs](https://exercism.org/tracks/rust/exercises/eliuds-eggs) | [Docs](./rust/eliuds-eggs/README.md) |
 | Gigasecond | [Gigasecond](https://exercism.org/tracks/rust/exercises/gigasecond) | [Docs](./rust/gigasecond/README.md) |
 | Grains | [Grains](https://exercism.org/tracks/rust/exercises/grains) | [Docs](./rust/grains/README.md) |
+| Hello World | [Hello World](https://exercism.org/tracks/rust/exercises/hello-world) | [Docs](./rust/hello-world/README.md) |
 | High Scores | [High Scores](https://exercism.org/tracks/rust/exercises/high-scores) | [Docs](./rust/high-scores/README.md) |
 | Isogram | [Isogram](https://exercism.org/tracks/rust/exercises/isogram) | [Docs](./rust/isogram/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/rust/exercises/leap) | [Docs](./rust/leap/README.md) |
@@ -182,6 +183,7 @@ These are my solutions to the Exercism exercises for the [Rust](https://exercism
 | Prime Factors | [Prime Factors](https://exercism.org/tracks/rust/exercises/prime-factors) | [Docs](./rust/prime-factors/README.md) |
 | Raindrops | [Raindrops](https://exercism.org/tracks/rust/exercises/raindrops) | [Docs](./rust/raindrops/README.md) |
 | Reverse String | [Reverse String](https://exercism.org/tracks/rust/exercises/reverse-string) | [Docs](./rust/reverse-string/README.md) |
+| Rna Transcription | [Rna Transcription](https://exercism.org/tracks/rust/exercises/rna-transcription) | [Docs](./rust/rna-transcription/README.md) |
 | Space Age | [Space Age](https://exercism.org/tracks/rust/exercises/space-age) | [Docs](./rust/space-age/README.md) |
 | Sublist | [Sublist](https://exercism.org/tracks/rust/exercises/sublist) | [Docs](./rust/sublist/README.md) |
 | Sum Of Multiples | [Sum Of Multiples](https://exercism.org/tracks/rust/exercises/sum-of-multiples) | [Docs](./rust/sum-of-multiples/README.md) |
@@ -213,6 +215,7 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Gigasecond | [Gigasecond](https://exercism.org/tracks/typescript/exercises/gigasecond) | [Docs](./typescript/gigasecond/README.md) |
 | Grains | [Grains](https://exercism.org/tracks/typescript/exercises/grains) | [Docs](./typescript/grains/README.md) |
 | Hamming | [Hamming](https://exercism.org/tracks/typescript/exercises/hamming) | [Docs](./typescript/hamming/README.md) |
+| Hello World | [Hello World](https://exercism.org/tracks/typescript/exercises/hello-world) | [Docs](./typescript/hello-world/README.md) |
 | Isogram | [Isogram](https://exercism.org/tracks/typescript/exercises/isogram) | [Docs](./typescript/isogram/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/typescript/exercises/leap) | [Docs](./typescript/leap/README.md) |
 | Raindrops | [Raindrops](https://exercism.org/tracks/typescript/exercises/raindrops) | [Docs](./typescript/raindrops/README.md) |
@@ -228,4 +231,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-22 04:14:43 UTC*
+*Generated on 2025-05-23 00:08:58 UTC*
