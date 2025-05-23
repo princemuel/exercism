@@ -9,7 +9,7 @@
     "language": "python",
     "category": "scripting",
     "total": 140,
-    "last_touched": 1
+    "last_touched": 2
   },
   {
     "language": "jq",
@@ -39,13 +39,13 @@
     "language": "go",
     "category": "scripting",
     "total": 141,
-    "last_touched": 3
+    "last_touched": 4
   },
   {
     "language": "c",
     "category": "system",
     "total": 82,
-    "last_touched": 1
+    "last_touched": 2
   },
   {
     "language": "cpp",

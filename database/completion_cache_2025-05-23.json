@@ -1,0 +1,14 @@
+{
+  "sqlite": 4,
+  "python": 31,
+  "jq": 3,
+  "rust": 26,
+  "javascript": 31,
+  "typescript": 24,
+  "go": 9,
+  "c": 3,
+  "cpp": 3,
+  "bash": 9,
+  "awk": 2,
+  "julia": 3
+}
