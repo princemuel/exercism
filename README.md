@@ -116,6 +116,7 @@ These are my solutions to the Exercism exercises for the [Julia](https://exercis
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Annalyns Infiltration | [Annalyns Infiltration](https://exercism.org/tracks/julia/exercises/annalyns-infiltration) | [Docs](./julia/annalyns-infiltration/README.md) |
+| Currency Exchange | [Currency Exchange](https://exercism.org/tracks/julia/exercises/currency-exchange) | [Docs](./julia/currency-exchange/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/julia/exercises/hello-world) | [Docs](./julia/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/julia/exercises/lasagna) | [Docs](./julia/lasagna/README.md) |
 
@@ -195,6 +196,7 @@ These are my solutions to the Exercism exercises for the [SQLite](https://exerci
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Darts | [Darts](https://exercism.org/tracks/sqlite/exercises/darts) | [Docs](./sqlite/darts/README.md) |
+| Difference Of Squares | [Difference Of Squares](https://exercism.org/tracks/sqlite/exercises/difference-of-squares) | [Docs](./sqlite/difference-of-squares/README.md) |
 | Grains | [Grains](https://exercism.org/tracks/sqlite/exercises/grains) | [Docs](./sqlite/grains/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/sqlite/exercises/hello-world) | [Docs](./sqlite/hello-world/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/sqlite/exercises/leap) | [Docs](./sqlite/leap/README.md) |
@@ -206,6 +208,7 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Acronym | [Acronym](https://exercism.org/tracks/typescript/exercises/acronym) | [Docs](./typescript/acronym/README.md) |
+| Bank Account | [Bank Account](https://exercism.org/tracks/typescript/exercises/bank-account) | [Docs](./typescript/bank-account/README.md) |
 | Bob | [Bob](https://exercism.org/tracks/typescript/exercises/bob) | [Docs](./typescript/bob/README.md) |
 | Clock | [Clock](https://exercism.org/tracks/typescript/exercises/clock) | [Docs](./typescript/clock/README.md) |
 | Collatz Conjecture | [Collatz Conjecture](https://exercism.org/tracks/typescript/exercises/collatz-conjecture) | [Docs](./typescript/collatz-conjecture/README.md) |
@@ -231,4 +234,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-23 00:21:26 UTC*
+*Generated on 2025-05-23 02:56:34 UTC*
