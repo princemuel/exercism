@@ -43,6 +43,7 @@ These are my solutions to the Exercism exercises for the [C++](https://exercism.
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/cpp/exercises/hello-world) | [Docs](./cpp/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/cpp/exercises/lasagna) | [Docs](./cpp/lasagna/README.md) |
+| Last Will | [Last Will](https://exercism.org/tracks/cpp/exercises/last-will) | [Docs](./cpp/last-will/README.md) |
 | Pacman Rules | [Pacman Rules](https://exercism.org/tracks/cpp/exercises/pacman-rules) | [Docs](./cpp/pacman-rules/README.md) |
 
 ## Go
@@ -56,6 +57,7 @@ These are my solutions to the Exercism exercises for the [Go](https://exercism.o
 | Cars Assemble | [Cars Assemble](https://exercism.org/tracks/go/exercises/cars-assemble) | [Docs](./go/cars-assemble/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/go/exercises/hello-world) | [Docs](./go/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/go/exercises/lasagna) | [Docs](./go/lasagna/README.md) |
+| Need For Speed | [Need For Speed](https://exercism.org/tracks/go/exercises/need-for-speed) | [Docs](./go/need-for-speed/README.md) |
 | Party Robot | [Party Robot](https://exercism.org/tracks/go/exercises/party-robot) | [Docs](./go/party-robot/README.md) |
 | Vehicle Purchase | [Vehicle Purchase](https://exercism.org/tracks/go/exercises/vehicle-purchase) | [Docs](./go/vehicle-purchase/README.md) |
 | Weather Forecast | [Weather Forecast](https://exercism.org/tracks/go/exercises/weather-forecast) | [Docs](./go/weather-forecast/README.md) |
@@ -92,6 +94,8 @@ These are my solutions to the Exercism exercises for the [JavaScript](https://ex
 | Mixed Juices | [Mixed Juices](https://exercism.org/tracks/javascript/exercises/mixed-juices) | [Docs](./javascript/mixed-juices/README.md) |
 | Poetry Club Door Policy | [Poetry Club Door Policy](https://exercism.org/tracks/javascript/exercises/poetry-club-door-policy) | [Docs](./javascript/poetry-club-door-policy/README.md) |
 | Raindrops | [Raindrops](https://exercism.org/tracks/javascript/exercises/raindrops) | [Docs](./javascript/raindrops/README.md) |
+| Resistor Color | [Resistor Color](https://exercism.org/tracks/javascript/exercises/resistor-color) | [Docs](./javascript/resistor-color/README.md) |
+| Resistor Color Duo | [Resistor Color Duo](https://exercism.org/tracks/javascript/exercises/resistor-color-duo) | [Docs](./javascript/resistor-color-duo/README.md) |
 | Space Age | [Space Age](https://exercism.org/tracks/javascript/exercises/space-age) | [Docs](./javascript/space-age/README.md) |
 | Translation Service | [Translation Service](https://exercism.org/tracks/javascript/exercises/translation-service) | [Docs](./javascript/translation-service/README.md) |
 | Triangle | [Triangle](https://exercism.org/tracks/javascript/exercises/triangle) | [Docs](./javascript/triangle/README.md) |
@@ -173,6 +177,7 @@ These are my solutions to the Exercism exercises for the [Rust](https://exercism
 | Eliuds Eggs | [Eliuds Eggs](https://exercism.org/tracks/rust/exercises/eliuds-eggs) | [Docs](./rust/eliuds-eggs/README.md) |
 | Gigasecond | [Gigasecond](https://exercism.org/tracks/rust/exercises/gigasecond) | [Docs](./rust/gigasecond/README.md) |
 | Grains | [Grains](https://exercism.org/tracks/rust/exercises/grains) | [Docs](./rust/grains/README.md) |
+| Hamming | [Hamming](https://exercism.org/tracks/rust/exercises/hamming) | [Docs](./rust/hamming/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/rust/exercises/hello-world) | [Docs](./rust/hello-world/README.md) |
 | High Scores | [High Scores](https://exercism.org/tracks/rust/exercises/high-scores) | [Docs](./rust/high-scores/README.md) |
 | Isogram | [Isogram](https://exercism.org/tracks/rust/exercises/isogram) | [Docs](./rust/isogram/README.md) |
@@ -197,6 +202,7 @@ These are my solutions to the Exercism exercises for the [SQLite](https://exerci
 |----------|----------|----------|
 | Darts | [Darts](https://exercism.org/tracks/sqlite/exercises/darts) | [Docs](./sqlite/darts/README.md) |
 | Difference Of Squares | [Difference Of Squares](https://exercism.org/tracks/sqlite/exercises/difference-of-squares) | [Docs](./sqlite/difference-of-squares/README.md) |
+| Gigasecond | [Gigasecond](https://exercism.org/tracks/sqlite/exercises/gigasecond) | [Docs](./sqlite/gigasecond/README.md) |
 | Grains | [Grains](https://exercism.org/tracks/sqlite/exercises/grains) | [Docs](./sqlite/grains/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/sqlite/exercises/hello-world) | [Docs](./sqlite/hello-world/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/sqlite/exercises/leap) | [Docs](./sqlite/leap/README.md) |
@@ -234,4 +240,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-23 02:56:34 UTC*
+*Generated on 2025-05-24 05:17:43 UTC*

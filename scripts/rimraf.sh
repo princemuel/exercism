@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Configuration
-DIRS_TO_DELETE=("target" ".pytest_cache" "__pycache__" "node_modules" ".yarn" ".venv")
+DIRS_TO_DELETE=("target" "build" ".pytest_cache" "__pycache__" "node_modules" ".yarn" ".venv")
 FILES_TO_DELETE=(".editorconfig")
 
 # Colors for output
