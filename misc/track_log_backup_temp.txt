@@ -1,7 +1,6 @@
 import csv
 import hashlib
 import json
-import sys
 from collections import Counter
 from datetime import datetime, timedelta
 from decimal import getcontext
@@ -48,7 +47,7 @@ class TrackSelector:
         self.days_in_week = 7
         self.total_weekly_slots = self.days_in_week * self.max_daily_tracks
 
-        # TODO: Enhanced features for v2
+        # Enhanced features
         self.historical_patterns = {}
         self.adaptive_weights = {
             "progress": PROGRESS_WEIGHT,
@@ -72,10 +71,10 @@ class TrackSelector:
         v = b"\x00" * 32  # Initial v
 
         # HMAC-SHA256 based deterministic generation (simplified RFC 6979)
-        for n in range(5):  # Multiple rounds for better distribution
+        for iteration in range(5):  # Multiple rounds for better distribution
             # Update k
             h = hashlib.new("sha256")
-            h.update(k + v + combined + n.to_bytes(1, "big"))
+            h.update(k + v + combined + iteration.to_bytes(1, "big"))
             k = h.digest()
 
             # Update v
@@ -439,109 +438,21 @@ def load_language_metadata(track_stats_file: Path) -> List[Dict[str, Any]]:
         return []
 
 
-def get_optional_tracks(
-    selector: TrackSelector,
-    today: datetime,
-    completion_counts: Dict[str, int],
-    selected_tracks: List[str],
-    num_optional: int = 3,
-) -> List[str]:
-    """Suggest optional tracks for extra practice."""
-    # Exclude already selected and completed tracks
-    candidates = [
-        t
-        for t in selector.tracks_data
-        if t["language"] not in selected_tracks
-        and completion_counts.get(t["language"], 0) / max(t.get("total", 1), 1)
-        < COMPLETION_THRESHOLD
-    ]
-    # Score and sort
-    scored = [
-        (
-            selector.calculate_priority_score(t, completion_counts, 0, "optional"),
-            t["language"],
-        )
-        for t in candidates
-    ]
-    scored = [x for x in scored if x[0] > 0]
-    scored.sort(reverse=True)
-    return [lang for _, lang in scored[:num_optional]]
-
-
-def prompt_completed_tracks(
-    selected_tracks: List[str], optional_tracks: List[str]
-) -> tuple[List[str], Dict[str, List[str]], str]:
-    """Interactively prompt user for completed tracks and exercises."""
-    print("\nEnter the tracks you worked on today:")
-    print("\nAvailable tracks:")
-    print("Selected tracks:")
-    for track in selected_tracks:
-        print(f"  - {track}")
-    if optional_tracks:
-        print("\nOptional tracks:")
-        for track in optional_tracks:
-            print(f"  - {track}")
-
-    valid_tracks = set(selected_tracks) | set(optional_tracks)
-    completed_tracks = []
-    completed_exercises: Dict[str, List[str]] = {}
-
-    while True:
-        print("\nEnter track name (or press Enter to finish):")
-        track = input("> ").strip().lower()
-
-        if not track:
-            break
-
-        if track not in valid_tracks:
-            print("⚠️  Invalid track. Please choose from the available tracks.")
-            continue
-
-        completed_tracks.append(track)
-        print(f"\nEnter exercises completed for {track}")
-        print("(comma-separated, or press Enter to skip)")
-        ex = input("> ").strip()
-        if ex:
-            completed_exercises[track] = [e.strip() for e in ex.split(",") if e.strip()]
-
-    print("\nAny notes for today? (optional)")
-    notes = input("> ").strip()
-
-    return completed_tracks, completed_exercises, notes
-
-
 def log_daily_selection(
     track_log_file: Path,
     today_str: str,
-    weekday: str,
     selected_tracks: List[str],
-    optional_tracks: List[str],
-    completed_tracks: List[str],
-    completed_exercises: Dict[str, List[str]],
-    notes: str,
-) -> None:
-    """Log today's track selection and completion info to CSV file."""
+    weekly_validation: Dict,
+):
+    """Log today's track selection with weekly coverage info to CSV file."""
     try:
         with open(track_log_file, "a", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow(
-                [
-                    today_str,
-                    weekday,
-                    "|".join(
-                        selected_tracks
-                    ),  # Use | as separator to avoid CSV conflicts
-                    "|".join(optional_tracks),
-                    "|".join(completed_tracks),
-                    json.dumps(completed_exercises, ensure_ascii=False),
-                    notes.replace(
-                        ",", ";"
-                    ),  # Replace commas in notes to avoid CSV issues
-                ]
-            )
+            # Main entry
+            writer.writerow([today_str, ",".join(selected_tracks)])
+
     except Exception as e:
         print(f"Error logging selection: {e}")
-        raise
 
 
 def ensure_log_file_exists(track_log_file: Path) -> None:
@@ -550,23 +461,14 @@ def ensure_log_file_exists(track_log_file: Path) -> None:
         track_log_file.parent.mkdir(parents=True, exist_ok=True)
         with open(track_log_file, "w", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow(
-                [
-                    "date",
-                    "weekday",
-                    "selected_tracks",
-                    "optional_tracks",
-                    "completed_tracks",
-                    "completed_exercises",
-                    "notes",
-                ]
-            )
+            writer.writerow(["date", "tracks"])
 
 
 def is_already_logged(track_log_file: Path, today_str: str) -> bool:
     """Check if today's selection is already logged."""
     if not track_log_file.exists():
         return False
+
     try:
         with open(track_log_file, "r") as f:
             existing_lines = f.read().splitlines()
@@ -579,137 +481,82 @@ def is_already_logged(track_log_file: Path, today_str: str) -> bool:
         return False
 
 
-def main() -> str | int | None:
-    """Main function with improved track selection and logging."""
-    try:
-        # Load track data
-        languages = load_language_metadata(TRACK_STATS_FILE)
-        if not languages:
-            print("No language metadata found. Exiting.")
-            return
+def main() -> None:
+    """Main function with improved track selection."""
+    # Load track data
+    languages = load_language_metadata(TRACK_STATS_FILE)
+    if not languages:
+        print("No language metadata found. Exiting.")
+        return
 
-        # Get today's date and completion counts
-        today = datetime.now(UTC_PLUS_ONE)
-        today_str = today.strftime("%Y-%m-%d")
-        weekday_str = today.strftime("%A")
-        completion_counts = get_cached_completion_counts(today_str)
+    # Get today's date and completion counts
+    today = datetime.now(UTC_PLUS_ONE)
+    today_str = today.strftime("%Y-%m-%d")
+    completion_counts = get_cached_completion_counts(today_str)
 
-        if not completion_counts:
-            print("No completion counts available. Exiting.")
-            return
+    if not completion_counts:
+        print("No completion counts available. Exiting.")
+        return
 
-        # Initialize track selector
-        selector = TrackSelector(languages, MAX_DAILY_TRACKS)
+    # Initialize track selector
+    selector = TrackSelector(languages, MAX_DAILY_TRACKS)
 
-        # Get daily tracks using weekly planning
-        selected_tracks = selector.get_daily_tracks(today, completion_counts)
-        optional_tracks = get_optional_tracks(
-            selector, today, completion_counts, selected_tracks
-        )
+    # Get daily tracks using weekly planning
+    selected_tracks = selector.get_daily_tracks(today, completion_counts)
 
-        # Generate weekly schedule for analysis
-        days_since_monday = today.weekday()
-        week_start = today - timedelta(days=days_since_monday)
-        weekly_schedule = selector.generate_weekly_schedule(
-            week_start, completion_counts
-        )
+    # Generate weekly schedule for analysis
+    days_since_monday = today.weekday()
+    week_start = today - timedelta(days=days_since_monday)
+    weekly_schedule = selector.generate_weekly_schedule(week_start, completion_counts)
 
-        # Validate coverage
-        validation = selector.validate_weekly_coverage(weekly_schedule)
+    # Validate coverage
+    validation = selector.validate_weekly_coverage(weekly_schedule)
 
-        # Clear output for better readability
-        print("\033[2J\033[H")  # Clear screen
-        print(f"🎯 Track Selection for {today_str} ({weekday_str})")
-        print("=" * 50)
+    # Output results
+    print(f"\nSelected tracks for {today_str}:")
+    for track in selected_tracks:
+        track_data = next((t for t in languages if t["language"] == track), None)
+        if track_data:
+            completed = completion_counts.get(track, 0)
+            total = track_data["total"]
+            completion_ratio = completed / total if total > 0 else 0
+            print(
+                f"- {track} ({track_data['category']}): "
+                f"{completed}/{total} exercises "
+                f"({completion_ratio:.0%})"
+            )
 
-        # Improved output formatting
-        print("\n📋 Selected Tracks:")
-        for track in selected_tracks:
-            track_data = next((t for t in languages if t["language"] == track), None)
-            if track_data:
-                completed = completion_counts.get(track, 0)
-                total = track_data["total"]
-                completion_ratio = completed / total if total > 0 else 0
-                print(
-                    f"  • {track:<15} ({track_data['category']:<10}): "
-                    f"{completed:>3}/{total:<3} exercises "
-                    f"({completion_ratio:>3.0%})"
-                )
+    # Log the selection (if not already logged)
+    ensure_log_file_exists(TRACK_LOG_FILE)
+    if not is_already_logged(TRACK_LOG_FILE, today_str):
+        log_daily_selection(TRACK_LOG_FILE, today_str, selected_tracks, validation)
+        print(f"\nLogged selection to {TRACK_LOG_FILE}")
+    else:
+        print(f"\nSelection already logged for {today_str}")
 
-        if optional_tracks:
-            print("\n💫 Optional Tracks:")
-            for track in optional_tracks:
-                track_data = next(
-                    (t for t in languages if t["language"] == track), None
-                )
-                if track_data:
-                    completed = completion_counts.get(track, 0)
-                    total = track_data["total"]
-                    completion_ratio = completed / total if total > 0 else 0
-                    print(
-                        f"  • {track:<15} ({track_data['category']:<10}): "
-                        f"{completed:>3}/{total:<3} exercises "
-                        f"({completion_ratio:>3.0%})"
-                    )
+    print("\nWeekly Coverage Analysis:")
+    print(
+        f"Coverage: {validation['coverage_percentage']:.1f}% "
+        f"({validation['tracks_meeting_minimum']}/{validation['total_possible_tracks']} tracks)"
+    )
+    print(f"Missing tracks: {validation['missing_tracks']}")
+    if validation["over_represented_tracks"]:
+        print(f"Over-represented: {validation['over_represented_tracks']}")
 
-        # Interactive logging with error handling
-        if not is_already_logged(TRACK_LOG_FILE, today_str):
-            print("\n📝 Recording Progress")
-            print("-" * 50)
-            try:
-                completed_tracks, completed_exercises, notes = prompt_completed_tracks(
-                    selected_tracks, optional_tracks
-                )
-                ensure_log_file_exists(TRACK_LOG_FILE)
-                log_daily_selection(
-                    TRACK_LOG_FILE,
-                    today_str,
-                    weekday_str,
-                    selected_tracks,
-                    optional_tracks,
-                    completed_tracks,
-                    completed_exercises,
-                    notes,
-                )
-                print("\n✅ Progress logged successfully")
-            except (KeyboardInterrupt, EOFError):
-                print("\n❌ Logging cancelled")
-                return 1
-            except Exception as e:
-                print(f"\n❌ Error logging progress: {e}")
-                return 1
-        else:
-            print(f"\n📝 Progress already logged for {today_str}")
-
-        print("\nWeekly Coverage Analysis:")
-        print(
-            f"Coverage: {validation['coverage_percentage']:.1f}% "
-            f"({validation['tracks_meeting_minimum']}/{validation['total_possible_tracks']} tracks)"
-        )
-        print(f"Missing tracks: {validation['missing_tracks']}")
-        if validation["over_represented_tracks"]:
-            print(f"Over-represented: {validation['over_represented_tracks']}")
-
-        # Show weekly schedule for debugging
-        print(f"\nFull weekly schedule starting {week_start.strftime('%Y-%m-%d')}:")
-        days = [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-        ]
-        for i, day_tracks in enumerate(weekly_schedule):
-            print(f"  {days[i]}: {day_tracks}")
-
-    except Exception as e:
-        print(f"\n❌ Error: {e}")
-        return 1
-
-    return 0
+    # Show weekly schedule for debugging
+    print(f"\nFull weekly schedule starting {week_start.strftime('%Y-%m-%d')}:")
+    days = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
+    for i, day_tracks in enumerate(weekly_schedule):
+        print(f"  {days[i]}: {day_tracks}")
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

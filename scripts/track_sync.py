@@ -56,18 +56,21 @@ def run_script(script_name: str, args: List[str] | None = None) -> Tuple[int, st
     venv_python = get_venv_python()
 
     try:
+        # Run in interactive mode (inherit stdin/stdout)
         cmd = [venv_python, str(script_path)] + args
         print(f"Running {kleur(script_name, 'blue')}...")
 
         result = subprocess.run(
             cmd,
-            capture_output=True,
+            stdin=sys.stdin,  # Allow interactive input
+            stdout=sys.stdout,  # Direct output to console
+            stderr=subprocess.PIPE,  # Capture errors only
             text=True,
-            check=False,  # Don't raise exception on non-zero return code
+            check=False,
         )
 
         if result.returncode == 0:
-            return 0, result.stdout
+            return 0, "Success"
         else:
             return result.returncode, f"Error: {result.stderr}"
 

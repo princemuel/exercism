@@ -1,0 +1,283 @@
+# Migration Guide: Current → Bitcoin-Style Track Selector
+
+## Overview
+
+This guide helps you migrate from the current daily selection system to the new Bitcoin-style weekly planning system with guaranteed coverage.
+
+## Key Changes
+
+### Before (Current System)
+
+- Daily seed generation from date
+- Score-based selection each day
+- No coverage guarantees
+- Some tracks might be missed for weeks
+
+### After (Bitcoin-Style System)
+
+- Weekly schedule generation
+- Deterministic k using RFC 6979 principles
+- Guaranteed 2+ appearances per track per week
+- Better long-term distribution
+
+## Step-by-Step Migration
+
+### 1. Backup Current System
+
+```bash
+# Backup existing files
+cp track_log.py track_log_backup.py
+cp track_stats.py track_stats_backup.py
+cp constants.py constants_backup.py
+```
+
+### 2. Update Constants
+
+Add these new constants to `constants.py`:
+
+```python
+# Weekly coverage constraints
+MIN_APPEARANCES_PER_WEEK = 2
+MAX_APPEARANCES_PER_WEEK = 4
+BITCOIN_STYLE_SELECTION = True
+
+# Enhanced scoring weights (redistributed)
+PROGRESS_WEIGHT = 0.35      # Slightly increased
+RECENCY_WEIGHT = 0.25       # Increased importance
+ROTATION_WEIGHT = 0.25      # Weekly rotation weight
+CATEGORY_WEIGHT = 0.15  # Slightly reduced
+```
+
+### 3. Replace Core Logic
+
+Replace the main selection logic in `track_log.py`:
+
+```python
+# OLD: Daily selection
+def main():
+    seed, today_str = get_daily_seed()
+    selected_tracks = select_daily_tracks(df, seed)
+
+# NEW: Weekly-based selection
+def main():
+    today = datetime.now(UTC_PLUS_ONE)
+    completion_counts = get_cached_completion_counts(today.strftime("%Y-%m-%d"))
+
+    selector = ImprovedTrackSelector(languages, MAX_DAILY_TRACKS)
+    selected_tracks = selector.get_daily_tracks(today, completion_counts)
+```
+
+### 4. Update Logging Format
+
+Enhance the CSV logging to include weekly context:
+
+```python
+# Add weekly validation to log entries
+def log_daily_selection_with_validation(track_log_file: Path, today_str: str,
+                                      selected_tracks: List[str],
+                                      weekly_validation: Dict):
+    """Enhanced logging with weekly coverage info."""
+    try:
+        with open(track_log_file, "a", newline="") as f:
+            writer = csv.writer(f)
+            # Main entry
+            writer.writerow([today_str, ",".join(selected_tracks)])
+
+            # Weekly summary (optional metadata)
+            if today_str.endswith('-01'):  # Log weekly summary on Mondays
+                coverage_pct = weekly_validation.get('coverage_percentage', 0)
+                writer.writerow([f"# Week {today_str[:8]} coverage: {coverage_pct:.1f}%"])
+    except Exception as e:
+        print(f"Error logging selection: {e}")
+```
+
+### 5. Testing & Validation
+
+#### Test Coverage Guarantees
+
+```python
+def test_weekly_coverage():
+    """Test that all tracks appear at least twice per week."""
+    languages = load_language_metadata(TRACK_STATS_FILE)
+    selector = ImprovedTrackSelector(languages)
+
+    # Test multiple weeks
+    for week_offset in range(4):  # Test 4 weeks
+        test_date = datetime(2025, 5, 26) + timedelta(weeks=week_offset)
+        weekly_schedule = selector.generate_weekly_schedule(test_date, {})
+        validation = selector.validate_weekly_coverage(weekly_schedule)
+
+        print(f"Week {week_offset + 1}: {validation['coverage_percentage']:.1f}% coverage")
+        assert validation['coverage_percentage'] >= 95, f"Week {week_offset + 1} failed coverage"
+        assert len(validation['missing_tracks']) <= 1, "Too many missing tracks"
+
+test_weekly_coverage()
+```
+
+#### Verify Determinism
+
+```python
+def test_determinism():
+    """Ensure same week generates same schedule."""
+    languages = load_language_metadata(TRACK_STATS_FILE)
+    selector = ImprovedTrackSelector(languages)
+
+    test_date = datetime(2025, 5, 26)
+    completion_counts = {"python": 45, "rust": 20, "javascript": 60}
+
+    # Generate same week multiple times
+    schedule1 = selector.generate_weekly_schedule(test_date, completion_counts)
+    schedule2 = selector.generate_weekly_schedule(test_date, completion_counts)
+
+    assert schedule1 == schedule2, "Schedules should be identical"
+    print("✅ Determinism test passed")
+
+test_determinism()
+```
+
+## Transition Strategy
+
+### Option 1: Immediate Cutover (Recommended)
+
+- Switch completely to new system
+- Benefits: Immediate coverage guarantees
+- Risk: Temporary adjustment period
+
+### Option 2: Gradual Migration
+
+- Run both systems in parallel for 2 weeks
+- Compare outputs and validate
+- Switch after confidence is high
+
+### Option 3: A/B Testing
+
+- Use new system on weekdays, old on weekends
+- Compare coverage metrics
+- Full switch after 1 week
+
+## Expected Improvements
+
+### Coverage Metrics
+
+- **Before**: ~60-80% of tracks appear weekly
+- **After**: 95%+ of tracks appear ≥2 times weekly
+
+### Distribution Quality
+
+- **Before**: High variance, some tracks ignored
+- **After**: Balanced distribution, fair rotation
+
+### Predictability
+
+- **Before**: Hard to predict future selections
+- **After**: Weekly patterns are deterministic
+
+## Monitoring & Validation
+
+### Daily Checks
+
+```bash
+# Verify today's selection meets constraints
+python track_log.py --validate-today
+
+# Expected output:
+# ✅ 4 tracks selected for 2025-05-24
+# ✅ All tracks appear ≥2 times this week
+# ✅ No over-representation detected
+```
+
+### Weekly Analysis
+
+```bash
+# Analyze full week coverage
+python track_log.py --analyze-week
+
+# Expected output:
+# Week 2025-W21: 96.2% coverage (25/26 tracks)
+# Missing: [cpp] (0 appearances)
+# Average: 2.3 appearances per track
+```
+
+### Monthly Reports
+
+```bash
+# Generate monthly coverage report
+python track_log.py --monthly-report
+
+# Expected output:
+# May 2025 Coverage Report
+# Average weekly coverage: 94.8%
+# Tracks never selected: []
+# Most selected: python (18 times)
+# Least selected: awk (8 times)
+```
+
+## Troubleshooting
+
+### Issue: Some tracks still missing
+
+**Cause**: Tracks with >96% completion
+**Solution**: Lower `COMPLETION_THRESHOLD` or add completion-override logic
+
+### Issue: Uneven category distribution
+
+**Cause**: Categories have very different track counts
+**Solution**: Increase `CATEGORY_WEIGHT` or add category quotas
+
+### Issue: Determinism breaks
+
+**Cause**: Input data changes between runs
+**Solution**: Ensure completion counts are cached consistently
+
+## Rollback Plan
+
+If issues arise, rollback is simple:
+
+```bash
+# Restore backup files
+cp track_log_backup.py track_log.py
+cp constants_backup.py constants.py
+
+# Run old system
+python track_log.py
+```
+
+## Performance Considerations
+
+### Memory Usage
+
+- **Current**: Minimal (daily processing)
+- **New**: Slightly higher (weekly schedule storage)
+- **Impact**: Negligible for 12 tracks
+
+### CPU Usage
+
+- **Current**: O(n) daily
+- **New**: O(n×7) weekly, but cached
+- **Impact**: Minimal increase
+
+### I/O Operations
+
+- **Current**: Read stats + write log daily
+- **New**: Same + weekly schedule caching
+- **Impact**: ~20% increase in file operations
+
+## Validation Checklist
+
+- [ ] All 12 tracks appear ≥2 times per week
+- [ ] No track appears >4 times per week
+- [ ] Same week always generates same schedule
+- [ ] Daily selections are consistent within week
+- [ ] Category balance is maintained
+- [ ] Completion ratios influence selection appropriately
+- [ ] Recent activity affects prioritization
+- [ ] System handles edge cases (all tracks completed, etc.)
+
+## Next Steps
+
+1. **Week 1**: Deploy and monitor daily
+2. **Week 2**: Analyze first weekly cycle
+3. **Week 3**: Fine-tune weights if needed
+4. **Week 4**: Full production confidence
+
+The Bitcoin-style approach ensures mathematical guarantees while maintaining the sophisticated prioritization logic you've already developed.

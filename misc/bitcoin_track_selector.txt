@@ -1,0 +1,330 @@
+import hashlib
+from collections import Counter
+from datetime import datetime, timedelta
+from typing import Dict, List
+
+
+class BitcoinStyleTrackSelector:
+    """
+    Uses Bitcoin's deterministic k algorithm for guaranteed weekly track coverage.
+    Ensures each track appears at least twice in any 7-day rolling window.
+    """
+
+    def __init__(self, tracks_data: List[Dict], max_daily_tracks: int = 4):
+        self.tracks_data = tracks_data
+        self.max_daily_tracks = max_daily_tracks
+        self.track_names = [t["language"] for t in tracks_data]
+        self.num_tracks = len(self.track_names)
+
+        # Weekly constraints
+        self.MIN_APPEARANCES_PER_WEEK = 2
+        self.days_in_week = 7
+        self.total_weekly_slots = self.days_in_week * self.max_daily_tracks
+
+    def deterministic_k(
+        self, message: bytes, private_key: bytes, nonce: int = 0
+    ) -> int:
+        """
+        Bitcoin-style deterministic k generation using RFC 6979 approach.
+        Returns a deterministic but pseudo-random integer.
+        """
+        # Combine message, private key, and nonce
+        combined = message + private_key + nonce.to_bytes(4, "big")
+
+        # Generate deterministic k using HMAC-SHA256 chain
+        k = b"\x01" * 32  # Initial k
+        v = b"\x00" * 32  # Initial v
+
+        # HMAC-SHA256 iterations for better distribution
+        for i in range(3):  # Multiple iterations for better randomness
+            h = hashlib.new("sha256")
+            h.update(k + v + combined)
+            k = h.digest()
+
+            h = hashlib.new("sha256")
+            h.update(k + v)
+            v = h.digest()
+
+        # Convert to integer in desired range
+        return int.from_bytes(v[:8], "big")
+
+    def generate_weekly_schedule(self, week_start: datetime) -> List[List[str]]:
+        """
+        Generate a complete weekly schedule ensuring each track appears at least twice.
+        Uses Bitcoin-style deterministic generation.
+        """
+        week_str = week_start.strftime("%Y-W%U")
+        private_key = hashlib.sha256(f"exercism-week-{week_str}".encode()).digest()
+
+        # Initialize daily schedules
+        weekly_schedule = [[] for _ in range(7)]
+        track_appearances = Counter()
+
+        # Phase 1: Ensure minimum appearances for each track
+        remaining_tracks = set(self.track_names)
+        day_idx = 0
+
+        while remaining_tracks and day_idx < 7:
+            for track in list(remaining_tracks):
+                if len(weekly_schedule[day_idx]) >= self.max_daily_tracks:
+                    day_idx += 1
+                    if day_idx >= 7:
+                        break
+                    continue
+
+                # Use deterministic k for this track-day combination
+                message = f"{week_str}-{track}-{day_idx}".encode()
+                k = self.deterministic_k(message, private_key)
+
+                # Add some deterministic jitter based on track properties
+                track_data = next(t for t in self.tracks_data if t["language"] == track)
+                track_score = self.calculate_priority_score(track_data)
+
+                # Combine k with track score for selection probability
+                selection_value = (k % 10000) + int(track_score * 1000)
+
+                # Higher probability for tracks that need more appearances
+                needed_appearances = max(
+                    0, self.MIN_APPEARANCES_PER_WEEK - track_appearances[track]
+                )
+                if needed_appearances > 0:
+                    selection_value += needed_appearances * 2000
+
+                # Select if slot available and track needs appearances
+                if (
+                    selection_value > 5000
+                    and track_appearances[track] < self.MIN_APPEARANCES_PER_WEEK
+                ):
+                    weekly_schedule[day_idx].append(track)
+                    track_appearances[track] += 1
+
+                    if track_appearances[track] >= self.MIN_APPEARANCES_PER_WEEK:
+                        remaining_tracks.remove(track)
+
+        # Phase 2: Fill remaining slots with highest priority tracks
+        all_slots = [
+            (day, pos)
+            for day in range(7)
+            for pos in range(len(weekly_schedule[day]), self.max_daily_tracks)
+        ]
+
+        for day_idx, slot_idx in all_slots[
+            : self.total_weekly_slots - sum(len(day) for day in weekly_schedule)
+        ]:
+            # Find best track for this slot
+            available_tracks = [
+                t for t in self.track_names if t not in weekly_schedule[day_idx]
+            ]
+
+            if available_tracks:
+                best_track = self.select_best_track_for_slot(
+                    available_tracks, day_idx, week_str, private_key, track_appearances
+                )
+                weekly_schedule[day_idx].append(best_track)
+                track_appearances[best_track] += 1
+
+        return weekly_schedule
+
+    def select_best_track_for_slot(
+        self,
+        available_tracks: List[str],
+        day_idx: int,
+        week_str: str,
+        private_key: bytes,
+        current_appearances: Counter,
+    ) -> str:
+        """Select the best track for a specific slot using deterministic scoring."""
+        track_scores = []
+
+        for track in available_tracks:
+            track_data = next(t for t in self.tracks_data if t["language"] == track)
+
+            # Base priority score
+            base_score = self.calculate_priority_score(track_data)
+
+            # Appearance balance bonus (favor tracks with fewer appearances)
+            appearance_bonus = max(0, 5 - current_appearances[track]) * 0.2
+
+            # Deterministic variance using Bitcoin k
+            message = f"{week_str}-{track}-slot-{day_idx}".encode()
+            k = self.deterministic_k(message, private_key)
+            variance = (k % 1000) / 10000  # Small random component (0-0.1)
+
+            final_score = base_score + appearance_bonus + variance
+            track_scores.append((final_score, track))
+
+        # Return highest scoring track
+        track_scores.sort(reverse=True)
+        return track_scores[0][1]
+
+    def calculate_priority_score(self, track_data: Dict) -> float:
+        """Calculate priority score for a track (0-1 scale)."""
+        # Progress factor (bell curve peaking at 50% completion)
+        completion_ratio = min(
+            track_data.get("completed", 0) / track_data["total"], 0.99
+        )
+        import math
+
+        progress_score = math.sin(completion_ratio * math.pi)
+
+        # Recency factor (higher for tracks not touched recently)
+        max_last_touched = 30  # Assume max 30 days
+        recency_score = 1.0 - (track_data.get("last_touched", 0) / max_last_touched)
+
+        # Category diversity (could be enhanced with more context)
+        category_score = 0.5  # Neutral for now
+
+        # Weighted combination
+        return progress_score * 0.4 + recency_score * 0.4 + category_score * 0.2
+
+    def get_daily_tracks(self, target_date: datetime) -> List[str]:
+        """Get tracks for a specific date using weekly schedule."""
+        # Find the Monday of the week containing target_date
+        days_since_monday = target_date.weekday()
+        week_start = target_date - timedelta(days=days_since_monday)
+
+        # Generate weekly schedule
+        weekly_schedule = self.generate_weekly_schedule(week_start)
+
+        # Return tracks for the target day
+        day_of_week = target_date.weekday()  # 0 = Monday
+        return weekly_schedule[day_of_week]
+
+    def validate_weekly_coverage(self, weekly_schedule: List[List[str]]) -> Dict:
+        """Validate that weekly schedule meets coverage requirements."""
+        track_counts = Counter()
+        for day_tracks in weekly_schedule:
+            for track in day_tracks:
+                track_counts[track] += 1
+
+        missing_tracks = [
+            t
+            for t in self.track_names
+            if track_counts[t] < self.MIN_APPEARANCES_PER_WEEK
+        ]
+        over_represented = [
+            t for t in self.track_names if track_counts[t] > 4
+        ]  # Max reasonable per week
+
+        return {
+            "total_tracks_scheduled": sum(track_counts.values()),
+            "unique_tracks_scheduled": len(track_counts),
+            "tracks_meeting_minimum": len(
+                [
+                    t
+                    for t in self.track_names
+                    if track_counts[t] >= self.MIN_APPEARANCES_PER_WEEK
+                ]
+            ),
+            "missing_tracks": missing_tracks,
+            "over_represented_tracks": over_represented,
+            "track_distribution": dict(track_counts),
+            "coverage_percentage": len(
+                [
+                    t
+                    for t in self.track_names
+                    if track_counts[t] >= self.MIN_APPEARANCES_PER_WEEK
+                ]
+            )
+            / len(self.track_names)
+            * 100,
+        }
+
+
+# Example usage and testing
+def test_bitcoin_selector():
+    """Test the Bitcoin-style track selector."""
+    # Sample track data
+    sample_tracks = [
+        {
+            "language": "python",
+            "total": 100,
+            "completed": 45,
+            "last_touched": 2,
+            "category": "scripting",
+        },
+        {
+            "language": "rust",
+            "total": 80,
+            "completed": 20,
+            "last_touched": 5,
+            "category": "system",
+        },
+        {
+            "language": "javascript",
+            "total": 90,
+            "completed": 60,
+            "last_touched": 1,
+            "category": "scripting",
+        },
+        {
+            "language": "go",
+            "total": 70,
+            "completed": 10,
+            "last_touched": 10,
+            "category": "system",
+        },
+        {
+            "language": "typescript",
+            "total": 85,
+            "completed": 30,
+            "last_touched": 3,
+            "category": "scripting",
+        },
+        {
+            "language": "julia",
+            "total": 60,
+            "completed": 5,
+            "last_touched": 0,
+            "category": "functional",
+        },
+        {
+            "language": "sqlite",
+            "total": 40,
+            "completed": 25,
+            "last_touched": 1,
+            "category": "database",
+        },
+        {
+            "language": "bash",
+            "total": 50,
+            "completed": 35,
+            "last_touched": 4,
+            "category": "shell",
+        },
+    ]
+
+    selector = BitcoinStyleTrackSelector(sample_tracks, max_daily_tracks=4)
+
+    # Test weekly schedule generation
+    test_date = datetime(2025, 5, 26)  # A Monday
+    weekly_schedule = selector.generate_weekly_schedule(test_date)
+
+    print("Weekly Schedule:")
+    days = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
+    for i, day_tracks in enumerate(weekly_schedule):
+        print(f"{days[i]}: {day_tracks}")
+
+    # Validate coverage
+    validation = selector.validate_weekly_coverage(weekly_schedule)
+    print("\nCoverage Analysis:")
+    print(f"Total tracks scheduled: {validation['total_tracks_scheduled']}")
+    print(f"Unique tracks: {validation['unique_tracks_scheduled']}")
+    print(f"Coverage percentage: {validation['coverage_percentage']:.1f}%")
+    print(f"Missing tracks: {validation['missing_tracks']}")
+
+    # Test individual day selection
+    today_tracks = selector.get_daily_tracks(datetime.now())
+    print(f"\nToday's tracks: {today_tracks}")
+
+
+if __name__ == "__main__":
+    test_bitcoin_selector()

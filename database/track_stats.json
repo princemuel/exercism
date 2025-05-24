@@ -9,66 +9,66 @@
     "language": "python",
     "category": "scripting",
     "total": 140,
-    "last_touched": 2
+    "last_touched": 3
   },
   {
     "language": "jq",
     "category": "shell",
     "total": 74,
-    "last_touched": 1
+    "last_touched": 3
   },
   {
     "language": "rust",
     "category": "system",
     "total": 99,
-    "last_touched": 0
+    "last_touched": 1
   },
   {
     "language": "javascript",
     "category": "scripting",
     "total": 150,
-    "last_touched": 1
+    "last_touched": 2
   },
   {
     "language": "typescript",
     "category": "scripting",
     "total": 100,
-    "last_touched": 0
+    "last_touched": 1
   },
   {
     "language": "go",
     "category": "scripting",
     "total": 141,
-    "last_touched": 4
+    "last_touched": 5
   },
   {
     "language": "c",
     "category": "system",
     "total": 82,
-    "last_touched": 2
+    "last_touched": 3
   },
   {
     "language": "cpp",
     "category": "system",
     "total": 99,
-    "last_touched": 1
+    "last_touched": 3
   },
   {
     "language": "bash",
     "category": "shell",
     "total": 92,
-    "last_touched": 0
+    "last_touched": 1
   },
   {
     "language": "awk",
     "category": "shell",
     "total": 83,
-    "last_touched": 0
+    "last_touched": 1
   },
   {
     "language": "julia",
     "category": "functional",
     "total": 101,
-    "last_touched": 0
+    "last_touched": 1
   }
 ]

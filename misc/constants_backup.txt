@@ -14,23 +14,24 @@ MAX_DAILY_TRACKS = 4
 DAYS_FOR_TRACK_ROTATION = 7  # Days to consider for track rotation history
 COMPLETION_THRESHOLD = 0.96  # Consider a track completed at 96% completion
 
-# Weekly coverage constraints
-MIN_APPEARANCES_PER_WEEK = 2
-MAX_APPEARANCES_PER_WEEK = 4
-BITCOIN_STYLE_SELECTION = True
-
-# Enhanced scoring weights (redistributed using exact decimal representations)
-PROGRESS_WEIGHT = 0.35  # Slightly increased
-RECENCY_WEIGHT = 0.25  # Increased importance
-ROTATION_WEIGHT = 0.25  # Weekly rotation weight
-CATEGORY_WEIGHT = 0.15  # Slightly reduced
+# Weights for score components (using exact decimal representations)
+PROGRESS_WEIGHT = 0.3
+RECENCY_WEIGHT = 0.2
+ROTATION_WEIGHT = 0.3
+CATEGORY_WEIGHT = 0.2
 
 # Determinism settings
-FLOAT_PRECISION = 28  # Precision for Decimal calculations
+FLOAT_PRECISION = 32  # Precision for Decimal calculations
 RANDOM_SEED_MOD = 2**256  # Modulo for daily seed generation
 
 # Validation: Ensure weights sum to 1.0
 assert (
-    abs(PROGRESS_WEIGHT + RECENCY_WEIGHT + ROTATION_WEIGHT + CATEGORY_WEIGHT - 1.0)
+    abs(
+        PROGRESS_WEIGHT
+        + RECENCY_WEIGHT
+        + ROTATION_WEIGHT
+        + CATEGORY_WEIGHT
+        - 1.0
+    )
     < 1e-10
 ), "Score weights must sum to 1.0"

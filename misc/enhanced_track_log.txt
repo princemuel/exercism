@@ -1,0 +1,801 @@
+import csv
+import hashlib
+import json
+from collections import Counter, defaultdict
+from datetime import datetime, timedelta
+from decimal import getcontext
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+import re
+
+from constants import (
+    BASE_DIR,
+    CATEGORY_WEIGHT,
+    COMPLETION_THRESHOLD,
+    MAX_DAILY_TRACKS,
+    PROGRESS_WEIGHT,
+    RECENCY_WEIGHT,
+    TRACK_LOG_FILE,
+    TRACK_STATS_FILE,
+    UTC_PLUS_ONE,
+)
+
+# Set decimal precision for consistent floating-point operations
+getcontext().prec = FLOAT_PRECISION
+
+# New constants for enhanced features
+OPTIONAL_TRACKS_COUNT = 2  # Number of optional tracks to suggest
+HISTORICAL_ANALYSIS_DAYS = 30  # Days to analyze for historical patterns
+STREAK_BONUS_DAYS = 3  # Days to consider for streak bonuses
+
+
+class EnhancedTrackSelector:
+    """
+    Enhanced track selector with optional tracks, historical learning,
+    adaptive weighting, seasonal adjustments, and streak bonuses.
+    """
+
+    def __init__(
+        self,
+        tracks_data: List[Dict[str, Any]],
+        max_daily_tracks: int = MAX_DAILY_TRACKS,
+    ):
+        self.tracks_data = tracks_data
+        self.max_daily_tracks = max_daily_tracks
+        self.track_names = [t["language"] for t in tracks_data]
+        self.num_tracks = len(self.track_names)
+
+        # Weekly coverage constraints
+        self.MIN_APPEARANCES_PER_WEEK = 2
+        self.MAX_APPEARANCES_PER_WEEK = 4
+        self.days_in_week = 7
+        self.total_weekly_slots = self.days_in_week * self.max_daily_tracks
+
+        # Enhanced features
+        self.historical_patterns = {}
+        self.adaptive_weights = {
+            'progress': PROGRESS_WEIGHT,
+            'recency': RECENCY_WEIGHT,
+            'rotation': 0.3,
+            'category': CATEGORY_WEIGHT
+        }
+
+    def analyze_historical_performance(self, track_log_file: Path) -> Dict[str, float]:
+        """Learn from past selection effectiveness."""
+        if not track_log_file.exists():
+            return {}
+
+        historical_data = {}
+        completion_data = self.load_completion_history()
+
+        try:
+            with open(track_log_file, 'r') as f:
+                reader = csv.DictReader(f)
+                recent_selections = []
+
+                for row in reader:
+                    date_str = row['date']
+                    tracks = row['tracks'].split(',')
+
+                    # Only analyze recent history
+                    date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+                    days_ago = (datetime.now() - date_obj).days
+
+                    if days_ago <= HISTORICAL_ANALYSIS_DAYS:
+                        recent_selections.append({
+                            'date': date_str,
+                            'tracks': tracks,
+                            'days_ago': days_ago
+                        })
+
+                # Analyze effectiveness for each track
+                for track in self.track_names:
+                    track_effectiveness = self.calculate_track_effectiveness(
+                        track, recent_selections, completion_data
+                    )
+                    historical_data[track] = track_effectiveness
+
+        except Exception as e:
+            print(f"Error analyzing historical performance: {e}")
+
+        return historical_data
+
+    def calculate_track_effectiveness(
+        self,
+        track: str,
+        selections: List[Dict],
+        completion_data: Dict
+    ) -> float:
+        """Calculate how effective selecting this track has been historically."""
+        track_selections = [s for s in selections if track in s['tracks']]
+
+        if not track_selections:
+            return 0.5  # Neutral score for tracks without history
+
+        # Calculate progress rate after selections
+        total_progress = 0
+        selection_count = len(track_selections)
+
+        for selection in track_selections:
+            # Look for progress in the days following selection
+            date_obj = datetime.strptime(selection['date'], '%Y-%m-%d')
+
+            # Check if there was progress in the next few days
+            progress_score = self.check_post_selection_progress(
+                track, date_obj, completion_data
+            )
+            total_progress += progress_score
+
+        return min(1.0, total_progress / selection_count) if selection_count > 0 else 0.5
+
+    def check_post_selection_progress(
+        self,
+        track: str,
+        selection_date: datetime,
+        completion_data: Dict
+    ) -> float:
+        """Check if there was progress on a track after it was selected."""
+        # This is a simplified version - in reality, you'd check file timestamps
+        # or completion logs to see if exercises were completed after selection
+
+        # For now, we'll use a heuristic based on recent activity
+        track_data = next((t for t in self.tracks_data if t['language'] == track), None)
+        if not track_data:
+            return 0.0
+
+        last_touched = track_data.get('last_touched', 30)
+
+        # If track was touched recently after selection, consider it effective
+        if last_touched <= 3:  # Touched within 3 days
+            return 1.0
+        elif last_touched <= 7:  # Touched within a week
+            return 0.7
+        else:
+            return 0.3  # Less effective if not touched recently
+
+    def load_completion_history(self) -> Dict:
+        """Load historical completion data."""
+        # This would load from completion cache files or other logs
+        # For now, return empty dict as placeholder
+        return {}
+
+    def adjust_weights_based_on_progress(self, weekly_progress: Dict[str, int]) -> Dict[str, float]:
+        """Dynamically adjust scoring weights based on weekly progress."""
+        total_progress = sum(weekly_progress.values())
+
+        if total_progress == 0:
+            return self.adaptive_weights  # No progress, keep current weights
+
+        # Analyze which factors led to most progress
+        progress_factor_correlation = {
+            'progress': 0.5,  # Baseline correlation
+            'recency': 0.5,
+            'rotation': 0.5,
+            'category': 0.5
+        }
+
+        # Adjust weights based on what's working
+        adjustment_factor = 0.1  # How much to adjust (10%)
+
+        for factor in self.adaptive_weights:
+            correlation = progress_factor_correlation.get(factor, 0.5)
+            if correlation > 0.6:  # Factor is working well
+                self.adaptive_weights[factor] = min(1.0,
+                    self.adaptive_weights[factor] + adjustment_factor)
+            elif correlation < 0.4:  # Factor isn't helping
+                self.adaptive_weights[factor] = max(0.1,
+                    self.adaptive_weights[factor] - adjustment_factor)
+
+        # Normalize weights to sum to 1.0
+        total_weight = sum(self.adaptive_weights.values())
+        for factor in self.adaptive_weights:
+            self.adaptive_weights[factor] /= total_weight
+
+        return self.adaptive_weights
+
+    def apply_seasonal_factors(self, date: datetime, track_data: Dict) -> float:
+        """Apply seasonal adjustments (holidays, weekends, etc.)."""
+        seasonal_bonus = 1.0
+
+        # Weekend adjustments (Saturday=5, Sunday=6)
+        if date.weekday() >= 5:
+            # Prefer lighter tracks on weekends
+            category = track_data.get('category', '')
+            if category in ['shell', 'scripting']:
+                seasonal_bonus += 0.1  # Slight bonus for lighter tracks
+            elif category in ['system']:
+                seasonal_bonus -= 0.1  # Slight penalty for heavier tracks
+
+        # Friday adjustments
+        elif date.weekday() == 4:  # Friday
+            # Prefer finishing tracks that are close to completion
+            total = track_data.get('total', 1)
+            # This would use actual completion count, simplified here
+            completion_ratio = 0.5  # Placeholder
+            if completion_ratio > 0.8:
+                seasonal_bonus += 0.15  # Bonus for nearly complete tracks
+
+        # Mid-week intensity (Tuesday-Thursday)
+        elif date.weekday() in [1, 2, 3]:
+            # Prefer more challenging tracks
+            category = track_data.get('category', '')
+            if category in ['system', 'functional']:
+                seasonal_bonus += 0.1
+
+        # Holiday considerations (simplified)
+        if self.is_holiday_period(date):
+            # Prefer familiar/easier tracks during holidays
+            last_touched = track_data.get('last_touched', 30)
+            if last_touched <= 7:  # Recently worked on
+                seasonal_bonus += 0.1
+
+        return max(0.5, min(2.0, seasonal_bonus))  # Clamp between 0.5 and 2.0
+
+    def is_holiday_period(self, date: datetime) -> bool:
+        """Check if date falls in common holiday periods."""
+        # Simplified holiday detection
+        month = date.month
+        day = date.day
+
+        # Christmas/New Year period
+        if (month == 12 and day >= 20) or (month == 1 and day <= 7):
+            return True
+
+        # Add other holidays as needed
+        return False
+
+    def calculate_streak_bonus(self, track: str, recent_history: List[str]) -> float:
+        """Reward continuing streaks for momentum."""
+        if not recent_history:
+            return 1.0
+
+        streak_bonus = 1.0
+
+        # Check recent appearances
+        recent_appearances = 0
+        for i, day_tracks in enumerate(recent_history[-STREAK_BONUS_DAYS:]):
+            if track in day_tracks:
+                # More recent appearances get higher weight
+                weight = 1.0 - (i * 0.2)  # Diminishing weight for older days
+                recent_appearances += weight
+
+        # Apply streak bonus
+        if recent_appearances > 0:
+            # Small bonus for momentum, but not too large to avoid over-selection
+            streak_bonus += min(0.2, recent_appearances * 0.1)
+        elif len(recent_history) >= 2 and track not in recent_history[-2:]:
+            # Small bonus for tracks that haven't appeared recently
+            streak_bonus += 0.05
+
+        return streak_bonus
+
+    def get_recent_selection_history(self, days: int = 7) -> List[List[str]]:
+        """Get recent track selections for streak analysis."""
+        if not TRACK_LOG_FILE.exists():
+            return []
+
+        recent_selections = []
+        try:
+            with open(TRACK_LOG_FILE, 'r') as f:
+                reader = csv.DictReader(f)
+                all_selections = list(reader)
+
+                # Get last N days
+                for row in all_selections[-days:]:
+                    tracks = row['tracks'].split(',')
+                    recent_selections.append(tracks)
+
+        except Exception as e:
+            print(f"Error loading recent history: {e}")
+
+        return recent_selections
+
+    def calculate_enhanced_priority_score(
+        self,
+        track_data: Dict[str, Any],
+        completion_counts: Dict[str, int],
+        target_date: datetime,
+        weekly_appearances: int = 0,
+        day_context: str = "",
+    ) -> float:
+        """
+        Calculate enhanced priority score with all new features.
+        """
+        track_name = track_data["language"]
+
+        # Basic score calculation (existing logic)
+        completed = completion_counts.get(track_name, 0)
+        total = track_data.get("total", 1)
+        completion_ratio = min(completed / total, 0.99) if total > 0 else 0
+
+        # Skip tracks that are essentially completed
+        if completion_ratio >= COMPLETION_THRESHOLD:
+            return -1.0
+
+        import math
+        progress_score = math.sin(completion_ratio * math.pi)
+
+        # Recency factor
+        last_touched = track_data.get("last_touched", 0)
+        max_last_touched = 30
+        recency_score = max(0, 1.0 - (last_touched / max_last_touched))
+
+        # Weekly balance factor
+        balance_penalty = 0
+        if weekly_appearances >= self.MAX_APPEARANCES_PER_WEEK:
+            balance_penalty = 0.5
+        elif weekly_appearances >= self.MIN_APPEARANCES_PER_WEEK:
+            balance_penalty = 0.1
+        balance_score = 1.0 - balance_penalty
+
+        # Category diversity factor
+        category_score = 0.5
+
+        # NEW FEATURES
+
+        # Historical effectiveness
+        historical_data = self.analyze_historical_performance(TRACK_LOG_FILE)
+        historical_score = historical_data.get(track_name, 0.5)
+
+        # Seasonal adjustments
+        seasonal_factor = self.apply_seasonal_factors(target_date, track_data)
+
+        # Streak bonus
+        recent_history = self.get_recent_selection_history()
+        streak_factor = self.calculate_streak_bonus(track_name, recent_history)
+
+        # Combine factors with adaptive weights
+        final_score = (
+            progress_score * self.adaptive_weights['progress']
+            + recency_score * self.adaptive_weights['recency']
+            + balance_score * self.adaptive_weights['rotation']
+            + category_score * self.adaptive_weights['category']
+            + historical_score * 0.1  # Historical effectiveness weight
+        )
+
+        # Apply seasonal and streak factors
+        final_score *= seasonal_factor * streak_factor
+
+        return max(0, final_score)
+
+    def get_optional_tracks(
+        self,
+        target_date: datetime,
+        completion_counts: Dict[str, int],
+        selected_tracks: List[str]
+    ) -> List[str]:
+        """
+        Get optional tracks for users who want to do more exercises.
+        """
+        # Get all viable tracks not already selected
+        available_tracks = []
+        for track_data in self.tracks_data:
+            track_name = track_data["language"]
+            if track_name in selected_tracks:
+                continue
+
+            completed = completion_counts.get(track_name, 0)
+            total = track_data.get("total", 1)
+            completion_ratio = completed / total if total > 0 else 0
+
+            if completion_ratio < COMPLETION_THRESHOLD:
+                score = self.calculate_enhanced_priority_score(
+                    track_data, completion_counts, target_date, 0, "optional"
+                )
+                if score > 0:
+                    available_tracks.append((score, track_name))
+
+        # Sort by score and return top optional tracks
+        available_tracks.sort(reverse=True)
+        return [track for _, track in available_tracks[:OPTIONAL_TRACKS_COUNT]]
+
+    def deterministic_k(
+        self, message: bytes, private_key: bytes, nonce: int = 0
+    ) -> int:
+        """Bitcoin-style deterministic k generation following RFC 6979 principles."""
+        combined = message + private_key + nonce.to_bytes(8, "big")
+        k = b"\x01" * 32
+        v = b"\x00" * 32
+
+        for iteration in range(5):
+            h = hashlib.new("sha256")
+            h.update(k + v + combined + iteration.to_bytes(1, "big"))
+            k = h.digest()
+
+            h = hashlib.new("sha256")
+            h.update(k + v)
+            v = h.digest()
+
+        return int.from_bytes(v[:8], "big")
+
+    def generate_weekly_schedule(
+        self, week_start: datetime, completion_counts: Dict[str, int]
+    ) -> List[List[str]]:
+        """Generate weekly schedule with enhanced scoring."""
+        week_str = week_start.strftime("%Y-W%U")
+        private_key = hashlib.sha256(f"exercism-week-{week_str}".encode()).digest()
+
+        weekly_schedule = [[] for _ in range(7)]
+        track_appearances = Counter()
+
+        # Filter viable tracks
+        viable_tracks = []
+        for track_data in self.tracks_data:
+            track_name = track_data["language"]
+            completed = completion_counts.get(track_name, 0)
+            total = track_data.get("total", 1)
+            completion_ratio = completed / total if total > 0 else 0
+
+            if completion_ratio < COMPLETION_THRESHOLD:
+                viable_tracks.append(track_data)
+
+        if not viable_tracks:
+            return weekly_schedule
+
+        # Phase 1: Ensure minimum appearances with enhanced scoring
+        track_priorities = []
+        for track_data in viable_tracks:
+            current_date = week_start + timedelta(days=3)  # Use mid-week as reference
+            priority = self.calculate_enhanced_priority_score(
+                track_data, completion_counts, current_date, 0, "initial"
+            )
+            if priority > 0:
+                track_priorities.append((priority, track_data))
+
+        track_priorities.sort(reverse=True)
+
+        # Distribute minimum appearances
+        for _, track_data in track_priorities:
+            track_name = track_data["language"]
+            while track_appearances[track_name] < self.MIN_APPEARANCES_PER_WEEK:
+                best_day = self.select_best_day_for_track(
+                    track_name, weekly_schedule, week_str, private_key, track_appearances
+                )
+                if best_day is not None:
+                    weekly_schedule[best_day].append(track_name)
+                    track_appearances[track_name] += 1
+                else:
+                    break
+
+        # Phase 2: Fill remaining slots
+        for day_idx in range(7):
+            while len(weekly_schedule[day_idx]) < self.max_daily_tracks:
+                current_date = week_start + timedelta(days=day_idx)
+                best_track = self.select_best_track_for_slot(
+                    day_idx, weekly_schedule, track_appearances, viable_tracks,
+                    completion_counts, week_str, private_key, current_date
+                )
+                if best_track:
+                    weekly_schedule[day_idx].append(best_track)
+                    track_appearances[best_track] += 1
+                else:
+                    break
+
+        return weekly_schedule
+
+    def select_best_day_for_track(
+        self, track_name: str, current_schedule: List[List[str]],
+        week_str: str, private_key: bytes, track_appearances: Counter
+    ) -> Optional[int]:
+        """Select best day for track placement."""
+        available_days = [
+            day for day in range(7)
+            if len(current_schedule[day]) < self.max_daily_tracks
+            and track_name not in current_schedule[day]
+        ]
+
+        if not available_days:
+            return None
+
+        message = f"{week_str}-{track_name}-day-selection-{track_appearances[track_name]}".encode()
+        k = self.deterministic_k(message, private_key)
+
+        day_weights = []
+        for day in available_days:
+            available_slots = self.max_daily_tracks - len(current_schedule[day])
+            weight = available_slots * 1000 + (k + day) % 1000
+            day_weights.append((weight, day))
+
+        day_weights.sort(reverse=True)
+        return day_weights[0][1]
+
+    def select_best_track_for_slot(
+        self, day_idx: int, current_schedule: List[List[str]],
+        track_appearances: Counter, tracks_data: List[Dict],
+        completion_counts: Dict[str, int], week_str: str,
+        private_key: bytes, current_date: datetime
+    ) -> Optional[str]:
+        """Select best track for specific slot with enhanced scoring."""
+        available_tracks = [
+            track_data for track_data in tracks_data
+            if track_data["language"] not in current_schedule[day_idx]
+            and track_appearances[track_data["language"]] < self.MAX_APPEARANCES_PER_WEEK
+        ]
+
+        if not available_tracks:
+            return None
+
+        track_scores = []
+        for track_data in available_tracks:
+            track_name = track_data["language"]
+            current_appearances = track_appearances[track_name]
+
+            # Use enhanced scoring
+            base_score = self.calculate_enhanced_priority_score(
+                track_data, completion_counts, current_date,
+                current_appearances, f"day-{day_idx}"
+            )
+
+            if base_score <= 0:
+                continue
+
+            # Add deterministic variance
+            message = f"{week_str}-{track_name}-day-{day_idx}-slot".encode()
+            k = self.deterministic_k(message, private_key)
+            variance = (k % 1000) / 10000
+
+            final_score = base_score + variance
+            track_scores.append((final_score, track_name))
+
+        if not track_scores:
+            return None
+
+        track_scores.sort(reverse=True)
+        return track_scores[0][1]
+
+    def get_daily_tracks(
+        self, target_date: datetime, completion_counts: Dict[str, int]
+    ) -> Tuple[List[str], List[str]]:
+        """
+        Get both required and optional tracks for a specific date.
+        Returns (required_tracks, optional_tracks)
+        """
+        days_since_monday = target_date.weekday()
+        week_start = target_date - timedelta(days=days_since_monday)
+
+        weekly_schedule = self.generate_weekly_schedule(week_start, completion_counts)
+        day_of_week = target_date.weekday()
+
+        required_tracks = (
+            weekly_schedule[day_of_week] if day_of_week < len(weekly_schedule) else []
+        )
+
+        optional_tracks = self.get_optional_tracks(
+            target_date, completion_counts, required_tracks
+        )
+
+        return required_tracks, optional_tracks
+
+    def validate_weekly_coverage(self, weekly_schedule: List[List[str]]) -> Dict[str, Any]:
+        """Validate weekly schedule meets coverage requirements."""
+        track_counts = Counter()
+        for day_tracks in weekly_schedule:
+            for track in day_tracks:
+                track_counts[track] += 1
+
+        total_unique_tracks = len(set(self.track_names))
+        tracks_with_min_coverage = len([
+            t for t in self.track_names
+            if track_counts[t] >= self.MIN_APPEARANCES_PER_WEEK
+        ])
+
+        missing_tracks = [
+            t for t in self.track_names
+            if track_counts[t] < self.MIN_APPEARANCES_PER_WEEK
+        ]
+
+        over_represented = [
+            t for t in self.track_names
+            if track_counts[t] > self.MAX_APPEARANCES_PER_WEEK
+        ]
+
+        return {
+            "total_slots_filled": sum(len(day) for day in weekly_schedule),
+            "total_possible_slots": self.days_in_week * self.max_daily_tracks,
+            "unique_tracks_scheduled": len(track_counts),
+            "total_possible_tracks": total_unique_tracks,
+            "tracks_meeting_minimum": tracks_with_min_coverage,
+            "coverage_percentage": (tracks_with_min_coverage / total_unique_tracks) * 100
+            if total_unique_tracks > 0 else 0,
+            "missing_tracks": missing_tracks,
+            "over_represented_tracks": over_represented,
+            "track_distribution": dict(track_counts),
+            "average_appearances": sum(track_counts.values()) / len(track_counts)
+            if track_counts else 0,
+        }
+
+
+# Interactive completion recording functions
+
+def record_daily_completion():
+    """Interactive function to record daily completion progress."""
+    print("\n🎯 Daily Exercise Completion Recording")
+    print("=" * 50)
+
+    today = datetime.now(UTC_PLUS_ONE)
+    today_str = today.strftime("%Y-%m-%d")
+
+    # Load today's tracks
+    completion_log_file = BASE_DIR / "database" / "daily_completions.json"
+    completion_data = load_completion_log(completion_log_file)
+
+    if today_str not in completion_data:
+        completion_data[today_str] = {}
+
+    # Get today's selected tracks
+    selected_tracks = get_todays_selected_tracks(today_str)
+
+    if not selected_tracks:
+        print("No tracks were selected for today.")
+        return
+
+    print(f"Today's tracks ({today_str}):")
+
+    for i, track in enumerate(selected_tracks, 1):
+        current_status = completion_data[today_str].get(track, {})
+
+        print(f"\n{i}. {track.upper()}")
+        print(f"   Current status: {format_track_status(current_status)}")
+
+        # Get user input
+        action = input(f"   Action for {track} (c=completed, p=in-progress, s=skip, Enter=no change): ").lower().strip()
+
+        if action == 'c':
+            # Record completed exercise
+            exercise_name = input(f"   Exercise name completed in {track}: ").strip()
+            if exercise_name:
+                if 'completed' not in completion_data[today_str].setdefault(track, {}):
+                    completion_data[today_str][track]['completed'] = []
+                completion_data[today_str][track]['completed'].append({
+                    'exercise': exercise_name,
+                    'timestamp': datetime.now().isoformat()
+                })
+                print(f"   ✅ Recorded completion of '{exercise_name}' in {track}")
+        elif action == 'p':
+            # Record in-progress exercise
+            exercise_name = input(f"   Exercise name in progress in {track}: ").strip()
+            if exercise_name:
+                completion_data[today_str][track]['in_progress'] = exercise_name
+                print(f"   🔄 Recorded '{exercise_name}' as in-progress in {track}")
+        elif action == 's':
+            # Mark as skipped
+            completion_data[today_str][track]['status'] = 'skipped'
+            print(f"   ⏭️  Marked {track} as skipped")
+        elif action == '':
+            print(f"   ➡️  No change for {track}")
+        else:
+            print(f"   ❌ Invalid action: {action}")
+
+    # Save completion data
+    save_completion_log(completion_log_file, completion_data)
+    print(f"\n💾 Progress saved to {completion_log_file}")
+
+    # Show summary
+    show_daily_summary(completion_data[today_str])
+
+
+def load_completion_log(file_path: Path) -> Dict:
+    """Load completion log from JSON file."""
+    if not file_path.exists():
+        return {}
+
+    try:
+        with open(file_path, 'r') as f:
+            return json.load(f)
+    except (json.JSONDecodeError, FileNotFoundError):
+        return {}
+
+
+def save_completion_log(file_path: Path, data: Dict):
+    """Save completion log to JSON file."""
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(file_path, 'w') as f:
+        json.dump(data, f, indent=2, sort_keys=True)
+
+
+def format_track_status(status_data: Dict) -> str:
+    """Format track status for display."""
+    if not status_data:
+        return "Not started"
+
+    parts = []
+
+    if 'completed' in status_data:
+        completed_count = len(status_data['completed'])
+        parts.append(f"{completed_count} completed")
+
+    if 'in_progress' in status_data:
+        parts.append(f"Working on: {status_data['in_progress']}")
+
+    if status_data.get('status') == 'skipped':
+        parts.append("Skipped")
+
+    return ", ".join(parts) if parts else "Not started"
+
+
+def get_todays_selected_tracks(date_str: str) -> List[str]:
+    """Get tracks that were selected for today."""
+    if not TRACK_LOG_FILE.exists():
+        return []
+
+    try:
+        with open(TRACK_LOG_FILE, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row['date'] == date_str:
+                    return row['tracks'].split(',')
+    except Exception as e:
+        print(f"Error reading track log: {e}")
+
+    return []
+
+
+def show_daily_summary(daily_data: Dict):
+    """Show summary of daily progress."""
+    if not daily_data:
+        print("\n📊 No progress recorded today.")
+        return
+
+    print("\n📊 Today's Progress Summary:")
+    print("-" * 30)
+
+    total_tracks = len(daily_data)
+    completed_exercises = 0
+    in_progress_tracks = 0
+    skipped_tracks = 0
+
+    for track, data in daily_data.items():
+        if 'completed' in data:
+            completed_exercises += len(data['completed'])
+        if 'in_progress' in data:
+            in_progress_tracks += 1
+        if data.get('status') == 'skipped':
+            skipped_tracks += 1
+
+    print(f"Tracks worked on: {total_tracks}")
+    print(f"Exercises completed: {completed_exercises}")
+    print(f"Tracks in progress: {in_progress_tracks}")
+    print(f"Tracks skipped: {skipped_tracks}")
+
+
+# Original helper functions (updated to work with enhanced selector)
+
+def count_completed_exercises(base_url: Path, track: str) -> int:
+    """Count completed exercises for a given track (non-hidden subdirs)."""
+    track_path = base_url / track
+    if not track_path.exists() or not track_path.is_dir():
+        return 0
+    try:
+        return sum(
+            1 for d in track_path.iterdir()
+            if d.is_dir() and not d.name.startswith(".")
+        )
+    except (PermissionError, FileNotFoundError) as e:
+        print(f"Error accessing {track_path}: {e}")
+        return 0
+
+
+def get_cached_completion_counts(today_str: str) -> Dict[str, int]:
+    """Get cached completion counts for today, or generate new ones if not cached."""
+    cache_file = BASE_DIR / "database" / f"completion_cache_{today_str}.json"
+
+    if cache_file.exists():
+        try:
+            with open(cache_file, "r") as f:
+                cached_data = json.load(f)
+                print(f"Using cached completion counts from {cache_file}")
+                return cached_data
+        except (json.JSONDecodeError, FileNotFoundError) as e:
+            print(f"Error reading cache file: {e}")
+
+    print("Generating fresh completion counts...")
+    languages = load_language_metadata(TRACK_STATS_FILE)
+    completion_counts = {}
+
+    for lang_data in languages:
+        track = lang_data["language"]
+        completed = count_completed_exercises(BASE_DIR, track)
+        completion_counts[track] = completed
+        print(f"  {track}: {completed} exercises completed")
+
+    cache_file.parent.mkdir(
