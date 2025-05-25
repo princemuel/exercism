@@ -1,3 +1,4 @@
 date,weekday,selected_tracks,optional_tracks,completed_tracks,completed_exercises,notes
 
 2025-05-24,Saturday,rust|sqlite|go|cpp,typescript|python|javascript,cpp|go|sqlite|rust|javascript,"{""cpp"": [""last-will""], ""go"": [""need-for-speed""], ""sqlite"": [""gigasecond""], ""rust"": [""hamming""], ""javascript"": [""resistor-color"", ""resistor-color-duo""]}",Finished before time :whoops:
+2025-05-25,Sunday,rust|sqlite|cpp|awk,typescript|javascript|python,awk|cpp|sqlite|rust|javascript,"{""awk"": [""reverse-string""], ""cpp"": [""log-levels""], ""sqlite"": [""raindrops""], ""rust"": [""triangle""], ""javascript"": [""bank-account""]}",

@@ -7,6 +7,7 @@ These are my solutions to the Exercism exercises for the [AWK](https://exercism.
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/awk/exercises/hello-world) | [Docs](./awk/hello-world/README.md) |
+| Reverse String | [Reverse String](https://exercism.org/tracks/awk/exercises/reverse-string) | [Docs](./awk/reverse-string/README.md) |
 | Two Fer | [Two Fer](https://exercism.org/tracks/awk/exercises/two-fer) | [Docs](./awk/two-fer/README.md) |
 
 ## Bash
@@ -44,6 +45,7 @@ These are my solutions to the Exercism exercises for the [C++](https://exercism.
 | Hello World | [Hello World](https://exercism.org/tracks/cpp/exercises/hello-world) | [Docs](./cpp/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/cpp/exercises/lasagna) | [Docs](./cpp/lasagna/README.md) |
 | Last Will | [Last Will](https://exercism.org/tracks/cpp/exercises/last-will) | [Docs](./cpp/last-will/README.md) |
+| Log Levels | [Log Levels](https://exercism.org/tracks/cpp/exercises/log-levels) | [Docs](./cpp/log-levels/README.md) |
 | Pacman Rules | [Pacman Rules](https://exercism.org/tracks/cpp/exercises/pacman-rules) | [Docs](./cpp/pacman-rules/README.md) |
 
 ## Go
@@ -71,6 +73,7 @@ These are my solutions to the Exercism exercises for the [JavaScript](https://ex
 |----------|----------|----------|
 | Amusement Park | [Amusement Park](https://exercism.org/tracks/javascript/exercises/amusement-park) | [Docs](./javascript/amusement-park/README.md) |
 | Annalyns Infiltration | [Annalyns Infiltration](https://exercism.org/tracks/javascript/exercises/annalyns-infiltration) | [Docs](./javascript/annalyns-infiltration/README.md) |
+| Bank Account | [Bank Account](https://exercism.org/tracks/javascript/exercises/bank-account) | [Docs](./javascript/bank-account/README.md) |
 | Bird Watcher | [Bird Watcher](https://exercism.org/tracks/javascript/exercises/bird-watcher) | [Docs](./javascript/bird-watcher/README.md) |
 | Collatz Conjecture | [Collatz Conjecture](https://exercism.org/tracks/javascript/exercises/collatz-conjecture) | [Docs](./javascript/collatz-conjecture/README.md) |
 | Coordinate Transformation | [Coordinate Transformation](https://exercism.org/tracks/javascript/exercises/coordinate-transformation) | [Docs](./javascript/coordinate-transformation/README.md) |
@@ -193,6 +196,7 @@ These are my solutions to the Exercism exercises for the [Rust](https://exercism
 | Space Age | [Space Age](https://exercism.org/tracks/rust/exercises/space-age) | [Docs](./rust/space-age/README.md) |
 | Sublist | [Sublist](https://exercism.org/tracks/rust/exercises/sublist) | [Docs](./rust/sublist/README.md) |
 | Sum Of Multiples | [Sum Of Multiples](https://exercism.org/tracks/rust/exercises/sum-of-multiples) | [Docs](./rust/sum-of-multiples/README.md) |
+| Triangle | [Triangle](https://exercism.org/tracks/rust/exercises/triangle) | [Docs](./rust/triangle/README.md) |
 
 ## SQLite
 
@@ -206,6 +210,7 @@ These are my solutions to the Exercism exercises for the [SQLite](https://exerci
 | Grains | [Grains](https://exercism.org/tracks/sqlite/exercises/grains) | [Docs](./sqlite/grains/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/sqlite/exercises/hello-world) | [Docs](./sqlite/hello-world/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/sqlite/exercises/leap) | [Docs](./sqlite/leap/README.md) |
+| Raindrops | [Raindrops](https://exercism.org/tracks/sqlite/exercises/raindrops) | [Docs](./sqlite/raindrops/README.md) |
 
 ## TypeScript
 
@@ -240,4 +245,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-24 05:17:43 UTC*
+*Generated on 2025-05-25 02:32:31 UTC*
