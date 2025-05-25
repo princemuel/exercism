@@ -1,0 +1,76 @@
+use std::ops::Add;
+
+#[derive(Debug, PartialEq, Eq)]
+pub enum Triangle {
+    Equilateral,
+    Isosceles,
+    Scalene,
+}
+
+impl Triangle {
+    pub fn build<T>(mut sides: [T; 3]) -> Option<Triangle>
+    where
+        T: Number + Copy + PartialEq + PartialOrd + Add<Output = T>,
+    {
+        if !sides.iter().all(T::is_strictly_positive) {
+            return None;
+        }
+
+        // sum of any two sides bust be >= the other sides
+        // -> the sum of the shortest sides must be >= the longest side
+        sides.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        if sides[0] + sides[1] < sides[2] {
+            return None;
+        }
+
+        let mut n_equal = 0;
+
+        if sides[0] == sides[1] {
+            n_equal += 1;
+        }
+        if sides[1] == sides[2] {
+            n_equal += 1;
+        }
+        if sides[0] == sides[2] {
+            n_equal += 1;
+        }
+
+        match n_equal {
+            0 => Some(Triangle::Scalene),
+            1 => Some(Triangle::Isosceles),
+            3 => Some(Triangle::Equilateral),
+            _ => unreachable!(),
+        }
+    }
+
+    pub fn is_equilateral(&self) -> bool {
+        *self == Triangle::Equilateral
+    }
+
+    pub fn is_scalene(&self) -> bool {
+        *self == Triangle::Scalene
+    }
+
+    pub fn is_isosceles(&self) -> bool {
+        *self == Triangle::Isosceles
+    }
+}
+
+// Quick and dirty Number trait because I don't have the num crate available...
+pub trait Number {
+    fn is_strictly_positive(&self) -> bool;
+}
+
+impl Number for i32 {
+    fn is_strictly_positive(&self) -> bool {
+        *self > 0
+    }
+}
+
+impl Number for f32 {
+    fn is_strictly_positive(&self) -> bool {
+        *self > 0.0
+    }
+}
+
+
