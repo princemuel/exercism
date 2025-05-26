@@ -1,0 +1,141 @@
+const LOWERCASE_MAP: [&str; 11] = [
+    "no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+];
+
+const CAMELCASE_MAP: [&str; 11] = [
+    "_", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+];
+
+pub fn recite(start_bottles: u32, take_down: u32) -> String {
+    ((start_bottles - take_down + 1)..=start_bottles)
+        .rev()
+        .map(|it| bottle(it))
+        .collect::<Vec<_>>()
+        .join("\n\n")
+}
+
+fn bottle(it: u32) -> String {
+    format!(
+        concat!(
+            "{} green {} hanging on the wall,\n",
+            "{} green {} hanging on the wall,\n",
+            "And if one green bottle should accidentally fall,\n",
+            "There'll be {} green {} hanging on the wall.",
+        ),
+        CAMELCASE_MAP[it as usize],
+        pluralize(it),
+        CAMELCASE_MAP[it as usize],
+        pluralize(it),
+        LOWERCASE_MAP[(it - 1) as usize],
+        pluralize(it - 1)
+    )
+}
+
+fn pluralize(count: u32) -> &'static str {
+    if count == 1 {
+        return "bottle";
+    }
+    "bottles"
+}
+
+
+ static NUMBERS_TO_WORDS: [&str; 11] = [
+    "No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+];
+fn green_bottles(i: usize) -> String {
+    format!(
+        "{} green bottle{}",
+        NUMBERS_TO_WORDS[i],
+        if i == 1 { "" } else { "s" }
+    )
+}
+pub fn recite(start_bottles: usize, take_down: usize) -> String {
+    ((start_bottles + 1 - take_down)..=start_bottles )
+        .rev()
+        .fold(String::new(), |acc, i| {
+            acc + &format!(
+                "
+{orig} hanging on the wall,
+{orig} hanging on the wall,
+And if one green bottle should accidentally fall,
+There'll be {rem} hanging on the wall.
+",
+                rem = green_bottles(i - 1).to_lowercase(),
+                orig = green_bottles(i)
+            )
+        })
+}
+
+
+
+
+
+pub fn recite(start_bottles: u32, take_down: u32) -> String {
+    (start_bottles - take_down + 1..=start_bottles)
+        .rev()
+        .map(|verse| {
+            let number = say_number(verse);
+            let bottle = say_bottle(verse);
+            format!(
+                r#"{number} green {bottle} hanging on the wall,
+{number} green {bottle} hanging on the wall,
+And if one green bottle should accidentally fall,
+There'll be {} green {} hanging on the wall.
+"#,
+                say_number(verse - 1).to_lowercase(),
+                say_bottle(verse - 1)
+            )
+        })
+        .collect::<Vec<String>>()
+        .join("\n")
+}
+
+fn say_number(n: u32) -> String {
+    match n {
+        0 => "No",
+        1 => "One",
+        2 => "Two",
+        3 => "Three",
+        4 => "Four",
+        5 => "Five",
+        6 => "Six",
+        7 => "Seven",
+        8 => "Eight",
+        9 => "Nine",
+        10 => "Ten",
+        _ => unreachable!(),
+    }
+    .to_owned()
+}
+
+fn say_bottle(n: u32) -> String {
+    match n {
+        1 => "bottle",
+        _ => "bottles",
+    }
+    .to_owned()
+}
+
+
+
+pub fn recite(start_bottles: u32, take_down: u32) -> String {
+    let counts = ["ten", "nine", "eight", "seven", "six", "five", "four", "three", "two", "one", "no"];
+
+    let i = (10 - start_bottles) as usize;
+    let mut ans = String::new();
+    for x in counts[i..i + take_down as usize + 1].windows(2) {
+        let start = x[0];
+        let take_down = x[1];
+        let first = start.chars().next().unwrap().to_ascii_uppercase();
+        let rest = &start[1..];
+        let s = if start == "one" { "" } else { "s" };
+        let s2 = if take_down == "one" { "" } else { "s" };
+        ans.push_str(&format!(r#"{first}{rest} green bottle{s} hanging on the wall,
+{first}{rest} green bottle{s} hanging on the wall,
+And if one green bottle should accidentally fall,
+There'll be {take_down} green bottle{s2} hanging on the wall.
+
+"#));
+    }
+    ans
+}

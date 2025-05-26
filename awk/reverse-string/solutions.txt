@@ -1,0 +1,48 @@
+{
+  for (i = length($0); i > 0; i--) {
+    printf substr($0, i, 1)
+  }
+}
+
+{ print | "rev" }
+
+{
+  split($0, chars, "")
+  for (i = length($0); i > 0; i--) { printf chars[i] }
+}
+
+BEGIN { FS = "" }
+{ for (i = NF; i > 0; i--) { printf $i }}
+
+{
+    for (i = length; i > 0; i--)
+        x = x substr($0, i, 1);
+    print x;
+}
+
+END {
+    split($0, src, "");
+    asort(src, rev, "@ind_num_desc")
+    join = "";
+    for (i in rev)
+        join = join rev[i]
+    print join
+}
+
+{
+    for(i = length; i >= 1; i--)
+        s = s substr($0, i, 1);
+}
+END { print(s) }
+
+
+END { print reverse($0) }
+
+function reverse(s,    i, chars) {
+    # indexing starts at 1 when a string is split into an array
+    split(s, chars, "")
+    s = ""
+    for (i = length(chars); i > 0; i--)
+        s = s chars[i]
+    return s
+}

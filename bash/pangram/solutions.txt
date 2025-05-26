@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+[ "$(echo "$1" | grep -Eoi '[a-z]' | sort -uf | wc -l)" -eq 26 ] && echo "true" || echo "false"
+
+#!/usr/bin/env bash
+
+unique=`echo $1 | tr A-Z a-z | tr -dc a-z | fold -w1 | sort -u`
+unique=`echo $unique | tr -d " "`
+[ ${#unique} == 26 ] && echo "true" || echo "false"
+
+#!/usr/bin/env bash
+
+(($# == 1)) || exit 1
+
+lines_with_blank_line=$(echo "$1" | tr -d "[:space:][:punct:][:digit:]"| tr "[:upper:]" "[:lower:]" | fold -w 1 | sort | uniq | wc -l)
+
+((lines_with_blank_line == 26)) && echo "true" || echo "false"
+
+
+#!/usr/bin/env bash
+for i in {a..z}; do
+  if [[ ! "${1,,}" =~ $i ]]; then
+    echo "false"
+    exit
+  fi
+done
+echo "true"
+
+#!/usr/bin/env bash
+
+#-- Init variables
+sentence=${1,,} #-- To Lowercase
+alphabet="abcdefghijklmnopqrstuvwxyz"
+
+#-- Strip non alphabetic chars (optimization: less chars to analize)
+# sentence=${sentence//[^a-z]/}
+
+#-- Discard every used char in the sentence from the alphabet
+for ((i=0;i<${#sentence};i++)); do
+	alphabet=${alphabet//${sentence:i:1}/}
+done
+
+#-- Test if alphabet is empty (every word used and discarded)
+[[ ${alphabet} == "" ]] && echo "true" && exit 0
+echo "false"
+
+#!/usr/bin/env bash
+
+alphabet="abcdefghijklmnopqrstuvwxyz"
+given=$(echo $1 | awk '{print tolower($0)}' | grep -o [a-z] | sort | uniq | tr -d "\n")
+[[ $alphabet == $given ]] && echo "true" || echo "false"

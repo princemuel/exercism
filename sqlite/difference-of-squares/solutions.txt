@@ -1,0 +1,49 @@
+-- Schema: CREATE TABLE "difference-of-squares" ("number" INT", property" TEXT, "result" INT);
+-- Task: update the difference-of-squares table and set the result based on the number and property fields.
+WITH intermediate AS (
+    SELECT
+        number,
+        POWER((number * (number + 1)) / 2, 2) as square_of_sum,
+        (number * (number + 1) * (2 * number + 1)) / 6 as sum_of_squares
+    FROM "difference-of-squares"
+)
+UPDATE "difference-of-squares"
+    SET result =
+        CASE property
+            WHEN "squareOfSum" THEN square_of_sum
+            WHEN "sumOfSquares" THEN sum_of_squares
+            WHEN "differenceOfSquares" THEN square_of_sum - sum_of_squares
+        END
+    FROM intermediate WHERE "difference-of-squares".number = intermediate.number;
+
+
+
+-- Schema: CREATE TABLE "difference-of-squares" ("number" INT", property" TEXT, "result" INT);
+-- Task: update the difference-of-squares table and set the result based on the number and property fields.
+UPDATE "difference-of-squares"
+SET result = CASE
+                property
+                WHEN 'squareOfSum' THEN square_of_sum
+                WHEN 'sumOfSquares' THEN sum_of_squares
+                WHEN 'differenceOfSquares' THEN square_of_sum - sum_of_squares
+                ELSE NULL
+        END
+FROM (
+                SELECT number,
+                        CAST(POWER((number * (number + 1)) / 2, 2) AS INT) AS square_of_sum,
+                        (number * (number + 1) * (2 * number + 1)) / 6 AS sum_of_squares
+                FROM "difference-of-squares"
+        ) AS precomputed
+WHERE "difference-of-squares".number = precomputed.number;
+
+
+
+1,"squareOfSum",""
+5,"squareOfSum",""
+100,"squareOfSum",""
+1,"sumOfSquares",""
+5,"sumOfSquares",""
+100,"sumOfSquares",""
+1,"differenceOfSquares",""
+5,"differenceOfSquares",""
+100,"differenceOfSquares",""

@@ -1,0 +1,24 @@
+#include "grains.h"
+
+uint64_t square(uint8_t index)
+{
+    return (index < 1 || index > 64) ? 0 : 1ull << (index - 1);
+}
+
+uint64_t total(void)
+{
+
+    return ~0ull;
+}
+
+#include "grains.h"
+#include <math.h>
+
+uint64_t square(uint8_t index)
+{
+ return pow (2,index-1);
+}
+uint64_t total(void)
+{
+    return (uint64_t) pow (2,64);
+}
