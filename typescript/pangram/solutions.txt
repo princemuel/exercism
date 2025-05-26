@@ -1,0 +1,13 @@
+export function isPangram(paragraph: string) : boolean {
+    return new Set(paragraph.toLowerCase()
+        .replace(/[^a-z]/g, '')).size === 26;
+}
+
+export const isPangram = (input: string): boolean =>
+    new Set([...input.toLowerCase()].filter((char) => /([a-z])/.test(char)))
+        .size === 26;
+
+export function isPangram(sentence: string) {
+  const regex = /([a-z])(?!.*\1)/g;
+  return (sentence.toLowerCase().match(regex) ?? []).length === 26;
+}
