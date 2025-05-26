@@ -3,3 +3,5 @@
 (.name // "you") as $name | "One for \($name), one for me."
 
 "One for \(.[]//"you"), one for me."
+
+"One for \(if .name then .name else "you" end ), one for me."
