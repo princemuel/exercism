@@ -1,3 +1,0 @@
-(.ingredients + ."optional ingredients" | map(select(has("substitute")) | {(.item): .substitute}) | add)
-
-(.ingredients + ."optional ingredients" | map(select(.substitute) | {(.item): .substitute}) | add)
