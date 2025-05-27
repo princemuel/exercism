@@ -1,13 +1,14 @@
 use ::std::fs;
 
-use readmes::{args, readme, scanner};
+use ::readmes::{args, readme, scanner};
 
 use args::Args;
-use readme::{generate_main_readme, generate_track_readmes};
+use readme::ReadmeGenerator;
 use scanner::scan_exercism_directories;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
 	let args = Args::parse();
+	let generator = ReadmeGenerator::new()?;
 
 	println!("Scanning for Exercism exercises in: {}", args.path.display());
 
@@ -18,11 +19,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 		return Ok(());
 	}
 
-	// Generate individual track README files
-	let track_stats = generate_track_readmes(&exercises, &args.path)?;
-
-	// Generate main README with links to track READMEs
-	let main_readme = generate_main_readme(&exercises, &track_stats);
+	let track_stats = generator.generate_track_readmes(&exercises, &args.path)?;
+	let main_readme = generator.generate_main_readme(&exercises, &track_stats)?;
 	fs::write(&args.output, main_readme)?;
 
 	let total_exercises: usize = exercises.values().map(|v| v.len()).sum();
