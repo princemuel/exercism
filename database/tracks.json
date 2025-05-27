@@ -3,7 +3,7 @@
     "title": "sqlite",
     "category": "database",
     "total": 28,
-    "completed": 7
+    "completed": 8
   },
   {
     "title": "python",
@@ -15,7 +15,7 @@
     "title": "jq",
     "category": "shell",
     "total": 74,
-    "completed": 3
+    "completed": 4
   },
   {
     "title": "rust",
@@ -33,25 +33,19 @@
     "title": "typescript",
     "category": "scripting",
     "total": 100,
-    "completed": 25
+    "completed": 26
   },
   {
     "title": "go",
     "category": "scripting",
     "total": 141,
-    "completed": 9
-  },
-  {
-    "title": "c",
-    "category": "system",
-    "total": 82,
-    "completed": 3
+    "completed": 10
   },
   {
     "title": "cpp",
     "category": "system",
     "total": 99,
-    "completed": 5
+    "completed": 6
   },
   {
     "title": "bash",
@@ -60,15 +54,21 @@
     "completed": 9
   },
   {
-    "title": "awk",
-    "category": "shell",
+    "title": "c",
+    "category": "system",
     "total": 83,
-    "completed": 3
+    "completed": 4
   },
   {
     "title": "julia",
     "category": "functional",
-    "total": 101,
+    "total": 104,
+    "completed": 6
+  },
+  {
+    "title": "awk",
+    "category": "shell",
+    "total": 85,
     "completed": 4
   }
 ]
