@@ -7,6 +7,7 @@ These are my solutions to the Exercism exercises for the [AWK](https://exercism.
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Hello World | [Hello World](https://exercism.org/tracks/awk/exercises/hello-world) | [Docs](./awk/hello-world/README.md) |
+| Raindrops | [Raindrops](https://exercism.org/tracks/awk/exercises/raindrops) | [Docs](./awk/raindrops/README.md) |
 | Reverse String | [Reverse String](https://exercism.org/tracks/awk/exercises/reverse-string) | [Docs](./awk/reverse-string/README.md) |
 | Two Fer | [Two Fer](https://exercism.org/tracks/awk/exercises/two-fer) | [Docs](./awk/two-fer/README.md) |
 
@@ -32,6 +33,7 @@ These are my solutions to the Exercism exercises for the [C](https://exercism.or
 
 | Exercise | Link | Solution |
 |----------|----------|----------|
+| Difference Of Squares | [Difference Of Squares](https://exercism.org/tracks/c/exercises/difference-of-squares) | [Docs](./c/difference-of-squares/README.md) |
 | Grains | [Grains](https://exercism.org/tracks/c/exercises/grains) | [Docs](./c/grains/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/c/exercises/hello-world) | [Docs](./c/hello-world/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/c/exercises/leap) | [Docs](./c/leap/README.md) |
@@ -45,6 +47,7 @@ These are my solutions to the Exercism exercises for the [C++](https://exercism.
 | Hello World | [Hello World](https://exercism.org/tracks/cpp/exercises/hello-world) | [Docs](./cpp/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/cpp/exercises/lasagna) | [Docs](./cpp/lasagna/README.md) |
 | Last Will | [Last Will](https://exercism.org/tracks/cpp/exercises/last-will) | [Docs](./cpp/last-will/README.md) |
+| Leap | [Leap](https://exercism.org/tracks/cpp/exercises/leap) | [Docs](./cpp/leap/README.md) |
 | Log Levels | [Log Levels](https://exercism.org/tracks/cpp/exercises/log-levels) | [Docs](./cpp/log-levels/README.md) |
 | Pacman Rules | [Pacman Rules](https://exercism.org/tracks/cpp/exercises/pacman-rules) | [Docs](./cpp/pacman-rules/README.md) |
 
@@ -61,6 +64,7 @@ These are my solutions to the Exercism exercises for the [Go](https://exercism.o
 | Lasagna | [Lasagna](https://exercism.org/tracks/go/exercises/lasagna) | [Docs](./go/lasagna/README.md) |
 | Need For Speed | [Need For Speed](https://exercism.org/tracks/go/exercises/need-for-speed) | [Docs](./go/need-for-speed/README.md) |
 | Party Robot | [Party Robot](https://exercism.org/tracks/go/exercises/party-robot) | [Docs](./go/party-robot/README.md) |
+| Two Fer | [Two Fer](https://exercism.org/tracks/go/exercises/two-fer) | [Docs](./go/two-fer/README.md) |
 | Vehicle Purchase | [Vehicle Purchase](https://exercism.org/tracks/go/exercises/vehicle-purchase) | [Docs](./go/vehicle-purchase/README.md) |
 | Weather Forecast | [Weather Forecast](https://exercism.org/tracks/go/exercises/weather-forecast) | [Docs](./go/weather-forecast/README.md) |
 | Welcome To Tech Palace | [Welcome To Tech Palace](https://exercism.org/tracks/go/exercises/welcome-to-tech-palace) | [Docs](./go/welcome-to-tech-palace/README.md) |
@@ -115,6 +119,7 @@ These are my solutions to the Exercism exercises for the [Jq](https://exercism.o
 | Hello World | [Hello World](https://exercism.org/tracks/jq/exercises/hello-world) | [Docs](./jq/hello-world/README.md) |
 | Log Line Parser | [Log Line Parser](https://exercism.org/tracks/jq/exercises/log-line-parser) | [Docs](./jq/log-line-parser/README.md) |
 | Shopping | [Shopping](https://exercism.org/tracks/jq/exercises/shopping) | [Docs](./jq/shopping/README.md) |
+| Two Fer | [Two Fer](https://exercism.org/tracks/jq/exercises/two-fer) | [Docs](./jq/two-fer/README.md) |
 
 ## Julia
 
@@ -123,9 +128,11 @@ These are my solutions to the Exercism exercises for the [Julia](https://exercis
 | Exercise | Link | Solution |
 |----------|----------|----------|
 | Annalyns Infiltration | [Annalyns Infiltration](https://exercism.org/tracks/julia/exercises/annalyns-infiltration) | [Docs](./julia/annalyns-infiltration/README.md) |
+| Cars Assemble | [Cars Assemble](https://exercism.org/tracks/julia/exercises/cars-assemble) | [Docs](./julia/cars-assemble/README.md) |
 | Currency Exchange | [Currency Exchange](https://exercism.org/tracks/julia/exercises/currency-exchange) | [Docs](./julia/currency-exchange/README.md) |
 | Hello World | [Hello World](https://exercism.org/tracks/julia/exercises/hello-world) | [Docs](./julia/hello-world/README.md) |
 | Lasagna | [Lasagna](https://exercism.org/tracks/julia/exercises/lasagna) | [Docs](./julia/lasagna/README.md) |
+| Leap | [Leap](https://exercism.org/tracks/julia/exercises/leap) | [Docs](./julia/leap/README.md) |
 
 ## Python
 
@@ -211,6 +218,7 @@ These are my solutions to the Exercism exercises for the [SQLite](https://exerci
 | Hello World | [Hello World](https://exercism.org/tracks/sqlite/exercises/hello-world) | [Docs](./sqlite/hello-world/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/sqlite/exercises/leap) | [Docs](./sqlite/leap/README.md) |
 | Raindrops | [Raindrops](https://exercism.org/tracks/sqlite/exercises/raindrops) | [Docs](./sqlite/raindrops/README.md) |
+| Resistor Color | [Resistor Color](https://exercism.org/tracks/sqlite/exercises/resistor-color) | [Docs](./sqlite/resistor-color/README.md) |
 
 ## TypeScript
 
@@ -232,6 +240,7 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Hello World | [Hello World](https://exercism.org/tracks/typescript/exercises/hello-world) | [Docs](./typescript/hello-world/README.md) |
 | Isogram | [Isogram](https://exercism.org/tracks/typescript/exercises/isogram) | [Docs](./typescript/isogram/README.md) |
 | Leap | [Leap](https://exercism.org/tracks/typescript/exercises/leap) | [Docs](./typescript/leap/README.md) |
+| Pangram | [Pangram](https://exercism.org/tracks/typescript/exercises/pangram) | [Docs](./typescript/pangram/README.md) |
 | Raindrops | [Raindrops](https://exercism.org/tracks/typescript/exercises/raindrops) | [Docs](./typescript/raindrops/README.md) |
 | Resistor Color | [Resistor Color](https://exercism.org/tracks/typescript/exercises/resistor-color) | [Docs](./typescript/resistor-color/README.md) |
 | Resistor Color Duo | [Resistor Color Duo](https://exercism.org/tracks/typescript/exercises/resistor-color-duo) | [Docs](./typescript/resistor-color-duo/README.md) |
@@ -245,4 +254,4 @@ These are my solutions to the Exercism exercises for the [TypeScript](https://ex
 | Word Count | [Word Count](https://exercism.org/tracks/typescript/exercises/word-count) | [Docs](./typescript/word-count/README.md) |
 
 ---
-*Generated on 2025-05-25 02:36:02 UTC*
+*Generated on 2025-05-27 01:27:40 UTC*
