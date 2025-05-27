@@ -4,45 +4,54 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 
 ## 📊 Overview
 
-- **Total Exercises Completed:** 169
+- **Total Exercises Completed:** 155
+- **Total Exercises Available:** 1189
+- **Overall Completion:** 13% 🟡
 - **Programming Languages:** 12
+- **Solutions Found Locally:** 169
+- **Track Categories:**
+  - Scripting: 4 tracks
+  - System: 3 tracks
+  - Shell: 3 tracks
+  - Functional: 1 tracks
+  - Database: 1 tracks
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
 
 ## 🗂️ Tracks
 
 Click on any track to view detailed solutions:
 
-| Track | Exercises | Last Updated | Progress |
-|-------|-----------|--------------|----------|
-| [AWK](awk/README.md) | 4 | 2025-05-27 | 🟡 |
-| [Bash](bash/README.md) | 9 | 2025-05-27 | 🟠 |
-| [C](c/README.md) | 4 | 2025-05-27 | 🟡 |
-| [C++](cpp/README.md) | 6 | 2025-05-27 | 🟠 |
-| [Go](go/README.md) | 11 | 2025-05-27 | 🟠 |
-| [JavaScript](javascript/README.md) | 34 | 2025-05-27 | 🟢 |
-| [Jq](jq/README.md) | 4 | 2025-05-27 | 🟡 |
-| [Julia](julia/README.md) | 6 | 2025-05-27 | 🟠 |
-| [Python](python/README.md) | 29 | 2025-05-27 | 🔵 |
-| [Rust](rust/README.md) | 28 | 2025-05-27 | 🔵 |
-| [SQLite](sqlite/README.md) | 8 | 2025-05-27 | 🟠 |
-| [TypeScript](typescript/README.md) | 26 | 2025-05-27 | 🔵 |
+| Track | Category | Progress | Exercises | Last Updated |
+|-------|----------|----------|-----------|-------------|
+| [AWK](awk/README.md) | Shell | 4% (3/83) | 4 | 2025-05-27 |
+| [Bash](bash/README.md) | Shell | 10% (9/92) | 9 | 2025-05-27 |
+| [C](c/README.md) | System | 4% (3/82) | 4 | 2025-05-27 |
+| [C++](cpp/README.md) | System | 5% (5/99) | 6 | 2025-05-27 |
+| [Go](go/README.md) | Scripting | 6% (9/141) | 11 | 2025-05-27 |
+| [JavaScript](javascript/README.md) | Scripting | 21% (31/150) | 34 | 2025-05-27 |
+| [Jq](jq/README.md) | Shell | 4% (3/74) | 4 | 2025-05-27 |
+| [Julia](julia/README.md) | Functional | 4% (4/101) | 6 | 2025-05-27 |
+| [Python](python/README.md) | Scripting | 21% (29/140) | 29 | 2025-05-27 |
+| [Rust](rust/README.md) | System | 27% (27/99) | 28 | 2025-05-27 |
+| [SQLite](sqlite/README.md) | Database | 25% (7/28) | 8 | 2025-05-27 |
+| [TypeScript](typescript/README.md) | Scripting | 25% (25/100) | 26 | 2025-05-27 |
 
 ## 🎯 Quick Stats by Track
 
-| Track | Exercises | Exercism Link | Details |
-|-------|-----------|---------------|----------|
-| [AWK](awk/README.md) | 4 | [View Track](https://exercism.org/tracks/awk) | [Detailed Stats](awk/README.md) |
-| [Bash](bash/README.md) | 9 | [View Track](https://exercism.org/tracks/bash) | [Detailed Stats](bash/README.md) |
-| [C](c/README.md) | 4 | [View Track](https://exercism.org/tracks/c) | [Detailed Stats](c/README.md) |
-| [C++](cpp/README.md) | 6 | [View Track](https://exercism.org/tracks/cpp) | [Detailed Stats](cpp/README.md) |
-| [Go](go/README.md) | 11 | [View Track](https://exercism.org/tracks/go) | [Detailed Stats](go/README.md) |
-| [JavaScript](javascript/README.md) | 34 | [View Track](https://exercism.org/tracks/javascript) | [Detailed Stats](javascript/README.md) |
-| [Jq](jq/README.md) | 4 | [View Track](https://exercism.org/tracks/jq) | [Detailed Stats](jq/README.md) |
-| [Julia](julia/README.md) | 6 | [View Track](https://exercism.org/tracks/julia) | [Detailed Stats](julia/README.md) |
-| [Python](python/README.md) | 29 | [View Track](https://exercism.org/tracks/python) | [Detailed Stats](python/README.md) |
-| [Rust](rust/README.md) | 28 | [View Track](https://exercism.org/tracks/rust) | [Detailed Stats](rust/README.md) |
-| [SQLite](sqlite/README.md) | 8 | [View Track](https://exercism.org/tracks/sqlite) | [Detailed Stats](sqlite/README.md) |
-| [TypeScript](typescript/README.md) | 26 | [View Track](https://exercism.org/tracks/typescript) | [Detailed Stats](typescript/README.md) |
+| Track | Category | Completion | Local Solutions | Exercism Link |
+|-------|----------|------------|-----------------|---------------|
+| [AWK](awk/README.md) | Shell | 4% (3/83) | 4 | [View Track](https://exercism.org/tracks/awk) |
+| [Bash](bash/README.md) | Shell | 10% (9/92) | 9 | [View Track](https://exercism.org/tracks/bash) |
+| [C](c/README.md) | System | 4% (3/82) | 4 | [View Track](https://exercism.org/tracks/c) |
+| [C++](cpp/README.md) | System | 5% (5/99) | 6 | [View Track](https://exercism.org/tracks/cpp) |
+| [Go](go/README.md) | Scripting | 6% (9/141) | 11 | [View Track](https://exercism.org/tracks/go) |
+| [JavaScript](javascript/README.md) | Scripting | 21% (31/150) | 34 | [View Track](https://exercism.org/tracks/javascript) |
+| [Jq](jq/README.md) | Shell | 4% (3/74) | 4 | [View Track](https://exercism.org/tracks/jq) |
+| [Julia](julia/README.md) | Functional | 4% (4/101) | 6 | [View Track](https://exercism.org/tracks/julia) |
+| [Python](python/README.md) | Scripting | 21% (29/140) | 29 | [View Track](https://exercism.org/tracks/python) |
+| [Rust](rust/README.md) | System | 27% (27/99) | 28 | [View Track](https://exercism.org/tracks/rust) |
+| [SQLite](sqlite/README.md) | Database | 25% (7/28) | 8 | [View Track](https://exercism.org/tracks/sqlite) |
+| [TypeScript](typescript/README.md) | Scripting | 25% (25/100) | 26 | [View Track](https://exercism.org/tracks/typescript) |
 ## 🚀 Getting Started
 
 Each track contains:
@@ -56,5 +65,5 @@ Each track contains:
 
 ---
 
-*This README was automatically generated on 2025-05-27 03:03:26 UTC*
+*This README was automatically generated on 2025-05-27 09:28:20 UTC*
 *To update, run the exercism-readme-generator tool*
