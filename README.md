@@ -5,14 +5,14 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 ## 📊 Overview
 
 - **Total Exercises Completed:** 164
-- **Total Exercises Available:** 1193
+- **Total Exercises Available:** 1195
 - **Overall Completion:** 14% 🟡
 - **Programming Languages:** 12
 - **Solutions Found Locally:** 169
 - **Track Categories:**
   - Scripting: 4 tracks
-  - Shell: 3 tracks
   - System: 3 tracks
+  - Shell: 3 tracks
   - Database: 1 tracks
   - Functional: 1 tracks
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
@@ -23,7 +23,7 @@ Click on any track to view detailed solutions:
 
 | Track | Category | Progress | Exercises | Last Updated |
 |-------|----------|----------|-----------|-------------|
-| [AWK](awk/README.md) | Shell | 5% (4/83) | 4 | 2025-05-27 |
+| [AWK](awk/README.md) | Shell | 5% (4/85) | 4 | 2025-05-27 |
 | [Bash](bash/README.md) | Shell | 10% (9/92) | 9 | 2025-05-27 |
 | [C](c/README.md) | System | 5% (4/83) | 4 | 2025-05-27 |
 | [C++](cpp/README.md) | System | 6% (6/99) | 6 | 2025-05-27 |
@@ -40,7 +40,7 @@ Click on any track to view detailed solutions:
 
 | Track | Category | Completion | Local Solutions | Exercism Link |
 |-------|----------|------------|-----------------|---------------|
-| [AWK](awk/README.md) | Shell | 5% (4/83) | 4 | [View Track](https://exercism.org/tracks/awk) |
+| [AWK](awk/README.md) | Shell | 5% (4/85) | 4 | [View Track](https://exercism.org/tracks/awk) |
 | [Bash](bash/README.md) | Shell | 10% (9/92) | 9 | [View Track](https://exercism.org/tracks/bash) |
 | [C](c/README.md) | System | 5% (4/83) | 4 | [View Track](https://exercism.org/tracks/c) |
 | [C++](cpp/README.md) | System | 6% (6/99) | 6 | [View Track](https://exercism.org/tracks/cpp) |
@@ -65,5 +65,5 @@ Each track contains:
 
 ---
 
-*This README was automatically generated on 2025-05-27 09:40:09 UTC*
+*This README was automatically generated on 2025-05-27 09:46:03 UTC*
 *To update, run the exercism-readme-generator tool*
