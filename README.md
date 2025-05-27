@@ -21,7 +21,6 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 
 Click on any track to view solutions to each exercise:
 
-
 | Track | Category | Progress | Solutions | Exercism Link | Last Updated |
 |-------|----------|----------|-----------|-------------|-------------|
 | [AWK](awk/README.md) | shell | 5% (4/85) | 4 | [View Track](https://exercism.org/tracks/awk) | 2025-05-27 |
@@ -40,6 +39,7 @@ Click on any track to view solutions to each exercise:
 ## 🚀 Getting Started
 
 Each track contains:
+
 - Individual exercise solutions with explanations
 - Links to the original Exercism problems
 - Track-specific statistics and progress
