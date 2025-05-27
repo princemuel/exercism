@@ -1,14 +1,15 @@
 use ::std::collections::HashMap;
+use ::std::error::Error;
 use ::std::fs;
 use ::std::path::Path;
 
 use crate::formatter::{format_exercise_name, format_track_name};
-use crate::model::{Exercise, Metadata};
+use crate::model::{Exercise, Metadata, Parsable};
 
 pub fn scan_exercism_directories(
 	root: &Path,
 	filter_tracks: Option<&Vec<String>>,
-) -> Result<HashMap<String, Vec<Exercise>>, Box<dyn std::error::Error>> {
+) -> Result<HashMap<String, Vec<Exercise>>, Box<dyn Error>> {
 	let mut exercises = HashMap::new();
 
 	fn scan_recursive(
@@ -16,7 +17,7 @@ pub fn scan_exercism_directories(
 		dir: &Path,
 		exercises: &mut HashMap<String, Vec<Exercise>>,
 		filter_tracks: Option<&Vec<String>>,
-	) -> Result<(), Box<dyn std::error::Error>> {
+	) -> Result<(), Box<dyn Error>> {
 		if !dir.is_dir() {
 			return Ok(());
 		}

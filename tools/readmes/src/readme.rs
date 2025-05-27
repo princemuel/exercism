@@ -1,25 +1,21 @@
 use ::std::collections::HashMap;
+use ::std::env;
 use ::std::fs;
 use ::std::path::Path;
 
 use ::time::OffsetDateTime;
 use ::time::format_description::parse;
 
-use crate::model::Exercise;
-
-#[derive(Debug, Clone)]
-pub struct TrackStats {
-	pub exercise_count: usize,
-	pub last_updated: String,
-	pub track_slug: String,
-	pub track_url: String,
-}
+use crate::model::{Exercise, Parsable, TrackMetadata, TrackStats};
 
 pub fn generate_track_readmes(
 	exercises_by_track: &HashMap<String, Vec<Exercise>>,
 	root_path: &Path,
 ) -> Result<HashMap<String, TrackStats>, Box<dyn std::error::Error>> {
 	let mut track_stats = HashMap::new();
+
+	// Load track metadata from tracks.json
+	let track_metadata = load_track_metadata()?;
 
 	let format =
 		parse("[year]-[month]-[day] [hour]:[minute]:[second] UTC").unwrap();
@@ -45,8 +41,9 @@ pub fn generate_track_readmes(
 		}
 
 		let track_readme_path = track_dir.join("README.md");
+		let metadata = track_metadata.get(&track_slug).cloned();
 		let track_readme_content =
-			generate_track_readme(track_name, exercises, &track_slug);
+			generate_track_readme(track_name, exercises, &track_slug, &metadata);
 
 		fs::write(&track_readme_path, track_readme_content)?;
 
@@ -64,6 +61,7 @@ pub fn generate_track_readmes(
 				last_updated: timestamp.clone(),
 				track_slug: track_slug.clone(),
 				track_url: format!("https://exercism.org/tracks/{}", track_slug),
+				metadata,
 			},
 		);
 	}
@@ -71,10 +69,39 @@ pub fn generate_track_readmes(
 	Ok(track_stats)
 }
 
+fn load_track_metadata()
+-> Result<HashMap<String, TrackMetadata>, Box<dyn std::error::Error>> {
+	let home_dir = env::var("HOME").or_else(|_| env::var("USERPROFILE"))?;
+	let json_path =
+		Path::new(&home_dir).join("exercism").join("database").join("tracks.json");
+
+	if !json_path.exists() {
+		eprintln!(
+			"Warning: tracks.json not found at {}, proceeding without metadata",
+			json_path.display()
+		);
+		return Ok(HashMap::new());
+	}
+
+	let tracks = Vec::<TrackMetadata>::parse(&json_path)?;
+
+	let metadata: HashMap<_, _> =
+		tracks.into_iter().map(|track| (track.title.clone(), track)).collect();
+
+	println!(
+		"📊 Loaded metadata for {} tracks from {}",
+		metadata.len(),
+		json_path.display()
+	);
+
+	Ok(metadata)
+}
+
 fn generate_track_readme(
 	track_name: &str,
 	exercises: &[Exercise],
 	track_slug: &str,
+	metadata: &Option<TrackMetadata>,
 ) -> String {
 	let mut content = String::new();
 
@@ -89,21 +116,48 @@ fn generate_track_readme(
 
 	// Statistics section
 	content.push_str("## 📊 Statistics\n\n");
-	content.push_str(&format!(
-		"- **Total Exercises Completed:** {}\n",
-		exercises.len()
-	));
+
+	if let Some(meta) = metadata {
+		let completion_percentage =
+			(meta.completed as f64 / meta.total as f64 * 100.0).round() as usize;
+		let progress_bar = progress_bar(completion_percentage);
+
+		content
+			.push_str(&format!("- **Category:** {}\n", capitalize(&meta.category)));
+		content.push_str(&format!(
+			"- **Total Exercises Available:** {}\n",
+			meta.total
+		));
+		content.push_str(&format!(
+			"- **Exercises Completed:** {} / {} ({}%)\n",
+			meta.completed, meta.total, completion_percentage
+		));
+		content.push_str(&format!(
+			"- **Progress:** {} {}\n",
+			progress_bar,
+			progress_emoji(completion_percentage)
+		));
+		content.push_str(&format!(
+			"- **Solutions Found Locally:** {}\n",
+			exercises.len()
+		));
+	} else {
+		content.push_str(&format!(
+			"- **Solutions Found Locally:** {}\n",
+			exercises.len()
+		));
+	}
+
 	content.push_str(&format!(
 		"- **Track:** [{}](https://exercism.org/tracks/{})\n",
 		track_name, track_slug
 	));
 
-	// Get difficulty distribution if available
+	// Get difficulty distribution
 	let mut concept_exercises = 0;
 	let mut practice_exercises = 0;
 
 	for exercise in exercises {
-		// This is a simple heuristic - you might want to enhance this based on actual exercise metadata
 		if exercise.name.contains("Concept") || exercise.url.contains("/concept/") {
 			concept_exercises += 1;
 		} else {
@@ -117,7 +171,8 @@ fn generate_track_readme(
 	}
 	if practice_exercises > 0 {
 		content.push_str(&format!(
-			"- **Practice Exercises:** {practice_exercises}\n",
+			"- **Practice Exercises:** {}\n",
+			practice_exercises
 		));
 	}
 
@@ -131,19 +186,17 @@ fn generate_track_readme(
 	for exercise in exercises {
 		let Exercise { name, url, local_path, .. } = exercise;
 		// Convert the local path to be relative from the track directory
-		// Remove the track prefix from the path since we're now inside the track dir
 		let solution_path = if local_path.starts_with(&format!("./{}/", track_slug))
 		{
 			local_path
 				.strip_prefix(&format!("./{}/", track_slug))
 				.unwrap_or("README.md")
 		} else {
-			// If path doesn't match expected format, just use the exercise name
 			&format!("{}/README.md", exercise.exercise_slug)
 		};
 
 		content.push_str(&format!(
-			"| {} | [View on Exercism]({}) | [Solution]({}) |\n",
+			"| {} | [View on Exercism]({}) | [View Solution]({}) |\n",
 			name, url, solution_path
 		));
 	}
@@ -182,14 +235,59 @@ pub fn generate_main_readme(
 	let total_exercises: usize = exercises_by_track.values().map(|v| v.len()).sum();
 	let total_tracks = exercises_by_track.len();
 
+	// Calculate aggregate stats from metadata
+	let mut total_available = 0;
+	let mut total_completed = 0;
+	let mut categories = HashMap::new();
+
+	for stats in track_stats.values() {
+		if let Some(meta) = &stats.metadata {
+			total_available += meta.total;
+			total_completed += meta.completed;
+			*categories.entry(meta.category.clone()).or_insert(0) += 1;
+		}
+	}
+
 	content.push_str("Welcome to my collection of solutions for [Exercism](https://exercism.org/) coding exercises!\n\n");
 
-	// Global statistics
+	// Global statistics with metadata
 	content.push_str("## 📊 Overview\n\n");
 	content.push_str(&format!(
-		"- **Total Exercises Completed:** {total_exercises}\n",
+		"- **Total Exercises Completed:** {}\n",
+		total_completed
 	));
+	content.push_str(&format!(
+		"- **Total Exercises Available:** {}\n",
+		total_available
+	));
+	if total_available > 0 {
+		let overall_completion = (total_completed as f64 / total_available as f64
+			* 100.0)
+			.round() as usize;
+		content.push_str(&format!(
+			"- **Overall Completion:** {}% {}\n",
+			overall_completion,
+			progress_emoji(overall_completion)
+		));
+	}
 	content.push_str(&format!("- **Programming Languages:** {}\n", total_tracks));
+	content
+		.push_str(&format!("- **Solutions Found Locally:** {}\n", total_exercises));
+
+	// Category breakdown
+	if !categories.is_empty() {
+		content.push_str("- **Track Categories:**\n");
+		let mut sorted_categories: Vec<_> = categories.iter().collect();
+		sorted_categories.sort_by_key(|(_, count)| std::cmp::Reverse(**count));
+		for (category, count) in sorted_categories {
+			content.push_str(&format!(
+				"  - {}: {} tracks\n",
+				capitalize(category),
+				count
+			));
+		}
+	}
+
 	content.push_str("- **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)\n\n");
 
 	// Sort tracks alphabetically
@@ -200,43 +298,74 @@ pub fn generate_main_readme(
 	content.push_str("## 🗂️ Tracks\n\n");
 	content.push_str("Click on any track to view detailed solutions:\n\n");
 
-	content.push_str("| Track | Exercises | Last Updated | Progress |\n");
-	content.push_str("|-------|-----------|--------------|----------|\n");
+	content
+		.push_str("| Track | Category | Progress | Exercises | Last Updated |\n");
+	content.push_str("|-------|----------|----------|-----------|-------------|\n");
 
 	for track in &tracks {
 		let exercises = &exercises_by_track[*track];
 		let stats = &track_stats[*track];
 		let track_slug = &stats.track_slug;
 
-		// Create a simple progress bar
-		let progress_bar = create_progress_indicator(exercises.len());
+		let (category, progress_info) = if let Some(meta) = &stats.metadata {
+			let completion_percentage = (meta.completed as f64 / meta.total as f64
+				* 100.0)
+				.round() as usize;
+			let progress_display = format!(
+				"{}% ({}/{})",
+				completion_percentage, meta.completed, meta.total
+			);
+
+			(capitalize(&meta.category), progress_display)
+		} else {
+			("Unknown".to_string(), format!("{} local", exercises.len()))
+		};
 
 		content.push_str(&format!(
-			"| [{}]({}/README.md) | {} | {} | {} |\n",
+			"| [{}]({}/README.md) | {} | {} | {} | {} |\n",
 			track,
 			track_slug,
+			category,
+			progress_info,
 			exercises.len(),
-			stats.last_updated.split_whitespace().next().unwrap_or("Unknown"), // Just show date
-			progress_bar
+			stats.last_updated.split_whitespace().next().unwrap_or("Unknown")
 		));
 	}
 
 	content.push_str("\n## 🎯 Quick Stats by Track\n\n");
 
-	content.push_str("| Track | Exercises | Exercism Link | Details |\n");
-	content.push_str("|-------|-----------|---------------|----------|\n");
+	content.push_str(
+		"| Track | Category | Completion | Local Solutions | Exercism Link |\n",
+	);
+	content.push_str(
+		"|-------|----------|------------|-----------------|---------------|\n",
+	);
 
 	for track in tracks {
 		let exercises = &exercises_by_track[track];
 		let stats = &track_stats[track];
 
+		let (category, completion_info) = if let Some(meta) = &stats.metadata {
+			let completion_percentage = (meta.completed as f64 / meta.total as f64
+				* 100.0)
+				.round() as usize;
+			let completion_display = format!(
+				"{}% ({}/{})",
+				completion_percentage, meta.completed, meta.total
+			);
+			(capitalize(&meta.category), completion_display)
+		} else {
+			("Unknown".to_string(), "N/A".to_string())
+		};
+
 		content.push_str(&format!(
-			"| [{}]({}/README.md) | {} | [View Track]({}) | [Detailed Stats]({}/README.md) |\n",
+			"| [{}]({}/README.md) | {} | {} | {} | [View Track]({}) |\n",
 			track,
 			stats.track_slug,
+			category,
+			completion_info,
 			exercises.len(),
-			stats.track_url,
-			stats.track_slug
+			stats.track_url
 		));
 	}
 
@@ -267,14 +396,39 @@ pub fn generate_main_readme(
 	content
 }
 
-fn create_progress_indicator(exercise_count: usize) -> String {
-	// Simple progress indicator based on exercise count
-	match exercise_count {
-		0 => "⭕".to_string(),
-		1..=5 => "🟡".to_string(),
-		6..=15 => "🟠".to_string(),
-		16..=30 => "🔵".to_string(),
-		31..=50 => "🟢".to_string(),
-		_ => "🏆".to_string(),
+// fn progress_indicator(count: usize) -> String {
+// 	match count {
+// 		0 => "⭕".to_string(),
+// 		1..=5 => "🟡".to_string(),
+// 		6..=15 => "🟠".to_string(),
+// 		16..=30 => "🔵".to_string(),
+// 		31..=50 => "🟢".to_string(),
+// 		_ => "🏆".to_string(),
+// 	}
+// }
+
+fn progress_bar(percentage: usize) -> String {
+	let filled = percentage / 10;
+	let empty = 10 - filled;
+	format!("{}{}", "█".repeat(filled), "░".repeat(empty))
+}
+
+fn progress_emoji(percentage: usize) -> &'static str {
+	match percentage {
+		0..=10 => "🔴",
+		11..=25 => "🟡",
+		26..=50 => "🟠",
+		51..=75 => "🔵",
+		76..=90 => "🟢",
+		91..=100 => "🏆",
+		_ => "🎯",
+	}
+}
+
+fn capitalize(word: &str) -> String {
+	let mut chars = word.chars();
+	match chars.next() {
+		Some(first) => first.to_uppercase().collect::<String>() + chars.as_str(),
+		None => String::new(),
 	}
 }
