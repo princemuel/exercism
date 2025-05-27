@@ -1,1 +1,1 @@
-./scripts/update_readme
+./scripts/readmes

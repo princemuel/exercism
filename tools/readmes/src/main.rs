@@ -1,6 +1,6 @@
 use ::std::fs;
 
-use update_readme::{args, readme, scanner};
+use readmes::{args, readme, scanner};
 
 use args::Args;
 use readme::{generate_main_readme, generate_track_readmes};

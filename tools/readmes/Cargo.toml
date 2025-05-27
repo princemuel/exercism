@@ -1,5 +1,5 @@
 [package]
-    name    = "update_readme"
+    name    = "readmes"
     version = "0.3.1"
     authors = ["Prince Muel <vansomecsam@gmail.com>"]
     edition = "2024"
@@ -9,7 +9,7 @@
 
 [[bin]]
     path = "src/main.rs"
-    name = "update_readme"
+    name = "readmes"
 
 [dependencies]
     serde      = { version = "1", features = ["derive"] }
