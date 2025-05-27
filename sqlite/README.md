@@ -6,8 +6,8 @@ My solutions to the [SQLite](https://exercism.org/tracks/sqlite) track on Exerci
 
 - **Category:** Database
 - **Total Exercises Available:** 28
-- **Exercises Completed:** 7 / 28 (25%)
-- **Progress:** ██░░░░░░░░ 🟡
+- **Exercises Completed:** 8 / 28 (29%)
+- **Progress:** ██░░░░░░░░ 🟠
 - **Solutions Found Locally:** 8
 - **Track:** [SQLite](https://exercism.org/tracks/sqlite)
 - **Practice Exercises:** 8
@@ -33,4 +33,4 @@ My solutions to the [SQLite](https://exercism.org/tracks/sqlite) track on Exerci
 - [Exercism SQLite Track](https://exercism.org/tracks/sqlite)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)
 
-*Last updated: 2025-05-27 09:30:06 UTC*
+*Last updated: 2025-05-27 09:39:54 UTC*

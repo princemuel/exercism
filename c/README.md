@@ -5,8 +5,8 @@ My solutions to the [C](https://exercism.org/tracks/c) track on Exercism.
 ## 📊 Statistics
 
 - **Category:** System
-- **Total Exercises Available:** 82
-- **Exercises Completed:** 3 / 82 (4%)
+- **Total Exercises Available:** 83
+- **Exercises Completed:** 4 / 83 (5%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 4
 - **Track:** [C](https://exercism.org/tracks/c)
@@ -29,4 +29,4 @@ My solutions to the [C](https://exercism.org/tracks/c) track on Exercism.
 - [Exercism C Track](https://exercism.org/tracks/c)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)
 
-*Last updated: 2025-05-27 09:30:06 UTC*
+*Last updated: 2025-05-27 09:39:54 UTC*

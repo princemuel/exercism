@@ -5,8 +5,8 @@ My solutions to the [Julia](https://exercism.org/tracks/julia) track on Exercism
 ## 📊 Statistics
 
 - **Category:** Functional
-- **Total Exercises Available:** 101
-- **Exercises Completed:** 4 / 101 (4%)
+- **Total Exercises Available:** 104
+- **Exercises Completed:** 6 / 104 (6%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 6
 - **Track:** [Julia](https://exercism.org/tracks/julia)
@@ -31,4 +31,4 @@ My solutions to the [Julia](https://exercism.org/tracks/julia) track on Exercism
 - [Exercism Julia Track](https://exercism.org/tracks/julia)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)
 
-*Last updated: 2025-05-27 09:30:06 UTC*
+*Last updated: 2025-05-27 09:39:54 UTC*
