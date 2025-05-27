@@ -6,7 +6,7 @@ My solutions to exercises on the [Python](https://exercism.org/tracks/python) tr
 
 - **Category:** Scripting
 - **Total Exercises Available:** 140
-- **Exercises Completed:** 29 / 140 (0%)
+- **Exercises Completed:** 29 / 140 (21%)
 - **Progress:** ██░░░░░░░░ 🟡
 - **Solutions Found Locally:** 29
 - **Track:** [Python](https://exercism.org/tracks/python)

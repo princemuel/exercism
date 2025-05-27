@@ -6,7 +6,7 @@ My solutions to exercises on the [C++](https://exercism.org/tracks/cpp) track on
 
 - **Category:** System
 - **Total Exercises Available:** 99
-- **Exercises Completed:** 6 / 99 (0%)
+- **Exercises Completed:** 6 / 99 (6%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 6
 - **Track:** [C++](https://exercism.org/tracks/cpp)

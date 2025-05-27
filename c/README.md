@@ -6,7 +6,7 @@ My solutions to exercises on the [C](https://exercism.org/tracks/c) track on Exe
 
 - **Category:** System
 - **Total Exercises Available:** 83
-- **Exercises Completed:** 4 / 83 (0%)
+- **Exercises Completed:** 4 / 83 (5%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 4
 - **Track:** [C](https://exercism.org/tracks/c)

@@ -6,7 +6,7 @@ My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track 
 
 - **Category:** Shell
 - **Total Exercises Available:** 92
-- **Exercises Completed:** 9 / 92 (0%)
+- **Exercises Completed:** 9 / 92 (10%)
 - **Progress:** █░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 9
 - **Track:** [Bash](https://exercism.org/tracks/bash)

@@ -6,7 +6,7 @@ My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on E
 
 - **Category:** Shell
 - **Total Exercises Available:** 74
-- **Exercises Completed:** 4 / 74 (0%)
+- **Exercises Completed:** 4 / 74 (5%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 4
 - **Track:** [Jq](https://exercism.org/tracks/jq)

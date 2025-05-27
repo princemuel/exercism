@@ -6,7 +6,7 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 
 - **Category:** Functional
 - **Total Exercises Available:** 104
-- **Exercises Completed:** 6 / 104 (0%)
+- **Exercises Completed:** 6 / 104 (6%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 6
 - **Track:** [Julia](https://exercism.org/tracks/julia)

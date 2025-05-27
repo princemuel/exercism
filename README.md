@@ -13,8 +13,8 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
   - Scripting: 4 track(s)
   - System: 3 track(s)
   - Shell: 3 track(s)
-  - Functional: 1 track(s)
   - Database: 1 track(s)
+  - Functional: 1 track(s)
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
 
 ## 🗂️ Tracks

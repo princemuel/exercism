@@ -6,7 +6,7 @@ My solutions to exercises on the [AWK](https://exercism.org/tracks/awk) track on
 
 - **Category:** Shell
 - **Total Exercises Available:** 85
-- **Exercises Completed:** 4 / 85 (0%)
+- **Exercises Completed:** 4 / 85 (5%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 4
 - **Track:** [AWK](https://exercism.org/tracks/awk)

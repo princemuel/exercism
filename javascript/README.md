@@ -6,7 +6,7 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 
 - **Category:** Scripting
 - **Total Exercises Available:** 150
-- **Exercises Completed:** 31 / 150 (0%)
+- **Exercises Completed:** 31 / 150 (21%)
 - **Progress:** ██░░░░░░░░ 🟡
 - **Solutions Found Locally:** 34
 - **Track:** [JavaScript](https://exercism.org/tracks/javascript)

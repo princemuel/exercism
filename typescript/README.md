@@ -6,7 +6,7 @@ My solutions to exercises on the [TypeScript](https://exercism.org/tracks/typesc
 
 - **Category:** Scripting
 - **Total Exercises Available:** 100
-- **Exercises Completed:** 26 / 100 (0%)
+- **Exercises Completed:** 26 / 100 (26%)
 - **Progress:** ██░░░░░░░░ 🟠
 - **Solutions Found Locally:** 26
 - **Track:** [TypeScript](https://exercism.org/tracks/typescript)
