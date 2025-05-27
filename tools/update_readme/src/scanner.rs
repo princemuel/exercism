@@ -46,6 +46,8 @@ pub fn scan_exercism_directories(
 						name: format_exercise_name(&metadata.exercise),
 						url: metadata.url,
 						local_path: format!("./{}/README.md", relative_path),
+						track: metadata.track.clone(), // Add track info to exercise
+						exercise_slug: metadata.exercise.clone(), // Add original slug
 					};
 
 					exercises_by_track

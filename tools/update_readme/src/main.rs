@@ -3,7 +3,7 @@ use std::fs;
 use update_readme::{args, readme, scanner};
 
 use args::Args;
-use readme::generate_readme;
+use readme::{generate_main_readme, generate_track_readmes};
 use scanner::scan_exercism_directories;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -18,15 +18,21 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 		return Ok(());
 	}
 
-	let readme_content = generate_readme(&exercises);
-	fs::write(&args.output, readme_content)?;
+	// Generate individual track README files
+	let track_stats = generate_track_readmes(&exercises, &args.path)?;
 
+	// Generate main README with links to track READMEs
+	let main_readme = generate_main_readme(&exercises, &track_stats);
+	fs::write(&args.output, main_readme)?;
+
+	let total_exercises: usize = exercises.values().map(|v| v.len()).sum();
 	println!(
-		"✅ Generated README with {} exercises across {} tracks",
-		exercises.values().map(|v| v.len()).sum::<usize>(),
+		"✅ Generated main README and {} track READMEs with {} exercises across {} tracks",
+		exercises.len(),
+		total_exercises,
 		exercises.len()
 	);
-	println!("📄 Output written to: {}", args.output.display());
+	println!("📄 Main README written to: {}", args.output.display());
 
 	Ok(())
 }
