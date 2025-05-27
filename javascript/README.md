@@ -1,6 +1,6 @@
 # JavaScript Solutions
 
-My solutions to the [JavaScript](https://exercism.org/tracks/javascript) track on Exercism.
+My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javascript) track on Exercism.
 
 ## 📊 Statistics
 
@@ -59,4 +59,3 @@ My solutions to the [JavaScript](https://exercism.org/tracks/javascript) track o
 - [Exercism JavaScript Track](https://exercism.org/tracks/javascript)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)
 
-*Last updated: 2025-05-27 09:46:03 UTC*

@@ -1,6 +1,6 @@
 # Python Solutions
 
-My solutions to the [Python](https://exercism.org/tracks/python) track on Exercism.
+My solutions to exercises on the [Python](https://exercism.org/tracks/python) track on Exercism.
 
 ## 📊 Statistics
 
@@ -54,4 +54,3 @@ My solutions to the [Python](https://exercism.org/tracks/python) track on Exerci
 - [Exercism Python Track](https://exercism.org/tracks/python)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)
 
-*Last updated: 2025-05-27 09:46:03 UTC*

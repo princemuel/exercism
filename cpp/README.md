@@ -1,6 +1,6 @@
 # C++ Solutions
 
-My solutions to the [C++](https://exercism.org/tracks/cpp) track on Exercism.
+My solutions to exercises on the [C++](https://exercism.org/tracks/cpp) track on Exercism.
 
 ## 📊 Statistics
 
@@ -31,4 +31,3 @@ My solutions to the [C++](https://exercism.org/tracks/cpp) track on Exercism.
 - [Exercism C++ Track](https://exercism.org/tracks/cpp)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)
 
-*Last updated: 2025-05-27 09:46:03 UTC*

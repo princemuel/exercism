@@ -1,6 +1,6 @@
 # SQLite Solutions
 
-My solutions to the [SQLite](https://exercism.org/tracks/sqlite) track on Exercism.
+My solutions to exercises on the [SQLite](https://exercism.org/tracks/sqlite) track on Exercism.
 
 ## 📊 Statistics
 
@@ -33,4 +33,3 @@ My solutions to the [SQLite](https://exercism.org/tracks/sqlite) track on Exerci
 - [Exercism SQLite Track](https://exercism.org/tracks/sqlite)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)
 
-*Last updated: 2025-05-27 09:46:03 UTC*
