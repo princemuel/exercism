@@ -110,7 +110,7 @@ fn generate_track_readme(
 
 	// Track description and stats
 	content.push_str(&format!(
-		"My solutions to the [{}](https://exercism.org/tracks/{}) track on Exercism.\n\n",
+		"My solutions to exercises on the [{}](https://exercism.org/tracks/{}) track on Exercism.\n\n",
 		track_name, track_slug
 	));
 
@@ -118,9 +118,9 @@ fn generate_track_readme(
 	content.push_str("## 📊 Statistics\n\n");
 
 	if let Some(meta) = metadata {
-		let completion_percentage =
+		let percentage =
 			(meta.completed as f64 / meta.total as f64 * 100.0).round() as usize;
-		let progress_bar = progress_bar(completion_percentage);
+		let progress_bar = progress_bar(percentage);
 
 		content
 			.push_str(&format!("- **Category:** {}\n", capitalize(&meta.category)));
@@ -130,12 +130,12 @@ fn generate_track_readme(
 		));
 		content.push_str(&format!(
 			"- **Exercises Completed:** {} / {} ({}%)\n",
-			meta.completed, meta.total, completion_percentage
+			meta.completed, meta.total, percentage
 		));
 		content.push_str(&format!(
 			"- **Progress:** {} {}\n",
 			progress_bar,
-			progress_emoji(completion_percentage)
+			progress_emoji(percentage)
 		));
 		content.push_str(&format!(
 			"- **Solutions Found Locally:** {}\n",
@@ -203,11 +203,6 @@ fn generate_track_readme(
 
 	content.push('\n');
 
-	// Footer
-	let format =
-		parse("[year]-[month]-[day] [hour]:[minute]:[second] UTC").unwrap();
-	let timestamp = OffsetDateTime::now_utc().format(&format).unwrap();
-
 	content.push_str("---\n\n");
 	content.push_str("## 🔗 Links\n\n");
 	content.push_str("- [Back to Main README](../README.md)\n");
@@ -218,8 +213,6 @@ fn generate_track_readme(
 	content.push_str(
 		"- [My Exercism Profile](https://exercism.org/profiles/princemuel)\n\n",
 	);
-
-	content.push_str(&format!("*Last updated: {timestamp}*\n"));
 
 	content
 }
@@ -281,7 +274,7 @@ pub fn generate_main_readme(
 		sorted_categories.sort_by_key(|(_, count)| std::cmp::Reverse(**count));
 		for (category, count) in sorted_categories {
 			content.push_str(&format!(
-				"  - {}: {} tracks\n",
+				"  - {}: {} track(s)\n",
 				capitalize(category),
 				count
 			));
@@ -296,76 +289,41 @@ pub fn generate_main_readme(
 
 	// Tracks section
 	content.push_str("## 🗂️ Tracks\n\n");
-	content.push_str("Click on any track to view detailed solutions:\n\n");
-
 	content
-		.push_str("| Track | Category | Progress | Exercises | Last Updated |\n");
-	content.push_str("|-------|----------|----------|-----------|-------------|\n");
-
-	for track in &tracks {
-		let exercises = &exercises_by_track[*track];
-		let stats = &track_stats[*track];
-		let track_slug = &stats.track_slug;
-
-		let (category, progress_info) = if let Some(meta) = &stats.metadata {
-			let completion_percentage = (meta.completed as f64 / meta.total as f64
-				* 100.0)
-				.round() as usize;
-			let progress_display = format!(
-				"{}% ({}/{})",
-				completion_percentage, meta.completed, meta.total
-			);
-
-			(capitalize(&meta.category), progress_display)
-		} else {
-			("Unknown".to_string(), format!("{} local", exercises.len()))
-		};
-
-		content.push_str(&format!(
-			"| [{}]({}/README.md) | {} | {} | {} | {} |\n",
-			track,
-			track_slug,
-			category,
-			progress_info,
-			exercises.len(),
-			stats.last_updated.split_whitespace().next().unwrap_or("Unknown")
-		));
-	}
-
-	content.push_str("\n## 🎯 Quick Stats by Track\n\n");
+		.push_str("Click on any track to view solutions to each exercise:\n\n\n");
 
 	content.push_str(
-		"| Track | Category | Completion | Local Solutions | Exercism Link |\n",
+		"| Track | Category | Progress | Solutions | Exercism Link | Last Updated |\n",
 	);
 	content.push_str(
-		"|-------|----------|------------|-----------------|---------------|\n",
+		"|-------|----------|----------|-----------|-------------|-------------|\n",
 	);
 
 	for track in tracks {
 		let exercises = &exercises_by_track[track];
 		let stats = &track_stats[track];
+		let track_slug = &stats.track_slug;
 
-		let (category, completion_info) = if let Some(meta) = &stats.metadata {
-			let completion_percentage = (meta.completed as f64 / meta.total as f64
-				* 100.0)
+		let (category, progress_info) = if let Some(meta) = &stats.metadata {
+			let percentage = (meta.completed as f64 / meta.total as f64 * 100.0)
 				.round() as usize;
-			let completion_display = format!(
-				"{}% ({}/{})",
-				completion_percentage, meta.completed, meta.total
-			);
-			(capitalize(&meta.category), completion_display)
+			let stats =
+				format!("{}% ({}/{})", percentage, meta.completed, meta.total);
+
+			(meta.category.clone(), stats)
 		} else {
-			("Unknown".to_string(), "N/A".to_string())
+			("Unknown".to_string(), format!("{} local", exercises.len()))
 		};
 
 		content.push_str(&format!(
-			"| [{}]({}/README.md) | {} | {} | {} | [View Track]({}) |\n",
+			"| [{}]({}/README.md) | {} | {} | {} | [View Track]({}) | {} |\n",
 			track,
-			stats.track_slug,
+			track_slug,
 			category,
-			completion_info,
+			progress_info,
 			exercises.len(),
-			stats.track_url
+			stats.track_url,
+			stats.last_updated.split_whitespace().next().unwrap_or("Unknown")
 		));
 	}
 
@@ -381,31 +339,8 @@ pub fn generate_main_readme(
 	content.push_str("practice exercises and mentorship. Each track provides a structured path to learn a language ");
 	content.push_str("with both concept exercises (teaching specific concepts) and practice exercises (applying knowledge).\n\n");
 
-	// Footer with generation info
-	let format =
-		parse("[year]-[month]-[day] [hour]:[minute]:[second] UTC").unwrap();
-	let timestamp = OffsetDateTime::now_utc().format(&format).unwrap();
-
-	content.push_str("---\n\n");
-	content.push_str(&format!(
-		"*This README was automatically generated on {}*\n",
-		timestamp
-	));
-	content.push_str("*To update, run the exercism-readme-generator tool*\n");
-
 	content
 }
-
-// fn progress_indicator(count: usize) -> String {
-// 	match count {
-// 		0 => "⭕".to_string(),
-// 		1..=5 => "🟡".to_string(),
-// 		6..=15 => "🟠".to_string(),
-// 		16..=30 => "🔵".to_string(),
-// 		31..=50 => "🟢".to_string(),
-// 		_ => "🏆".to_string(),
-// 	}
-// }
 
 fn progress_bar(percentage: usize) -> String {
 	let filled = percentage / 10;
