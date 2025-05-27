@@ -6,11 +6,11 @@ My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track 
 
 - **Category:** Shell
 - **Total Exercises Available:** 92
-- **Exercises Completed:** 9 / 92 (10%)
-- **Progress:** █░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 9
+- **Exercises Completed:** 10 / 92 (11%)
+- **Progress:** █░░░░░░░░░ 🟡
+- **Solutions Found Locally:** 10
 - **Track:** [Bash](https://exercism.org/tracks/bash)
-- **Practice Exercises:** 9
+- **Practice Exercises:** 10
 
 ## 🏋️ Exercises
 
@@ -22,6 +22,7 @@ My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track 
 | Error Handling | [View on Exercism](https://exercism.org/tracks/bash/exercises/error-handling) | [View Solution](error-handling/README.md) |
 | Hamming | [View on Exercism](https://exercism.org/tracks/bash/exercises/hamming) | [View Solution](hamming/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/bash/exercises/hello-world) | [View Solution](hello-world/README.md) |
+| Leap | [View on Exercism](https://exercism.org/tracks/bash/exercises/leap) | [View Solution](leap/README.md) |
 | Pangram | [View on Exercism](https://exercism.org/tracks/bash/exercises/pangram) | [View Solution](pangram/README.md) |
 | Raindrops | [View on Exercism](https://exercism.org/tracks/bash/exercises/raindrops) | [View Solution](raindrops/README.md) |
 | Two Fer | [View on Exercism](https://exercism.org/tracks/bash/exercises/two-fer) | [View Solution](two-fer/README.md) |
