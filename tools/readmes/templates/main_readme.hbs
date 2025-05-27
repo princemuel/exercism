@@ -1,0 +1,42 @@
+# 🏋️ Exercism Solutions
+
+Welcome to my collection of solutions for [Exercism](https://exercism.org/) coding exercises!
+
+## 📊 Overview
+
+- **Total Exercises Completed:** {{total_completed}}
+- **Total Exercises Available:** {{total_available}}
+{{#if overall_completion}}
+- **Overall Completion:** {{overall_completion}}% {{progress_emoji overall_completion}}
+{{/if}}
+- **Programming Languages:** {{total_tracks}}
+- **Solutions Found Locally:** {{total_exercises}}
+{{#if categories}}
+- **Track Categories:**
+{{#each categories}}
+  - {{capitalize name}}: {{count}} track(s)
+{{/each}}
+{{/if}}
+- **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
+
+## 🗂️ Tracks
+
+Click on any track to view solutions to each exercise:
+
+
+| Track | Category | Progress | Solutions | Exercism Link | Last Updated |
+|-------|----------|----------|-----------|-------------|-------------|
+{{#each tracks}}
+| [{{name}}]({{slug}}/README.md) | {{category}} | {{progress_info}} | {{exercise_count}} | [View Track]({{track_url}}) | {{last_updated}} |
+{{/each}}
+
+## 🚀 Getting Started
+
+Each track contains:
+- Individual exercise solutions with explanations
+- Links to the original Exercism problems
+- Track-specific statistics and progress
+
+## 📝 About Exercism
+
+[Exercism](https://exercism.org/) is a free platform for learning programming languages through practice exercises and mentorship. Each track provides a structured path to learn a language with both concept exercises (teaching specific concepts) and practice exercises (applying knowledge).

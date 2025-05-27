@@ -1,0 +1,40 @@
+# {{track_name}} Solutions
+
+My solutions to exercises on the [{{track_name}}](https://exercism.org/tracks/{{track_slug}}) track on Exercism.
+
+## 📊 Statistics
+
+{{#if has_metadata}}
+{{#with metadata}}
+- **Category:** {{capitalize category}}
+- **Total Exercises Available:** {{total}}
+- **Exercises Completed:** {{completed}} / {{total}} ({{percentage}}%)
+- **Progress:** {{progress_bar percentage}} {{progress_emoji percentage}}
+- **Solutions Found Locally:** {{../exercise_count}}
+{{/with}}
+{{else}}
+- **Solutions Found Locally:** {{exercise_count}}
+{{/if}}
+- **Track:** [{{track_name}}](https://exercism.org/tracks/{{track_slug}})
+{{#if concept_count}}
+- **Concept Exercises:** {{concept_count}}
+{{/if}}
+{{#if practice_count}}
+- **Practice Exercises:** {{practice_count}}
+{{/if}}
+
+## 🏋️ Exercises
+
+| Exercise | Exercism Link | Solution |
+|----------|---------------|----------|
+{{#each exercises}}
+| {{name}} | [View on Exercism]({{url}}) | [View Solution]({{solution_path}}) |
+{{/each}}
+
+---
+
+## 🔗 Links
+
+- [Back to Main README](../README.md)
+- [Exercism {{track_name}} Track](https://exercism.org/tracks/{{track_slug}})
+- [My Exercism Profile](https://exercism.org/profiles/princemuel)
