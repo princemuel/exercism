@@ -1,0 +1,57 @@
+-- CREATE TABLE "color_code" ("color" TEXT, "result" INT);
+-- Task: update the color_code table and set the result based on the color.
+
+CREATE TEMP TABLE colors (
+    name TEXT,
+    value INT
+);
+
+INSERT INTO colors (name, value)
+VALUES
+    ('black', 0),
+    ('brown', 1),
+    ('red', 2),
+    ('orange', 3),
+    ('yellow', 4),
+    ('green', 5),
+    ('blue', 6),
+    ('violet', 7),
+    ('grey', 8),
+    ('white', 9);
+
+UPDATE color_code
+SET result = (
+    SELECT value
+    FROM colors
+    WHERE colors.name = color_code.color
+);
+
+
+CREATE TABLE encoding (color TEXT, code INT);
+INSERT INTO encoding (color, code) VALUES
+    ("black", 0),
+    ("brown", 1),
+    ("red", 2),
+    ("orange", 3),
+    ("yellow", 4),
+    ("green", 5),
+    ("blue", 6),
+    ("violet", 7),
+    ("grey", 8),
+    ("white", 9);
+
+UPDATE color_code
+SET result = code
+FROM encoding
+WHERE encoding.color = color_code.color;
+
+
+-- CREATE TABLE "color_code" ("color" TEXT, "result" INT);
+-- Task: update the color_code table and set the result based on the color.
+UPDATE color_code
+SET result = instr("black     brown     red       orange    yellow    green     blue      violet    grey      white", color)/10
+
+
+
+
+
