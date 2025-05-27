@@ -1,8 +1,9 @@
-use std::collections::HashMap;
-use std::fs;
-use std::path::Path;
+use ::std::collections::HashMap;
+use ::std::fs;
+use ::std::path::Path;
 
-use time::{OffsetDateTime, format_description::parse};
+use ::time::OffsetDateTime;
+use ::time::format_description::parse;
 
 use crate::model::Exercise;
 
@@ -116,8 +117,7 @@ fn generate_track_readme(
 	}
 	if practice_exercises > 0 {
 		content.push_str(&format!(
-			"- **Practice Exercises:** {}\n",
-			practice_exercises
+			"- **Practice Exercises:** {practice_exercises}\n",
 		));
 	}
 
@@ -187,10 +187,9 @@ pub fn generate_main_readme(
 	// Global statistics
 	content.push_str("## 📊 Overview\n\n");
 	content.push_str(&format!(
-		"- **Total Exercises Completed:** {}\n",
-		total_exercises
+		"- **Total Exercises Completed:** {total_exercises}\n",
 	));
-	content.push_str(&format!("- **Programming Languages:** {total_tracks}\n"));
+	content.push_str(&format!("- **Programming Languages:** {}\n", total_tracks));
 	content.push_str("- **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)\n\n");
 
 	// Sort tracks alphabetically
@@ -224,17 +223,20 @@ pub fn generate_main_readme(
 
 	content.push_str("\n## 🎯 Quick Stats by Track\n\n");
 
+	content.push_str("| Track | Exercises | Exercism Link | Details |\n");
+	content.push_str("|-------|-----------|---------------|----------|\n");
+
 	for track in tracks {
 		let exercises = &exercises_by_track[track];
 		let stats = &track_stats[track];
 
 		content.push_str(&format!(
-			"### [{}]({}/README.md)\n- Solutions: {} • [View Details]({}/README.md) • [Exercism Track]({})\n\n",
+			"| [{}]({}/README.md) | {} | [View Track]({}) | [Detailed Stats]({}/README.md) |\n",
 			track,
 			stats.track_slug,
 			exercises.len(),
-			stats.track_slug,
-			stats.track_url
+			stats.track_url,
+			stats.track_slug
 		));
 	}
 
