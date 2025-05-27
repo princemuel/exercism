@@ -1,8 +1,6 @@
-# 🏋️ Exercism Solutions
-Welcome to my collection of solutions for [Exercism](https://exercism.org/) coding
-exercises!
-## 📊 Overview
-- **Total Exercises Completed:**
+# 🏋️ Exercism Solutions Welcome to my collection of solutions for
+[Exercism](https://exercism.org/) coding exercises! ## 📊 Overview - **Total
+Exercises Completed:**
 164
 - **Total Exercises Available:**
 1195
@@ -19,11 +17,11 @@ exercises!
         4
         track(s)
         -
-        System:
+        Shell:
         3
         track(s)
         -
-        Shell:
+        System:
         3
         track(s)
         -
@@ -35,9 +33,8 @@ exercises!
         1
         track(s)
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
-## 🗂️ Tracks
-Click on any track to view solutions to each exercise:
-| Track | Category | Progress | Solutions | Exercism Link | Last Updated |
+## 🗂️ Tracks Click on any track to view solutions to each exercise: | Track |
+Category | Progress | Solutions | Exercism Link | Last Updated |
 |-------|----------|----------|-----------|-------------|-------------|
     | [AWK](awk/README.md) |
     shell
@@ -147,11 +144,11 @@ Click on any track to view solutions to each exercise:
     | [View Track](https://exercism.org/tracks/typescript) |
     2025-05-27
     |
-## 🚀 Getting Started
-Each track contains: - Individual exercise solutions with explanations - Links to
-the original Exercism problems - Track-specific statistics and progress
-## 📝 About Exercism
-[Exercism](https://exercism.org/) is a free platform for learning programming
-languages through practice exercises and mentorship. Each track provides a
-structured path to learn a language with both concept exercises (teaching specific
-concepts) and practice exercises (applying knowledge).
+
+## 🚀 Getting Started Each track contains: - Individual exercise solutions with
+explanations - Links to the original Exercism problems - Track-specific statistics
+and progress ## 📝 About Exercism [Exercism](https://exercism.org/) is a free
+platform for learning programming languages through practice exercises and
+mentorship. Each track provides a structured path to learn a language with both
+concept exercises (teaching specific concepts) and practice exercises (applying
+knowledge).
