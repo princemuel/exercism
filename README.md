@@ -11,8 +11,8 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 - **Solutions Found Locally:** 169
 - **Track Categories:**
   - Scripting: 4 tracks
-  - System: 3 tracks
   - Shell: 3 tracks
+  - System: 3 tracks
   - Functional: 1 tracks
   - Database: 1 tracks
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
@@ -65,5 +65,5 @@ Each track contains:
 
 ---
 
-*This README was automatically generated on 2025-05-27 09:28:20 UTC*
+*This README was automatically generated on 2025-05-27 09:30:06 UTC*
 *To update, run the exercism-readme-generator tool*
