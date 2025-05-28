@@ -1,0 +1,33 @@
+function raindrops(n)
+    result = ""
+    if n % 3 == 0
+        result *= "Pling"
+    end
+    if n % 5 == 0
+        result *= "Plang"
+    end
+    if n % 7 == 0
+        result *= "Plong"
+    end
+    return result == "" ? string(n) : result
+end
+
+
+function raindrops(n)
+    sounds = [
+        n % 3 == 0 ? "Pling" : "",
+        n % 5 == 0 ? "Plang" : "",
+        n % 7 == 0 ? "Plong" : ""
+    ]
+    result = join(sounds)
+    return isempty(result) ? string(n) : result
+end
+
+function raindrops(n)
+    result = join([
+        n % 3 == 0 ? "Pling" : "",
+        n % 5 == 0 ? "Plang" : "",
+        n % 7 == 0 ? "Plong" : ""
+    ])
+    return isempty(result) ? string(n) : result
+end
