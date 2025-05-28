@@ -1,0 +1,145 @@
+#pragma once
+
+#include <string>
+#include <cstdint> // for int32_t
+
+namespace raindrops
+{
+    // Converts a given number to its "raindrop speak" string.
+    // Rules:
+    // - If the number has 3 as a factor, add "Pling" to the result.
+    // - If the number has 5 as a factor, add "Plang".
+    // - If the number has 7 as a factor, add "Plong".
+    // - If it has none of these factors, return the number as a string.
+    //
+    // Example:
+    //   convert(28) => "Plong"
+    //   convert(30) => "PlingPlang"
+    //   convert(34) => "34"
+
+    [[nodiscard]]
+    std::string convert(int32_t n);
+}
+
+
+#include "raindrops.h"
+namespace raindrops {
+    int pling(int number){
+        int mod{number % 3};
+        return mod;
+    }
+    int plang(int number){
+        int mod{number % 5};
+        return mod;
+    }
+    int plong(int number){
+        int mod{number % 7};
+        return mod;
+    }
+    std::string convert(int number){
+        std::string rain{""};
+        if (pling(number) == 0){
+            rain += "Pling";
+        }
+        if (plang(number) == 0){
+            rain += "Plang";
+        }
+        if (plong(number) == 0){
+            rain += "Plong";
+        }
+        if (pling(number) != 0 && plang(number) != 0 && plong(number) != 0){
+            rain = std::to_string(number);
+        }
+        return rain;
+    }
+}  // namespace raindrops
+
+
+
+
+#if !defined(RAINDROPS_H)
+#define RAINDROPS_H
+#include <string>
+
+namespace raindrops {
+    int pling(int number);
+    int plang(int number);
+    int plong(int number);
+    std::string convert(int number);
+}  // namespace raindrops
+#endif  // RAINDROPS_H
+
+
+#include "raindrops.h"
+#include <string>
+using namespace std;
+
+namespace raindrops {
+
+string modBy3(int number) { return number % 3 == 0 ? "Pling" : ""; }
+string modBy5(int number) { return number % 5 == 0 ? "Plang" : ""; }
+string modBy7(int number) { return number % 7 == 0 ? "Plong" : ""; }
+
+// TODO: add your solution here
+string convert(int number) {
+  string res = "";
+  res += modBy3(number);
+  res += modBy5(number);
+  res += modBy7(number);
+  return res.empty() ? to_string(number) : res;
+}
+
+} // namespace raindrops
+
+
+
+
+
+#if !defined(RAINDROPS_H)
+#define RAINDROPS_H
+#include <string>
+using namespace std;
+namespace raindrops {
+
+// TODO: add your solution here
+string convert(int number);
+} // namespace raindrops
+
+#endif // RAINDROPS_H
+
+#include "raindrops.h"
+#include <string>
+using namespace std;
+
+namespace raindrops {
+
+string modBy3(int number) { return number % 3 == 0 ? "Pling" : ""; }
+string modBy5(int number) { return number % 5 == 0 ? "Plang" : ""; }
+string modBy7(int number) { return number % 7 == 0 ? "Plong" : ""; }
+
+// TODO: add your solution here
+string convert(int number) {
+  string res = "";
+  res += modBy3(number);
+  res += modBy5(number);
+  res += modBy7(number);
+  return res.empty() ? to_string(number) : res;
+}
+
+} // namespace raindrops
+
+
+
+
+
+#if !defined(RAINDROPS_H)
+#define RAINDROPS_H
+#include <string>
+using namespace std;
+namespace raindrops {
+
+// TODO: add your solution here
+string convert(int number);
+} // namespace raindrops
+
+#endif // RAINDROPS_H
