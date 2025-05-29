@@ -1,24 +1,37 @@
 #[derive(Debug)]
-pub struct HighScores;
+pub struct HighScores<'a> {
+	scores: &'a [u32],
+}
 
-impl HighScores {
-    pub fn new(scores: &[u32]) -> Self {
-        todo!("Construct a HighScores struct, given the scores: {scores:?}")
-    }
+impl<'a> HighScores<'a> {
+	pub fn new(scores: &'a [u32]) -> Self {
+		Self { scores }
+	}
 
-    pub fn scores(&self) -> &[u32] {
-        todo!("Return all the scores as a slice")
-    }
+	pub fn scores(&self) -> &[u32] {
+		self.scores
+	}
 
-    pub fn latest(&self) -> Option<u32> {
-        todo!("Return the latest (last) score")
-    }
+	pub fn latest(&self) -> Option<u32> {
+		self.scores.last().copied()
+	}
 
-    pub fn personal_best(&self) -> Option<u32> {
-        todo!("Return the highest score")
-    }
+	pub fn personal_best(&self) -> Option<u32> {
+		self.scores.iter().max().copied()
+	}
 
-    pub fn personal_top_three(&self) -> Vec<u32> {
-        todo!("Return 3 highest scores")
-    }
+	pub fn personal_top_three(&self) -> Vec<u32> {
+		self.scores
+			.iter()
+			.fold([u32::MIN; 3], |[a, b, c], &x| match x {
+				x if x >= a => [x, a, b],
+				x if x >= b => [a, x, b],
+				x if x >= c => [a, b, x],
+				_ => [a, b, c],
+			})
+			.iter()
+			.take(self.scores.len())
+			.copied()
+			.collect()
+	}
 }

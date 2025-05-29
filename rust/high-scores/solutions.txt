@@ -1,0 +1,12 @@
+pub fn personal_top_three(&self) -> Vec<u32> {
+    let mut sorted_scores = self.scores.to_vec();
+    // sorted_scores.sort_by(|a, b| b.cmp(a));
+    sorted_scores.sort_unstable_by(|a, b| b.cmp(a));
+    sorted_scores.truncate(3);
+    sorted_scores
+}
+
+pub fn personal_top_three(&self) -> Vec<u32> {
+    let mut heap: BinaryHeap<u32> = self.scores.iter().copied().collect();
+    (0..3).filter_map(|_| heap.pop()).collect()
+}
