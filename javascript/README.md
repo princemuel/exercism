@@ -6,11 +6,11 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 
 - **Category:** Scripting
 - **Total Exercises Available:** 150
-- **Exercises Completed:** 31 / 150 (21%)
+- **Exercises Completed:** 32 / 150 (21%)
 - **Progress:** ██░░░░░░░░ 🟡
-- **Solutions Found Locally:** 34
+- **Solutions Found Locally:** 35
 - **Track:** [JavaScript](https://exercism.org/tracks/javascript)
-- **Practice Exercises:** 34
+- **Practice Exercises:** 35
 
 ## 🏋️ Exercises
 
@@ -40,6 +40,7 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 | Leap | [View on Exercism](https://exercism.org/tracks/javascript/exercises/leap) | [View Solution](leap/README.md) |
 | Lucky Numbers | [View on Exercism](https://exercism.org/tracks/javascript/exercises/lucky-numbers) | [View Solution](lucky-numbers/README.md) |
 | Mixed Juices | [View on Exercism](https://exercism.org/tracks/javascript/exercises/mixed-juices) | [View Solution](mixed-juices/README.md) |
+| Pangram | [View on Exercism](https://exercism.org/tracks/javascript/exercises/pangram) | [View Solution](pangram/README.md) |
 | Poetry Club Door Policy | [View on Exercism](https://exercism.org/tracks/javascript/exercises/poetry-club-door-policy) | [View Solution](poetry-club-door-policy/README.md) |
 | Raindrops | [View on Exercism](https://exercism.org/tracks/javascript/exercises/raindrops) | [View Solution](raindrops/README.md) |
 | Resistor Color | [View on Exercism](https://exercism.org/tracks/javascript/exercises/resistor-color) | [View Solution](resistor-color/README.md) |

@@ -5,12 +5,12 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 ## 📊 Statistics
 
 - **Category:** Functional
-- **Total Exercises Available:** 104
-- **Exercises Completed:** 6 / 104 (6%)
+- **Total Exercises Available:** 105
+- **Exercises Completed:** 8 / 105 (8%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 6
+- **Solutions Found Locally:** 8
 - **Track:** [Julia](https://exercism.org/tracks/julia)
-- **Practice Exercises:** 6
+- **Practice Exercises:** 8
 
 ## 🏋️ Exercises
 
@@ -19,9 +19,11 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 | Annalyns Infiltration | [View on Exercism](https://exercism.org/tracks/julia/exercises/annalyns-infiltration) | [View Solution](annalyns-infiltration/README.md) |
 | Cars Assemble | [View on Exercism](https://exercism.org/tracks/julia/exercises/cars-assemble) | [View Solution](cars-assemble/README.md) |
 | Currency Exchange | [View on Exercism](https://exercism.org/tracks/julia/exercises/currency-exchange) | [View Solution](currency-exchange/README.md) |
+| Elyses Enchantments | [View on Exercism](https://exercism.org/tracks/julia/exercises/elyses-enchantments) | [View Solution](elyses-enchantments/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/julia/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Lasagna | [View on Exercism](https://exercism.org/tracks/julia/exercises/lasagna) | [View Solution](lasagna/README.md) |
 | Leap | [View on Exercism](https://exercism.org/tracks/julia/exercises/leap) | [View Solution](leap/README.md) |
+| Raindrops | [View on Exercism](https://exercism.org/tracks/julia/exercises/raindrops) | [View Solution](raindrops/README.md) |
 
 ---
 

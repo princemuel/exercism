@@ -6,11 +6,11 @@ My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track 
 
 - **Category:** Shell
 - **Total Exercises Available:** 92
-- **Exercises Completed:** 10 / 92 (11%)
+- **Exercises Completed:** 11 / 92 (12%)
 - **Progress:** █░░░░░░░░░ 🟡
-- **Solutions Found Locally:** 10
+- **Solutions Found Locally:** 12
 - **Track:** [Bash](https://exercism.org/tracks/bash)
-- **Practice Exercises:** 10
+- **Practice Exercises:** 12
 
 ## 🏋️ Exercises
 
@@ -20,11 +20,13 @@ My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track 
 | Armstrong Numbers | [View on Exercism](https://exercism.org/tracks/bash/exercises/armstrong-numbers) | [View Solution](armstrong-numbers/README.md) |
 | Bob | [View on Exercism](https://exercism.org/tracks/bash/exercises/bob) | [View Solution](bob/README.md) |
 | Error Handling | [View on Exercism](https://exercism.org/tracks/bash/exercises/error-handling) | [View Solution](error-handling/README.md) |
+| Grains | [View on Exercism](https://exercism.org/tracks/bash/exercises/grains) | [View Solution](grains/README.md) |
 | Hamming | [View on Exercism](https://exercism.org/tracks/bash/exercises/hamming) | [View Solution](hamming/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/bash/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Leap | [View on Exercism](https://exercism.org/tracks/bash/exercises/leap) | [View Solution](leap/README.md) |
 | Pangram | [View on Exercism](https://exercism.org/tracks/bash/exercises/pangram) | [View Solution](pangram/README.md) |
 | Raindrops | [View on Exercism](https://exercism.org/tracks/bash/exercises/raindrops) | [View Solution](raindrops/README.md) |
+| Reverse String | [View on Exercism](https://exercism.org/tracks/bash/exercises/reverse-string) | [View Solution](reverse-string/README.md) |
 | Two Fer | [View on Exercism](https://exercism.org/tracks/bash/exercises/two-fer) | [View Solution](two-fer/README.md) |
 
 ---
