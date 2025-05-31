@@ -1,0 +1,65 @@
+#ifndef RESISTOR_COLOR_H
+#define RESISTOR_COLOR_H
+
+#include <stdint.h>
+#include <stddef.h>
+
+#define COLORS                         \
+    BLACK, BROWN, RED, ORANGE, YELLOW, \
+        GREEN, BLUE, VIOLET, GREY, WHITE
+
+typedef enum resistor_band
+{
+    COLORS
+} resistor_band_t;
+
+uint8_t color_code(resistor_band_t color);
+const resistor_band_t *colors(void);
+
+#endif
+
+
+
+#include "resistor_color.h"
+#include <stddef.h>
+#include <assert.h>
+
+static const resistor_band_t color_bands[] = {COLORS};
+
+_Static_assert(WHITE == 9, "Resistor color values must be sequential from 0 to 9");
+_Static_assert(sizeof(color_bands) / sizeof(color_bands[0]) == 10,
+               "Must have exactly 10 resistor colors");
+
+uint8_t color_code(const resistor_band_t color)
+{
+    return (uint8_t)color;
+}
+
+const resistor_band_t *colors(void)
+{
+    return color_bands;
+}
+
+
+
+
+
+#ifndef RESISTOR_COLOR_H
+#define RESISTOR_COLOR_H
+
+#include <stdint.h>
+#include <stddef.h>
+
+#define COLORS                         \
+    BLACK, BROWN, RED, ORANGE, YELLOW, \
+        GREEN, BLUE, VIOLET, GREY, WHITE
+
+typedef enum resistor_band
+{
+    COLORS
+} resistor_band_t;
+
+uint8_t color_code(resistor_band_t color);
+const resistor_band_t *colors(void);
+
+#endif
