@@ -6,7 +6,7 @@ My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track 
 
 - **Category:** System
 - **Total Exercises Available:** 99
-- **Exercises Completed:** 27 / 99 (27%)
+- **Exercises Completed:** 28 / 99 (28%)
 - **Progress:** ██░░░░░░░░ 🟠
 - **Solutions Found Locally:** 28
 - **Track:** [Rust](https://exercism.org/tracks/rust)
