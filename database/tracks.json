@@ -15,60 +15,60 @@
     "title": "jq",
     "category": "shell",
     "total": 74,
-    "completed": 4
+    "completed": 5
   },
   {
     "title": "rust",
     "category": "system",
     "total": 99,
-    "completed": 27
+    "completed": 28
   },
   {
     "title": "javascript",
     "category": "scripting",
     "total": 150,
-    "completed": 31
+    "completed": 32
   },
   {
     "title": "typescript",
     "category": "scripting",
     "total": 100,
-    "completed": 26
+    "completed": 27
   },
   {
     "title": "go",
     "category": "scripting",
     "total": 141,
-    "completed": 10
+    "completed": 11
   },
   {
     "title": "cpp",
     "category": "system",
     "total": 99,
-    "completed": 6
+    "completed": 8
   },
   {
     "title": "bash",
     "category": "shell",
     "total": 92,
-    "completed": 9
+    "completed": 11
   },
   {
     "title": "c",
     "category": "system",
     "total": 83,
-    "completed": 4
-  },
-  {
-    "title": "julia",
-    "category": "functional",
-    "total": 104,
-    "completed": 6
+    "completed": 5
   },
   {
     "title": "awk",
     "category": "shell",
     "total": 85,
     "completed": 4
+  },
+  {
+    "title": "julia",
+    "category": "functional",
+    "total": 105,
+    "completed": 9
   }
 ]

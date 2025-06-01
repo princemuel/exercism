@@ -36,3 +36,4 @@ Command-line power tools, scripting, text munging, editor automation
 🗃️ Data & Persistence
 Lightweight database operations and structure
 - SQLite
+https://learnxinyminutes.com
