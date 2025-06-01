@@ -1,0 +1,27 @@
+.value | explode | reverse | implode
+
+.value / "" | reverse | join("")
+
+.value | split("") | reverse | join("")
+
+(.value | split("") | reverse | add) // ""
+
+.value | split("") | reduce .[] as $char (""; $char + .)
+
+.value | reduce explode[] as $char (""; implode([$char]) + .)
+
+.value as $s | [range(length-1; -1; -1)] | map($s[.]) | join("")
+
+.value | [foreach explode[] as $c (null; $c)] | reverse | implode
+
+.value |  [range(length)] | map(length - 1 - .) | map(input[.]) | join("")
+
+def reverse_string: explode | reverse | implode;
+
+def reverse_recursive:
+  if length <= 1 then .
+  else .[-1:] + (.[:-1] | reverse_recursive)
+  end;
+
+
+.value | (. / "") as $chars | [$chars[range(length; 0; -1) - 1]] | add + ""
