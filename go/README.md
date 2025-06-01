@@ -6,11 +6,11 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 
 - **Category:** Scripting
 - **Total Exercises Available:** 141
-- **Exercises Completed:** 10 / 141 (7%)
+- **Exercises Completed:** 11 / 141 (8%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 11
+- **Solutions Found Locally:** 12
 - **Track:** [Go](https://exercism.org/tracks/go)
-- **Practice Exercises:** 11
+- **Practice Exercises:** 12
 
 ## 🏋️ Exercises
 
@@ -18,6 +18,7 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 |----------|---------------|----------|
 | Annalyns Infiltration | [View on Exercism](https://exercism.org/tracks/go/exercises/annalyns-infiltration) | [View Solution](annalyns-infiltration/README.md) |
 | Blackjack | [View on Exercism](https://exercism.org/tracks/go/exercises/blackjack) | [View Solution](blackjack/README.md) |
+| Card Tricks | [View on Exercism](https://exercism.org/tracks/go/exercises/card-tricks) | [View Solution](card-tricks/README.md) |
 | Cars Assemble | [View on Exercism](https://exercism.org/tracks/go/exercises/cars-assemble) | [View Solution](cars-assemble/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/go/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Lasagna | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna) | [View Solution](lasagna/README.md) |

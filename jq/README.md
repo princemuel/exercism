@@ -6,11 +6,11 @@ My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on E
 
 - **Category:** Shell
 - **Total Exercises Available:** 74
-- **Exercises Completed:** 4 / 74 (5%)
+- **Exercises Completed:** 5 / 74 (7%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 4
+- **Solutions Found Locally:** 5
 - **Track:** [Jq](https://exercism.org/tracks/jq)
-- **Practice Exercises:** 4
+- **Practice Exercises:** 5
 
 ## 🏋️ Exercises
 
@@ -18,6 +18,7 @@ My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on E
 |----------|---------------|----------|
 | Hello World | [View on Exercism](https://exercism.org/tracks/jq/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Log Line Parser | [View on Exercism](https://exercism.org/tracks/jq/exercises/log-line-parser) | [View Solution](log-line-parser/README.md) |
+| Reverse String | [View on Exercism](https://exercism.org/tracks/jq/exercises/reverse-string) | [View Solution](reverse-string/README.md) |
 | Shopping | [View on Exercism](https://exercism.org/tracks/jq/exercises/shopping) | [View Solution](shopping/README.md) |
 | Two Fer | [View on Exercism](https://exercism.org/tracks/jq/exercises/two-fer) | [View Solution](two-fer/README.md) |
 
