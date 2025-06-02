@@ -1,0 +1,24 @@
+UPDATE twofer
+SET response = CASE
+        WHEN input = ''
+        OR input IS NULL THEN 'One for you, one for me.'
+        ELSE 'One for ' || input || ', one for me.'
+    END;
+
+UPDATE twofer
+SET response = 'One for ' || iif(input = '', 'you', input) || ', one for me.';
+
+UPDATE twofer
+SET response = 'One for ' || COALESCE(NULLIF(input, ''), 'you') || ', one for me.';
+
+
+UPDATE twofer
+SET response =
+    CASE
+        WHEN input IS NOT NULL AND input <> '' THEN 'One for ' || input || ', one for me.'
+        ELSE 'One for you, one for me.'
+    END;
+
+
+
+
