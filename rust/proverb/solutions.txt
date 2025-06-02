@@ -1,0 +1,50 @@
+pub fn build_proverb(list: &[&str]) -> String {
+    // If the list is empty, return empty string
+    if list.is_empty() {
+        return String::with_capacity(0);
+    }
+
+    let mut lines =  Vec::with_capacity(list.len());
+
+    // We need to go through pairs: (item[0], item[1]), (item[1], item[2]), etc.
+    for i in 0..list.len() - 1 {
+        let current = list[i];
+        let next = list[i + 1];
+        let line = format!("For want of a {} the {} was lost.", current, next);
+        lines.push(line);
+    }
+
+    // Add the final line
+    let final_line = format!("And all for the want of a {}.", list[0]);
+    lines.push(final_line);
+
+    // Join all lines with newlines
+    lines.join("\n")
+}
+
+use std::iter::once;
+
+pub fn build_proverb(list: &[&str]) -> String {
+    match list.first() {
+        None => String::new(),
+        Some(word) => list.windows(2)
+            .map(|w| format!("For want of a {} the {} was lost.\n", w[0], w[1]))
+            .chain(once(format!("And all for the want of a {}.", word)))
+            .collect(),
+    }
+}
+
+pub fn build_proverb(list: &[&str]) -> String {
+	if list.is_empty() {
+		return String::with_capacity(0);
+	}
+
+	let mut lines = Vec::with_capacity(list.len());
+
+	for pair in list.windows(2) {
+		lines.push(format!("For want of a {} the {} was lost.", pair[0], pair[1]));
+	}
+
+	lines.push(format!("And all for the want of a {}.", list[0]));
+	lines.join("\n")
+}
