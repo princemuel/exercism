@@ -1,100 +1,57 @@
-class PrimeIterator implements Iterator<number>, Iterable<number> {
-    private static readonly WHEEL = [4, 2, 4, 2, 4, 6, 2, 6];
-    private static readonly INITIAL_PRIMES = [
-        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
-    ];
-    private static instance: PrimeIterator | null = null;
+const WHEEL = [4, 2, 4, 2, 4, 6, 2, 6];
+const INITIAL_PRIMES = [2, 3, 5];
 
-    #primes: number[] = [];
-    #candidate: number;
-    #wheelPosition = 0;
-    #cache = new Map<number, boolean>();
-    #currentIndex = 0;
+const primes = memoize(primeGenerator());
 
-    private constructor() {
-        this.#primes = [...PrimeIterator.INITIAL_PRIMES];
-        // Start wheel iteration from 37 (next candidate after 31)
-        this.#candidate = 37;
-    }
+export function nth(n: number): number {
+    if (n < 1) throw new Error("Prime is not possible");
+    return primes(n - 1);
+}
 
-    #isPrime(n: number): boolean {
-        if (this.#cache.has(n)) return this.#cache.get(n)!;
-        // Use existing primes for faster divisibility testing
+function* primeGenerator(): Generator<number, never, undefined> {
+    yield* INITIAL_PRIMES;
+
+    // Start wheel iteration from 7 (next candidate after 5 in INITIAL_PRIMES)
+    let candidate = 7;
+    let wheelPosition = 0;
+
+    const cache = new Map<number, boolean>();
+    const foundPrimes = [...INITIAL_PRIMES];
+
+    function isPrime(n: number): boolean {
+        if (cache.has(n)) return cache.get(n)!;
+
         const sqrt = Math.floor(Math.sqrt(n));
-        for (const prime of this.#primes) {
+
+        for (const prime of foundPrimes) {
             if (prime > sqrt) break;
             if (n % prime === 0) {
-                this.#cache.set(n, false);
+                cache.set(n, false);
                 return false;
             }
         }
 
-        // Fall back to brute force if we don't have enough primes cached
-        for (
-            let divisor =
-                this.#primes.length > 0
-                    ? this.#primes[this.#primes.length - 1] + 1
-                    : 2;
-            divisor <= sqrt;
-            divisor++
-        ) {
-            if (n % divisor === 0) {
-                this.#cache.set(n, false);
-                return false;
-            }
-        }
-
-        this.#cache.set(n, true);
+        cache.set(n, true);
         return true;
     }
 
-    public next(): IteratorResult<number, number> {
-        if (this.#currentIndex < this.#primes.length) {
-            return { value: this.#primes[this.#currentIndex++], done: false };
+    while (true) {
+        if (isPrime(candidate)) {
+            foundPrimes.push(candidate);
+            yield candidate;
         }
 
-        // Find next prime using wheel
-        while (!this.#isPrime(this.#candidate)) {
-            this.#candidate += PrimeIterator.WHEEL[this.#wheelPosition];
-            this.#wheelPosition = (this.#wheelPosition + 1) % 8;
-        }
-
-        const value = this.#candidate;
-        this.#primes.push(value);
-        this.#currentIndex++;
-
-        // Update candidate for next iteration
-        this.#candidate += PrimeIterator.WHEEL[this.#wheelPosition];
-        this.#wheelPosition = (this.#wheelPosition + 1) % 8;
-
-        return { value, done: false };
-    }
-
-    [Symbol.iterator](): Iterator<number> {
-        return this;
-    }
-
-    static getInstance(): PrimeIterator {
-        return PrimeIterator.instance ?? new PrimeIterator();
-    }
-
-    static nthPrime(n: number): number {
-        if (n < 1) throw new Error("Prime is not possible");
-
-        const iterator = PrimeIterator.getInstance();
-
-        if (n <= iterator.#primes.length) return iterator.#primes[n - 1];
-
-        while (iterator.#primes.length < n) iterator.next();
-
-        return iterator.#primes[n - 1];
-    }
-
-    static reset(): void {
-        PrimeIterator.instance = null;
+        candidate += WHEEL[wheelPosition];
+        wheelPosition = (wheelPosition + 1) % WHEEL.length;
     }
 }
 
-export function nth(n: number): number {
-    return PrimeIterator.nthPrime(n);
+function memoize<T>(gen: Generator<T, never, undefined>): (idx: number) => T {
+    const cache: T[] = [];
+    return (idx: number): T => {
+        if (idx < 0) throw new Error("Index out of bounds");
+
+        while (cache.length <= idx) cache.push(gen.next().value);
+        return cache[idx];
+    };
 }
