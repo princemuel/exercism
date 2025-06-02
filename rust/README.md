@@ -6,11 +6,11 @@ My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track 
 
 - **Category:** System
 - **Total Exercises Available:** 99
-- **Exercises Completed:** 28 / 99 (28%)
+- **Exercises Completed:** 29 / 99 (29%)
 - **Progress:** ██░░░░░░░░ 🟠
-- **Solutions Found Locally:** 28
+- **Solutions Found Locally:** 29
 - **Track:** [Rust](https://exercism.org/tracks/rust)
-- **Practice Exercises:** 28
+- **Practice Exercises:** 29
 
 ## 🏋️ Exercises
 
@@ -37,6 +37,7 @@ My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track 
 | Minesweeper | [View on Exercism](https://exercism.org/tracks/rust/exercises/minesweeper) | [View Solution](minesweeper/README.md) |
 | Nth Prime | [View on Exercism](https://exercism.org/tracks/rust/exercises/nth-prime) | [View Solution](nth-prime/README.md) |
 | Prime Factors | [View on Exercism](https://exercism.org/tracks/rust/exercises/prime-factors) | [View Solution](prime-factors/README.md) |
+| Proverb | [View on Exercism](https://exercism.org/tracks/rust/exercises/proverb) | [View Solution](proverb/README.md) |
 | Raindrops | [View on Exercism](https://exercism.org/tracks/rust/exercises/raindrops) | [View Solution](raindrops/README.md) |
 | Reverse String | [View on Exercism](https://exercism.org/tracks/rust/exercises/reverse-string) | [View Solution](reverse-string/README.md) |
 | Rna Transcription | [View on Exercism](https://exercism.org/tracks/rust/exercises/rna-transcription) | [View Solution](rna-transcription/README.md) |

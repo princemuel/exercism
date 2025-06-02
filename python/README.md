@@ -6,16 +6,17 @@ My solutions to exercises on the [Python](https://exercism.org/tracks/python) tr
 
 - **Category:** Scripting
 - **Total Exercises Available:** 140
-- **Exercises Completed:** 29 / 140 (21%)
+- **Exercises Completed:** 30 / 140 (21%)
 - **Progress:** ██░░░░░░░░ 🟡
-- **Solutions Found Locally:** 29
+- **Solutions Found Locally:** 30
 - **Track:** [Python](https://exercism.org/tracks/python)
-- **Practice Exercises:** 29
+- **Practice Exercises:** 30
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
+| All Your Base | [View on Exercism](https://exercism.org/tracks/python/exercises/all-your-base) | [View Solution](all-your-base/README.md) |
 | Armstrong Numbers | [View on Exercism](https://exercism.org/tracks/python/exercises/armstrong-numbers) | [View Solution](armstrong-numbers/README.md) |
 | Black Jack | [View on Exercism](https://exercism.org/tracks/python/exercises/black-jack) | [View Solution](black-jack/README.md) |
 | Bob | [View on Exercism](https://exercism.org/tracks/python/exercises/bob) | [View Solution](bob/README.md) |
