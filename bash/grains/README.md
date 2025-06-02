@@ -40,4 +40,4 @@ Write code that calculates:
 
 ### Based on
 
-The CodeRanch Cattle Drive, Assignment 6 - https://web.archive.org/web/20240908084142/https://coderanch.com/wiki/718824/Grains
+The CodeRanch Cattle Drive, Assignment 6 - <https://web.archive.org/web/20240908084142/https://coderanch.com/wiki/718824/Grains>

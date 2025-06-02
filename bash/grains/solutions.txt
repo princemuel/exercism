@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+x=$1
+
+if [ $x = total ] ; then
+    printf "%llu\n" $(( 2 ** 64 - 1 ))
+    exit 0
+fi
+
+# error cases
+if [[ "$x" -le 0 || "$x" -gt 64 ]] ; then
+    echo "Error: invalid input"
+    exit 1
+fi
+
+printf "%llu\n" $(( 2 ** (x - 1) ))
+exit 0
+
+
+
+case "$1" in
+    total) printf '%u' $((0xffffffffffffffff));;
+    [1-9]|[1-5][0-9]|6[0-4]) printf '%u' $((1 << $1 - 1));;
+    *) printf 'Error: invalid input'; exit 1;;
+esac
