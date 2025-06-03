@@ -3,13 +3,13 @@
     "title": "sqlite",
     "category": "database",
     "total": 28,
-    "completed": 8
+    "completed": 9
   },
   {
     "title": "python",
     "category": "scripting",
     "total": 140,
-    "completed": 29
+    "completed": 30
   },
   {
     "title": "jq",
@@ -21,7 +21,7 @@
     "title": "rust",
     "category": "system",
     "total": 99,
-    "completed": 28
+    "completed": 29
   },
   {
     "title": "javascript",
@@ -51,7 +51,7 @@
     "title": "bash",
     "category": "shell",
     "total": 92,
-    "completed": 11
+    "completed": 12
   },
   {
     "title": "c",
