@@ -1,38 +1,37 @@
 {
-  "name": "@exercism/javascript-elyses-transformative-enchantments",
-  "description": "Exercism concept exercise on array transformations",
-  "author": "Katrina Owen",
-  "contributors": [
-    "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)",
-    "Tejas Bubane (https://tejasbubane.github.io/)"
-  ],
-  "private": true,
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept/elyses-transformative-enchantments"
-  },
-  "devDependencies": {
-    "@exercism/babel-preset-javascript": "^0.5.1",
-    "@exercism/eslint-config-javascript": "^0.8.1",
-    "@jest/globals": "^29.7.0",
-    "@types/node": "^22.10.3",
-    "@types/shelljs": "^0.8.15",
-    "babel-jest": "^29.7.0",
-    "core-js": "~3.40.0",
-    "diff": "^7.0.0",
-    "eslint": "^9.19.0",
-    "expect": "^29.7.0",
-    "globals": "^15.14.0",
-    "jest": "^29.7.0"
-  },
-  "dependencies": {},
-  "scripts": {
-    "lint": "corepack pnpm eslint .",
-    "test": "corepack pnpm jest",
-    "watch": "corepack pnpm jest --watch",
-    "format": "corepack pnpm prettier -w ."
-  },
-  "packageManager": "pnpm@9.15.2"
+    "name": "@exercism/javascript-elyses-transformative-enchantments",
+    "description": "Exercism concept exercise on array transformations",
+    "author": "Katrina Owen",
+    "contributors": [
+        "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)",
+        "Tejas Bubane (https://tejasbubane.github.io/)"
+    ],
+    "private": true,
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/exercism/javascript",
+        "directory": "exercises/concept/elyses-transformative-enchantments"
+    },
+    "devDependencies": {
+        "@exercism/babel-preset-javascript": "^0.5.1",
+        "@exercism/eslint-config-javascript": "^0.8.1",
+        "@jest/globals": "^29.7.0",
+        "@types/node": "^22.10.3",
+        "@types/shelljs": "^0.8.15",
+        "babel-jest": "^29.7.0",
+        "core-js": "~3.40.0",
+        "diff": "^7.0.0",
+        "eslint": "^9.19.0",
+        "expect": "^29.7.0",
+        "globals": "^15.14.0",
+        "jest": "^29.7.0"
+    },
+    "scripts": {
+        "lint": "corepack yarn eslint .",
+        "test": "corepack yarn jest",
+        "watch": "corepack yarn jest --watch",
+        "format": "corepack yarn prettier -w ."
+    },
+    "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538"
 }

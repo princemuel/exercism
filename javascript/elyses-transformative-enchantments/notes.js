@@ -16,9 +16,6 @@ export const seeingDouble = (deck) => deck.map((card) => card * 2);
  *
  * @returns {number[]} deck with triplicate 3s
  */
-// export const threeOfEachThree = (deck) =>
-//   deck.flatMap((card) => (card === 3 ? [3, 3, 3] : [card]));
-
 export const threeOfEachThree = (deck) =>
   deck.reduce((/**@type number[]*/ result, card) => {
     card === 3 ? result.push(3, 3, 3) : result.push(card);
@@ -85,11 +82,3 @@ export const perfectlyOrdered = (deck) => deck.sort((a, b) => a - b);
  * @returns {number[]} reordered deck
  */
 export const reorder = (deck) => deck.reverse();
-
-
-export function sandwichTrick(deck) {
-  const first = deck.shift();
-    const last = deck.pop();
-  deck.splice(deck.length / 2, 0, last, first)
-  return deck
-}

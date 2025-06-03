@@ -17,10 +17,7 @@ export const seeingDouble = (deck) => deck.map((card) => card * 2);
  * @returns {number[]} deck with triplicate 3s
  */
 export const threeOfEachThree = (deck) =>
-  deck.reduce((/**@type number[]*/ result, card) => {
-    card === 3 ? result.push(3, 3, 3) : result.push(card);
-    return result;
-  }, []);
+    deck.flatMap((card) => (card === 3 ? [3, 3, 3] : card));
 
 /**
  * Extracts the middle two cards from a deck.
@@ -31,8 +28,8 @@ export const threeOfEachThree = (deck) =>
  * @returns {number[]} deck with only two middle cards
  */
 export const middleTwo = (deck) => {
-  const middleIndex = Math.floor(deck.length / 2);
-  return deck.slice(middleIndex - 1, middleIndex + 1);
+    const middleIndex = Math.floor(deck.length / 2);
+    return deck.slice(middleIndex - 1, middleIndex + 1);
 };
 
 /**
@@ -44,16 +41,16 @@ export const middleTwo = (deck) => {
  */
 
 export const sandwichTrick = (deck) => {
-  const first = deck[0];
-  const last = deck[deck.length - 1];
-  const middle = deck.slice(1, -1);
-  const middleIndex = Math.floor(middle.length / 2);
-  return [
-    ...middle.slice(0, middleIndex),
-    last,
-    first,
-    ...middle.slice(middleIndex),
-  ];
+    const first = deck[0];
+    const last = deck[deck.length - 1];
+    const middle = deck.slice(1, -1);
+    const middleIndex = Math.floor(middle.length / 2);
+    return [
+        ...middle.slice(0, middleIndex),
+        last,
+        first,
+        ...middle.slice(middleIndex),
+    ];
 };
 
 /**
