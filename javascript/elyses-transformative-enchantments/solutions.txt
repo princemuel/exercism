@@ -93,3 +93,20 @@ export function sandwichTrick(deck) {
   deck.splice(deck.length / 2, 0, last, first)
   return deck
 }
+
+export function threeOfEachThree(deck) {
+  return deck.reduce((acc, card) => [...acc, ...((card === 3) ? [3, 3, 3] : [card])], []);
+
+
+export function middleTwo(deck) {
+
+  return deck.slice(deck.length/2 - 1, deck.length/2 + 1);
+
+
+}
+
+
+
+
+export function sandwichTrick(deck) {
+  return [...deck.slice(1, deck.length/2), deck[deck.length-1], deck[0], ...deck.slice(deck.length/2, -1)];
