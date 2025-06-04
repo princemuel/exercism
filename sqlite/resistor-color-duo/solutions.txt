@@ -1,0 +1,106 @@
+-- Schema: CREATE TABLE "color_code" ("color1" TEXT, "color2" TEXT, "result" INT);
+-- Task: update the color_code table and set the result based on the two colors.
+
+-- Step 1: Create a lookup table for color codes
+CREATE TEMP TABLE IF NOT EXISTS color_values (
+    color TEXT PRIMARY KEY,
+    value INTEGER
+);
+
+-- Ensure we don't insert duplicates into the lookup table
+INSERT OR IGNORE INTO color_values (color, value) VALUES
+('black', 0),
+('brown', 1),
+('red', 2),
+('orange', 3),
+('yellow', 4),
+('green', 5),
+('blue', 6),
+('violet', 7),
+('grey', 8),
+('white', 9);
+
+-- Step 2: Enhanced Update of the color_code table using a LEFT JOIN to handle missing colors
+UPDATE color_code
+SET result = COALESCE(
+    (SELECT a.value * 10 + b.value
+     FROM color_values a
+     LEFT JOIN color_values b ON color_code.color2 = b.color
+     WHERE color_code.color1 = a.color), 0);
+
+-- Verify the updates
+SELECT * FROM color_code;
+
+
+
+
+
+-- Schema: CREATE TABLE "color_code" ("color1" TEXT, "color2" TEXT, "result" INT);
+-- Task: update the color_code table and set the result based on the two colors.
+
+CREATE TABLE color_code_map (color TEXT, code INT);
+INSERT INTO color_code_map VALUES
+    ("black", 0),
+    ("brown", 1),
+    ("red", 2),
+    ("orange", 3),
+    ("yellow", 4),
+    ("green", 5),
+    ("blue", 6),
+    ("violet", 7),
+    ("grey", 8),
+    ("white", 9);
+
+UPDATE color_code
+SET result = cc1.code || cc2.code
+FROM color_code_map AS cc1, color_code_map AS cc2
+WHERE cc1.color == color_code.color1 AND cc2.color = color_code.color2;
+
+
+-- Schema: CREATE TABLE 'color_code' ('color1' TEXT, 'color2' TEXT, 'result' INT);
+-- Task: update the color_code table and set the result based on the two colors.
+
+CREATE TABLE bands (color TEXT, code INT);
+INSERT INTO bands (color, code) VALUES
+    ('black', 0), ('brown', 1), ('red', 2), ('orange', 3), ('yellow', 4),
+    ('green', 5), ('blue', 6), ('violet', 7), ('grey', 8), ('white', 9);
+
+UPDATE color_code AS c
+SET result = b1.code || b2.code
+FROM bands AS b1, bands AS b2
+WHERE b1.color = c.color1 AND b2.color = c.color2;
+
+
+
+
+
+"brown","black",
+"blue","grey",
+"yellow","violet",
+"white","red",
+"orange","orange",
+"black","brown",
+
+
+-- Schema: CREATE TABLE "color_code" ("color1" TEXT, "color2" TEXT, "result" INT);
+-- Task: update the color_code table and set the result based on the two colors.
+WITH colors(name, value) AS (
+    VALUES ('black', 0),
+        ('brown', 1),
+        ('red', 2),
+        ('orange', 3),
+        ('yellow', 4),
+        ('green', 5),
+        ('blue', 6),
+        ('violet', 7),
+        ('grey', 8),
+        ('white', 9)
+)
+UPDATE color_code
+SET result = (
+        SELECT a.value * 10 + b.value
+        FROM colors a,
+            colors b
+        WHERE a.name = color_code.color1
+            AND b.name = color_code.color2
+    );
