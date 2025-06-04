@@ -6,16 +6,17 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 
 - **Category:** Scripting
 - **Total Exercises Available:** 141
-- **Exercises Completed:** 11 / 141 (8%)
+- **Exercises Completed:** 12 / 141 (9%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 12
+- **Solutions Found Locally:** 13
 - **Track:** [Go](https://exercism.org/tracks/go)
-- **Practice Exercises:** 12
+- **Practice Exercises:** 13
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
+| Animal Magic | [View on Exercism](https://exercism.org/tracks/go/exercises/animal-magic) | [View Solution](animal-magic/README.md) |
 | Annalyns Infiltration | [View on Exercism](https://exercism.org/tracks/go/exercises/annalyns-infiltration) | [View Solution](annalyns-infiltration/README.md) |
 | Blackjack | [View on Exercism](https://exercism.org/tracks/go/exercises/blackjack) | [View Solution](blackjack/README.md) |
 | Card Tricks | [View on Exercism](https://exercism.org/tracks/go/exercises/card-tricks) | [View Solution](card-tricks/README.md) |

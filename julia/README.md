@@ -6,17 +6,18 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 
 - **Category:** Functional
 - **Total Exercises Available:** 105
-- **Exercises Completed:** 9 / 105 (9%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 9
+- **Exercises Completed:** 10 / 105 (10%)
+- **Progress:** █░░░░░░░░░ 🔴
+- **Solutions Found Locally:** 10
 - **Track:** [Julia](https://exercism.org/tracks/julia)
-- **Practice Exercises:** 9
+- **Practice Exercises:** 10
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
 | Annalyns Infiltration | [View on Exercism](https://exercism.org/tracks/julia/exercises/annalyns-infiltration) | [View Solution](annalyns-infiltration/README.md) |
+| Bird Watcher | [View on Exercism](https://exercism.org/tracks/julia/exercises/bird-watcher) | [View Solution](bird-watcher/README.md) |
 | Cars Assemble | [View on Exercism](https://exercism.org/tracks/julia/exercises/cars-assemble) | [View Solution](cars-assemble/README.md) |
 | Chessboard | [View on Exercism](https://exercism.org/tracks/julia/exercises/chessboard) | [View Solution](chessboard/README.md) |
 | Currency Exchange | [View on Exercism](https://exercism.org/tracks/julia/exercises/currency-exchange) | [View Solution](currency-exchange/README.md) |

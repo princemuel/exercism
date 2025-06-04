@@ -6,16 +6,17 @@ My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on E
 
 - **Category:** Shell
 - **Total Exercises Available:** 74
-- **Exercises Completed:** 5 / 74 (7%)
+- **Exercises Completed:** 6 / 74 (8%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 5
+- **Solutions Found Locally:** 6
 - **Track:** [Jq](https://exercism.org/tracks/jq)
-- **Practice Exercises:** 5
+- **Practice Exercises:** 6
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
+| Assembly Line | [View on Exercism](https://exercism.org/tracks/jq/exercises/assembly-line) | [View Solution](assembly-line/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/jq/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Log Line Parser | [View on Exercism](https://exercism.org/tracks/jq/exercises/log-line-parser) | [View Solution](log-line-parser/README.md) |
 | Reverse String | [View on Exercism](https://exercism.org/tracks/jq/exercises/reverse-string) | [View Solution](reverse-string/README.md) |

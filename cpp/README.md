@@ -6,11 +6,11 @@ My solutions to exercises on the [C++](https://exercism.org/tracks/cpp) track on
 
 - **Category:** System
 - **Total Exercises Available:** 99
-- **Exercises Completed:** 8 / 99 (8%)
+- **Exercises Completed:** 9 / 99 (9%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 8
+- **Solutions Found Locally:** 9
 - **Track:** [C++](https://exercism.org/tracks/cpp)
-- **Practice Exercises:** 8
+- **Practice Exercises:** 9
 
 ## 🏋️ Exercises
 
@@ -24,6 +24,7 @@ My solutions to exercises on the [C++](https://exercism.org/tracks/cpp) track on
 | Log Levels | [View on Exercism](https://exercism.org/tracks/cpp/exercises/log-levels) | [View Solution](log-levels/README.md) |
 | Pacman Rules | [View on Exercism](https://exercism.org/tracks/cpp/exercises/pacman-rules) | [View Solution](pacman-rules/README.md) |
 | Raindrops | [View on Exercism](https://exercism.org/tracks/cpp/exercises/raindrops) | [View Solution](raindrops/README.md) |
+| Vehicle Purchase | [View on Exercism](https://exercism.org/tracks/cpp/exercises/vehicle-purchase) | [View Solution](vehicle-purchase/README.md) |
 
 ---
 
