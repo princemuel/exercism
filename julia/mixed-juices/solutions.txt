@@ -1,0 +1,50 @@
+function time_to_mix_juice(juice)
+    juices = Dict("Pure Strawberry Joy" => 0.5, "Energizer" => 1.5, "Green Garden" => 1.5, "Tropical Island" => 3, "All or Nothing" => 5)
+    juice in keys(juices) ? juices[juice] : 2.5
+end
+
+function wedges_from_lime(size)
+    slices = Dict("small" => 6, "medium" => 8, "large" => 10)
+    slices[size]
+end
+
+function limes_to_cut(needed, limes)
+    for (n, size) in enumerate(limes)
+        needed < 1 && return n - 1
+        needed -= wedges_from_lime(size)
+    end
+    return length(limes)
+end
+
+function order_times(orders)
+    [time_to_mix_juice(item) for item in orders]
+end
+
+function remaining_orders(time_left, orders)
+    while time_left > 0 && !isempty(orders)
+        time_left -= time_to_mix_juice(orders[begin])
+        popfirst!(orders)
+    end
+    return orders
+end
+
+
+time_to_mix_juice(juice) = get(Dict(zip(("Pure Strawberry Joy", "Energizer", "Green Garden", "Tropical Island", "All or Nothing"),(0.5, 1.5, 1.5, 3, 5))), juice, 2.5)
+order_times(orders) = time_to_mix_juice.(orders)
+wedges_from_lime(limesize) = Dict("small" => 6, "medium" => 8, "large" => 10)[limesize]
+
+function limes_to_cut(needed, limes)
+    for (i, limesize) in enumerate(limes)
+        needed ≤ 0 && return i-1
+        needed -= wedges_from_lime(limesize)
+    end
+    length(limes)
+end
+
+function remaining_orders(timeleft, orders)
+    for (i,time) in enumerate(order_times(orders))
+        timeleft ≤ 0 && return orders[i:end]
+        timeleft -= time
+    end
+    []
+end
