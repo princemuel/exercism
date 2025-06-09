@@ -6,11 +6,11 @@ My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track 
 
 - **Category:** System
 - **Total Exercises Available:** 99
-- **Exercises Completed:** 29 / 99 (29%)
-- **Progress:** ██░░░░░░░░ 🟠
-- **Solutions Found Locally:** 29
+- **Exercises Completed:** 30 / 99 (30%)
+- **Progress:** ███░░░░░░░ 🟠
+- **Solutions Found Locally:** 30
 - **Track:** [Rust](https://exercism.org/tracks/rust)
-- **Practice Exercises:** 29
+- **Practice Exercises:** 30
 
 ## 🏋️ Exercises
 
@@ -33,6 +33,7 @@ My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track 
 | Isogram | [View on Exercism](https://exercism.org/tracks/rust/exercises/isogram) | [View Solution](isogram/README.md) |
 | Leap | [View on Exercism](https://exercism.org/tracks/rust/exercises/leap) | [View Solution](leap/README.md) |
 | Luhn | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn) | [View Solution](luhn/README.md) |
+| Luhn Trait | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn-trait) | [View Solution](luhn-trait/README.md) |
 | Matching Brackets | [View on Exercism](https://exercism.org/tracks/rust/exercises/matching-brackets) | [View Solution](matching-brackets/README.md) |
 | Minesweeper | [View on Exercism](https://exercism.org/tracks/rust/exercises/minesweeper) | [View Solution](minesweeper/README.md) |
 | Nth Prime | [View on Exercism](https://exercism.org/tracks/rust/exercises/nth-prime) | [View Solution](nth-prime/README.md) |

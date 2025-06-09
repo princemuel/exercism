@@ -6,16 +6,17 @@ My solutions to exercises on the [C++](https://exercism.org/tracks/cpp) track on
 
 - **Category:** System
 - **Total Exercises Available:** 99
-- **Exercises Completed:** 9 / 99 (9%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 9
+- **Exercises Completed:** 10 / 99 (10%)
+- **Progress:** █░░░░░░░░░ 🔴
+- **Solutions Found Locally:** 10
 - **Track:** [C++](https://exercism.org/tracks/cpp)
-- **Practice Exercises:** 9
+- **Practice Exercises:** 10
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
+| Darts | [View on Exercism](https://exercism.org/tracks/cpp/exercises/darts) | [View Solution](darts/README.md) |
 | Freelancer Rates | [View on Exercism](https://exercism.org/tracks/cpp/exercises/freelancer-rates) | [View Solution](freelancer-rates/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/cpp/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Lasagna | [View on Exercism](https://exercism.org/tracks/cpp/exercises/lasagna) | [View Solution](lasagna/README.md) |

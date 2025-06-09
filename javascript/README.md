@@ -6,11 +6,11 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 
 - **Category:** Scripting
 - **Total Exercises Available:** 150
-- **Exercises Completed:** 33 / 150 (22%)
+- **Exercises Completed:** 34 / 150 (23%)
 - **Progress:** ██░░░░░░░░ 🟡
-- **Solutions Found Locally:** 35
+- **Solutions Found Locally:** 36
 - **Track:** [JavaScript](https://exercism.org/tracks/javascript)
-- **Practice Exercises:** 35
+- **Practice Exercises:** 36
 
 ## 🏋️ Exercises
 
@@ -27,6 +27,7 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 | Elyses Analytic Enchantments | [View on Exercism](https://exercism.org/tracks/javascript/exercises/elyses-analytic-enchantments) | [View Solution](elyses-analytic-enchantments/README.md) |
 | Elyses Destructured Enchantments | [View on Exercism](https://exercism.org/tracks/javascript/exercises/elyses-destructured-enchantments) | [View Solution](elyses-destructured-enchantments/README.md) |
 | Elyses Enchantments | [View on Exercism](https://exercism.org/tracks/javascript/exercises/elyses-enchantments) | [View Solution](elyses-enchantments/README.md) |
+| Elyses Looping Enchantments | [View on Exercism](https://exercism.org/tracks/javascript/exercises/elyses-looping-enchantments) | [View Solution](elyses-looping-enchantments/README.md) |
 | Elyses Transformative Enchantments | [View on Exercism](https://exercism.org/tracks/javascript/exercises/elyses-transformative-enchantments) | [View Solution](elyses-transformative-enchantments/README.md) |
 | Factory Sensors | [View on Exercism](https://exercism.org/tracks/javascript/exercises/factory-sensors) | [View Solution](factory-sensors/README.md) |
 | Freelancer Rates | [View on Exercism](https://exercism.org/tracks/javascript/exercises/freelancer-rates) | [View Solution](freelancer-rates/README.md) |

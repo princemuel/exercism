@@ -6,7 +6,7 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 
 - **Category:** Scripting
 - **Total Exercises Available:** 141
-- **Exercises Completed:** 12 / 141 (9%)
+- **Exercises Completed:** 13 / 141 (9%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 13
 - **Track:** [Go](https://exercism.org/tracks/go)

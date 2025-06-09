@@ -6,7 +6,6 @@ If you get stuck on the exercise, check out `HINTS.md`, but try and solve it wit
 
 ## Introduction
 
-
 A [set][type-set] is a _mutable_ and _unordered_ collection of [_hashable_][hashable] objects.
 Set members must be distinct — duplicate items are not allowed.
 They can hold multiple different data types and even nested structures like a `tuple` of `tuples` — as long as all elements can be _hashed_.
@@ -16,21 +15,21 @@ Sets are most commonly used to quickly remove duplicates from other data structu
 They are also used for efficient comparisons when sequencing and duplicate tracking are not needed.
 
 Like other collection types (_dictionaries, lists, tuples_), `sets` support:
+
 - Iteration via `for item in <set>`
 - Membership checking via `in` and `not in`,
 - Length calculation through `len()`, and
 - Shallow copies through `copy()`
 
 `sets` do not support:
+
 - Indexing of any kind
 - Ordering via sorting or insertion
 - Slicing
 - Concatenation via `+`
 
-
 Checking membership in a `set` has constant time complexity (on average) versus checking membership in a `list` or `string`, where the time complexity grows as the length of the data increases.
 Methods such as `<set>.union()`, `<set>.intersection()`, or `<set>.difference()` also have constant time complexity (on average).
-
 
 ## Set Literals
 
@@ -44,14 +43,13 @@ Duplicates are silently omitted:
 >>> multiple_elements = {'😀', '😃', '😄', '😁'}
 {'😀', '😃', '😄', '😁'}
 
->>> multiple_duplicates =  {'Hello!', 'Hello!', 'Hello!', 
-                            '¡Hola!','Привіт!', 'こんにちは！', 
+>>> multiple_duplicates =  {'Hello!', 'Hello!', 'Hello!',
+                            '¡Hola!','Привіт!', 'こんにちは！',
                             '¡Hola!','Привіт!', 'こんにちは！'}
 {'こんにちは！', '¡Hola!', 'Hello!', 'Привіт!'}
 ```
 
 Set literals use the same curly braces as `dict` literals, which means you need to use `set()` to create an empty `set`.
-
 
 ## The Set Constructor
 
@@ -64,15 +62,15 @@ Element order is not preserved and duplicates are silently omitted:
 >>> no_elements = set()
 set()
 
-# The tuple is unpacked & each element is added.  
+# The tuple is unpacked & each element is added.
 # Duplicates are removed.
->>> elements_from_tuple = set(("Parrot", "Bird", 
+>>> elements_from_tuple = set(("Parrot", "Bird",
                                334782, "Bird", "Parrot"))
 {334782, 'Bird', 'Parrot'}
 
 # The list is unpacked & each element is added.
 # Duplicates are removed.
->>> elements_from_list = set([2, 3, 2, 3, 3, 3, 5, 
+>>> elements_from_list = set([2, 3, 2, 3, 3, 3, 5,
                               7, 11, 7, 11, 13, 13])
 {2, 3, 5, 7, 11, 13}
 ```
@@ -82,12 +80,12 @@ set()
 Due to its "unpacking" behavior, using `set()` with a string might be surprising:
 
 ```python
-# String elements (Unicode code points) are 
+# String elements (Unicode code points) are
 # iterated through and added *individually*.
 >>> elements_string = set("Timbuktu")
 {'T', 'b', 'i', 'k', 'm', 't', 'u'}
 
-# Unicode separators and positioning code points 
+# Unicode separators and positioning code points
 # are also added *individually*.
 >>> multiple_code_points_string = set('अभ्यास')
 {'अ', 'भ', 'य', 'स', 'ा', '्'}
@@ -97,8 +95,8 @@ Sets can hold different datatypes and _nested_ datatypes, but all `set` elements
 
 ```python
 # Attempting to use a list for a set member throws a TypeError
->>> lists_as_elements = {['😅','🤣'], 
-                        ['😂','🙂','🙃'], 
+>>> lists_as_elements = {['😅','🤣'],
+                        ['😂','🙂','🙃'],
                         ['😜', '🤪', '😝']}
 
 Traceback (most recent call last):
@@ -107,8 +105,8 @@ TypeError: unhashable type: 'list'
 
 
 # Standard sets are mutable, so they cannot be hashed.
->>> sets_as_elements = {{'😅','🤣'}, 
-                        {'😂','🙂','🙃'}, 
+>>> sets_as_elements = {{'😅','🤣'},
+                        {'😂','🙂','🙃'},
                         {'😜', '🤪', '😝'}}
 
 Traceback (most recent call last):
@@ -116,13 +114,11 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'set'
 ```
 
-
 ## Working with Sets
 
 Sets have methods that generally mimic [mathematical set operations][mathematical-sets].
 Most (_not all_) of these methods have an [operator][operator] equivalent.
 Methods generally take any `iterable` as an argument, while operators require that both sides of the operation are `sets` or `frozensets`.
-
 
 ### Disjoint Sets
 
@@ -131,11 +127,10 @@ The method will accept any `iterable` or `set` as an argument.
 It will return `True` if the two sets have **no elements in common**, `False` if elements are **shared**.
 There is no operator equivalent:
 
-
 ```python
 # Both mammals and additional_animals are lists.
 >>> mammals = ['squirrel','dog','cat','cow', 'tiger', 'elephant']
->>> additional_animals = ['pangolin', 'panda', 'parrot', 
+>>> additional_animals = ['pangolin', 'panda', 'parrot',
                           'lemur', 'tiger', 'pangolin']
 
 # Animals is a dict.
@@ -144,13 +139,13 @@ There is no operator equivalent:
                'eagle': 'brown and white',
                'albatross': 'grey and white',
                'crow': 'black',
-               'elephant': 'grey', 
+               'elephant': 'grey',
                'dog': 'rust',
                'cow': 'black and white',
                'tiger': 'orange and black',
                'cat': 'grey',
                'squirrel': 'black'}
-               
+
 # Birds is a set.
 >>> birds = {'crow','sparrow','eagle','chicken', 'albatross'}
 
@@ -158,7 +153,7 @@ There is no operator equivalent:
 >>> birds.isdisjoint(mammals)
 True
 
-# There are also no shared elements between 
+# There are also no shared elements between
 # additional_animals and birds.
 >>> birds.isdisjoint(additional_animals)
 True
@@ -170,17 +165,15 @@ True
 False
 ```
 
-
 ### Subsets and Supersets
 
 `<set>.issubset(<other_collection>)` is used to check if every element in `<set>` is also in `<other_collection>`.
 The operator form is `<set> <= <other_set>`:
 
-
 ```python
 # Both mammals and additional_animals are lists.
 >>> mammals = ['squirrel','dog','cat','cow', 'tiger', 'elephant']
->>> additional_animals = ['pangolin', 'panda', 'parrot', 
+>>> additional_animals = ['pangolin', 'panda', 'parrot',
                           'lemur', 'tiger', 'pangolin']
 
 # Animals is a dict.
@@ -189,7 +182,7 @@ The operator form is `<set> <= <other_set>`:
                'eagle': 'brown and white',
                'albatross': 'grey and white',
                'crow': 'black',
-               'elephant': 'grey', 
+               'elephant': 'grey',
                'dog': 'rust',
                'cow': 'black and white',
                'tiger': 'orange and black',
@@ -223,7 +216,6 @@ True
 It is used to check if every element in `<other_collection>` is also in `<set>`.
 The operator form is `<set> >= <other_set>`:
 
-
 ```python
 # All members of mammals also appear in animals.
 # **Note** The first object needs to be a set or converted to a set
@@ -244,27 +236,25 @@ False
 True
 ```
 
-
 ### Set Intersections
 
 `<set>.intersection(*<other iterables>)` returns a new `set` with elements common to the original `set` and all `<others>` (_in other words, the `set` where everything [intersects][intersection]_).
 The operator version of this method is `<set> & <other set> & <other set 2> & ... <other set n>`:
 
-
 ```python
 >>> perennials = {'Annatto','Asafetida','Asparagus','Azalea',
-                 'Winter Savory', 'Broccoli','Curry Leaf','Fennel', 
+                 'Winter Savory', 'Broccoli','Curry Leaf','Fennel',
                  'Kaffir Lime','Kale','Lavender','Mint','Oranges',
                  'Oregano', 'Tarragon', 'Wild Bergamot'}
 
->>> annuals = {'Corn', 'Zucchini', 'Sweet Peas', 'Marjoram', 
-              'Summer Squash', 'Okra','Shallots', 'Basil', 
-              'Cilantro', 'Cumin', 'Sunflower', 'Chervil', 
+>>> annuals = {'Corn', 'Zucchini', 'Sweet Peas', 'Marjoram',
+              'Summer Squash', 'Okra','Shallots', 'Basil',
+              'Cilantro', 'Cumin', 'Sunflower', 'Chervil',
               'Summer Savory'}
 
 >>> herbs = ['Annatto','Asafetida','Basil','Chervil','Cilantro',
             'Curry Leaf','Fennel','Kaffir Lime','Lavender',
-            'Marjoram','Mint','Oregano','Summer Savory' 
+            'Marjoram','Mint','Oregano','Summer Savory'
             'Tarragon','Wild Bergamot','Wild Celery',
             'Winter Savory']
 
@@ -279,17 +269,15 @@ The operator version of this method is `<set> & <other set> & <other set 2> & ..
  {'Basil', 'Chervil', 'Marjoram', 'Cilantro'}
 ```
 
-
 ### Set Unions
 
 `<set>.union(*<other iterables>)` returns a new `set` with elements from `<set>` and all `<other iterables>`.
 The operator form of this method is `<set> | <other set 1> | <other set 2> | ... | <other set n>`:
 
-
 ```python
 >>> perennials = {'Asparagus', 'Broccoli', 'Sweet Potato', 'Kale'}
 >>> annuals = {'Corn', 'Zucchini', 'Sweet Peas', 'Summer Squash'}
->>> more_perennials = ['Radicchio', 'Rhubarb', 
+>>> more_perennials = ['Radicchio', 'Rhubarb',
                       'Spinach', 'Watercress']
 
 # Methods will take any iterable as an argument.
@@ -309,25 +297,24 @@ The operator form of this method is `<set> | <other set 1> | <other set 2> | ...
  'Watercress'}
 ```
 
-
 ### Set Differences
 
 `<set>.difference(*<other iterables>)` returns a new `set` with elements from the original `<set>` that are not in `<others>`.
 The operator version of this method is `<set> - <other set 1> - <other set 2> - ...<other set n>`.
 
 ```python
->>> berries_and_veggies = {'Asparagus', 
-                          'Broccoli', 
-                          'Watercress', 
-                          'Goji Berries', 
-                          'Goose Berries', 
-                          'Ramps', 
-                          'Walking Onions', 
-                          'Blackberries', 
-                          'Strawberries', 
-                          'Rhubarb', 
-                          'Kale', 
-                          'Artichokes', 
+>>> berries_and_veggies = {'Asparagus',
+                          'Broccoli',
+                          'Watercress',
+                          'Goji Berries',
+                          'Goose Berries',
+                          'Ramps',
+                          'Walking Onions',
+                          'Blackberries',
+                          'Strawberries',
+                          'Rhubarb',
+                          'Kale',
+                          'Artichokes',
                           'Currants'}
 
 >>> veggies = ('Asparagus', 'Broccoli', 'Watercress', 'Ramps',
@@ -344,10 +331,8 @@ The operator version of this method is `<set> - <other set 1> - <other set 2> - 
 'Ramps','Rhubarb','Walking Onions','Watercress'}
 ```
 
-
 `<set>.symmetric_difference(<other iterable>)` returns a new `set` that contains elements that are in `<set>` OR `<other>`, **but not in both**.
-The operator version of this method is  `<set> ^ <other set>`:
-
+The operator version of this method is `<set> ^ <other set>`:
 
 ```python
 >>> plants_1 = {'🌲','🍈','🌵', '🥑','🌴', '🥭'}
@@ -368,11 +353,11 @@ The operator version of this method is  `<set> ^ <other set>`:
 { '🥑', '🌴','🌲', '🌵', '🍈', '🥭'}
 ```
 
-~~~~exercism/note
+````exercism/note
 
-A symmetric difference of more than two sets will result in a `set` that includes both the elements unique to each `set` AND elements shared between more than two sets in the series (_details in the Wikipedia article on [symmetric difference][symmetric_difference]_).  
+A symmetric difference of more than two sets will result in a `set` that includes both the elements unique to each `set` AND elements shared between more than two sets in the series (_details in the Wikipedia article on [symmetric difference][symmetric_difference]_).
 
-To obtain only items unique to each `set` in the series, intersections between all 2-set combinations need to be aggregated in a separate step, and removed:  
+To obtain only items unique to each `set` in the series, intersections between all 2-set combinations need to be aggregated in a separate step, and removed:
 
 
 ```python
@@ -394,13 +379,13 @@ To obtain only items unique to each `set` in the series, intersections between a
             'red onion', 'red pepper flakes','rosemary','salt',
             'sugar','tomatoes','water','yeast'}
 
->>> intersections = (one & two | one & three | one & four | 
+>>> intersections = (one & two | one & three | one & four |
                      two & three | two & four | three & four)
 ...
-{'black pepper','flour','garlic','lemon juice','nutritional yeast', 
+{'black pepper','flour','garlic','lemon juice','nutritional yeast',
 'olive oil','salt','soy sauce', 'sugar','water'}
 
-# The ^ operation will include some of the items in intersections, 
+# The ^ operation will include some of the items in intersections,
 # which means it is not a "clean" symmetric difference - there
 # are overlapping members.
 >>> (one ^ two ^ three ^ four) & intersections
@@ -414,12 +399,12 @@ To obtain only items unique to each `set` in the series, intersections between a
   'chickpea flour','cornstarch','fresh basil', 'garlic powder',
   'ginger','honey','lemon','lemon zest','mixed herbs','mushrooms',
   'oregano','parsley','red onion','red pepper flakes','rosemary',
-  'silken tofu','smoked tofu','spaghetti','sunflower oil', 'tofu', 
+  'silken tofu','smoked tofu','spaghetti','sunflower oil', 'tofu',
   'tomatoes','turmeric','vegetable oil','vegetable stock','yeast'}
 ```
 
 [symmetric_difference]: https://en.wikipedia.org/wiki/Symmetric_difference
-~~~~
+````
 
 [hashable]: https://docs.python.org/3.7/glossary.html#term-hashable
 [intersection]: https://www.mathgoodies.com/lessons/sets/intersection
@@ -435,11 +420,10 @@ You and your business partners operate a small catering company. You've just agr
 ## 1. Clean up Dish Ingredients
 
 The event recipes were added from various sources and their ingredients appear to have duplicate (_or more_) entries — you don't want to end up purchasing excess items!
- Before the shopping and cooking can commence, each dish's ingredient list needs to be "cleaned".
+Before the shopping and cooking can commence, each dish's ingredient list needs to be "cleaned".
 
 Implement the `clean_ingredients(<dish_name>, <dish_ingredients>)` function that takes the name of a dish and a `list` of ingredients.
- This function should return a `tuple` with the name of the dish as the first item, followed by the de-duped `set` of ingredients.
-
+This function should return a `tuple` with the name of the dish as the first item, followed by the de-duped `set` of ingredients.
 
 ```python
 >>> clean_ingredients('Punjabi-Style Chole', ['onions', 'tomatoes', 'ginger paste', 'garlic paste', 'ginger paste', 'vegetable oil', 'bay leaves', 'cloves', 'cardamom', 'cilantro', 'peppercorns', 'cumin powder', 'chickpeas', 'coriander powder', 'red chili powder', 'ground turmeric', 'garam masala', 'chickpeas', 'ginger', 'cilantro'])
@@ -450,14 +434,14 @@ Implement the `clean_ingredients(<dish_name>, <dish_ingredients>)` function that
 ## 2. Cocktails and Mocktails
 
 The event is going to include both cocktails and "mocktails" - mixed drinks _without_ the alcohol.
- You need to ensure that "mocktail" drinks are truly non-alcoholic and the cocktails do indeed _include_ alcohol.
+You need to ensure that "mocktail" drinks are truly non-alcoholic and the cocktails do indeed _include_ alcohol.
 
 Implement the `check_drinks(<drink_name>, <drink_ingredients>)` function that takes the name of a drink and a `list` of ingredients.
- The function should return the name of the drink followed by "Mocktail" if the drink has no alcoholic ingredients, and drink name followed by "Cocktail" if the drink includes alcohol.
-  For the purposes of this exercise, cocktails will only include alcohols from the ALCOHOLS constant in `sets_categories_data.py`:
+The function should return the name of the drink followed by "Mocktail" if the drink has no alcoholic ingredients, and drink name followed by "Cocktail" if the drink includes alcohol.
+For the purposes of this exercise, cocktails will only include alcohols from the ALCOHOLS constant in `sets_categories_data.py`:
 
 ```python
->>> from sets_categories_data import ALCOHOLS 
+>>> from sets_categories_data import ALCOHOLS
 
 >>> check_drinks('Honeydew Cucumber', ['honeydew', 'coconut water', 'mint leaves', 'lime juice', 'salt', 'english cucumber'])
 ...
@@ -497,7 +481,7 @@ These ingredients need to be tagged/annotated for each dish so that they don't c
 Implement the `tag_special_ingredients(<dish>)` function that takes a `tuple` with the dish name in the first position, and a `list` or `set` of ingredients for that dish in the second position.
 Return the dish name followed by the `set` of ingredients that require a special note on the dish description.
 Dish ingredients inside a `list` may or may not have duplicates.
- For the purposes of this exercise, all allergens or special ingredients that need to be labeled are in the SPECIAL_INGREDIENTS constant imported from `sets_categories_data.py`.
+For the purposes of this exercise, all allergens or special ingredients that need to be labeled are in the SPECIAL_INGREDIENTS constant imported from `sets_categories_data.py`.
 
 ```python
 >>> from sets_categories_data import SPECIAL_INGREDIENTS
@@ -532,7 +516,7 @@ dishes = [ {'tofu', 'soy sauce', 'ginger', 'corn starch', 'garlic', 'brown sugar
 ## 6. Pull out Appetizers for Passing on Trays
 
 The hosts have given you a list of dishes they'd like prepped as "bite-sized" appetizers to be served on trays.
- You need to pull these from the main list of dishes being prepared as larger servings.
+You need to pull these from the main list of dishes being prepared as larger servings.
 
 Implement the `separate_appetizers(<dishes>, <appetizers>)` function that takes a `list` of dish names and a `list` of appetizer names.
 The function should return the `list` of dish names with appetizer names removed.
@@ -542,14 +526,14 @@ Either the `<dishes>` or `<appetizers>` `list` could contain duplicates and may 
 dishes =    ['Avocado Deviled Eggs','Flank Steak with Chimichurri and Asparagus', 'Kingfish Lettuce Cups',
              'Grilled Flank Steak with Caesar Salad','Vegetarian Khoresh Bademjan','Avocado Deviled Eggs',
              'Barley Risotto','Kingfish Lettuce Cups']
-          
+
 appetizers = ['Kingfish Lettuce Cups','Avocado Deviled Eggs','Satay Steak Skewers',
               'Dahi Puri with Black Chickpeas','Avocado Deviled Eggs','Asparagus Puffs',
               'Asparagus Puffs']
-              
+
 >>> separate_appetizers(dishes, appetizers)
 ...
-['Vegetarian Khoresh Bademjan', 'Barley Risotto', 'Flank Steak with Chimichurri and Asparagus', 
+['Vegetarian Khoresh Bademjan', 'Barley Risotto', 'Flank Steak with Chimichurri and Asparagus',
  'Grilled Flank Steak with Caesar Salad']
 ```
 
