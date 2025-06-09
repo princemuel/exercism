@@ -1,0 +1,7 @@
+# Using reduce (overkill but shows another way)
+busy_days: reduce .[-1][] as $day (0; if $day >= 5 then . + 1 else . end)
+
+# Or counting directly
+busy_days: [.[-1][] >= 5] | add
+
+busy_days: (.[-1] | map(select(. >= 5)) | length),
