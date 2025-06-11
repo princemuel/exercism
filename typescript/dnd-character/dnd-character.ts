@@ -18,19 +18,28 @@ export class DnDCharacter {
         this.hitpoints = 10 + DnDCharacter.getModifierFor(this.constitution);
     }
 
+    /**
+     * Roll 4d6, drop the lowest die
+     * @returns Ability score between 3-18
+     */
     public static generateAbilityScore(): number {
-        const rolls = Array.from(
-            { length: 4 },
-            () => Math.floor(Math.random() * 6) + 1,
-        );
+        let sum = 0;
+        let minRoll = 7;
 
-        return rolls
-            .sort()
-            .slice(-3)
-            .reduce((sum, roll) => sum + roll, 0);
+        for (let i = 0; i < 4; i++) {
+            const roll = Math.floor(Math.random() * 6) + 1;
+            sum += roll;
+            if (roll < minRoll) minRoll = roll;
+        }
+
+        return sum - minRoll;
     }
-
-    public static getModifierFor(abilityValue: number): number {
-        return Math.floor((abilityValue - 10) / 2);
+    /**
+     * Calculate ability modifier using D&D 5e rules
+     * @param score - Ability score (3-18 typically)
+     * @returns Modifier (-4 to +4 for normal range)
+     */
+    public static getModifierFor(score: number): number {
+        return Math.floor((score - 10) / 2);
     }
 }
