@@ -32,12 +32,13 @@ def update_recipes(
     recipe_updates: Iterable[Tuple[str, dict[str, int]]],
 ) -> dict[str, dict[str, int]]:
     """Update the recipe ideas dictionary.
-    s
-        :param ideas: dict - The "recipe ideas" dict.
-        :param recipe_updates: dict - dictionary with updates for the ideas section.
-        :return: dict - updated "recipe ideas" dict.
+
+    :param ideas: dict - The "recipe ideas" dict.
+    :param recipe_updates: dict - dictionary with updates for the ideas section.
+    :return: dict - updated "recipe ideas" dict.
     """
-    return ideas | dict(recipe_updates)
+    ideas.update(recipe_updates)
+    return ideas
 
 
 def sort_entries(cart: dict[str, int]) -> dict[str, int]:
@@ -50,35 +51,36 @@ def sort_entries(cart: dict[str, int]) -> dict[str, int]:
 
 
 def send_to_store(
-    cart: dict[str, int], aisle_mapping: dict[str, list[int | str | bool]]
-) -> dict[str, list[int | str | bool]]:
+    cart: dict[str, int], aisle_mapping: dict[str, list]
+) -> dict[str, list]:
     """Combine users order to aisle and refrigeration information.
 
     :param cart: dict - users shopping cart dictionary.
     :param aisle_mapping: dict - aisle and refrigeration information dictionary.
     :return: dict - fulfillment dictionary ready to send to store.
     """
-    return {
-        item: [count, *aisle_mapping[item]]
-        for item, count in sorted(cart.items(), reverse=True)
-    }
+    fulfillment_cart = {}
+
+    for key in cart.keys():
+        fulfillment_cart[key] = [cart[key]] + aisle_mapping[key]
+
+    return dict(sorted(fulfillment_cart.items(), reverse=True))
 
 
 def update_store_inventory(
-    fulfillment_cart: dict[str, list[int | str | bool]],
-    store_inventory: dict[str, list[int | str | bool]],
-) -> dict[str, list[int | str | bool]]:
+    fulfillment_cart: dict[str, list],
+    store_inventory: dict[str, list],
+) -> dict[str, list]:
     """Update store inventory levels with user order.
 
     :param fulfillment_cart: dict - fulfillment cart to send to store.
     :param store_inventory: dict - store available inventory
     :return: dict - store_inventory updated.
     """
-    return {
-        item: [
-            count - fulfillment_cart.get(item, [0])[0] or "Out of Stock",  # type: ignore this as it is always int
-            aisle,
-            value,
-        ]
-        for item, (count, aisle, value) in store_inventory.items()
-    }
+    for key in fulfillment_cart.keys():
+        store_inventory[key][0] -= int(fulfillment_cart[key][0])
+
+        if store_inventory[key][0] <= 0:
+            store_inventory[key][0] = "Out of Stock"
+
+    return store_inventory
