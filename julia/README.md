@@ -4,9 +4,9 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 
 ## 📊 Statistics
 
-- **Category:** Functional
-- **Total Exercises Available:** 107
-- **Exercises Completed:** 12 / 107 (11%)
+- **Category:** Scientific
+- **Total Exercises Available:** 108
+- **Exercises Completed:** 12 / 108 (11%)
 - **Progress:** █░░░░░░░░░ 🟡
 - **Solutions Found Locally:** 12
 - **Track:** [Julia](https://exercism.org/tracks/julia)

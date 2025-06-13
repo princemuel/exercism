@@ -4,7 +4,7 @@ My solutions to exercises on the [AWK](https://exercism.org/tracks/awk) track on
 
 ## 📊 Statistics
 
-- **Category:** Shell
+- **Category:** Data-processing
 - **Total Exercises Available:** 86
 - **Exercises Completed:** 5 / 86 (6%)
 - **Progress:** ░░░░░░░░░░ 🔴

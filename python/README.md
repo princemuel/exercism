@@ -4,13 +4,13 @@ My solutions to exercises on the [Python](https://exercism.org/tracks/python) tr
 
 ## 📊 Statistics
 
-- **Category:** Scripting
+- **Category:** General-purpose
 - **Total Exercises Available:** 140
-- **Exercises Completed:** 30 / 140 (21%)
+- **Exercises Completed:** 31 / 140 (22%)
 - **Progress:** ██░░░░░░░░ 🟡
-- **Solutions Found Locally:** 30
+- **Solutions Found Locally:** 31
 - **Track:** [Python](https://exercism.org/tracks/python)
-- **Practice Exercises:** 30
+- **Practice Exercises:** 31
 
 ## 🏋️ Exercises
 
@@ -28,6 +28,7 @@ My solutions to exercises on the [Python](https://exercism.org/tracks/python) tr
 | Darts | [View on Exercism](https://exercism.org/tracks/python/exercises/darts) | [View Solution](darts/README.md) |
 | Ghost Gobble Arcade Game | [View on Exercism](https://exercism.org/tracks/python/exercises/ghost-gobble-arcade-game) | [View Solution](ghost-gobble-arcade-game/README.md) |
 | Grains | [View on Exercism](https://exercism.org/tracks/python/exercises/grains) | [View Solution](grains/README.md) |
+| Hamming | [View on Exercism](https://exercism.org/tracks/python/exercises/hamming) | [View Solution](hamming/README.md) |
 | Inventory Management | [View on Exercism](https://exercism.org/tracks/python/exercises/inventory-management) | [View Solution](inventory-management/README.md) |
 | Isogram | [View on Exercism](https://exercism.org/tracks/python/exercises/isogram) | [View Solution](isogram/README.md) |
 | Leap | [View on Exercism](https://exercism.org/tracks/python/exercises/leap) | [View Solution](leap/README.md) |

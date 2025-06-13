@@ -4,13 +4,13 @@ My solutions to exercises on the [C](https://exercism.org/tracks/c) track on Exe
 
 ## 📊 Statistics
 
-- **Category:** System
+- **Category:** Systems
 - **Total Exercises Available:** 83
-- **Exercises Completed:** 7 / 83 (8%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 7
+- **Exercises Completed:** 8 / 83 (10%)
+- **Progress:** █░░░░░░░░░ 🔴
+- **Solutions Found Locally:** 8
 - **Track:** [C](https://exercism.org/tracks/c)
-- **Practice Exercises:** 7
+- **Practice Exercises:** 8
 
 ## 🏋️ Exercises
 
@@ -19,6 +19,7 @@ My solutions to exercises on the [C](https://exercism.org/tracks/c) track on Exe
 | Collatz Conjecture | [View on Exercism](https://exercism.org/tracks/c/exercises/collatz-conjecture) | [View Solution](collatz-conjecture/README.md) |
 | Darts | [View on Exercism](https://exercism.org/tracks/c/exercises/darts) | [View Solution](darts/README.md) |
 | Difference Of Squares | [View on Exercism](https://exercism.org/tracks/c/exercises/difference-of-squares) | [View Solution](difference-of-squares/README.md) |
+| Dnd Character | [View on Exercism](https://exercism.org/tracks/c/exercises/dnd-character) | [View Solution](dnd-character/README.md) |
 | Grains | [View on Exercism](https://exercism.org/tracks/c/exercises/grains) | [View Solution](grains/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/c/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Leap | [View on Exercism](https://exercism.org/tracks/c/exercises/leap) | [View Solution](leap/README.md) |

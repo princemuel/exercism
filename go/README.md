@@ -4,13 +4,13 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 
 ## 📊 Statistics
 
-- **Category:** Scripting
+- **Category:** Backend
 - **Total Exercises Available:** 141
 - **Exercises Completed:** 13 / 141 (9%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 13
+- **Solutions Found Locally:** 14
 - **Track:** [Go](https://exercism.org/tracks/go)
-- **Practice Exercises:** 13
+- **Practice Exercises:** 14
 
 ## 🏋️ Exercises
 
@@ -21,6 +21,7 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 | Blackjack | [View on Exercism](https://exercism.org/tracks/go/exercises/blackjack) | [View Solution](blackjack/README.md) |
 | Card Tricks | [View on Exercism](https://exercism.org/tracks/go/exercises/card-tricks) | [View Solution](card-tricks/README.md) |
 | Cars Assemble | [View on Exercism](https://exercism.org/tracks/go/exercises/cars-assemble) | [View Solution](cars-assemble/README.md) |
+| Hamming | [View on Exercism](https://exercism.org/tracks/go/exercises/hamming) | [View Solution](hamming/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/go/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Lasagna | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna) | [View Solution](lasagna/README.md) |
 | Need For Speed | [View on Exercism](https://exercism.org/tracks/go/exercises/need-for-speed) | [View Solution](need-for-speed/README.md) |

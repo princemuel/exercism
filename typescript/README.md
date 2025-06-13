@@ -4,13 +4,13 @@ My solutions to exercises on the [TypeScript](https://exercism.org/tracks/typesc
 
 ## 📊 Statistics
 
-- **Category:** Scripting
+- **Category:** Web
 - **Total Exercises Available:** 100
-- **Exercises Completed:** 28 / 100 (28%)
+- **Exercises Completed:** 29 / 100 (29%)
 - **Progress:** ██░░░░░░░░ 🟠
-- **Solutions Found Locally:** 28
+- **Solutions Found Locally:** 29
 - **Track:** [TypeScript](https://exercism.org/tracks/typescript)
-- **Practice Exercises:** 28
+- **Practice Exercises:** 29
 
 ## 🏋️ Exercises
 
@@ -23,6 +23,7 @@ My solutions to exercises on the [TypeScript](https://exercism.org/tracks/typesc
 | Collatz Conjecture | [View on Exercism](https://exercism.org/tracks/typescript/exercises/collatz-conjecture) | [View Solution](collatz-conjecture/README.md) |
 | Darts | [View on Exercism](https://exercism.org/tracks/typescript/exercises/darts) | [View Solution](darts/README.md) |
 | Difference Of Squares | [View on Exercism](https://exercism.org/tracks/typescript/exercises/difference-of-squares) | [View Solution](difference-of-squares/README.md) |
+| Dnd Character | [View on Exercism](https://exercism.org/tracks/typescript/exercises/dnd-character) | [View Solution](dnd-character/README.md) |
 | Eliuds Eggs | [View on Exercism](https://exercism.org/tracks/typescript/exercises/eliuds-eggs) | [View Solution](eliuds-eggs/README.md) |
 | Gigasecond | [View on Exercism](https://exercism.org/tracks/typescript/exercises/gigasecond) | [View Solution](gigasecond/README.md) |
 | Grains | [View on Exercism](https://exercism.org/tracks/typescript/exercises/grains) | [View Solution](grains/README.md) |

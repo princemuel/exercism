@@ -4,13 +4,13 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 
 ## 📊 Statistics
 
-- **Category:** Scripting
-- **Total Exercises Available:** 150
-- **Exercises Completed:** 34 / 150 (23%)
+- **Category:** Web
+- **Total Exercises Available:** 152
+- **Exercises Completed:** 35 / 152 (23%)
 - **Progress:** ██░░░░░░░░ 🟡
-- **Solutions Found Locally:** 36
+- **Solutions Found Locally:** 37
 - **Track:** [JavaScript](https://exercism.org/tracks/javascript)
-- **Practice Exercises:** 36
+- **Practice Exercises:** 37
 
 ## 🏋️ Exercises
 
@@ -47,6 +47,7 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 | Resistor Color | [View on Exercism](https://exercism.org/tracks/javascript/exercises/resistor-color) | [View Solution](resistor-color/README.md) |
 | Resistor Color Duo | [View on Exercism](https://exercism.org/tracks/javascript/exercises/resistor-color-duo) | [View Solution](resistor-color-duo/README.md) |
 | Space Age | [View on Exercism](https://exercism.org/tracks/javascript/exercises/space-age) | [View Solution](space-age/README.md) |
+| Train Driver | [View on Exercism](https://exercism.org/tracks/javascript/exercises/train-driver) | [View Solution](train-driver/README.md) |
 | Translation Service | [View on Exercism](https://exercism.org/tracks/javascript/exercises/translation-service) | [View Solution](translation-service/README.md) |
 | Triangle | [View on Exercism](https://exercism.org/tracks/javascript/exercises/triangle) | [View Solution](triangle/README.md) |
 | Two Fer | [View on Exercism](https://exercism.org/tracks/javascript/exercises/two-fer) | [View Solution](two-fer/README.md) |
