@@ -8,9 +8,9 @@ My solutions to exercises on the [SQLite](https://exercism.org/tracks/sqlite) tr
 - **Total Exercises Available:** 28
 - **Exercises Completed:** 10 / 28 (36%)
 - **Progress:** ███░░░░░░░ 🟠
-- **Solutions Found Locally:** 10
+- **Solutions Found Locally:** 11
 - **Track:** [SQLite](https://exercism.org/tracks/sqlite)
-- **Practice Exercises:** 10
+- **Practice Exercises:** 11
 
 ## 🏋️ Exercises
 
@@ -25,6 +25,7 @@ My solutions to exercises on the [SQLite](https://exercism.org/tracks/sqlite) tr
 | Raindrops | [View on Exercism](https://exercism.org/tracks/sqlite/exercises/raindrops) | [View Solution](raindrops/README.md) |
 | Resistor Color | [View on Exercism](https://exercism.org/tracks/sqlite/exercises/resistor-color) | [View Solution](resistor-color/README.md) |
 | Resistor Color Duo | [View on Exercism](https://exercism.org/tracks/sqlite/exercises/resistor-color-duo) | [View Solution](resistor-color-duo/README.md) |
+| Rna Transcription | [View on Exercism](https://exercism.org/tracks/sqlite/exercises/rna-transcription) | [View Solution](rna-transcription/README.md) |
 | Two Fer | [View on Exercism](https://exercism.org/tracks/sqlite/exercises/two-fer) | [View Solution](two-fer/README.md) |
 
 ---

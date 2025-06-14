@@ -6,11 +6,11 @@ My solutions to exercises on the [C](https://exercism.org/tracks/c) track on Exe
 
 - **Category:** Systems
 - **Total Exercises Available:** 83
-- **Exercises Completed:** 8 / 83 (10%)
-- **Progress:** █░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 8
+- **Exercises Completed:** 9 / 83 (11%)
+- **Progress:** █░░░░░░░░░ 🟡
+- **Solutions Found Locally:** 9
 - **Track:** [C](https://exercism.org/tracks/c)
-- **Practice Exercises:** 8
+- **Practice Exercises:** 9
 
 ## 🏋️ Exercises
 
@@ -23,6 +23,7 @@ My solutions to exercises on the [C](https://exercism.org/tracks/c) track on Exe
 | Grains | [View on Exercism](https://exercism.org/tracks/c/exercises/grains) | [View Solution](grains/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/c/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Leap | [View on Exercism](https://exercism.org/tracks/c/exercises/leap) | [View Solution](leap/README.md) |
+| Queen Attack | [View on Exercism](https://exercism.org/tracks/c/exercises/queen-attack) | [View Solution](queen-attack/README.md) |
 | Resistor Color | [View on Exercism](https://exercism.org/tracks/c/exercises/resistor-color) | [View Solution](resistor-color/README.md) |
 
 ---
