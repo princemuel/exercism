@@ -6,7 +6,7 @@ My solutions to exercises on the [SQLite](https://exercism.org/tracks/sqlite) tr
 
 - **Category:** Database
 - **Total Exercises Available:** 28
-- **Exercises Completed:** 10 / 28 (36%)
+- **Exercises Completed:** 11 / 28 (39%)
 - **Progress:** ███░░░░░░░ 🟠
 - **Solutions Found Locally:** 11
 - **Track:** [SQLite](https://exercism.org/tracks/sqlite)
