@@ -4,7 +4,7 @@ My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track 
 
 ## 📊 Statistics
 
-- **Category:** Shell
+- **Category:** Shell-scripting
 - **Total Exercises Available:** 92
 - **Exercises Completed:** 12 / 92 (13%)
 - **Progress:** █░░░░░░░░░ 🟡

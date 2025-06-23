@@ -4,9 +4,9 @@ My solutions to exercises on the [AWK](https://exercism.org/tracks/awk) track on
 
 ## 📊 Statistics
 
-- **Category:** Data-processing
-- **Total Exercises Available:** 86
-- **Exercises Completed:** 5 / 86 (6%)
+- **Category:** Text-processing
+- **Total Exercises Available:** 87
+- **Exercises Completed:** 5 / 87 (6%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 5
 - **Track:** [AWK](https://exercism.org/tracks/awk)

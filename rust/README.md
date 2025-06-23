@@ -4,7 +4,7 @@ My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track 
 
 ## 📊 Statistics
 
-- **Category:** Systems
+- **Category:** Systems-programming
 - **Total Exercises Available:** 99
 - **Exercises Completed:** 31 / 99 (31%)
 - **Progress:** ███░░░░░░░ 🟠

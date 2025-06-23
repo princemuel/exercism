@@ -4,9 +4,9 @@ My solutions to exercises on the [C](https://exercism.org/tracks/c) track on Exe
 
 ## 📊 Statistics
 
-- **Category:** Systems
-- **Total Exercises Available:** 83
-- **Exercises Completed:** 9 / 83 (11%)
+- **Category:** Systems-programming
+- **Total Exercises Available:** 84
+- **Exercises Completed:** 9 / 84 (11%)
 - **Progress:** █░░░░░░░░░ 🟡
 - **Solutions Found Locally:** 9
 - **Track:** [C](https://exercism.org/tracks/c)

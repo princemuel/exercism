@@ -4,7 +4,7 @@ My solutions to exercises on the [Python](https://exercism.org/tracks/python) tr
 
 ## 📊 Statistics
 
-- **Category:** General-purpose
+- **Category:** General-programming
 - **Total Exercises Available:** 140
 - **Exercises Completed:** 32 / 140 (23%)
 - **Progress:** ██░░░░░░░░ 🟡

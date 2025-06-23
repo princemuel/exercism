@@ -4,7 +4,7 @@ My solutions to exercises on the [SQLite](https://exercism.org/tracks/sqlite) tr
 
 ## 📊 Statistics
 
-- **Category:** Database
+- **Category:** Database-programming
 - **Total Exercises Available:** 28
 - **Exercises Completed:** 11 / 28 (39%)
 - **Progress:** ███░░░░░░░ 🟠

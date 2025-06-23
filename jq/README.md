@@ -4,7 +4,7 @@ My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on E
 
 ## 📊 Statistics
 
-- **Category:** Data-processing
+- **Category:** Data-transformation
 - **Total Exercises Available:** 74
 - **Exercises Completed:** 7 / 74 (9%)
 - **Progress:** ░░░░░░░░░░ 🔴

@@ -4,7 +4,7 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 
 ## 📊 Statistics
 
-- **Category:** Scientific
+- **Category:** Scientific-computing
 - **Total Exercises Available:** 108
 - **Exercises Completed:** 12 / 108 (11%)
 - **Progress:** █░░░░░░░░░ 🟡

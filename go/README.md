@@ -4,7 +4,7 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 
 ## 📊 Statistics
 
-- **Category:** Backend
+- **Category:** Backend-development
 - **Total Exercises Available:** 141
 - **Exercises Completed:** 13 / 141 (9%)
 - **Progress:** ░░░░░░░░░░ 🔴
