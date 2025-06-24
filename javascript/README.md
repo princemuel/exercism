@@ -4,7 +4,7 @@ My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javasc
 
 ## 📊 Statistics
 
-- **Category:** Web-development
+- **Category:** Web
 - **Total Exercises Available:** 153
 - **Exercises Completed:** 35 / 153 (23%)
 - **Progress:** ██░░░░░░░░ 🟡

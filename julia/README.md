@@ -4,13 +4,13 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 
 ## 📊 Statistics
 
-- **Category:** Scientific-computing
-- **Total Exercises Available:** 108
-- **Exercises Completed:** 12 / 108 (11%)
+- **Category:** Scientific
+- **Total Exercises Available:** 109
+- **Exercises Completed:** 13 / 109 (12%)
 - **Progress:** █░░░░░░░░░ 🟡
-- **Solutions Found Locally:** 12
+- **Solutions Found Locally:** 13
 - **Track:** [Julia](https://exercism.org/tracks/julia)
-- **Practice Exercises:** 12
+- **Practice Exercises:** 13
 
 ## 🏋️ Exercises
 
@@ -21,6 +21,7 @@ My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) trac
 | Cars Assemble | [View on Exercism](https://exercism.org/tracks/julia/exercises/cars-assemble) | [View Solution](cars-assemble/README.md) |
 | Chessboard | [View on Exercism](https://exercism.org/tracks/julia/exercises/chessboard) | [View Solution](chessboard/README.md) |
 | Currency Exchange | [View on Exercism](https://exercism.org/tracks/julia/exercises/currency-exchange) | [View Solution](currency-exchange/README.md) |
+| Difference Of Squares | [View on Exercism](https://exercism.org/tracks/julia/exercises/difference-of-squares) | [View Solution](difference-of-squares/README.md) |
 | Elyses Enchantments | [View on Exercism](https://exercism.org/tracks/julia/exercises/elyses-enchantments) | [View Solution](elyses-enchantments/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/julia/exercises/hello-world) | [View Solution](hello-world/README.md) |
 | Lasagna | [View on Exercism](https://exercism.org/tracks/julia/exercises/lasagna) | [View Solution](lasagna/README.md) |

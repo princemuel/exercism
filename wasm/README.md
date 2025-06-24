@@ -4,7 +4,7 @@ My solutions to exercises on the [WebAssembly](https://exercism.org/tracks/wasm)
 
 ## 📊 Statistics
 
-- **Category:** Performance-computing
+- **Category:** Performance
 - **Total Exercises Available:** 85
 - **Exercises Completed:** 1 / 85 (1%)
 - **Progress:** ░░░░░░░░░░ 🔴

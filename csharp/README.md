@@ -4,7 +4,7 @@ My solutions to exercises on the [C#](https://exercism.org/tracks/csharp) track 
 
 ## 📊 Statistics
 
-- **Category:** Enterprise-development
+- **Category:** General-purpose
 - **Total Exercises Available:** 175
 - **Exercises Completed:** 0 / 175 (0%)
 - **Progress:** ░░░░░░░░░░ 🔴

@@ -4,7 +4,7 @@ My solutions to exercises on the [C++](https://exercism.org/tracks/cpp) track on
 
 ## 📊 Statistics
 
-- **Category:** Systems-programming
+- **Category:** Systems
 - **Total Exercises Available:** 99
 - **Exercises Completed:** 10 / 99 (10%)
 - **Progress:** █░░░░░░░░░ 🔴

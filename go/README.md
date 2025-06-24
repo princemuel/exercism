@@ -4,13 +4,13 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 
 ## 📊 Statistics
 
-- **Category:** Backend-development
+- **Category:** Concurrent
 - **Total Exercises Available:** 141
-- **Exercises Completed:** 13 / 141 (9%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 14
+- **Exercises Completed:** 14 / 141 (10%)
+- **Progress:** █░░░░░░░░░ 🔴
+- **Solutions Found Locally:** 15
 - **Track:** [Go](https://exercism.org/tracks/go)
-- **Practice Exercises:** 14
+- **Practice Exercises:** 15
 
 ## 🏋️ Exercises
 
@@ -18,6 +18,7 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 |----------|---------------|----------|
 | Animal Magic | [View on Exercism](https://exercism.org/tracks/go/exercises/animal-magic) | [View Solution](animal-magic/README.md) |
 | Annalyns Infiltration | [View on Exercism](https://exercism.org/tracks/go/exercises/annalyns-infiltration) | [View Solution](annalyns-infiltration/README.md) |
+| Bird Watcher | [View on Exercism](https://exercism.org/tracks/go/exercises/bird-watcher) | [View Solution](bird-watcher/README.md) |
 | Blackjack | [View on Exercism](https://exercism.org/tracks/go/exercises/blackjack) | [View Solution](blackjack/README.md) |
 | Card Tricks | [View on Exercism](https://exercism.org/tracks/go/exercises/card-tricks) | [View Solution](card-tricks/README.md) |
 | Cars Assemble | [View on Exercism](https://exercism.org/tracks/go/exercises/cars-assemble) | [View Solution](cars-assemble/README.md) |

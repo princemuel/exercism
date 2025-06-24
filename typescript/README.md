@@ -4,7 +4,7 @@ My solutions to exercises on the [TypeScript](https://exercism.org/tracks/typesc
 
 ## 📊 Statistics
 
-- **Category:** Web-development
+- **Category:** Web
 - **Total Exercises Available:** 100
 - **Exercises Completed:** 29 / 100 (29%)
 - **Progress:** ██░░░░░░░░ 🟠

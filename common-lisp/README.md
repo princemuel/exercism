@@ -4,7 +4,7 @@ My solutions to exercises on the [Common Lisp](https://exercism.org/tracks/commo
 
 ## 📊 Statistics
 
-- **Category:** Functional-programming
+- **Category:** Functional
 - **Total Exercises Available:** 90
 - **Exercises Completed:** 1 / 90 (1%)
 - **Progress:** ░░░░░░░░░░ 🔴

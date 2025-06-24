@@ -4,7 +4,7 @@ My solutions to exercises on the [x86-64 Assembly](https://exercism.org/tracks/x
 
 ## 📊 Statistics
 
-- **Category:** Hardware-programming
+- **Category:** Hardware
 - **Total Exercises Available:** 57
 - **Exercises Completed:** 0 / 57 (0%)
 - **Progress:** ░░░░░░░░░░ 🔴

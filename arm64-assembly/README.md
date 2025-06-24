@@ -4,7 +4,7 @@ My solutions to exercises on the [Arm64 assembly](https://exercism.org/tracks/ar
 
 ## 📊 Statistics
 
-- **Category:** Hardware-programming
+- **Category:** Hardware
 - **Total Exercises Available:** 77
 - **Exercises Completed:** 1 / 77 (1%)
 - **Progress:** ░░░░░░░░░░ 🔴
