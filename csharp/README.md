@@ -6,7 +6,7 @@ My solutions to exercises on the [C#](https://exercism.org/tracks/csharp) track 
 
 - **Category:** General-purpose
 - **Total Exercises Available:** 175
-- **Exercises Completed:** 0 / 175 (0%)
+- **Exercises Completed:** 1 / 175 (1%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 1
 - **Track:** [C#](https://exercism.org/tracks/csharp)

@@ -6,7 +6,7 @@ My solutions to exercises on the [x86-64 Assembly](https://exercism.org/tracks/x
 
 - **Category:** Hardware
 - **Total Exercises Available:** 57
-- **Exercises Completed:** 0 / 57 (0%)
+- **Exercises Completed:** 1 / 57 (2%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 1
 - **Track:** [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly)

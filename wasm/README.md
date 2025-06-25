@@ -8,14 +8,15 @@ My solutions to exercises on the [WebAssembly](https://exercism.org/tracks/wasm)
 - **Total Exercises Available:** 85
 - **Exercises Completed:** 1 / 85 (1%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 1
+- **Solutions Found Locally:** 2
 - **Track:** [WebAssembly](https://exercism.org/tracks/wasm)
-- **Practice Exercises:** 1
+- **Practice Exercises:** 2
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
+| Armstrong Numbers | [View on Exercism](https://exercism.org/tracks/wasm/exercises/armstrong-numbers) | [View Solution](armstrong-numbers/README.md) |
 | Hello World | [View on Exercism](https://exercism.org/tracks/wasm/exercises/hello-world) | [View Solution](hello-world/README.md) |
 
 ---
