@@ -10,18 +10,18 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 - **Programming Languages:** 20
 - **Solutions Found Locally:** 220
 - **Track Categories:**
-  - General-purpose: 3 track(s)
   - Systems: 3 track(s)
+  - General-purpose: 3 track(s)
+  - Hardware: 2 track(s)
   - Web: 2 track(s)
   - Concurrent: 2 track(s)
-  - Hardware: 2 track(s)
-  - Functional: 1 track(s)
-  - Shell: 1 track(s)
   - Scientific: 1 track(s)
+  - Shell: 1 track(s)
   - Database: 1 track(s)
-  - Data-transformation: 1 track(s)
   - Text-processing: 1 track(s)
+  - Functional: 1 track(s)
   - Performance: 1 track(s)
+  - Data-transformation: 1 track(s)
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
 
 ## 🗂️ Tracks

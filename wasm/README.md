@@ -6,7 +6,7 @@ My solutions to exercises on the [WebAssembly](https://exercism.org/tracks/wasm)
 
 - **Category:** Performance
 - **Total Exercises Available:** 85
-- **Exercises Completed:** 1 / 85 (1%)
+- **Exercises Completed:** 2 / 85 (2%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 2
 - **Track:** [WebAssembly](https://exercism.org/tracks/wasm)
