@@ -6,36 +6,6 @@
     "completed": 1
   },
   {
-    "title": "awk",
-    "category": "text-processing",
-    "total": 87,
-    "completed": 5
-  },
-  {
-    "title": "bash",
-    "category": "shell",
-    "total": 92,
-    "completed": 12
-  },
-  {
-    "title": "c",
-    "category": "systems",
-    "total": 84,
-    "completed": 9
-  },
-  {
-    "title": "common-lisp",
-    "category": "functional",
-    "total": 90,
-    "completed": 1
-  },
-  {
-    "title": "cpp",
-    "category": "systems",
-    "total": 99,
-    "completed": 10
-  },
-  {
     "title": "csharp",
     "category": "general-purpose",
     "total": 175,
@@ -54,36 +24,6 @@
     "completed": 14
   },
   {
-    "title": "javascript",
-    "category": "web",
-    "total": 153,
-    "completed": 35
-  },
-  {
-    "title": "jq",
-    "category": "data-transformation",
-    "total": 74,
-    "completed": 7
-  },
-  {
-    "title": "perl",
-    "category": "text-processing",
-    "total": 83,
-    "completed": 0
-  },
-  {
-    "title": "python",
-    "category": "general-purpose",
-    "total": 140,
-    "completed": 32
-  },
-  {
-    "title": "ruby",
-    "category": "general-purpose",
-    "total": 120,
-    "completed": 2
-  },
-  {
     "title": "rust",
     "category": "systems",
     "total": 99,
@@ -94,12 +34,6 @@
     "category": "database",
     "total": 28,
     "completed": 11
-  },
-  {
-    "title": "typescript",
-    "category": "web",
-    "total": 100,
-    "completed": 29
   },
   {
     "title": "wasm",
@@ -118,5 +52,71 @@
     "category": "scientific",
     "total": 109,
     "completed": 13
+  },
+  {
+    "title": "awk",
+    "category": "text-processing",
+    "total": 87,
+    "completed": 5
+  },
+  {
+    "title": "bash",
+    "category": "shell",
+    "total": 92,
+    "completed": 12
+  },
+  {
+    "title": "cpp",
+    "category": "systems",
+    "total": 99,
+    "completed": 10
+  },
+  {
+    "title": "jq",
+    "category": "data-transformation",
+    "total": 74,
+    "completed": 7
+  },
+  {
+    "title": "javascript",
+    "category": "web",
+    "total": 153,
+    "completed": 35
+  },
+  {
+    "title": "typescript",
+    "category": "web",
+    "total": 100,
+    "completed": 29
+  },
+  {
+    "title": "python",
+    "category": "general-purpose",
+    "total": 141,
+    "completed": 32
+  },
+  {
+    "title": "common-lisp",
+    "category": "functional",
+    "total": 90,
+    "completed": 1
+  },
+  {
+    "title": "c",
+    "category": "systems",
+    "total": 84,
+    "completed": 9
+  },
+  {
+    "title": "ruby",
+    "category": "general-purpose",
+    "total": 120,
+    "completed": 2
+  },
+  {
+    "title": "perl5",
+    "category": "text-processing",
+    "total": 83,
+    "completed": 0
   }
 ]

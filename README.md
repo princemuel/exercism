@@ -5,22 +5,22 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 ## 📊 Overview
 
 - **Total Exercises Completed:** 217
-- **Total Exercises Available:** 1974
+- **Total Exercises Available:** 2058
 - **Overall Completion:** 11% 🟡
 - **Programming Languages:** 20
 - **Solutions Found Locally:** 220
 - **Track Categories:**
-  - Systems: 3 track(s)
   - General-purpose: 3 track(s)
-  - Hardware: 2 track(s)
+  - Systems: 3 track(s)
+  - Text-processing: 2 track(s)
   - Web: 2 track(s)
+  - Hardware: 2 track(s)
   - Concurrent: 2 track(s)
   - Scientific: 1 track(s)
   - Shell: 1 track(s)
   - Database: 1 track(s)
-  - Text-processing: 1 track(s)
-  - Functional: 1 track(s)
   - Performance: 1 track(s)
+  - Functional: 1 track(s)
   - Data-transformation: 1 track(s)
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
 
@@ -42,8 +42,8 @@ Click on any track to view solutions to each exercise:
 | [JavaScript](javascript/README.md) | web | 23% (35/153) | 37 | [View Track](https://exercism.org/tracks/javascript) | 2025-06-25 |
 | [Jq](jq/README.md) | data-transformation | 9% (7/74) | 7 | [View Track](https://exercism.org/tracks/jq) | 2025-06-25 |
 | [Julia](julia/README.md) | scientific | 12% (13/109) | 13 | [View Track](https://exercism.org/tracks/julia) | 2025-06-25 |
-| [Perl5](perl5/README.md) | Unknown | 1 local | 1 | [View Track](https://exercism.org/tracks/perl5) | 2025-06-25 |
-| [Python](python/README.md) | general-purpose | 23% (32/140) | 31 | [View Track](https://exercism.org/tracks/python) | 2025-06-25 |
+| [Perl5](perl5/README.md) | text-processing | 0% (0/83) | 1 | [View Track](https://exercism.org/tracks/perl5) | 2025-06-25 |
+| [Python](python/README.md) | general-purpose | 23% (32/141) | 31 | [View Track](https://exercism.org/tracks/python) | 2025-06-25 |
 | [Ruby](ruby/README.md) | general-purpose | 2% (2/120) | 2 | [View Track](https://exercism.org/tracks/ruby) | 2025-06-25 |
 | [Rust](rust/README.md) | systems | 31% (31/99) | 31 | [View Track](https://exercism.org/tracks/rust) | 2025-06-25 |
 | [SQLite](sqlite/README.md) | database | 39% (11/28) | 11 | [View Track](https://exercism.org/tracks/sqlite) | 2025-06-25 |
