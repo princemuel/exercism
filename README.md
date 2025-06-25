@@ -4,7 +4,7 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 
 ## 📊 Overview
 
-- **Total Exercises Completed:** 216
+- **Total Exercises Completed:** 217
 - **Total Exercises Available:** 1974
 - **Overall Completion:** 11% 🟡
 - **Programming Languages:** 20
@@ -12,16 +12,16 @@ Welcome to my collection of solutions for [Exercism](https://exercism.org/) codi
 - **Track Categories:**
   - General-purpose: 3 track(s)
   - Systems: 3 track(s)
-  - Hardware: 2 track(s)
-  - Concurrent: 2 track(s)
   - Web: 2 track(s)
-  - Text-processing: 1 track(s)
-  - Performance: 1 track(s)
+  - Concurrent: 2 track(s)
+  - Hardware: 2 track(s)
+  - Functional: 1 track(s)
+  - Shell: 1 track(s)
+  - Scientific: 1 track(s)
   - Database: 1 track(s)
   - Data-transformation: 1 track(s)
-  - Shell: 1 track(s)
-  - Functional: 1 track(s)
-  - Scientific: 1 track(s)
+  - Text-processing: 1 track(s)
+  - Performance: 1 track(s)
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
 
 ## 🗂️ Tracks
@@ -48,7 +48,7 @@ Click on any track to view solutions to each exercise:
 | [Rust](rust/README.md) | systems | 31% (31/99) | 31 | [View Track](https://exercism.org/tracks/rust) | 2025-06-25 |
 | [SQLite](sqlite/README.md) | database | 39% (11/28) | 11 | [View Track](https://exercism.org/tracks/sqlite) | 2025-06-25 |
 | [TypeScript](typescript/README.md) | web | 29% (29/100) | 29 | [View Track](https://exercism.org/tracks/typescript) | 2025-06-25 |
-| [WebAssembly](wasm/README.md) | performance | 1% (1/85) | 2 | [View Track](https://exercism.org/tracks/wasm) | 2025-06-25 |
+| [WebAssembly](wasm/README.md) | performance | 2% (2/85) | 2 | [View Track](https://exercism.org/tracks/wasm) | 2025-06-25 |
 | [x86-64 Assembly](x86-64-assembly/README.md) | hardware | 2% (1/57) | 1 | [View Track](https://exercism.org/tracks/x86-64-assembly) | 2025-06-25 |
 
 ## 🚀 Getting Started

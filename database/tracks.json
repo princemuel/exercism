@@ -1,51 +1,15 @@
 [
   {
-    "title": "sqlite",
-    "category": "database",
-    "total": 28,
-    "completed": 9
+    "title": "arm64-assembly",
+    "category": "hardware",
+    "total": 77,
+    "completed": 1
   },
   {
-    "title": "python",
-    "category": "scripting",
-    "total": 140,
-    "completed": 30
-  },
-  {
-    "title": "jq",
-    "category": "shell",
-    "total": 74,
+    "title": "awk",
+    "category": "text-processing",
+    "total": 87,
     "completed": 5
-  },
-  {
-    "title": "rust",
-    "category": "system",
-    "total": 99,
-    "completed": 29
-  },
-  {
-    "title": "javascript",
-    "category": "scripting",
-    "total": 150,
-    "completed": 32
-  },
-  {
-    "title": "typescript",
-    "category": "scripting",
-    "total": 100,
-    "completed": 27
-  },
-  {
-    "title": "go",
-    "category": "scripting",
-    "total": 141,
-    "completed": 11
-  },
-  {
-    "title": "cpp",
-    "category": "system",
-    "total": 99,
-    "completed": 8
   },
   {
     "title": "bash",
@@ -55,20 +19,104 @@
   },
   {
     "title": "c",
-    "category": "system",
-    "total": 83,
-    "completed": 5
+    "category": "systems",
+    "total": 84,
+    "completed": 9
   },
   {
-    "title": "awk",
-    "category": "shell",
+    "title": "common-lisp",
+    "category": "functional",
+    "total": 90,
+    "completed": 1
+  },
+  {
+    "title": "cpp",
+    "category": "systems",
+    "total": 99,
+    "completed": 10
+  },
+  {
+    "title": "csharp",
+    "category": "general-purpose",
+    "total": 175,
+    "completed": 1
+  },
+  {
+    "title": "elixir",
+    "category": "concurrent",
+    "total": 164,
+    "completed": 1
+  },
+  {
+    "title": "go",
+    "category": "concurrent",
+    "total": 141,
+    "completed": 14
+  },
+  {
+    "title": "javascript",
+    "category": "web",
+    "total": 153,
+    "completed": 35
+  },
+  {
+    "title": "jq",
+    "category": "data-transformation",
+    "total": 74,
+    "completed": 7
+  },
+  {
+    "title": "perl",
+    "category": "text-processing",
+    "total": 83,
+    "completed": 0
+  },
+  {
+    "title": "python",
+    "category": "general-purpose",
+    "total": 140,
+    "completed": 32
+  },
+  {
+    "title": "ruby",
+    "category": "general-purpose",
+    "total": 120,
+    "completed": 2
+  },
+  {
+    "title": "rust",
+    "category": "systems",
+    "total": 99,
+    "completed": 31
+  },
+  {
+    "title": "sqlite",
+    "category": "database",
+    "total": 28,
+    "completed": 11
+  },
+  {
+    "title": "typescript",
+    "category": "web",
+    "total": 100,
+    "completed": 29
+  },
+  {
+    "title": "wasm",
+    "category": "performance",
     "total": 85,
-    "completed": 4
+    "completed": 2
+  },
+  {
+    "title": "x86-64-assembly",
+    "category": "hardware",
+    "total": 57,
+    "completed": 1
   },
   {
     "title": "julia",
-    "category": "functional",
-    "total": 105,
-    "completed": 9
+    "category": "scientific",
+    "total": 109,
+    "completed": 13
   }
 ]
