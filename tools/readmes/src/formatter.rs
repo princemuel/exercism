@@ -13,7 +13,7 @@ pub fn format_track_name(track: &str) -> String {
         "visual-basic" => "Visual Basic".to_string(),
         "wasm" => "Web Assembly".to_string(),
         "x86-64-assembly" => "x86-64 Assembly".to_string(),
-        "arm64-assembly" => "ARM Assembly".to_string(),
+        "arm64-assembly" => "ARM64 Assembly".to_string(),
         _ => {
             // Capitalize first letter and replace hyphens with spaces
             let mut chars: Vec<char> = track.chars().collect();

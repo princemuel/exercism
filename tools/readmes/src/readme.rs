@@ -173,10 +173,10 @@ impl ReadmeGenerator {
             .collect();
 
         category_list.sort_unstable_by(|a, b| {
-            b["count"]
-                .as_u64()
-                .unwrap_or(0)
-                .cmp(&a["count"].as_u64().unwrap_or(0))
+            a["name"]
+                .as_str()
+                .unwrap_or("")
+                .cmp(b["name"].as_str().unwrap_or(""))
         });
 
         let mut track_list: Vec<_> = exercises_by_track
