@@ -5,8 +5,8 @@ My solutions to exercises on the [Python](https://exercism.org/tracks/python) tr
 ## 📊 Statistics
 
 - **Category:** General-purpose
-- **Total Exercises Available:** 140
-- **Exercises Completed:** 32 / 140 (23%)
+- **Total Exercises Available:** 141
+- **Exercises Completed:** 32 / 141 (23%)
 - **Progress:** ██░░░░░░░░ 🟡
 - **Solutions Found Locally:** 31
 - **Track:** [Python](https://exercism.org/tracks/python)

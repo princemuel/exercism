@@ -6,17 +6,18 @@ My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track 
 
 - **Category:** Shell
 - **Total Exercises Available:** 92
-- **Exercises Completed:** 12 / 92 (13%)
+- **Exercises Completed:** 13 / 92 (14%)
 - **Progress:** █░░░░░░░░░ 🟡
-- **Solutions Found Locally:** 12
+- **Solutions Found Locally:** 13
 - **Track:** [Bash](https://exercism.org/tracks/bash)
-- **Practice Exercises:** 12
+- **Practice Exercises:** 13
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
 | Acronym | [View on Exercism](https://exercism.org/tracks/bash/exercises/acronym) | [View Solution](acronym/README.md) |
+| Allergies | [View on Exercism](https://exercism.org/tracks/bash/exercises/allergies) | [View Solution](allergies/README.md) |
 | Armstrong Numbers | [View on Exercism](https://exercism.org/tracks/bash/exercises/armstrong-numbers) | [View Solution](armstrong-numbers/README.md) |
 | Bob | [View on Exercism](https://exercism.org/tracks/bash/exercises/bob) | [View Solution](bob/README.md) |
 | Error Handling | [View on Exercism](https://exercism.org/tracks/bash/exercises/error-handling) | [View Solution](error-handling/README.md) |

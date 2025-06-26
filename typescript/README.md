@@ -6,11 +6,11 @@ My solutions to exercises on the [TypeScript](https://exercism.org/tracks/typesc
 
 - **Category:** Web
 - **Total Exercises Available:** 100
-- **Exercises Completed:** 29 / 100 (29%)
-- **Progress:** ██░░░░░░░░ 🟠
-- **Solutions Found Locally:** 29
+- **Exercises Completed:** 30 / 100 (30%)
+- **Progress:** ███░░░░░░░ 🟠
+- **Solutions Found Locally:** 30
 - **Track:** [TypeScript](https://exercism.org/tracks/typescript)
-- **Practice Exercises:** 29
+- **Practice Exercises:** 30
 
 ## 🏋️ Exercises
 
@@ -32,6 +32,7 @@ My solutions to exercises on the [TypeScript](https://exercism.org/tracks/typesc
 | Isogram | [View on Exercism](https://exercism.org/tracks/typescript/exercises/isogram) | [View Solution](isogram/README.md) |
 | Leap | [View on Exercism](https://exercism.org/tracks/typescript/exercises/leap) | [View Solution](leap/README.md) |
 | Luhn | [View on Exercism](https://exercism.org/tracks/typescript/exercises/luhn) | [View Solution](luhn/README.md) |
+| Matrix | [View on Exercism](https://exercism.org/tracks/typescript/exercises/matrix) | [View Solution](matrix/README.md) |
 | Nth Prime | [View on Exercism](https://exercism.org/tracks/typescript/exercises/nth-prime) | [View Solution](nth-prime/README.md) |
 | Pangram | [View on Exercism](https://exercism.org/tracks/typescript/exercises/pangram) | [View Solution](pangram/README.md) |
 | Raindrops | [View on Exercism](https://exercism.org/tracks/typescript/exercises/raindrops) | [View Solution](raindrops/README.md) |
