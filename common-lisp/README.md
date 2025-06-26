@@ -1,15 +1,15 @@
-# Common Lisp Solutions
+# Common Lisp
 
-My solutions to exercises on the [Common Lisp](https://exercism.org/tracks/common-lisp) track on Exercism.
+My solutions to [Common Lisp](https://exercism.org/tracks/common-lisp) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Common Lisp](https://exercism.org/tracks/common-lisp)
-- **Category:** Functional
-- **Total Exercises Available:** 90
-- **Exercises Completed:** 1 / 90 (1%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 1
+- Track: [Common Lisp](https://exercism.org/tracks/common-lisp)
+- Category: Functional
+- Total Exercises Available: 90
+- Exercises Completed: 1 / 90 (1%)
+- Progress: ░░░░░░░░░░ 🔴
+- Solutions Found Locally: 1
 
 ## 🏋️ Exercises
 

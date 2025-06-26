@@ -1,15 +1,15 @@
-# C Solutions
+# C
 
-My solutions to exercises on the [C](https://exercism.org/tracks/c) track on Exercism.
+My solutions to [C](https://exercism.org/tracks/c) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [C](https://exercism.org/tracks/c)
-- **Category:** Systems
-- **Total Exercises Available:** 84
-- **Exercises Completed:** 9 / 84 (11%)
-- **Progress:** █░░░░░░░░░ 🟡
-- **Solutions Found Locally:** 9
+- Track: [C](https://exercism.org/tracks/c)
+- Category: Systems
+- Total Exercises Available: 84
+- Exercises Completed: 9 / 84 (11%)
+- Progress: █░░░░░░░░░ 🟡
+- Solutions Found Locally: 9
 
 ## 🏋️ Exercises
 

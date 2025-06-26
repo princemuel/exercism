@@ -1,15 +1,15 @@
-# Bash Solutions
+# Bash
 
-My solutions to exercises on the [Bash](https://exercism.org/tracks/bash) track on Exercism.
+My solutions to [Bash](https://exercism.org/tracks/bash) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Bash](https://exercism.org/tracks/bash)
-- **Category:** Shell
-- **Total Exercises Available:** 92
-- **Exercises Completed:** 13 / 92 (14%)
-- **Progress:** █░░░░░░░░░ 🟡
-- **Solutions Found Locally:** 13
+- Track: [Bash](https://exercism.org/tracks/bash)
+- Category: Shell
+- Total Exercises Available: 92
+- Exercises Completed: 13 / 92 (14%)
+- Progress: █░░░░░░░░░ 🟡
+- Solutions Found Locally: 13
 
 ## 🏋️ Exercises
 

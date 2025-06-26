@@ -1,15 +1,15 @@
-# C# Solutions
+# C#
 
-My solutions to exercises on the [C#](https://exercism.org/tracks/csharp) track on Exercism.
+My solutions to [C#](https://exercism.org/tracks/csharp) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [C#](https://exercism.org/tracks/csharp)
-- **Category:** General-purpose
-- **Total Exercises Available:** 175
-- **Exercises Completed:** 1 / 175 (1%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 1
+- Track: [C#](https://exercism.org/tracks/csharp)
+- Category: General-purpose
+- Total Exercises Available: 175
+- Exercises Completed: 1 / 175 (1%)
+- Progress: ░░░░░░░░░░ 🔴
+- Solutions Found Locally: 1
 
 ## 🏋️ Exercises
 

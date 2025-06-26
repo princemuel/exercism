@@ -1,32 +1,19 @@
-# 🏋️ Exercism Solutions by Prince Muel
+# 🏋️ Exercism Solutions
 
 Welcome to my collection of solutions to the coding exercises on [Exercism](https://exercism.org/). This repository showcases my progress across various programming languages and tracks, providing a comprehensive overview of my coding journey.
 
 ## 📊 Overview
 
-- **Total Exercises Completed:** 221
-- **Total Exercises Available:** 2058
-- **Overall Completion:** 11% 🟡
-- **Programming Languages:** 20
-- **Solutions Found Locally:** 223
-- **Track Categories:**
-  - Concurrent: 2 track(s)
-  - Data-transformation: 1 track(s)
-  - Database: 1 track(s)
-  - Functional: 1 track(s)
-  - General-purpose: 3 track(s)
-  - Hardware: 2 track(s)
-  - Performance: 1 track(s)
-  - Scientific: 1 track(s)
-  - Shell: 1 track(s)
-  - Systems: 3 track(s)
-  - Text-processing: 2 track(s)
-  - Web: 2 track(s)
-- **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
+- Programming Languages: 20
+- Total Exercises Available: 2058
+- Total Exercises Completed: 221
+- Solutions Found Locally: 223
+- Overall Completion: 11% 🟡
+- Me on Exercism: [@princemuel](https://exercism.org/profiles/princemuel)
 
-## 🗂️ Tracks
+## 🗂️ Track List
 
-Click on any track to view solutions to each exercise:
+Click on any track to view the solutions to each exercise:
 
 | Track | Category | Progress | Solutions | Link |
 |-------|----------|----------|-----------|-------------|

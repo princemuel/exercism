@@ -1,15 +1,15 @@
-# TypeScript Solutions
+# TypeScript
 
-My solutions to exercises on the [TypeScript](https://exercism.org/tracks/typescript) track on Exercism.
+My solutions to [TypeScript](https://exercism.org/tracks/typescript) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [TypeScript](https://exercism.org/tracks/typescript)
-- **Category:** Web
-- **Total Exercises Available:** 100
-- **Exercises Completed:** 30 / 100 (30%)
-- **Progress:** ███░░░░░░░ 🟠
-- **Solutions Found Locally:** 30
+- Track: [TypeScript](https://exercism.org/tracks/typescript)
+- Category: Web
+- Total Exercises Available: 100
+- Exercises Completed: 30 / 100 (30%)
+- Progress: ███░░░░░░░ 🟠
+- Solutions Found Locally: 30
 
 ## 🏋️ Exercises
 

@@ -1,15 +1,15 @@
-# Go Solutions
+# Go
 
-My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on Exercism.
+My solutions to [Go](https://exercism.org/tracks/go) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Go](https://exercism.org/tracks/go)
-- **Category:** Concurrent
-- **Total Exercises Available:** 141
-- **Exercises Completed:** 14 / 141 (10%)
-- **Progress:** █░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 15
+- Track: [Go](https://exercism.org/tracks/go)
+- Category: Concurrent
+- Total Exercises Available: 141
+- Exercises Completed: 14 / 141 (10%)
+- Progress: █░░░░░░░░░ 🔴
+- Solutions Found Locally: 15
 
 ## 🏋️ Exercises
 

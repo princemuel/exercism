@@ -1,15 +1,15 @@
-# JavaScript Solutions
+# JavaScript
 
-My solutions to exercises on the [JavaScript](https://exercism.org/tracks/javascript) track on Exercism.
+My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [JavaScript](https://exercism.org/tracks/javascript)
-- **Category:** Web
-- **Total Exercises Available:** 153
-- **Exercises Completed:** 35 / 153 (23%)
-- **Progress:** ██░░░░░░░░ 🟡
-- **Solutions Found Locally:** 37
+- Track: [JavaScript](https://exercism.org/tracks/javascript)
+- Category: Web
+- Total Exercises Available: 153
+- Exercises Completed: 35 / 153 (23%)
+- Progress: ██░░░░░░░░ 🟡
+- Solutions Found Locally: 37
 
 ## 🏋️ Exercises
 

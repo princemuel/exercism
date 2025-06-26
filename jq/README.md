@@ -1,15 +1,15 @@
-# Jq Solutions
+# Jq
 
-My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on Exercism.
+My solutions to [Jq](https://exercism.org/tracks/jq) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Jq](https://exercism.org/tracks/jq)
-- **Category:** Data-transformation
-- **Total Exercises Available:** 74
-- **Exercises Completed:** 7 / 74 (9%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 7
+- Track: [Jq](https://exercism.org/tracks/jq)
+- Category: Data-transformation
+- Total Exercises Available: 74
+- Exercises Completed: 7 / 74 (9%)
+- Progress: ░░░░░░░░░░ 🔴
+- Solutions Found Locally: 7
 
 ## 🏋️ Exercises
 

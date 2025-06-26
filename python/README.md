@@ -1,15 +1,15 @@
-# Python Solutions
+# Python
 
-My solutions to exercises on the [Python](https://exercism.org/tracks/python) track on Exercism.
+My solutions to [Python](https://exercism.org/tracks/python) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Python](https://exercism.org/tracks/python)
-- **Category:** General-purpose
-- **Total Exercises Available:** 141
-- **Exercises Completed:** 32 / 141 (23%)
-- **Progress:** ██░░░░░░░░ 🟡
-- **Solutions Found Locally:** 31
+- Track: [Python](https://exercism.org/tracks/python)
+- Category: General-purpose
+- Total Exercises Available: 141
+- Exercises Completed: 32 / 141 (23%)
+- Progress: ██░░░░░░░░ 🟡
+- Solutions Found Locally: 31
 
 ## 🏋️ Exercises
 

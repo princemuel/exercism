@@ -1,15 +1,15 @@
-# Rust Solutions
+# Rust
 
-My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track on Exercism.
+My solutions to [Rust](https://exercism.org/tracks/rust) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Rust](https://exercism.org/tracks/rust)
-- **Category:** Systems
-- **Total Exercises Available:** 99
-- **Exercises Completed:** 31 / 99 (31%)
-- **Progress:** ███░░░░░░░ 🟠
-- **Solutions Found Locally:** 31
+- Track: [Rust](https://exercism.org/tracks/rust)
+- Category: Systems
+- Total Exercises Available: 99
+- Exercises Completed: 31 / 99 (31%)
+- Progress: ███░░░░░░░ 🟠
+- Solutions Found Locally: 31
 
 ## 🏋️ Exercises
 

@@ -1,15 +1,15 @@
-# Perl5 Solutions
+# Perl5
 
-My solutions to exercises on the [Perl5](https://exercism.org/tracks/perl5) track on Exercism.
+My solutions to [Perl5](https://exercism.org/tracks/perl5) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Perl5](https://exercism.org/tracks/perl5)
-- **Category:** Text-processing
-- **Total Exercises Available:** 83
-- **Exercises Completed:** 1 / 83 (1%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 1
+- Track: [Perl5](https://exercism.org/tracks/perl5)
+- Category: Text-processing
+- Total Exercises Available: 83
+- Exercises Completed: 1 / 83 (1%)
+- Progress: ░░░░░░░░░░ 🔴
+- Solutions Found Locally: 1
 
 ## 🏋️ Exercises
 

@@ -1,15 +1,15 @@
-# SQLite Solutions
+# SQLite
 
-My solutions to exercises on the [SQLite](https://exercism.org/tracks/sqlite) track on Exercism.
+My solutions to [SQLite](https://exercism.org/tracks/sqlite) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [SQLite](https://exercism.org/tracks/sqlite)
-- **Category:** Database
-- **Total Exercises Available:** 28
-- **Exercises Completed:** 11 / 28 (39%)
-- **Progress:** ███░░░░░░░ 🟠
-- **Solutions Found Locally:** 11
+- Track: [SQLite](https://exercism.org/tracks/sqlite)
+- Category: Database
+- Total Exercises Available: 28
+- Exercises Completed: 11 / 28 (39%)
+- Progress: ███░░░░░░░ 🟠
+- Solutions Found Locally: 11
 
 ## 🏋️ Exercises
 

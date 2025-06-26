@@ -1,15 +1,15 @@
-# AWK Solutions
+# AWK
 
-My solutions to exercises on the [AWK](https://exercism.org/tracks/awk) track on Exercism.
+My solutions to [AWK](https://exercism.org/tracks/awk) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [AWK](https://exercism.org/tracks/awk)
-- **Category:** Text-processing
-- **Total Exercises Available:** 87
-- **Exercises Completed:** 6 / 87 (7%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 6
+- Track: [AWK](https://exercism.org/tracks/awk)
+- Category: Text-processing
+- Total Exercises Available: 87
+- Exercises Completed: 6 / 87 (7%)
+- Progress: ░░░░░░░░░░ 🔴
+- Solutions Found Locally: 6
 
 ## 🏋️ Exercises
 

@@ -1,15 +1,15 @@
-# Elixir Solutions
+# Elixir
 
-My solutions to exercises on the [Elixir](https://exercism.org/tracks/elixir) track on Exercism.
+My solutions to [Elixir](https://exercism.org/tracks/elixir) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Elixir](https://exercism.org/tracks/elixir)
-- **Category:** Concurrent
-- **Total Exercises Available:** 164
-- **Exercises Completed:** 1 / 164 (1%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 1
+- Track: [Elixir](https://exercism.org/tracks/elixir)
+- Category: Concurrent
+- Total Exercises Available: 164
+- Exercises Completed: 1 / 164 (1%)
+- Progress: ░░░░░░░░░░ 🔴
+- Solutions Found Locally: 1
 
 ## 🏋️ Exercises
 

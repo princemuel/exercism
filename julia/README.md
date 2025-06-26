@@ -1,15 +1,15 @@
-# Julia Solutions
+# Julia
 
-My solutions to exercises on the [Julia](https://exercism.org/tracks/julia) track on Exercism.
+My solutions to [Julia](https://exercism.org/tracks/julia) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Julia](https://exercism.org/tracks/julia)
-- **Category:** Scientific
-- **Total Exercises Available:** 109
-- **Exercises Completed:** 13 / 109 (12%)
-- **Progress:** █░░░░░░░░░ 🟡
-- **Solutions Found Locally:** 13
+- Track: [Julia](https://exercism.org/tracks/julia)
+- Category: Scientific
+- Total Exercises Available: 109
+- Exercises Completed: 13 / 109 (12%)
+- Progress: █░░░░░░░░░ 🟡
+- Solutions Found Locally: 13
 
 ## 🏋️ Exercises
 

@@ -1,15 +1,15 @@
-# Web Assembly Solutions
+# Web Assembly
 
-My solutions to exercises on the [Web Assembly](https://exercism.org/tracks/wasm) track on Exercism.
+My solutions to [Web Assembly](https://exercism.org/tracks/wasm) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [Web Assembly](https://exercism.org/tracks/wasm)
-- **Category:** Performance
-- **Total Exercises Available:** 85
-- **Exercises Completed:** 2 / 85 (2%)
-- **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 2
+- Track: [Web Assembly](https://exercism.org/tracks/wasm)
+- Category: Performance
+- Total Exercises Available: 85
+- Exercises Completed: 2 / 85 (2%)
+- Progress: ░░░░░░░░░░ 🔴
+- Solutions Found Locally: 2
 
 ## 🏋️ Exercises
 

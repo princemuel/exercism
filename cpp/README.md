@@ -1,15 +1,15 @@
-# C++ Solutions
+# C++
 
-My solutions to exercises on the [C++](https://exercism.org/tracks/cpp) track on Exercism.
+My solutions to [C++](https://exercism.org/tracks/cpp) exercises on Exercism.
 
 ## 📊 Stats
 
-- **Track:** [C++](https://exercism.org/tracks/cpp)
-- **Category:** Systems
-- **Total Exercises Available:** 99
-- **Exercises Completed:** 10 / 99 (10%)
-- **Progress:** █░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 10
+- Track: [C++](https://exercism.org/tracks/cpp)
+- Category: Systems
+- Total Exercises Available: 99
+- Exercises Completed: 10 / 99 (10%)
+- Progress: █░░░░░░░░░ 🔴
+- Solutions Found Locally: 10
 
 ## 🏋️ Exercises
 
