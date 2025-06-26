@@ -13,8 +13,20 @@ pub enum Allergen {
 pub struct Allergies {
     score: u8,
 }
+use self::Allergen::*;
 
 impl Allergies {
+    const ALLERGIES: [Allergen; 8] = [
+        Eggs,
+        Peanuts,
+        Shellfish,
+        Strawberries,
+        Tomatoes,
+        Chocolate,
+        Pollen,
+        Cats,
+    ];
+
     pub fn new(score: u32) -> Self {
         Self {
             score: (score & 0xff) as u8,
@@ -26,21 +38,9 @@ impl Allergies {
     }
 
     pub fn allergies(&self) -> Vec<Allergen> {
-        let mut allergens = Vec::with_capacity(8);
-        for allergen in [
-            Allergen::Eggs,
-            Allergen::Peanuts,
-            Allergen::Shellfish,
-            Allergen::Strawberries,
-            Allergen::Tomatoes,
-            Allergen::Chocolate,
-            Allergen::Pollen,
-            Allergen::Cats,
-        ] {
-            if self.is_allergic_to(&allergen) {
-                allergens.push(allergen);
-            }
-        }
-        allergens
+        Self::ALLERGIES
+            .into_iter()
+            .filter(|allergen| self.is_allergic_to(allergen))
+            .collect()
     }
 }
