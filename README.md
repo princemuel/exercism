@@ -1,18 +1,6 @@
-
 # 🏋️ Exercism Solutions by Prince Muel
 
 Welcome to my collection of solutions to the coding exercises on [Exercism](https://exercism.org/). This repository showcases my progress across various programming languages and tracks, providing a comprehensive overview of my coding journey.
-
-
-## 🚀 Getting Started
-
-Each track contains:
-
-- Individual exercise solutions with explanations
-- Links to the original Exercism problems
-- Track-specific statistics and progress
-- Categories for better organization
-
 
 ## 📊 Overview
 
@@ -22,18 +10,18 @@ Each track contains:
 - **Programming Languages:** 20
 - **Solutions Found Locally:** 223
 - **Track Categories:**
-  - Systems: 3 track(s)
-  - General-purpose: 3 track(s)
-  - Text-processing: 2 track(s)
   - Concurrent: 2 track(s)
-  - Web: 2 track(s)
-  - Hardware: 2 track(s)
-  - Shell: 1 track(s)
   - Data-transformation: 1 track(s)
-  - Scientific: 1 track(s)
-  - Performance: 1 track(s)
   - Database: 1 track(s)
   - Functional: 1 track(s)
+  - General-purpose: 3 track(s)
+  - Hardware: 2 track(s)
+  - Performance: 1 track(s)
+  - Scientific: 1 track(s)
+  - Shell: 1 track(s)
+  - Systems: 3 track(s)
+  - Text-processing: 2 track(s)
+  - Web: 2 track(s)
 - **My Exercism Profile:** [View Profile](https://exercism.org/profiles/princemuel)
 
 ## 🗂️ Tracks
@@ -42,7 +30,7 @@ Click on any track to view solutions to each exercise:
 
 | Track | Category | Progress | Solutions | Link |
 |-------|----------|----------|-----------|-------------|
-| [ARM Assembly](arm64-assembly/README.md) | hardware | 1% (1/77) | 1 | [ARM Assembly on Exercism](https://exercism.org/tracks/arm64-assembly) |
+| [ARM64 Assembly](arm64-assembly/README.md) | hardware | 1% (1/77) | 1 | [ARM64 Assembly on Exercism](https://exercism.org/tracks/arm64-assembly) |
 | [AWK](awk/README.md) | text-processing | 7% (6/87) | 6 | [AWK on Exercism](https://exercism.org/tracks/awk) |
 | [Bash](bash/README.md) | shell | 14% (13/92) | 13 | [Bash on Exercism](https://exercism.org/tracks/bash) |
 | [C](c/README.md) | systems | 11% (9/84) | 9 | [C on Exercism](https://exercism.org/tracks/c) |
@@ -62,6 +50,14 @@ Click on any track to view solutions to each exercise:
 | [TypeScript](typescript/README.md) | web | 30% (30/100) | 30 | [TypeScript on Exercism](https://exercism.org/tracks/typescript) |
 | [Web Assembly](wasm/README.md) | performance | 2% (2/85) | 2 | [Web Assembly on Exercism](https://exercism.org/tracks/wasm) |
 | [x86-64 Assembly](x86-64-assembly/README.md) | hardware | 2% (1/57) | 1 | [x86-64 Assembly on Exercism](https://exercism.org/tracks/x86-64-assembly) |
+
+## 🚀 Getting Started
+
+Each track contains:
+
+- Individual exercise solutions with explanations
+- Links to the original Exercism problems
+- Track-specific statistics and progress
 
 ## 📝 About Exercism
 

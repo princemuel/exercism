@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [Ruby](https://exercism.org/tracks/ruby) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [Ruby](https://exercism.org/tracks/ruby)
 - **Category:** General-purpose
@@ -15,8 +15,8 @@ My solutions to exercises on the [Ruby](https://exercism.org/tracks/ruby) track 
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/hello-world) |
-| Lasagna(lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/lasagna) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/hello-world) |
+| [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/lasagna) |
 
 ---
 

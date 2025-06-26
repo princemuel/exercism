@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [Common Lisp](https://exercism.org/tracks/common-lisp) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [Common Lisp](https://exercism.org/tracks/common-lisp)
 - **Category:** Functional
@@ -15,7 +15,7 @@ My solutions to exercises on the [Common Lisp](https://exercism.org/tracks/commo
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/common-lisp/exercises/hello-world) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/common-lisp/exercises/hello-world) |
 
 ---
 

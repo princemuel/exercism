@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly)
 - **Category:** Hardware
@@ -15,7 +15,7 @@ My solutions to exercises on the [x86-64 Assembly](https://exercism.org/tracks/x
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/x86-64-assembly/exercises/hello-world) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/x86-64-assembly/exercises/hello-world) |
 
 ---
 

@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [AWK](https://exercism.org/tracks/awk) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [AWK](https://exercism.org/tracks/awk)
 - **Category:** Text-processing
@@ -15,12 +15,12 @@ My solutions to exercises on the [AWK](https://exercism.org/tracks/awk) track on
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Acronym(acronym/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/acronym) |
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/hello-world) |
-| Leap(leap/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/leap) |
-| Raindrops(raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/raindrops) |
-| Reverse String(reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/reverse-string) |
-| Two Fer(two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/two-fer) |
+| [Acronym](acronym/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/acronym) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/hello-world) |
+| [Leap](leap/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/leap) |
+| [Raindrops](raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/raindrops) |
+| [Reverse String](reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/reverse-string) |
+| [Two Fer](two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/awk/exercises/two-fer) |
 
 ---
 

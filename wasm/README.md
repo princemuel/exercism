@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [Web Assembly](https://exercism.org/tracks/wasm) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [Web Assembly](https://exercism.org/tracks/wasm)
 - **Category:** Performance
@@ -15,8 +15,8 @@ My solutions to exercises on the [Web Assembly](https://exercism.org/tracks/wasm
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Armstrong Numbers(armstrong-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/wasm/exercises/armstrong-numbers) |
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/wasm/exercises/hello-world) |
+| [Armstrong Numbers](armstrong-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/wasm/exercises/armstrong-numbers) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/wasm/exercises/hello-world) |
 
 ---
 

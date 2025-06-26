@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [Jq](https://exercism.org/tracks/jq)
 - **Category:** Data-transformation
@@ -15,13 +15,13 @@ My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on E
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Assembly Line(assembly-line/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/assembly-line) |
-| Bird Count(bird-count/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/bird-count) |
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/hello-world) |
-| Log Line Parser(log-line-parser/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/log-line-parser) |
-| Reverse String(reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/reverse-string) |
-| Shopping(shopping/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/shopping) |
-| Two Fer(two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/two-fer) |
+| [Assembly Line](assembly-line/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/assembly-line) |
+| [Bird Count](bird-count/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/bird-count) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/hello-world) |
+| [Log Line Parser](log-line-parser/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/log-line-parser) |
+| [Reverse String](reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/reverse-string) |
+| [Shopping](shopping/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/shopping) |
+| [Two Fer](two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/two-fer) |
 
 ---
 

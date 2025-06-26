@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [Perl5](https://exercism.org/tracks/perl5) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [Perl5](https://exercism.org/tracks/perl5)
 - **Category:** Text-processing
@@ -15,7 +15,7 @@ My solutions to exercises on the [Perl5](https://exercism.org/tracks/perl5) trac
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/perl5/exercises/hello-world) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/perl5/exercises/hello-world) |
 
 ---
 

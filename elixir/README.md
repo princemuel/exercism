@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [Elixir](https://exercism.org/tracks/elixir) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [Elixir](https://exercism.org/tracks/elixir)
 - **Category:** Concurrent
@@ -15,7 +15,7 @@ My solutions to exercises on the [Elixir](https://exercism.org/tracks/elixir) tr
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/elixir/exercises/hello-world) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/elixir/exercises/hello-world) |
 
 ---
 

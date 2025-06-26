@@ -2,7 +2,7 @@
 
 My solutions to exercises on the [C#](https://exercism.org/tracks/csharp) track on Exercism.
 
-## 📊 Statistics
+## 📊 Stats
 
 - **Track:** [C#](https://exercism.org/tracks/csharp)
 - **Category:** General-purpose
@@ -15,7 +15,7 @@ My solutions to exercises on the [C#](https://exercism.org/tracks/csharp) track 
 
 | Exercise | Exercism Link |
 |----------|---------------|
-| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/csharp/exercises/hello-world) |
+| [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/csharp/exercises/hello-world) |
 
 ---
 
