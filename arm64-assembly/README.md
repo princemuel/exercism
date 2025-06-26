@@ -1,6 +1,6 @@
-# Arm64 assembly Solutions
+# x86-64 Assembly Solutions
 
-My solutions to exercises on the [Arm64 assembly](https://exercism.org/tracks/arm64-assembly) track on Exercism.
+My solutions to exercises on the [x86-64 Assembly](https://exercism.org/tracks/arm64-assembly) track on Exercism.
 
 ## 📊 Statistics
 
@@ -8,20 +8,21 @@ My solutions to exercises on the [Arm64 assembly](https://exercism.org/tracks/ar
 - **Total Exercises Available:** 77
 - **Exercises Completed:** 1 / 77 (1%)
 - **Progress:** ░░░░░░░░░░ 🔴
-- **Solutions Found Locally:** 1
-- **Track:** [Arm64 assembly](https://exercism.org/tracks/arm64-assembly)
-- **Practice Exercises:** 1
+- **Solutions Found Locally:** 2
+- **Track:** [x86-64 Assembly](https://exercism.org/tracks/arm64-assembly)
+- **Practice Exercises:** 2
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link | Solution |
 |----------|---------------|----------|
 | Hello World | [View on Exercism](https://exercism.org/tracks/arm64-assembly/exercises/hello-world) | [View Solution](hello-world/README.md) |
+| Hello World | [View on Exercism](https://exercism.org/tracks/x86-64-assembly/exercises/hello-world) | [View Solution](hello-world/README.md) |
 
 ---
 
 ## 🔗 Links
 
 - [Back to Main README](../README.md)
-- [Exercism Arm64 assembly Track](https://exercism.org/tracks/arm64-assembly)
+- [Exercism x86-64 Assembly Track](https://exercism.org/tracks/arm64-assembly)
 - [My Exercism Profile](https://exercism.org/profiles/princemuel)

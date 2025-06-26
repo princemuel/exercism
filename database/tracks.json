@@ -57,13 +57,13 @@
     "title": "awk",
     "category": "text-processing",
     "total": 87,
-    "completed": 5
+    "completed": 6
   },
   {
     "title": "bash",
     "category": "shell",
     "total": 92,
-    "completed": 12
+    "completed": 13
   },
   {
     "title": "cpp",
@@ -87,7 +87,7 @@
     "title": "typescript",
     "category": "web",
     "total": 100,
-    "completed": 29
+    "completed": 30
   },
   {
     "title": "python",
@@ -117,6 +117,6 @@
     "title": "perl5",
     "category": "text-processing",
     "total": 83,
-    "completed": 0
+    "completed": 1
   }
 ]
