@@ -1,25 +1,24 @@
 [package]
-    name    = "readmes"
-    version = "0.3.2"
-    authors = ["Prince Muel <vansomecsam@gmail.com>"]
-    edition = "2024"
+  authors = ["Prince Muel <vansomecsam@gmail.com>"]
+  edition = "2024"
+  name = "readmes"
+  version = "0.3.2"
 
 [lib]
-    path = "src/lib.rs"
+  path = "src/lib.rs"
 
 [[bin]]
-    path = "src/main.rs"
-    name = "readmes"
+  name = "readmes"
+  path = "src/main.rs"
 
 [dependencies]
-    handlebars = "6"
-    serde      = { version = "1", features = ["derive"] }
-    serde_json = "1"
-    time       = { version = "0.3", features = ["formatting"] }
+  handlebars = "6"
+  serde = { version = "1", features = ["derive"] }
+  serde_json = "1"
 
 [profile.release]
-    opt-level     = 3
-    codegen-units = 1
-    panic         = "abort"
-    debug         = 0         # No debug info in release build
-    strip         = "symbols" # Automatically strip symbols after build
+  codegen-units = 1
+  debug = 0         # No debug info in release build
+  opt-level = 3
+  panic = "abort"
+  strip = "symbols" # Automatically strip symbols after build
