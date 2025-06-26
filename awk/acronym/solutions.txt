@@ -1,0 +1,59 @@
+#!/usr/bin/env gawk -f
+{
+    gsub(/-/, " ")
+    gsub(/[^[:alpha:] ]/, "")
+
+    acronym = ""
+    while (match($0, /[[:alpha:]]+/)) {
+        word = substr($0, RSTART, RLENGTH)
+        acronym = acronym toupper(substr(word, 1, 1))
+        $0 = substr($0, RSTART + RLENGTH)
+    }
+    print acronym
+}
+
+
+#!/usr/bin/env gawk -f
+
+BEGIN { FPAT = "[[:alpha:]']+" }
+
+{
+    for (i = 1; i <= NF; i++) out = out substr($i, 1, 1)
+    print toupper(out)
+}
+
+
+#!/usr/bin/env gawk -f
+
+BEGIN {
+    # defining what constitutes a "word" makes this easy:
+    # starts with a letter and contains letters and apostrophes
+    FPAT = "[[:alpha:]][[:alpha:]']*"
+}
+{
+    acronym = ""
+    for (i = 1; i <= NF; i++)
+        acronym = acronym substr($i, 1, 1)
+    print toupper(acronym)
+}
+
+{
+    split(toupper($0), parts, /[ \-_]/)
+    for (i in parts)
+        res = res substr(parts[i], 1, 1)
+    print res
+}
+
+BEGIN {
+    FS="[ _-]+"
+}
+
+END {
+    i = 1
+    acronym = ""
+    while ($i) {
+        acronym = acronym toupper(substr($i, 0, 1))
+        i++
+    }
+    print acronym
+}
