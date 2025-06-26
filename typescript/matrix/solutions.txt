@@ -1,0 +1,22 @@
+export class Matrix {
+  private matrix: number[][];
+
+  constructor(matrixString: string) {
+    // Initialize the matrix by parsing the input string
+    this.matrix = matrixString.split('\n').map(row =>
+      row.split(' ').map(Number)
+    );
+  }
+
+  get rows(): number[][] {
+    // Return the rows of the matrix
+    return this.matrix;
+  }
+
+  get columns(): number[][] {
+    // Transpose the rows to get the columns
+    return this.matrix[0].map((_, colIndex) =>
+      this.matrix.map(row => row[colIndex])
+    );
+  }
+}

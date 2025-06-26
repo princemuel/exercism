@@ -1,5 +1,5 @@
 export class Matrix {
-    #rows: number[][];
+    #matrix: number[][];
     #columns?: number[][];
     /**
      * Constructs a Matrix from a string representation.
@@ -9,31 +9,35 @@ export class Matrix {
      * @param source - A string representation of the matrix.
      */
     constructor(source: string) {
-        this.#rows = source
+        this.#matrix = source
             .split("\n")
             .map((row) => row.trim().split(/\s+/).map(Number));
     }
 
     get rows(): number[][] {
-        return this.#rows;
+        return this.#matrix;
     }
 
     get columns(): number[][] {
-        return (this.#columns ??= this.#compute_cols());
+        return (this.#columns ??= this.#computeColumns());
     }
 
-    #compute_cols(): number[][] {
-        if (this.#rows.length === 0) return [];
-        const numCols = this.#rows[0].length;
+    /**
+     * Computes the columns of the matrix.
+     * This method is called lazily when the columns are accessed.
+     *
+     * @returns An array of arrays, where each inner array represents a column.
+     */
+    #computeColumns(): number[][] {
+        if (this.#matrix.length === 0) return [];
 
-        const cols: number[][] = Array.from({ length: numCols }, () => []);
+        const numCols = this.#matrix[0].length;
+        const columns: number[][] = Array.from({ length: numCols }, () => []);
 
-        for (let rowIdx = 0; rowIdx < this.#rows.length; rowIdx++) {
-            for (let colIdx = 0; colIdx < numCols; colIdx++) {
-                cols[colIdx].push(this.#rows[rowIdx][colIdx]);
-            }
+        for (const row of this.#matrix) {
+            for (const [idx, value] of row.entries()) columns[idx].push(value);
         }
 
-        return cols;
+        return columns;
     }
 }
