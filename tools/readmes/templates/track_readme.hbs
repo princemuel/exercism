@@ -4,6 +4,7 @@ My solutions to exercises on the [{{track_name}}](https://exercism.org/tracks/{{
 
 ## 📊 Statistics
 
+- **Track:** [{{track_name}}](https://exercism.org/tracks/{{track_slug}})
 {{#if has_metadata}}
 {{#with metadata}}
 - **Category:** {{capitalize category}}
@@ -15,20 +16,13 @@ My solutions to exercises on the [{{track_name}}](https://exercism.org/tracks/{{
 {{else}}
 - **Solutions Found Locally:** {{exercise_count}}
 {{/if}}
-- **Track:** [{{track_name}}](https://exercism.org/tracks/{{track_slug}})
-{{#if concept_count}}
-- **Concept Exercises:** {{concept_count}}
-{{/if}}
-{{#if practice_count}}
-- **Practice Exercises:** {{practice_count}}
-{{/if}}
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
+| Exercise | Exercism Link |
+|----------|---------------|
 {{#each exercises}}
-| {{name}} | [View on Exercism]({{url}}) | [View Solution]({{solution_path}}) |
+| {{name}}({{solution_path}}) | [View on Exercism]({{url}}) |
 {{/each}}
 
 ---
