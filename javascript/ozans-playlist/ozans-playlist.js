@@ -10,9 +10,7 @@
  * @param {string[]} playlist
  * @returns {string[]} new playlist with unique entries
  */
-export function removeDuplicates(playlist) {
-    throw new Error("Please implement the removeDuplicates function");
-}
+export const removeDuplicates = (playlist) => Array.from(new Set(playlist));
 
 /**
  * Checks whether a playlist includes a track.
@@ -21,9 +19,7 @@ export function removeDuplicates(playlist) {
  * @param {string} track
  * @returns {boolean} whether the track is in the playlist
  */
-export function hasTrack(playlist, track) {
-    throw new Error("Please implement the hasTrack function");
-}
+export const hasTrack = (playlist, track) => new Set(playlist).has(track);
 
 /**
  * Adds a track to a playlist.
@@ -32,10 +28,8 @@ export function hasTrack(playlist, track) {
  * @param {string} track
  * @returns {string[]} new playlist
  */
-export function addTrack(playlist, track) {
-    throw new Error("Please implement the addTrack function");
-}
-
+export const addTrack = (playlist, track) =>
+    Array.from(new Set(playlist.concat(track)));
 /**
  * Deletes a track from a playlist.
  *
@@ -43,9 +37,8 @@ export function addTrack(playlist, track) {
  * @param {string} track
  * @returns {string[]} new playlist
  */
-export function deleteTrack(playlist, track) {
-    throw new Error("Please implement the deleteTrack function");
-}
+export const deleteTrack = (playlist, track) =>
+    Array.from(new Set(playlist.filter((t) => t !== track)));
 
 /**
  * Lists the unique artists in a playlist.
@@ -53,6 +46,5 @@ export function deleteTrack(playlist, track) {
  * @param {string[]} playlist
  * @returns {string[]} list of artists
  */
-export function listArtists(playlist) {
-    throw new Error("Please implement the listArtists function");
-}
+export const listArtists = (playlist) =>
+    Array.from(new Set(playlist.map((track) => track.split(" - ")[1])));
