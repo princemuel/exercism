@@ -1,13 +1,13 @@
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Allergen {
-    Eggs         = 1 << 0u8,
-    Peanuts      = 1 << 1u8,
-    Shellfish    = 1 << 2u8,
-    Strawberries = 1 << 3u8,
-    Tomatoes     = 1 << 4u8,
-    Chocolate    = 1 << 5u8,
-    Pollen       = 1 << 6u8,
-    Cats         = 1 << 7u8,
+    Eggs         = 1 << 0,
+    Peanuts      = 1 << 1,
+    Shellfish    = 1 << 2,
+    Strawberries = 1 << 3,
+    Tomatoes     = 1 << 4,
+    Chocolate    = 1 << 5,
+    Pollen       = 1 << 6,
+    Cats         = 1 << 7,
 }
 
 pub struct Allergies {
