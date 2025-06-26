@@ -4,33 +4,32 @@ My solutions to exercises on the [Go](https://exercism.org/tracks/go) track on E
 
 ## 📊 Statistics
 
+- **Track:** [Go](https://exercism.org/tracks/go)
 - **Category:** Concurrent
 - **Total Exercises Available:** 141
 - **Exercises Completed:** 14 / 141 (10%)
 - **Progress:** █░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 15
-- **Track:** [Go](https://exercism.org/tracks/go)
-- **Practice Exercises:** 15
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
-| Animal Magic | [View on Exercism](https://exercism.org/tracks/go/exercises/animal-magic) | [View Solution](animal-magic/README.md) |
-| Annalyns Infiltration | [View on Exercism](https://exercism.org/tracks/go/exercises/annalyns-infiltration) | [View Solution](annalyns-infiltration/README.md) |
-| Bird Watcher | [View on Exercism](https://exercism.org/tracks/go/exercises/bird-watcher) | [View Solution](bird-watcher/README.md) |
-| Blackjack | [View on Exercism](https://exercism.org/tracks/go/exercises/blackjack) | [View Solution](blackjack/README.md) |
-| Card Tricks | [View on Exercism](https://exercism.org/tracks/go/exercises/card-tricks) | [View Solution](card-tricks/README.md) |
-| Cars Assemble | [View on Exercism](https://exercism.org/tracks/go/exercises/cars-assemble) | [View Solution](cars-assemble/README.md) |
-| Hamming | [View on Exercism](https://exercism.org/tracks/go/exercises/hamming) | [View Solution](hamming/README.md) |
-| Hello World | [View on Exercism](https://exercism.org/tracks/go/exercises/hello-world) | [View Solution](hello-world/README.md) |
-| Lasagna | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna) | [View Solution](lasagna/README.md) |
-| Need For Speed | [View on Exercism](https://exercism.org/tracks/go/exercises/need-for-speed) | [View Solution](need-for-speed/README.md) |
-| Party Robot | [View on Exercism](https://exercism.org/tracks/go/exercises/party-robot) | [View Solution](party-robot/README.md) |
-| Two Fer | [View on Exercism](https://exercism.org/tracks/go/exercises/two-fer) | [View Solution](two-fer/README.md) |
-| Vehicle Purchase | [View on Exercism](https://exercism.org/tracks/go/exercises/vehicle-purchase) | [View Solution](vehicle-purchase/README.md) |
-| Weather Forecast | [View on Exercism](https://exercism.org/tracks/go/exercises/weather-forecast) | [View Solution](weather-forecast/README.md) |
-| Welcome To Tech Palace | [View on Exercism](https://exercism.org/tracks/go/exercises/welcome-to-tech-palace) | [View Solution](welcome-to-tech-palace/README.md) |
+| Exercise | Exercism Link |
+|----------|---------------|
+| Animal Magic(animal-magic/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/animal-magic) |
+| Annalyns Infiltration(annalyns-infiltration/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/annalyns-infiltration) |
+| Bird Watcher(bird-watcher/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/bird-watcher) |
+| Blackjack(blackjack/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/blackjack) |
+| Card Tricks(card-tricks/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/card-tricks) |
+| Cars Assemble(cars-assemble/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/cars-assemble) |
+| Hamming(hamming/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/hamming) |
+| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/hello-world) |
+| Lasagna(lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna) |
+| Need For Speed(need-for-speed/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/need-for-speed) |
+| Party Robot(party-robot/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/party-robot) |
+| Two Fer(two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/two-fer) |
+| Vehicle Purchase(vehicle-purchase/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/vehicle-purchase) |
+| Weather Forecast(weather-forecast/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/weather-forecast) |
+| Welcome To Tech Palace(welcome-to-tech-palace/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/welcome-to-tech-palace) |
 
 ---
 

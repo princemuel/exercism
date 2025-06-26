@@ -4,25 +4,24 @@ My solutions to exercises on the [Jq](https://exercism.org/tracks/jq) track on E
 
 ## 📊 Statistics
 
+- **Track:** [Jq](https://exercism.org/tracks/jq)
 - **Category:** Data-transformation
 - **Total Exercises Available:** 74
 - **Exercises Completed:** 7 / 74 (9%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 7
-- **Track:** [Jq](https://exercism.org/tracks/jq)
-- **Practice Exercises:** 7
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
-| Assembly Line | [View on Exercism](https://exercism.org/tracks/jq/exercises/assembly-line) | [View Solution](assembly-line/README.md) |
-| Bird Count | [View on Exercism](https://exercism.org/tracks/jq/exercises/bird-count) | [View Solution](bird-count/README.md) |
-| Hello World | [View on Exercism](https://exercism.org/tracks/jq/exercises/hello-world) | [View Solution](hello-world/README.md) |
-| Log Line Parser | [View on Exercism](https://exercism.org/tracks/jq/exercises/log-line-parser) | [View Solution](log-line-parser/README.md) |
-| Reverse String | [View on Exercism](https://exercism.org/tracks/jq/exercises/reverse-string) | [View Solution](reverse-string/README.md) |
-| Shopping | [View on Exercism](https://exercism.org/tracks/jq/exercises/shopping) | [View Solution](shopping/README.md) |
-| Two Fer | [View on Exercism](https://exercism.org/tracks/jq/exercises/two-fer) | [View Solution](two-fer/README.md) |
+| Exercise | Exercism Link |
+|----------|---------------|
+| Assembly Line(assembly-line/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/assembly-line) |
+| Bird Count(bird-count/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/bird-count) |
+| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/hello-world) |
+| Log Line Parser(log-line-parser/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/log-line-parser) |
+| Reverse String(reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/reverse-string) |
+| Shopping(shopping/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/shopping) |
+| Two Fer(two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/two-fer) |
 
 ---
 

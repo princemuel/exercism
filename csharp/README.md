@@ -4,19 +4,18 @@ My solutions to exercises on the [C#](https://exercism.org/tracks/csharp) track 
 
 ## 📊 Statistics
 
+- **Track:** [C#](https://exercism.org/tracks/csharp)
 - **Category:** General-purpose
 - **Total Exercises Available:** 175
 - **Exercises Completed:** 1 / 175 (1%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 1
-- **Track:** [C#](https://exercism.org/tracks/csharp)
-- **Practice Exercises:** 1
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
-| Hello World | [View on Exercism](https://exercism.org/tracks/csharp/exercises/hello-world) | [View Solution](hello-world/README.md) |
+| Exercise | Exercism Link |
+|----------|---------------|
+| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/csharp/exercises/hello-world) |
 
 ---
 

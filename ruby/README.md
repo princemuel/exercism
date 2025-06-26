@@ -4,20 +4,19 @@ My solutions to exercises on the [Ruby](https://exercism.org/tracks/ruby) track 
 
 ## 📊 Statistics
 
+- **Track:** [Ruby](https://exercism.org/tracks/ruby)
 - **Category:** General-purpose
 - **Total Exercises Available:** 120
 - **Exercises Completed:** 2 / 120 (2%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 2
-- **Track:** [Ruby](https://exercism.org/tracks/ruby)
-- **Practice Exercises:** 2
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
-| Hello World | [View on Exercism](https://exercism.org/tracks/ruby/exercises/hello-world) | [View Solution](hello-world/README.md) |
-| Lasagna | [View on Exercism](https://exercism.org/tracks/ruby/exercises/lasagna) | [View Solution](lasagna/README.md) |
+| Exercise | Exercism Link |
+|----------|---------------|
+| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/hello-world) |
+| Lasagna(lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/lasagna) |
 
 ---
 

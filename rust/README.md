@@ -4,49 +4,48 @@ My solutions to exercises on the [Rust](https://exercism.org/tracks/rust) track 
 
 ## 📊 Statistics
 
+- **Track:** [Rust](https://exercism.org/tracks/rust)
 - **Category:** Systems
 - **Total Exercises Available:** 99
 - **Exercises Completed:** 31 / 99 (31%)
 - **Progress:** ███░░░░░░░ 🟠
 - **Solutions Found Locally:** 31
-- **Track:** [Rust](https://exercism.org/tracks/rust)
-- **Practice Exercises:** 31
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
-| Anagram | [View on Exercism](https://exercism.org/tracks/rust/exercises/anagram) | [View Solution](anagram/README.md) |
-| Armstrong Numbers | [View on Exercism](https://exercism.org/tracks/rust/exercises/armstrong-numbers) | [View Solution](armstrong-numbers/README.md) |
-| Beer Song | [View on Exercism](https://exercism.org/tracks/rust/exercises/beer-song) | [View Solution](beer-song/README.md) |
-| Bob | [View on Exercism](https://exercism.org/tracks/rust/exercises/bob) | [View Solution](bob/README.md) |
-| Bottle Song | [View on Exercism](https://exercism.org/tracks/rust/exercises/bottle-song) | [View Solution](bottle-song/README.md) |
-| Clock | [View on Exercism](https://exercism.org/tracks/rust/exercises/clock) | [View Solution](clock/README.md) |
-| Collatz Conjecture | [View on Exercism](https://exercism.org/tracks/rust/exercises/collatz-conjecture) | [View Solution](collatz-conjecture/README.md) |
-| Difference Of Squares | [View on Exercism](https://exercism.org/tracks/rust/exercises/difference-of-squares) | [View Solution](difference-of-squares/README.md) |
-| Eliuds Eggs | [View on Exercism](https://exercism.org/tracks/rust/exercises/eliuds-eggs) | [View Solution](eliuds-eggs/README.md) |
-| Gigasecond | [View on Exercism](https://exercism.org/tracks/rust/exercises/gigasecond) | [View Solution](gigasecond/README.md) |
-| Grains | [View on Exercism](https://exercism.org/tracks/rust/exercises/grains) | [View Solution](grains/README.md) |
-| Hamming | [View on Exercism](https://exercism.org/tracks/rust/exercises/hamming) | [View Solution](hamming/README.md) |
-| Hello World | [View on Exercism](https://exercism.org/tracks/rust/exercises/hello-world) | [View Solution](hello-world/README.md) |
-| High Scores | [View on Exercism](https://exercism.org/tracks/rust/exercises/high-scores) | [View Solution](high-scores/README.md) |
-| Isogram | [View on Exercism](https://exercism.org/tracks/rust/exercises/isogram) | [View Solution](isogram/README.md) |
-| Leap | [View on Exercism](https://exercism.org/tracks/rust/exercises/leap) | [View Solution](leap/README.md) |
-| Luhn | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn) | [View Solution](luhn/README.md) |
-| Luhn From | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn-from) | [View Solution](luhn-from/README.md) |
-| Luhn Trait | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn-trait) | [View Solution](luhn-trait/README.md) |
-| Matching Brackets | [View on Exercism](https://exercism.org/tracks/rust/exercises/matching-brackets) | [View Solution](matching-brackets/README.md) |
-| Minesweeper | [View on Exercism](https://exercism.org/tracks/rust/exercises/minesweeper) | [View Solution](minesweeper/README.md) |
-| Nth Prime | [View on Exercism](https://exercism.org/tracks/rust/exercises/nth-prime) | [View Solution](nth-prime/README.md) |
-| Prime Factors | [View on Exercism](https://exercism.org/tracks/rust/exercises/prime-factors) | [View Solution](prime-factors/README.md) |
-| Proverb | [View on Exercism](https://exercism.org/tracks/rust/exercises/proverb) | [View Solution](proverb/README.md) |
-| Raindrops | [View on Exercism](https://exercism.org/tracks/rust/exercises/raindrops) | [View Solution](raindrops/README.md) |
-| Reverse String | [View on Exercism](https://exercism.org/tracks/rust/exercises/reverse-string) | [View Solution](reverse-string/README.md) |
-| Rna Transcription | [View on Exercism](https://exercism.org/tracks/rust/exercises/rna-transcription) | [View Solution](rna-transcription/README.md) |
-| Space Age | [View on Exercism](https://exercism.org/tracks/rust/exercises/space-age) | [View Solution](space-age/README.md) |
-| Sublist | [View on Exercism](https://exercism.org/tracks/rust/exercises/sublist) | [View Solution](sublist/README.md) |
-| Sum Of Multiples | [View on Exercism](https://exercism.org/tracks/rust/exercises/sum-of-multiples) | [View Solution](sum-of-multiples/README.md) |
-| Triangle | [View on Exercism](https://exercism.org/tracks/rust/exercises/triangle) | [View Solution](triangle/README.md) |
+| Exercise | Exercism Link |
+|----------|---------------|
+| Anagram(anagram/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/anagram) |
+| Armstrong Numbers(armstrong-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/armstrong-numbers) |
+| Beer Song(beer-song/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/beer-song) |
+| Bob(bob/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/bob) |
+| Bottle Song(bottle-song/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/bottle-song) |
+| Clock(clock/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/clock) |
+| Collatz Conjecture(collatz-conjecture/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/collatz-conjecture) |
+| Difference Of Squares(difference-of-squares/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/difference-of-squares) |
+| Eliuds Eggs(eliuds-eggs/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/eliuds-eggs) |
+| Gigasecond(gigasecond/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/gigasecond) |
+| Grains(grains/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/grains) |
+| Hamming(hamming/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/hamming) |
+| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/hello-world) |
+| High Scores(high-scores/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/high-scores) |
+| Isogram(isogram/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/isogram) |
+| Leap(leap/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/leap) |
+| Luhn(luhn/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn) |
+| Luhn From(luhn-from/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn-from) |
+| Luhn Trait(luhn-trait/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/luhn-trait) |
+| Matching Brackets(matching-brackets/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/matching-brackets) |
+| Minesweeper(minesweeper/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/minesweeper) |
+| Nth Prime(nth-prime/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/nth-prime) |
+| Prime Factors(prime-factors/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/prime-factors) |
+| Proverb(proverb/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/proverb) |
+| Raindrops(raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/raindrops) |
+| Reverse String(reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/reverse-string) |
+| Rna Transcription(rna-transcription/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/rna-transcription) |
+| Space Age(space-age/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/space-age) |
+| Sublist(sublist/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/sublist) |
+| Sum Of Multiples(sum-of-multiples/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/sum-of-multiples) |
+| Triangle(triangle/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/triangle) |
 
 ---
 

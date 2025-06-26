@@ -4,19 +4,18 @@ My solutions to exercises on the [x86-64 Assembly](https://exercism.org/tracks/x
 
 ## 📊 Statistics
 
+- **Track:** [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly)
 - **Category:** Hardware
 - **Total Exercises Available:** 57
 - **Exercises Completed:** 1 / 57 (2%)
 - **Progress:** ░░░░░░░░░░ 🔴
 - **Solutions Found Locally:** 1
-- **Track:** [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly)
-- **Practice Exercises:** 1
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
-| Hello World | [View on Exercism](https://exercism.org/tracks/x86-64-assembly/exercises/hello-world) | [View Solution](hello-world/README.md) |
+| Exercise | Exercism Link |
+|----------|---------------|
+| Hello World(hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/x86-64-assembly/exercises/hello-world) |
 
 ---
 

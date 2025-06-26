@@ -4,49 +4,48 @@ My solutions to exercises on the [Python](https://exercism.org/tracks/python) tr
 
 ## 📊 Statistics
 
+- **Track:** [Python](https://exercism.org/tracks/python)
 - **Category:** General-purpose
 - **Total Exercises Available:** 141
 - **Exercises Completed:** 32 / 141 (23%)
 - **Progress:** ██░░░░░░░░ 🟡
 - **Solutions Found Locally:** 31
-- **Track:** [Python](https://exercism.org/tracks/python)
-- **Practice Exercises:** 31
 
 ## 🏋️ Exercises
 
-| Exercise | Exercism Link | Solution |
-|----------|---------------|----------|
-| All Your Base | [View on Exercism](https://exercism.org/tracks/python/exercises/all-your-base) | [View Solution](all-your-base/README.md) |
-| Armstrong Numbers | [View on Exercism](https://exercism.org/tracks/python/exercises/armstrong-numbers) | [View Solution](armstrong-numbers/README.md) |
-| Black Jack | [View on Exercism](https://exercism.org/tracks/python/exercises/black-jack) | [View Solution](black-jack/README.md) |
-| Bob | [View on Exercism](https://exercism.org/tracks/python/exercises/bob) | [View Solution](bob/README.md) |
-| Card Games | [View on Exercism](https://exercism.org/tracks/python/exercises/card-games) | [View Solution](card-games/README.md) |
-| Cater Waiter | [View on Exercism](https://exercism.org/tracks/python/exercises/cater-waiter) | [View Solution](cater-waiter/README.md) |
-| Chaitanas Colossal Coaster | [View on Exercism](https://exercism.org/tracks/python/exercises/chaitanas-colossal-coaster) | [View Solution](chaitanas-colossal-coaster/README.md) |
-| Collatz Conjecture | [View on Exercism](https://exercism.org/tracks/python/exercises/collatz-conjecture) | [View Solution](collatz-conjecture/README.md) |
-| Currency Exchange | [View on Exercism](https://exercism.org/tracks/python/exercises/currency-exchange) | [View Solution](currency-exchange/README.md) |
-| Darts | [View on Exercism](https://exercism.org/tracks/python/exercises/darts) | [View Solution](darts/README.md) |
-| Ghost Gobble Arcade Game | [View on Exercism](https://exercism.org/tracks/python/exercises/ghost-gobble-arcade-game) | [View Solution](ghost-gobble-arcade-game/README.md) |
-| Grains | [View on Exercism](https://exercism.org/tracks/python/exercises/grains) | [View Solution](grains/README.md) |
-| Hamming | [View on Exercism](https://exercism.org/tracks/python/exercises/hamming) | [View Solution](hamming/README.md) |
-| Inventory Management | [View on Exercism](https://exercism.org/tracks/python/exercises/inventory-management) | [View Solution](inventory-management/README.md) |
-| Isogram | [View on Exercism](https://exercism.org/tracks/python/exercises/isogram) | [View Solution](isogram/README.md) |
-| Leap | [View on Exercism](https://exercism.org/tracks/python/exercises/leap) | [View Solution](leap/README.md) |
-| Little Sisters Essay | [View on Exercism](https://exercism.org/tracks/python/exercises/little-sisters-essay) | [View Solution](little-sisters-essay/README.md) |
-| Little Sisters Vocab | [View on Exercism](https://exercism.org/tracks/python/exercises/little-sisters-vocab) | [View Solution](little-sisters-vocab/README.md) |
-| Making The Grade | [View on Exercism](https://exercism.org/tracks/python/exercises/making-the-grade) | [View Solution](making-the-grade/README.md) |
-| Matching Brackets | [View on Exercism](https://exercism.org/tracks/python/exercises/matching-brackets) | [View Solution](matching-brackets/README.md) |
-| Mecha Munch Management | [View on Exercism](https://exercism.org/tracks/python/exercises/mecha-munch-management) | [View Solution](mecha-munch-management/README.md) |
-| Meltdown Mitigation | [View on Exercism](https://exercism.org/tracks/python/exercises/meltdown-mitigation) | [View Solution](meltdown-mitigation/README.md) |
-| Nth Prime | [View on Exercism](https://exercism.org/tracks/python/exercises/nth-prime) | [View Solution](nth-prime/README.md) |
-| Pig Latin | [View on Exercism](https://exercism.org/tracks/python/exercises/pig-latin) | [View Solution](pig-latin/README.md) |
-| Raindrops | [View on Exercism](https://exercism.org/tracks/python/exercises/raindrops) | [View Solution](raindrops/README.md) |
-| Resistor Color | [View on Exercism](https://exercism.org/tracks/python/exercises/resistor-color) | [View Solution](resistor-color/README.md) |
-| Resistor Color Duo | [View on Exercism](https://exercism.org/tracks/python/exercises/resistor-color-duo) | [View Solution](resistor-color-duo/README.md) |
-| Square Root | [View on Exercism](https://exercism.org/tracks/python/exercises/square-root) | [View Solution](square-root/README.md) |
-| Sublist | [View on Exercism](https://exercism.org/tracks/python/exercises/sublist) | [View Solution](sublist/README.md) |
-| Tisbury Treasure Hunt | [View on Exercism](https://exercism.org/tracks/python/exercises/tisbury-treasure-hunt) | [View Solution](tisbury-treasure-hunt/README.md) |
-| Triangle | [View on Exercism](https://exercism.org/tracks/python/exercises/triangle) | [View Solution](triangle/README.md) |
+| Exercise | Exercism Link |
+|----------|---------------|
+| All Your Base(all-your-base/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/all-your-base) |
+| Armstrong Numbers(armstrong-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/armstrong-numbers) |
+| Black Jack(black-jack/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/black-jack) |
+| Bob(bob/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/bob) |
+| Card Games(card-games/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/card-games) |
+| Cater Waiter(cater-waiter/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/cater-waiter) |
+| Chaitanas Colossal Coaster(chaitanas-colossal-coaster/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/chaitanas-colossal-coaster) |
+| Collatz Conjecture(collatz-conjecture/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/collatz-conjecture) |
+| Currency Exchange(currency-exchange/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/currency-exchange) |
+| Darts(darts/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/darts) |
+| Ghost Gobble Arcade Game(ghost-gobble-arcade-game/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/ghost-gobble-arcade-game) |
+| Grains(grains/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/grains) |
+| Hamming(hamming/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/hamming) |
+| Inventory Management(inventory-management/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/inventory-management) |
+| Isogram(isogram/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/isogram) |
+| Leap(leap/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/leap) |
+| Little Sisters Essay(little-sisters-essay/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/little-sisters-essay) |
+| Little Sisters Vocab(little-sisters-vocab/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/little-sisters-vocab) |
+| Making The Grade(making-the-grade/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/making-the-grade) |
+| Matching Brackets(matching-brackets/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/matching-brackets) |
+| Mecha Munch Management(mecha-munch-management/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/mecha-munch-management) |
+| Meltdown Mitigation(meltdown-mitigation/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/meltdown-mitigation) |
+| Nth Prime(nth-prime/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/nth-prime) |
+| Pig Latin(pig-latin/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/pig-latin) |
+| Raindrops(raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/raindrops) |
+| Resistor Color(resistor-color/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/resistor-color) |
+| Resistor Color Duo(resistor-color-duo/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/resistor-color-duo) |
+| Square Root(square-root/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/square-root) |
+| Sublist(sublist/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/sublist) |
+| Tisbury Treasure Hunt(tisbury-treasure-hunt/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/tisbury-treasure-hunt) |
+| Triangle(triangle/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/triangle) |
 
 ---
 
