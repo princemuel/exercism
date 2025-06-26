@@ -47,4 +47,4 @@ export const deleteTrack = (playlist, track) =>
  * @returns {string[]} list of artists
  */
 export const listArtists = (playlist) =>
-    Array.from(new Set(playlist.map((track) => track.split(" - ")[1])));
+    Array.from(new Set(playlist.map((track) => track.split(" - ").pop() ?? "")));
