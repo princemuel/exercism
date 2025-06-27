@@ -5,9 +5,8 @@ class Alien {
  public:
   int32_t x_coordinate;
   int32_t y_coordinate;
-  int32_t health;
 
-  Alien(int32_t x, int32_t y) : x_coordinate(x), y_coordinate(y), health(3) {}
+  Alien(int32_t x, int32_t y) : x_coordinate{x}, y_coordinate{y} {}
 
   int32_t get_health() const { return health; }
 
@@ -26,9 +25,12 @@ class Alien {
   }
 
   bool collision_detection(const Alien& other) const {
-    return x_coordinate == other.x_coordinate &&
+    return x_coordinate == other.x_coordinate and
            y_coordinate == other.y_coordinate;
   }
+
+ private:
+  int32_t health{3};
 };
 
 }  // namespace targets
