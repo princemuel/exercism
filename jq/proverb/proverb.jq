@@ -1,7 +1,8 @@
-.strings as $w |
-if ($w | length) == 0 then
+.strings |
+if length == 0 then
   []
 else
-  [range($w | length - 1) | . as $i | "For want of a \($w[$i]) the \($w[$i + 1]) was lost."] +
-  ["And all for the want of a \($w[0])."]
+  [range(length - 1) as $i | .[$i:$i+2]] as $windows |
+  [$windows[] | "For want of a \(.[0]) the \(.[1]) was lost."] +
+  ["And all for the want of a \(.[0])."]
 end
