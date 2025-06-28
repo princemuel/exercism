@@ -7,14 +7,15 @@ My solutions to [Rust](https://exercism.org/tracks/rust) exercises on Exercism.
 - Track: [Rust](https://exercism.org/tracks/rust)
 - Category: Systems
 - Total Exercises Available: 99
-- Exercises Completed: 31 / 99 (31%)
+- Exercises Completed: 32 / 99 (32%)
 - Progress: ███░░░░░░░ 🟠
-- Solutions Found Locally: 31
+- Solutions Found Locally: 32
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link |
 |----------|---------------|
+| [Allergies](allergies/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/allergies) |
 | [Anagram](anagram/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/anagram) |
 | [Armstrong Numbers](armstrong-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/armstrong-numbers) |
 | [Beer Song](beer-song/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/beer-song) |

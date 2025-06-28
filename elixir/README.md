@@ -5,7 +5,7 @@ My solutions to [Elixir](https://exercism.org/tracks/elixir) exercises on Exerci
 ## 📊 Stats
 
 - Track: [Elixir](https://exercism.org/tracks/elixir)
-- Category: Concurrent
+- Category: Functional
 - Total Exercises Available: 164
 - Exercises Completed: 1 / 164 (1%)
 - Progress: ░░░░░░░░░░ 🔴

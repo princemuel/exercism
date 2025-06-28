@@ -5,7 +5,7 @@ My solutions to [Bash](https://exercism.org/tracks/bash) exercises on Exercism.
 ## 📊 Stats
 
 - Track: [Bash](https://exercism.org/tracks/bash)
-- Category: Shell
+- Category: Shell-scripting
 - Total Exercises Available: 92
 - Exercises Completed: 13 / 92 (14%)
 - Progress: █░░░░░░░░░ 🟡

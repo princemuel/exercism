@@ -7,9 +7,9 @@ My solutions to [Julia](https://exercism.org/tracks/julia) exercises on Exercism
 - Track: [Julia](https://exercism.org/tracks/julia)
 - Category: Scientific
 - Total Exercises Available: 109
-- Exercises Completed: 13 / 109 (12%)
+- Exercises Completed: 14 / 109 (13%)
 - Progress: █░░░░░░░░░ 🟡
-- Solutions Found Locally: 13
+- Solutions Found Locally: 14
 
 ## 🏋️ Exercises
 
@@ -26,6 +26,7 @@ My solutions to [Julia](https://exercism.org/tracks/julia) exercises on Exercism
 | [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/julia/exercises/lasagna) |
 | [Leap](leap/README.md) | [View on Exercism](https://exercism.org/tracks/julia/exercises/leap) |
 | [Mixed Juices](mixed-juices/README.md) | [View on Exercism](https://exercism.org/tracks/julia/exercises/mixed-juices) |
+| [Perfect Numbers](perfect-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/julia/exercises/perfect-numbers) |
 | [Raindrops](raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/julia/exercises/raindrops) |
 | [Secrets](secrets/README.md) | [View on Exercism](https://exercism.org/tracks/julia/exercises/secrets) |
 

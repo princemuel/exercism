@@ -5,7 +5,7 @@ My solutions to [Go](https://exercism.org/tracks/go) exercises on Exercism.
 ## 📊 Stats
 
 - Track: [Go](https://exercism.org/tracks/go)
-- Category: Concurrent
+- Category: Systems
 - Total Exercises Available: 141
 - Exercises Completed: 14 / 141 (10%)
 - Progress: █░░░░░░░░░ 🔴

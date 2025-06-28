@@ -5,7 +5,7 @@ My solutions to [AWK](https://exercism.org/tracks/awk) exercises on Exercism.
 ## 📊 Stats
 
 - Track: [AWK](https://exercism.org/tracks/awk)
-- Category: Text-processing
+- Category: Shell-scripting
 - Total Exercises Available: 87
 - Exercises Completed: 6 / 87 (7%)
 - Progress: ░░░░░░░░░░ 🔴

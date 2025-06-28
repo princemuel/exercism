@@ -7,14 +7,15 @@ My solutions to [C](https://exercism.org/tracks/c) exercises on Exercism.
 - Track: [C](https://exercism.org/tracks/c)
 - Category: Systems
 - Total Exercises Available: 84
-- Exercises Completed: 9 / 84 (11%)
+- Exercises Completed: 10 / 84 (12%)
 - Progress: █░░░░░░░░░ 🟡
-- Solutions Found Locally: 9
+- Solutions Found Locally: 10
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link |
 |----------|---------------|
+| [Allergies](allergies/README.md) | [View on Exercism](https://exercism.org/tracks/c/exercises/allergies) |
 | [Collatz Conjecture](collatz-conjecture/README.md) | [View on Exercism](https://exercism.org/tracks/c/exercises/collatz-conjecture) |
 | [Darts](darts/README.md) | [View on Exercism](https://exercism.org/tracks/c/exercises/darts) |
 | [Difference Of Squares](difference-of-squares/README.md) | [View on Exercism](https://exercism.org/tracks/c/exercises/difference-of-squares) |

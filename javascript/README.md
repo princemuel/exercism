@@ -7,9 +7,9 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 - Track: [JavaScript](https://exercism.org/tracks/javascript)
 - Category: Web
 - Total Exercises Available: 153
-- Exercises Completed: 35 / 153 (23%)
+- Exercises Completed: 37 / 153 (24%)
 - Progress: ██░░░░░░░░ 🟡
-- Solutions Found Locally: 37
+- Solutions Found Locally: 39
 
 ## 🏋️ Exercises
 
@@ -17,6 +17,7 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 |----------|---------------|
 | [Amusement Park](amusement-park/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/amusement-park) |
 | [Annalyns Infiltration](annalyns-infiltration/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/annalyns-infiltration) |
+| [Appointment Time](appointment-time/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/appointment-time) |
 | [Bank Account](bank-account/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/bank-account) |
 | [Bird Watcher](bird-watcher/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/bird-watcher) |
 | [Collatz Conjecture](collatz-conjecture/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/collatz-conjecture) |
@@ -40,6 +41,7 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 | [Leap](leap/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/leap) |
 | [Lucky Numbers](lucky-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/lucky-numbers) |
 | [Mixed Juices](mixed-juices/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/mixed-juices) |
+| [Ozans Playlist](ozans-playlist/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/ozans-playlist) |
 | [Pangram](pangram/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/pangram) |
 | [Poetry Club Door Policy](poetry-club-door-policy/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/poetry-club-door-policy) |
 | [Raindrops](raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/raindrops) |

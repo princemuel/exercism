@@ -5,11 +5,11 @@ My solutions to [Jq](https://exercism.org/tracks/jq) exercises on Exercism.
 ## 📊 Stats
 
 - Track: [Jq](https://exercism.org/tracks/jq)
-- Category: Data-transformation
+- Category: Shell-scripting
 - Total Exercises Available: 74
-- Exercises Completed: 7 / 74 (9%)
-- Progress: ░░░░░░░░░░ 🔴
-- Solutions Found Locally: 7
+- Exercises Completed: 8 / 74 (11%)
+- Progress: █░░░░░░░░░ 🟡
+- Solutions Found Locally: 8
 
 ## 🏋️ Exercises
 
@@ -19,6 +19,7 @@ My solutions to [Jq](https://exercism.org/tracks/jq) exercises on Exercism.
 | [Bird Count](bird-count/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/bird-count) |
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/hello-world) |
 | [Log Line Parser](log-line-parser/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/log-line-parser) |
+| [Proverb](proverb/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/proverb) |
 | [Reverse String](reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/reverse-string) |
 | [Shopping](shopping/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/shopping) |
 | [Two Fer](two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/jq/exercises/two-fer) |

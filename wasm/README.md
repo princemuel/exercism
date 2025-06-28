@@ -5,7 +5,7 @@ My solutions to [Web Assembly](https://exercism.org/tracks/wasm) exercises on Ex
 ## 📊 Stats
 
 - Track: [Web Assembly](https://exercism.org/tracks/wasm)
-- Category: Performance
+- Category: Assembly
 - Total Exercises Available: 85
 - Exercises Completed: 2 / 85 (2%)
 - Progress: ░░░░░░░░░░ 🔴

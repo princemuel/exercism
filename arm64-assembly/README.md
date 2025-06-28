@@ -5,7 +5,7 @@ My solutions to [ARM64 Assembly](https://exercism.org/tracks/arm64-assembly) exe
 ## 📊 Stats
 
 - Track: [ARM64 Assembly](https://exercism.org/tracks/arm64-assembly)
-- Category: Hardware
+- Category: Assembly
 - Total Exercises Available: 77
 - Exercises Completed: 1 / 77 (1%)
 - Progress: ░░░░░░░░░░ 🔴

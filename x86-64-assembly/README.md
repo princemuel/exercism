@@ -5,7 +5,7 @@ My solutions to [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly) e
 ## 📊 Stats
 
 - Track: [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly)
-- Category: Hardware
+- Category: Assembly
 - Total Exercises Available: 57
 - Exercises Completed: 1 / 57 (2%)
 - Progress: ░░░░░░░░░░ 🔴

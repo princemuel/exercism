@@ -5,7 +5,7 @@ My solutions to [Perl5](https://exercism.org/tracks/perl5) exercises on Exercism
 ## 📊 Stats
 
 - Track: [Perl5](https://exercism.org/tracks/perl5)
-- Category: Text-processing
+- Category: Shell-scripting
 - Total Exercises Available: 83
 - Exercises Completed: 1 / 83 (1%)
 - Progress: ░░░░░░░░░░ 🔴
