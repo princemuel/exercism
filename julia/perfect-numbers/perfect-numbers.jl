@@ -1,6 +1,5 @@
-@inline function is_positive_int(n::Integer)
+@inline is_positive_int(n::Integer) =
     n <= 0 && throw(DomainError(n, "Only positive integers are allowed"))
-end
 
 function aliquot_sum(n::Integer)
     is_positive_int(n)
@@ -20,7 +19,7 @@ function aliquot_sum(n::Integer)
     return sum_divisors
 end
 
-isperfect(n::Integer) = aliquot_sum(n) == n
-isabundant(n::Integer) = aliquot_sum(n) > n
-isdeficient(n::Integer) = aliquot_sum(n) < n
+isperfect(n::Integer) = n == aliquot_sum(n)
+isabundant(n::Integer) = n < aliquot_sum(n)
+isdeficient(n::Integer) = n > aliquot_sum(n)
 
