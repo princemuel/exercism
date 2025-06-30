@@ -23,13 +23,13 @@ steps:
     ; Pre-calculate the "odd case" result (3n + 1)
     ; LEA is used as a fast arithmetic instruction: esi = edi * 3 + 1
     ; We calculate this speculatively before knowing if the number is odd
-    lea esi, [edi * 3 + 1]
+    lea esi, [rdi*3+1]
 
     ; Always perform the "even case" operation (divide by 2)
     ; SHR shifts bits right by 1, equivalent to dividing by 2
     ; CRUCIAL: If the original number was odd, the LSB (1) shifts into carry flag
     ; If the original number was even, the LSB (0) clears the carry flag
-shr edi, 1
+    shr edi, 1
 
     ; Conditional move based on carry flag (our even/odd detector)
     ; If carry flag is set (original number was odd), use the pre-calculated 3n+1 value
@@ -50,7 +50,6 @@ shr edi, 1
 .failed:
     ; Return -1 for invalid input
     ; Since eax was initialized to 0, NOT flips all bits: 0 becomes 0xFFFFFFFF (-1)
-    ; mov eax, -1
     not eax
     ret
 
