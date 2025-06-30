@@ -15,7 +15,7 @@ sub preparation_time_in_minutes ($number_of_layers) {
 
 sub total_time_in_minutes ( $number_of_layers, $actual_minutes_in_oven ) {
     my $preparation_time = preparation_time_in_minutes($number_of_layers);
-    return $preparation_time + $actual_minutes_in_oven;
+    return $actual_minutes_in_oven + $preparation_time;
 }
 
 sub oven_alarm () {
