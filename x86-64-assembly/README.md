@@ -7,14 +7,15 @@ My solutions to [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly) e
 - Track: [x86-64 Assembly](https://exercism.org/tracks/x86-64-assembly)
 - Category: Assembly
 - Total Exercises Available: 57
-- Exercises Completed: 1 / 57 (2%)
+- Exercises Completed: 2 / 57 (4%)
 - Progress: ░░░░░░░░░░ 🔴
-- Solutions Found Locally: 1
+- Solutions Found Locally: 2
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link |
 |----------|---------------|
+| [Collatz Conjecture](collatz-conjecture/README.md) | [View on Exercism](https://exercism.org/tracks/x86-64-assembly/exercises/collatz-conjecture) |
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/x86-64-assembly/exercises/hello-world) |
 
 ---

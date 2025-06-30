@@ -7,15 +7,16 @@ My solutions to [Perl5](https://exercism.org/tracks/perl5) exercises on Exercism
 - Track: [Perl5](https://exercism.org/tracks/perl5)
 - Category: Shell-scripting
 - Total Exercises Available: 83
-- Exercises Completed: 1 / 83 (1%)
+- Exercises Completed: 2 / 83 (2%)
 - Progress: ░░░░░░░░░░ 🔴
-- Solutions Found Locally: 1
+- Solutions Found Locally: 2
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link |
 |----------|---------------|
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/perl5/exercises/hello-world) |
+| [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/perl5/exercises/lasagna) |
 
 ---
 

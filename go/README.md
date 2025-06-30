@@ -7,9 +7,9 @@ My solutions to [Go](https://exercism.org/tracks/go) exercises on Exercism.
 - Track: [Go](https://exercism.org/tracks/go)
 - Category: Systems
 - Total Exercises Available: 141
-- Exercises Completed: 14 / 141 (10%)
-- Progress: █░░░░░░░░░ 🔴
-- Solutions Found Locally: 15
+- Exercises Completed: 15 / 141 (11%)
+- Progress: █░░░░░░░░░ 🟡
+- Solutions Found Locally: 16
 
 ## 🏋️ Exercises
 
@@ -24,6 +24,7 @@ My solutions to [Go](https://exercism.org/tracks/go) exercises on Exercism.
 | [Hamming](hamming/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/hamming) |
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/hello-world) |
 | [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna) |
+| [Lasagna Master](lasagna-master/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna-master) |
 | [Need For Speed](need-for-speed/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/need-for-speed) |
 | [Party Robot](party-robot/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/party-robot) |
 | [Two Fer](two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/two-fer) |
