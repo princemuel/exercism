@@ -7,7 +7,7 @@ Welcome to my collection of solutions to the coding exercises on [Exercism](http
 - Programming Languages: 20
 - Total Exercises Available: 2059
 - Total Exercises Completed: 233
-- Solutions Found Locally: 235
+- Solutions Found Locally: 236
 - Overall Completion: 11% 🟡
 - Me on Exercism: [@princemuel](https://exercism.org/profiles/princemuel)
 
@@ -31,7 +31,7 @@ Click on any track to view the solutions to each exercise:
 | [Julia](julia/README.md) | scientific | 13% (14/109) | 14 | [Julia on Exercism](https://exercism.org/tracks/julia) |
 | [Perl5](perl5/README.md) | shell-scripting | 2% (2/83) | 2 | [Perl5 on Exercism](https://exercism.org/tracks/perl5) |
 | [Python](python/README.md) | general-purpose | 23% (32/141) | 31 | [Python on Exercism](https://exercism.org/tracks/python) |
-| [Ruby](ruby/README.md) | general-purpose | 2% (2/120) | 2 | [Ruby on Exercism](https://exercism.org/tracks/ruby) |
+| [Ruby](ruby/README.md) | general-purpose | 2% (2/120) | 3 | [Ruby on Exercism](https://exercism.org/tracks/ruby) |
 | [Rust](rust/README.md) | systems | 32% (32/99) | 32 | [Rust on Exercism](https://exercism.org/tracks/rust) |
 | [SQLite](sqlite/README.md) | database | 39% (11/28) | 11 | [SQLite on Exercism](https://exercism.org/tracks/sqlite) |
 | [TypeScript](typescript/README.md) | web | 30% (30/100) | 30 | [TypeScript on Exercism](https://exercism.org/tracks/typescript) |
