@@ -1,0 +1,37 @@
+class LogLineParser
+  def initialize(i) = @line = i
+
+  def message = @line.match(/^\[.*\]: (?<i>.*)$/)[:i].strip
+  def log_level = @line.match(/^\[(?<i>.*)\]: .*$/)[:i].downcase
+  def reformat = "#{message} (#{log_level})"
+end
+
+class LogLineParser
+  def initialize(line) = @line = line
+
+  def message = @line[@line.index(':') + 1..].strip
+  def log_level = @line[1..@line.index(':') - 2].downcase
+  def reformat = "#{message} (#{log_level})"
+end
+
+class LogLineParser
+  def initialize(line) = @line = line
+
+  def message
+    @line.split(':')[1].strip
+  end
+
+  def log_level = @line[1..@line.index(':') - 2].downcase
+
+  def reformat = "#{message} (#{log_level})"
+end
+
+class LogLineParser
+  def initialize(line)
+    @message = line.gsub(/^.*\]:/, '').strip
+    @log_level = line.gsub(/^\[|\]:.*$/, '').strip.downcase
+    @reformat = "#{message} (#{log_level})"
+  end
+
+  attr_reader :message, :log_level, :reformat
+end

@@ -1,17 +1,7 @@
 class LogLineParser
-  def initialize(line)
-    @line = line
-  end
+  def initialize(line) = @line = line
 
-  def message
-    @line.split(':')[1].strip
-  end
-
-  def log_level
-    @line.slice(1, @line.index(']') - 1).downcase
-  end
-
-  def reformat
-    "#{message} (#{log_level})"
-  end
+  def message = @line.split(':').last.strip
+  def log_level = @line[1..@line.index(':') - 2].downcase
+  def reformat = "#{message} (#{log_level})"
 end

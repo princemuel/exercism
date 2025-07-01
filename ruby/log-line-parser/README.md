@@ -64,7 +64,7 @@ my_string.slice(1, 3)   #=> "ome"
 The semantic values of strings can also be manipulated.
 It's worth exploring the [Ruby docs][docs-string] to learn about all the methods, but here are a few commonly used examples:
 
-```
+```rb
 "hello".capitalize   #=> "Hello"
 "HELLO".downcase     #=> "hello"
 "hello".center(9)    #=> "  hello  "
@@ -75,7 +75,7 @@ It's worth exploring the [Ruby docs][docs-string] to learn about all the methods
 
 You can also use methods such as `gsub` to substitute characters:
 
-```
+```rb
 # Replace one character with another
 "noob".gsub("o","0")   #=> "n00b"
 
@@ -86,7 +86,7 @@ You can also use methods such as `gsub` to substitute characters:
 In all of the examples above, a new `String` is returned.
 However, many methods have equivalents which end in `!` which actually modify the string itself.
 
-```
+```rb
 # Use normal methods to return new strings
 my_string = "hello"
 my_string.capitalize   #=> "Hello"
