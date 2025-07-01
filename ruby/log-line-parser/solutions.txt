@@ -35,3 +35,39 @@ class LogLineParser
 
   attr_reader :message, :log_level, :reformat
 end
+
+class LogLineParser
+  attr_reader :message, :log_level, :reformat
+
+  def initialize(line)
+    groups = /\[(?<level>[A-Z]+)\]:\s+(?<msg>.+)/.match(line)
+    @log_level = groups[:level].downcase
+    @message = groups[:msg].strip
+    @reformat = "#{@message} (#{@log_level})"
+  end
+end
+
+class LogLineParser
+  attr_reader :log_level, :message, :reformat
+
+  def initialize(line)
+    @log_level, @message = line.split(':')
+    @log_level = log_level.scan(/[a-zA-Z]/).join.downcase
+    @message = message.strip
+    @reformat = "#{message} (#{log_level})"
+  end
+end
+
+class LogLineParser
+  def initialize(line)
+    @line = line
+  end
+
+  LOG_LEVEL_REGEX = /^\[(ERROR|WARNING|INFO)\]:/
+
+  def message = @line.gsub(LOG_LEVEL_REGEX,'').strip
+
+  def log_level = @line.match(LOG_LEVEL_REGEX)&.[](1).downcase
+
+  def reformat = "#{message} (#{log_level})"
+end
