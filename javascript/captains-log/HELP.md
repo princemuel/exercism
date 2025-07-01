@@ -11,13 +11,13 @@ Go through the setup [instructions for JavaScript][docs-exercism-javascript] to 
 Install assignment dependencies:
 
 ```shell
-corepack pnpm install
+corepack yarn install
 ```
 
 If `corepack` complains about not being enabled, you can do so by running:
 
 ```bash
-corepack enable pnpm
+corepack enable yarn
 ```
 
 ## Making the test suite pass
@@ -26,7 +26,7 @@ All exercises come with a test suite to help you validate your solution before s
 You can execute these tests by opening a command prompt in the exercise's directory, and then running:
 
 ```bash
-corepack pnpm test
+corepack yarn test
 ```
 
 In some test suites all tests but the first have been skipped.

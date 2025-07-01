@@ -33,8 +33,6 @@ It will return a psuedorandom floating-point number between 0 (inclusive), and 1
 
 ## Instructions
 
-## Instructions
-
 Mary is a big fan of the TV series Star Trek: The Next Generation.
 She often plays pen-and-paper role playing games, where she and her friends pretend to be the crew of the Starship Enterprise.
 Mary's character is Captain Picard, which means she has to keep the captain's log.
