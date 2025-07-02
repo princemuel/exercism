@@ -1,8 +1,0 @@
-[{"name":"grains on square 1","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"grains on square 2","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"grains on square 3","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"grains on square 4","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"grains on square 16","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"grains on square 32","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"grains on square 64","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"returns the total number of grains on the board","status":"pass","message":null,"output":null,"test_code":null,"task_id":null}]

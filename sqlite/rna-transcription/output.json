@@ -1,6 +1,0 @@
-[{"name":"Empty RNA sequence","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"RNA complement of cytosine is guanine","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"RNA complement of guanine is cytosine","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"RNA complement of thymine is adenine","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"RNA complement of adenine is uracil","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
-{"name":"RNA complement","status":"pass","message":null,"output":null,"test_code":null,"task_id":null}]

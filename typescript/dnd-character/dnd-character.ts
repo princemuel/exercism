@@ -37,7 +37,7 @@ export class DnDCharacter {
     /**
      * Calculate ability modifier using D&D 5e rules
      * @param score - Ability score (3-18 typically)
-     * @returns Modifier (-4 to +4 for normal range)
+     * @returns Modifier (-4 to +4 for normal range)pyets
      */
     public static getModifierFor(score: number): number {
         return Math.floor((score - 10) / 2);
