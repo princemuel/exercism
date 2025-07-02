@@ -9,12 +9,13 @@ My solutions to [C++](https://exercism.org/tracks/cpp) exercises on Exercism.
 - Total Exercises Available: 99
 - Exercises Completed: 11 / 99 (11%)
 - Progress: █░░░░░░░░░ 🟡
-- Solutions Found Locally: 11
+- Solutions Found Locally: 12
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link |
 |----------|---------------|
+| [Allergies](allergies/README.md) | [View on Exercism](https://exercism.org/tracks/cpp/exercises/allergies) |
 | [Darts](darts/README.md) | [View on Exercism](https://exercism.org/tracks/cpp/exercises/darts) |
 | [Ellens Alien Game](ellens-alien-game/README.md) | [View on Exercism](https://exercism.org/tracks/cpp/exercises/ellens-alien-game) |
 | [Freelancer Rates](freelancer-rates/README.md) | [View on Exercism](https://exercism.org/tracks/cpp/exercises/freelancer-rates) |

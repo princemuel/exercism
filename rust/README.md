@@ -9,7 +9,7 @@ My solutions to [Rust](https://exercism.org/tracks/rust) exercises on Exercism.
 - Total Exercises Available: 99
 - Exercises Completed: 32 / 99 (32%)
 - Progress: ███░░░░░░░ 🟠
-- Solutions Found Locally: 32
+- Solutions Found Locally: 33
 
 ## 🏋️ Exercises
 
@@ -40,6 +40,7 @@ My solutions to [Rust](https://exercism.org/tracks/rust) exercises on Exercism.
 | [Nth Prime](nth-prime/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/nth-prime) |
 | [Prime Factors](prime-factors/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/prime-factors) |
 | [Proverb](proverb/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/proverb) |
+| [Queen Attack](queen-attack/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/queen-attack) |
 | [Raindrops](raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/raindrops) |
 | [Reverse String](reverse-string/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/reverse-string) |
 | [Rna Transcription](rna-transcription/README.md) | [View on Exercism](https://exercism.org/tracks/rust/exercises/rna-transcription) |

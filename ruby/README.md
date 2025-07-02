@@ -7,7 +7,7 @@ My solutions to [Ruby](https://exercism.org/tracks/ruby) exercises on Exercism.
 - Track: [Ruby](https://exercism.org/tracks/ruby)
 - Category: General-purpose
 - Total Exercises Available: 120
-- Exercises Completed: 2 / 120 (2%)
+- Exercises Completed: 3 / 120 (3%)
 - Progress: ░░░░░░░░░░ 🔴
 - Solutions Found Locally: 3
 

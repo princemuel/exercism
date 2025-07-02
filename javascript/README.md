@@ -7,9 +7,9 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 - Track: [JavaScript](https://exercism.org/tracks/javascript)
 - Category: Web
 - Total Exercises Available: 153
-- Exercises Completed: 37 / 153 (24%)
+- Exercises Completed: 38 / 153 (25%)
 - Progress: ██░░░░░░░░ 🟡
-- Solutions Found Locally: 39
+- Solutions Found Locally: 40
 
 ## 🏋️ Exercises
 
@@ -20,6 +20,7 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 | [Appointment Time](appointment-time/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/appointment-time) |
 | [Bank Account](bank-account/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/bank-account) |
 | [Bird Watcher](bird-watcher/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/bird-watcher) |
+| [Captains Log](captains-log/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/captains-log) |
 | [Collatz Conjecture](collatz-conjecture/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/collatz-conjecture) |
 | [Coordinate Transformation](coordinate-transformation/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/coordinate-transformation) |
 | [Custom Signs](custom-signs/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/custom-signs) |
