@@ -21,7 +21,7 @@ const EXTRA_PRICES = {
  *
  * @returns {number} the price of the pizza
  */
-export const pizzaPrice = (pizza, ...extras) => pizzaPriceInternal(pizza, extras);
+export const pizzaPrice = (pizza, ...extras) => helper(pizza, extras);
 
 /**
  * Determine the price of the pizza given the pizza and optional extras
@@ -36,12 +36,12 @@ export const pizzaPrice = (pizza, ...extras) => pizzaPriceInternal(pizza, extras
  * @throws {TypeError} If any extra is not a valid extra type
  * @throws {RangeError} If recursion depth exceeds JavaScript's call stack limit
  */
-function pizzaPriceInternal(pizza, extras, index = 0) {
+function helper(pizza, extras, index = 0) {
     if (index >= extras.length) return PIZZA_PRICES[pizza];
 
     const extra = extras[index];
     const price = EXTRA_PRICES[extra];
-    const remaining = pizzaPriceInternal(pizza, extras, index + 1);
+    const remaining = helper(pizza, extras, index + 1);
 
     return price + remaining;
 }
