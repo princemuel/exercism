@@ -5,14 +5,13 @@
 For running the tests provided, you will need the Minitest gem. Open a
 terminal window and run the following command to install minitest:
 
-```
+```sh
 gem install minitest
 ```
 
-
 Run the tests from the exercise directory using the following command:
 
-```
+```sh
 ruby <snake-case-exercise>_test.rb
 ```
 
@@ -22,7 +21,7 @@ Please replace `<snake-case-exercise>` with your exercise name in snake_case.
 
 You can `require 'minitest/pride'` or run the following command to get colored output:
 
-```
+```sh
 ruby -r minitest/pride <snake-case-exercise>_test.rb
 ```
 
