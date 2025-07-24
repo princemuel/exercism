@@ -6,8 +6,8 @@ My solutions to [Julia](https://exercism.org/tracks/julia) exercises on Exercism
 
 - Track: [Julia](https://exercism.org/tracks/julia)
 - Category: Scientific
-- Total Exercises Available: 109
-- Exercises Completed: 14 / 109 (13%)
+- Total Exercises Available: 111
+- Exercises Completed: 14 / 111 (13%)
 - Progress: █░░░░░░░░░ 🟡
 - Solutions Found Locally: 14
 

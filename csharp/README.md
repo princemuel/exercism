@@ -7,14 +7,15 @@ My solutions to [C#](https://exercism.org/tracks/csharp) exercises on Exercism.
 - Track: [C#](https://exercism.org/tracks/csharp)
 - Category: General-purpose
 - Total Exercises Available: 175
-- Exercises Completed: 2 / 175 (1%)
+- Exercises Completed: 3 / 175 (2%)
 - Progress: ░░░░░░░░░░ 🔴
-- Solutions Found Locally: 2
+- Solutions Found Locally: 3
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link |
 |----------|---------------|
+| [Annalyns Infiltration](annalyns-infiltration/README.md) | [View on Exercism](https://exercism.org/tracks/csharp/exercises/annalyns-infiltration) |
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/csharp/exercises/hello-world) |
 | [Lucians Luscious Lasagna](lucians-luscious-lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/csharp/exercises/lucians-luscious-lasagna) |
 

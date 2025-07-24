@@ -6,8 +6,8 @@ My solutions to [Perl5](https://exercism.org/tracks/perl5) exercises on Exercism
 
 - Track: [Perl5](https://exercism.org/tracks/perl5)
 - Category: Shell-scripting
-- Total Exercises Available: 83
-- Exercises Completed: 2 / 83 (2%)
+- Total Exercises Available: 84
+- Exercises Completed: 2 / 84 (2%)
 - Progress: ░░░░░░░░░░ 🔴
 - Solutions Found Locally: 2
 

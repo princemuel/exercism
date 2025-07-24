@@ -6,8 +6,8 @@ My solutions to [Rust](https://exercism.org/tracks/rust) exercises on Exercism.
 
 - Track: [Rust](https://exercism.org/tracks/rust)
 - Category: Systems
-- Total Exercises Available: 99
-- Exercises Completed: 32 / 99 (32%)
+- Total Exercises Available: 100
+- Exercises Completed: 32 / 100 (32%)
 - Progress: ███░░░░░░░ 🟠
 - Solutions Found Locally: 33
 

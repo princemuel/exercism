@@ -6,10 +6,10 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 
 - Track: [JavaScript](https://exercism.org/tracks/javascript)
 - Category: Web
-- Total Exercises Available: 153
-- Exercises Completed: 38 / 153 (25%)
+- Total Exercises Available: 154
+- Exercises Completed: 39 / 154 (25%)
 - Progress: ██░░░░░░░░ 🟡
-- Solutions Found Locally: 40
+- Solutions Found Locally: 41
 
 ## 🏋️ Exercises
 
@@ -44,6 +44,7 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 | [Mixed Juices](mixed-juices/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/mixed-juices) |
 | [Ozans Playlist](ozans-playlist/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/ozans-playlist) |
 | [Pangram](pangram/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/pangram) |
+| [Pizza Order](pizza-order/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/pizza-order) |
 | [Poetry Club Door Policy](poetry-club-door-policy/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/poetry-club-door-policy) |
 | [Raindrops](raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/raindrops) |
 | [Resistor Color](resistor-color/README.md) | [View on Exercism](https://exercism.org/tracks/javascript/exercises/resistor-color) |

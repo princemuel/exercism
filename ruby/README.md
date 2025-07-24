@@ -7,9 +7,9 @@ My solutions to [Ruby](https://exercism.org/tracks/ruby) exercises on Exercism.
 - Track: [Ruby](https://exercism.org/tracks/ruby)
 - Category: General-purpose
 - Total Exercises Available: 120
-- Exercises Completed: 3 / 120 (3%)
+- Exercises Completed: 4 / 120 (3%)
 - Progress: ░░░░░░░░░░ 🔴
-- Solutions Found Locally: 3
+- Solutions Found Locally: 4
 
 ## 🏋️ Exercises
 
@@ -18,6 +18,7 @@ My solutions to [Ruby](https://exercism.org/tracks/ruby) exercises on Exercism.
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/hello-world) |
 | [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/lasagna) |
 | [Log Line Parser](log-line-parser/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/log-line-parser) |
+| [Two Fer](two-fer/README.md) | [View on Exercism](https://exercism.org/tracks/ruby/exercises/two-fer) |
 
 ---
 

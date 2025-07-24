@@ -6,16 +6,17 @@ My solutions to [Elixir](https://exercism.org/tracks/elixir) exercises on Exerci
 
 - Track: [Elixir](https://exercism.org/tracks/elixir)
 - Category: Functional
-- Total Exercises Available: 164
-- Exercises Completed: 1 / 164 (1%)
+- Total Exercises Available: 165
+- Exercises Completed: 2 / 165 (1%)
 - Progress: ░░░░░░░░░░ 🔴
-- Solutions Found Locally: 1
+- Solutions Found Locally: 2
 
 ## 🏋️ Exercises
 
 | Exercise | Exercism Link |
 |----------|---------------|
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/elixir/exercises/hello-world) |
+| [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/elixir/exercises/lasagna) |
 
 ---
 
