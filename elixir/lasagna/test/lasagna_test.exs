@@ -2,7 +2,7 @@ defmodule LasagnaTest do
   use ExUnit.Case
   doctest Lasagna
 
-  @tag :pending
+  # @tag :pending
   @tag task_id: 1
   test "expected minutes in oven" do
     assert Lasagna.expected_minutes_in_oven() === 40

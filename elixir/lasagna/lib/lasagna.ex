@@ -1,11 +1,25 @@
 defmodule Lasagna do
-  # Please define the 'expected_minutes_in_oven/0' function
+  @doc """
+  Methods for making a nice, tasty lasagna.
+  """
 
-  # Please define the 'remaining_minutes_in_oven/1' function
+  @expected_minutes_in_oven 40
+  @minutes_per_layer 2
 
-  # Please define the 'preparation_time_in_minutes/1' function
+  @spec expected_minutes_in_oven :: integer()
+  def expected_minutes_in_oven, do: @expected_minutes_in_oven
 
-  # Please define the 'total_time_in_minutes/2' function
+  @spec remaining_minutes_in_oven(integer()) :: integer()
+  def remaining_minutes_in_oven(actual_minutes_in_oven),
+    do: expected_minutes_in_oven() - actual_minutes_in_oven
 
-  # Please define the 'alarm/0' function
+  @spec preparation_time_in_minutes(integer()) :: integer()
+  def preparation_time_in_minutes(number_of_layers), do: @minutes_per_layer * number_of_layers
+
+  @spec total_time_in_minutes(integer(), integer()) :: integer()
+  def total_time_in_minutes(number_of_layers, actual_minutes_in_oven),
+    do: actual_minutes_in_oven + preparation_time_in_minutes(number_of_layers)
+
+  @spec alarm() :: String.t()
+  def alarm(), do: "Ding!"
 end
