@@ -15,4 +15,4 @@
   (floor (/ (* 2 (expt cube-size 3)) (* 3 pi (expt diameter 2)))))
 
 (defun fair-share-p (pizzas friends)
-  (zerop (mod (* pizzas 8) friends)))
+  (= 0 (mod (* pizzas 8) friends)))
