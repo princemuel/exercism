@@ -18,7 +18,7 @@ export class ExternalApi {
      */
     constructor(values = {}) {
         /** @type {TranslatableValues} */
-        this.values = JSON.parse(JSON.stringify(values));
+        this.values = structuredClone(values);
     }
 
     /**
