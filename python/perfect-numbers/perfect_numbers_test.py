@@ -4,9 +4,7 @@
 
 import unittest
 
-from perfect_numbers import (
-    classify,
-)
+from perfect_numbers import classify
 
 
 class PerfectNumbersTest(unittest.TestCase):
