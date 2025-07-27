@@ -16,22 +16,22 @@
 
 (in-package :leslies-lists)
 
-(defun new-list () 'this-is-wrong)
+(defun new-list () '())
 
-(defun list-of-things (thing1 thing2 thing3))
+(defun list-of-things (a b c) (list a b c))
 
-(defun add-to-list (item list))
+(defun add-to-list (item list) (cons item list))
 
-(defun first-thing (list))
+(defun first-thing (list) (first list))
 
-(defun second-thing (list))
+(defun second-thing (list) (second list))
 
-(defun third-thing (list))
+(defun third-thing (list) (third list))
 
-(defun twenty-third-thing (list))
+(defun twenty-third-thing (list) (nth 22 list))
 
-(defun remove-first-item (list))
+(defun remove-first-item (list) (cdr list))
 
-(defun list-append (list1 list2))
+(defun list-append (list1 list2) (append list1 list2))
 
-(defun just-how-long (list))
+(defun just-how-long (list)  (length list))
