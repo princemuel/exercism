@@ -7,9 +7,9 @@ My solutions to [Elixir](https://exercism.org/tracks/elixir) exercises on Exerci
 - Track: [Elixir](https://exercism.org/tracks/elixir)
 - Category: Functional
 - Total Exercises Available: 165
-- Exercises Completed: 2 / 165 (1%)
+- Exercises Completed: 3 / 165 (2%)
 - Progress: ░░░░░░░░░░ 🔴
-- Solutions Found Locally: 2
+- Solutions Found Locally: 3
 
 ## 🏋️ Exercises
 
@@ -17,6 +17,7 @@ My solutions to [Elixir](https://exercism.org/tracks/elixir) exercises on Exerci
 |----------|---------------|
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/elixir/exercises/hello-world) |
 | [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/elixir/exercises/lasagna) |
+| [Secrets](secrets/README.md) | [View on Exercism](https://exercism.org/tracks/elixir/exercises/secrets) |
 
 ---
 

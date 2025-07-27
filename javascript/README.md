@@ -7,8 +7,8 @@ My solutions to [JavaScript](https://exercism.org/tracks/javascript) exercises o
 - Track: [JavaScript](https://exercism.org/tracks/javascript)
 - Category: Web
 - Total Exercises Available: 154
-- Exercises Completed: 39 / 154 (25%)
-- Progress: ██░░░░░░░░ 🟡
+- Exercises Completed: 40 / 154 (26%)
+- Progress: ██░░░░░░░░ 🟠
 - Solutions Found Locally: 41
 
 ## 🏋️ Exercises

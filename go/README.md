@@ -9,7 +9,7 @@ My solutions to [Go](https://exercism.org/tracks/go) exercises on Exercism.
 - Total Exercises Available: 141
 - Exercises Completed: 15 / 141 (11%)
 - Progress: █░░░░░░░░░ 🟡
-- Solutions Found Locally: 16
+- Solutions Found Locally: 17
 
 ## 🏋️ Exercises
 
@@ -23,6 +23,7 @@ My solutions to [Go](https://exercism.org/tracks/go) exercises on Exercism.
 | [Cars Assemble](cars-assemble/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/cars-assemble) |
 | [Hamming](hamming/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/hamming) |
 | [Hello World](hello-world/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/hello-world) |
+| [Interest Is Interesting](interest-is-interesting/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/interest-is-interesting) |
 | [Lasagna](lasagna/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna) |
 | [Lasagna Master](lasagna-master/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/lasagna-master) |
 | [Need For Speed](need-for-speed/README.md) | [View on Exercism](https://exercism.org/tracks/go/exercises/need-for-speed) |

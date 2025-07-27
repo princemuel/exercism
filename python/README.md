@@ -7,9 +7,9 @@ My solutions to [Python](https://exercism.org/tracks/python) exercises on Exerci
 - Track: [Python](https://exercism.org/tracks/python)
 - Category: General-purpose
 - Total Exercises Available: 141
-- Exercises Completed: 32 / 141 (23%)
+- Exercises Completed: 33 / 141 (23%)
 - Progress: ██░░░░░░░░ 🟡
-- Solutions Found Locally: 31
+- Solutions Found Locally: 32
 
 ## 🏋️ Exercises
 
@@ -38,6 +38,7 @@ My solutions to [Python](https://exercism.org/tracks/python) exercises on Exerci
 | [Mecha Munch Management](mecha-munch-management/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/mecha-munch-management) |
 | [Meltdown Mitigation](meltdown-mitigation/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/meltdown-mitigation) |
 | [Nth Prime](nth-prime/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/nth-prime) |
+| [Perfect Numbers](perfect-numbers/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/perfect-numbers) |
 | [Pig Latin](pig-latin/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/pig-latin) |
 | [Raindrops](raindrops/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/raindrops) |
 | [Resistor Color](resistor-color/README.md) | [View on Exercism](https://exercism.org/tracks/python/exercises/resistor-color) |
