@@ -1,29 +1,36 @@
 defmodule Secrets do
+  @spec secret_add(number()) :: (number() -> number())
   def secret_add(secret) do
-    # Please implement the secret_add/1 function
+    fn x -> x + secret end
   end
 
+  @spec secret_subtract(number()) :: (number() -> number())
   def secret_subtract(secret) do
-    # Please implement the secret_subtract/1 function
+    fn x -> x - secret end
   end
 
+  @spec secret_multiply(number()) :: (number() -> number())
   def secret_multiply(secret) do
-    # Please implement the secret_multiply/1 function
+    fn x -> x * secret end
   end
 
+  @spec secret_divide(number()) :: (number() -> number())
   def secret_divide(secret) do
-    # Please implement the secret_divide/1 function
+    fn x -> div(x, secret) end
   end
 
+  @spec secret_and(number()) :: (number() -> number())
   def secret_and(secret) do
-    # Please implement the secret_and/1 function
+    fn x -> Bitwise.band(x, secret) end
   end
 
+  @spec secret_xor(number()) :: (number() -> number())
   def secret_xor(secret) do
-    # Please implement the secret_xor/1 function
+    fn x -> Bitwise.bxor(x, secret) end
   end
 
+  @spec secret_combine((a -> b), (b -> c)) :: (a -> c) when a: any(), b: any(), c: any()
   def secret_combine(secret_function1, secret_function2) do
-    # Please implement the secret_combine/2 function
+    fn x -> secret_function2.(secret_function1.(x)) end
   end
 end
