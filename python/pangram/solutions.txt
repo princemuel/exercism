@@ -1,0 +1,45 @@
+Instead of lower(), the casefold method could be used to lowercase the letters. casefold() differs from lower() in lowercasing certain Unicode characters. At the time of writing, those differences are not of concern to this exercise. Also, casefold() benched slower than lower().
+
+def is_pangram(input_string: str) -> bool:
+    input_lower = input_string.lower()
+    return all(letter in input_lower for letter in 'abcdefghijklmnopqrstuvwxyz')
+from string import ascii_lowercase
+def is_pangram(sentence):
+    return all(letter in sentence.lower() for letter in ascii_lowercase)
+
+def is_pangram(input_string: str) -> bool:
+   return len(set(c for c in input_string.lower() if c.isalpha())) == 26
+
+
+A_LCASE = 97
+A_UCASE = 65
+ALL_26_BITS_SET = 67108863
+
+
+def is_pangram(sentence):
+    letter_flags = 0
+    for letter in sentence:
+        if 'a' <= letter <= 'z':
+            letter_flags |= 1 << ord(letter) - A_LCASE
+        elif 'A' <= letter <= 'Z':
+            letter_flags |= 1 << ord(letter) - A_UCASE
+    return letter_flags == ALL_26_BITS_SET
+
+    perf: optimize is_pangram by fixing unnecessary list creation
+Issue: Current implementation creates an intermediate list from a set, which is redundant and inefficient.
+
+**Before:**
+```python
+return len([ltr for ltr in set(sentence.lower()) if ltr.isalpha()]) == 26
+```
+**After:**
+```python
+return len(set(ltr for ltr in sentence.lower() if ltr.isalpha())) == 26
+```
+Why this is better:
+- Eliminates double iteration: Old version iterates once for set(), again for list comprehension
+- Removes unnecessary list creation: No need to convert set → list just to count
+- Better memory usage: Generator expression feeds directly into set constructor
+- Same time complexity but more efficient constant factors
+
+The old approach first deduplicates all the characters, then filters alphabetic ones. The new approach filters while building the set, which is the natural order of operations for this problem.
