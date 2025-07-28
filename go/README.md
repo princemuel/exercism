@@ -7,7 +7,7 @@ My solutions to [Go](https://exercism.org/tracks/go) exercises on Exercism.
 - Track: [Go](https://exercism.org/tracks/go)
 - Category: Systems
 - Total Exercises Available: 141
-- Exercises Completed: 15 / 141 (11%)
+- Exercises Completed: 16 / 141 (11%)
 - Progress: █░░░░░░░░░ 🟡
 - Solutions Found Locally: 17
 

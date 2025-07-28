@@ -7,7 +7,7 @@ My solutions to [Common Lisp](https://exercism.org/tracks/common-lisp) exercises
 - Track: [Common Lisp](https://exercism.org/tracks/common-lisp)
 - Category: Functional
 - Total Exercises Available: 90
-- Exercises Completed: 3 / 90 (3%)
+- Exercises Completed: 4 / 90 (4%)
 - Progress: ░░░░░░░░░░ 🔴
 - Solutions Found Locally: 4
 
