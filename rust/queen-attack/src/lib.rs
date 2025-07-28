@@ -1,24 +1,26 @@
 #[derive(Debug)]
-pub struct ChessPosition;
+pub struct ChessPosition {
+    rank: i32,
+    file: i32,
+}
 
 #[derive(Debug)]
-pub struct Queen;
+pub struct Queen {
+    position: ChessPosition,
+}
 
 impl ChessPosition {
     pub fn new(rank: i32, file: i32) -> Option<Self> {
-        todo!(
-            "Construct a ChessPosition struct, given the following rank, file: ({rank}, \
-             {file}). If the position is invalid return None."
-        );
+        ((0..8).contains(&rank) && (0..8).contains(&file)).then_some(Self { rank, file })
     }
 }
 
 impl Queen {
-    pub fn new(position: ChessPosition) -> Self {
-        todo!("Given the chess position {position:?}, construct a Queen struct.");
-    }
+    pub fn new(position: ChessPosition) -> Self { Queen { position } }
 
     pub fn can_attack(&self, other: &Queen) -> bool {
-        todo!("Determine if this Queen can attack the other Queen {other:?}");
+        let dr = other.position.rank - self.position.rank;
+        let dc = other.position.file - self.position.file;
+        dr == 0 || dc == 0 || dr.abs() == dc.abs()
     }
 }

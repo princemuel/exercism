@@ -1,0 +1,13 @@
+
+
+pub fn can_attack(&self, other: &Queen) -> bool {
+    // Calculate direction vector (delta row, delta column)
+    let dr = other.position.rank - self.position.rank;
+    let dc = other.position.file - self.position.file;
+
+    // Queens can attack along straight lines (horizontal, vertical) or diagonals
+    // - Horizontal: dr == 0 (same rank)
+    // - Vertical: dc == 0 (same file)
+    // - Diagonal: |dr| == |dc| (45-degree line)
+    dr == 0 || dc == 0 || dr.abs() == dc.abs()
+}

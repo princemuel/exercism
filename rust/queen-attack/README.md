@@ -51,4 +51,4 @@ The chessboard image was made by [habere-et-dispertire][habere-et-dispertire] us
 
 ### Based on
 
-J Dalbey's Programming Practice problems - <https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html>
+J Dalbey's Programming Practice problems - https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html
