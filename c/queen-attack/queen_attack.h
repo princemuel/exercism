@@ -1,7 +1,8 @@
 #ifndef QUEEN_ATTACK_H
 #define QUEEN_ATTACK_H
-
 #include <stdint.h>
+
+#define BOARD_SIZE 8
 
 typedef enum attack_status {
   CAN_NOT_ATTACK,
@@ -15,5 +16,4 @@ typedef struct position {
 } position_t;
 
 attack_status_t can_attack(position_t queen_1, position_t queen_2);
-
 #endif

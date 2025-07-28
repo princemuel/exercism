@@ -60,7 +60,17 @@ clean_language_dir() {
 
         # Language-specific cleanup patterns
         case "$lang_name" in
-        "cpp" | "c" | "x86-64-assembly" | "arm64-assembly")
+        "cpp" | "c")
+            safe_remove "*.o" "object files" && cleaned_any=true
+            safe_remove "*.exe" "executables" && cleaned_any=true
+            safe_remove "*.out" "output files" && cleaned_any=true
+            safe_remove "a.out" "default executable" && cleaned_any=true
+            safe_remove "core" "core dumps" && cleaned_any=true
+            safe_remove ".deps" "dependency cache" && cleaned_any=true
+            safe_remove ".cache" "dependency cache" && cleaned_any=true
+            safe_remove "build/" "dependency cache" && cleaned_any=true
+            ;;
+        "x86-64-assembly" | "arm64-assembly")
             safe_remove "*.o" "object files" && cleaned_any=true
             safe_remove "*.exe" "executables" && cleaned_any=true
             safe_remove "*.out" "output files" && cleaned_any=true
@@ -72,21 +82,34 @@ clean_language_dir() {
             ;;
         "rust")
             safe_remove "target/" "build directory" && cleaned_any=true
-            safe_remove "Cargo.lock" "lock file" && cleaned_any=true
+            # safe_remove "Cargo.lock" "lock file" && cleaned_any=true
             ;;
         "go")
             safe_remove "*.exe" "executables" && cleaned_any=true
             safe_remove "go.sum" "module checksums" && cleaned_any=true
             safe_remove "go.mod" "module file" && cleaned_any=true
             ;;
-        "javascript" | "typescript" | "wasm")
+        "javascript" | "typescript")
             safe_remove "node_modules/" "dependencies" && cleaned_any=true
             safe_remove ".yarn/" "dependencies" && cleaned_any=true
-            safe_remove "package-lock.json" "lock file" && cleaned_any=true
-            safe_remove "yarn.lock" "lock file" && cleaned_any=true
+            # safe_remove "package-lock.json" "lock file" && cleaned_any=true
+            # safe_remove "yarn.lock" "lock file" && cleaned_any=true
             safe_remove ".pnp.cjs" "lock file" && cleaned_any=true
             safe_remove ".pnp.loader.mjs" "lock file" && cleaned_any=true
-            safe_remove "pnpm-lock.yaml" "lock file" && cleaned_any=true
+            # safe_remove "pnpm-lock.yaml" "lock file" && cleaned_any=true
+            safe_remove "dist/" "build output" && cleaned_any=true
+            safe_remove "build/" "build directory" && cleaned_any=true
+            safe_remove ".nyc_output/" "coverage cache" && cleaned_any=true
+            safe_remove "coverage/" "coverage reports" && cleaned_any=true
+            ;;
+        "wasm")
+            safe_remove "node_modules/" "dependencies" && cleaned_any=true
+            safe_remove ".yarn/" "dependencies" && cleaned_any=true
+            # safe_remove "package-lock.json" "lock file" && cleaned_any=true
+            # safe_remove "yarn.lock" "lock file" && cleaned_any=true
+            safe_remove ".pnp.cjs" "lock file" && cleaned_any=true
+            safe_remove ".pnp.loader.mjs" "lock file" && cleaned_any=true
+            # safe_remove "pnpm-lock.yaml" "lock file" && cleaned_any=true
             safe_remove "dist/" "build output" && cleaned_any=true
             safe_remove "build/" "build directory" && cleaned_any=true
             safe_remove ".nyc_output/" "coverage cache" && cleaned_any=true
@@ -127,7 +150,7 @@ clean_language_dir() {
             safe_remove ".bundle/" "bundler cache" && cleaned_any=true
             safe_remove "vendor/bundle/" "vendor gems" && cleaned_any=true
             safe_remove ".ruby-lsp/" "editor generated" && cleaned_any=true
-            safe_remove "Gemfile.lock" "gem lock file" && cleaned_any=true
+            # safe_remove "Gemfile.lock" "gem lock file" && cleaned_any=true
             ;;
         "perl5")
             safe_remove "*.o" "object files" && cleaned_any=true
@@ -172,7 +195,7 @@ clean_language_dir() {
 initial_size=$(du -sb "$EXERCISM_DIR" 2>/dev/null | cut -f1 || echo "0")
 
 # Clean each language directory
-find "$EXERCISM_DIR" -mindepth 1 -maxdepth 3 -type d ! -name ".*" | while read -r lang_dir; do
+find "$EXERCISM_DIR" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | while read -r lang_dir; do
     clean_language_dir "$lang_dir"
 done
 

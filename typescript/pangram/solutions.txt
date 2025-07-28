@@ -11,3 +11,9 @@ export function isPangram(sentence: string) {
   const regex = /([a-z])(?!.*\1)/g;
   return (sentence.toLowerCase().match(regex) ?? []).length === 26;
 }
+
+export function isPangram(sentence: string) {
+    const alphabet = new Set('abcdefghijklmnopqrstuvwxyz');
+    const inputSet = new Set(sentence.toLowerCase().match(/[a-z]/g) ?? []);
+    return alphabet.isSubsetOf(inputSet);
+};
